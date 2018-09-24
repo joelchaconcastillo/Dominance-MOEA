@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: chacon-ieeetec-17.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bibtex/bib/IEEEabrv.bib
+Database file #2: bibtex/bib/References.bib.bib
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty year in Joel:BALANCE_DIVERSITY
+Warning--empty year in Joel:BOOK_MOEAs
+Warning--empty institution in Joel:SBX1994
+Warning--empty title in Joel:DNR_SBX
+
+Done.
+You've used 45 entries,
+            4039 wiz_defined-function locations,
+            1524 strings with 25750 characters,
+and the built_in function-call counts, 37415 in all, are:
+= -- 2998
+> -- 874
+< -- 355
++ -- 481
+- -- 137
+* -- 1809
+:= -- 5406
+add.period$ -- 99
+call.type$ -- 45
+change.case$ -- 34
+chr.to.int$ -- 849
+cite$ -- 49
+duplicate$ -- 2598
+empty$ -- 3070
+format.name$ -- 180
+if$ -- 8753
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 433
+newline$ -- 174
+num.names$ -- 45
+pop$ -- 1013
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 2898
+stack$ -- 0
+substring$ -- 2014
+swap$ -- 2235
+text.length$ -- 72
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 45
+warning$ -- 4
+while$ -- 174
+width$ -- 47
+write$ -- 471
+(There were 4 warnings)
