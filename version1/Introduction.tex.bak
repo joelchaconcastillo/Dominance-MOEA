@@ -81,7 +81,7 @@ a high degree of exploration.
 For instance, it has been shown that with some of the \WFG{} benchmarks, in most of the state-of-the-art \MOEAS{} the distance parameters quickly converge, meaning that the approach
 focuses just on optimizing the position parameters~\cite{Joel:GDE3_CEC09}.
 %
-Thus, while some degree of diversity is maintained, a similar situation to premature convergence is presented
+Thus, while some degree of diversity is mantained, a similar situation to premature convergence is presented
 meaning that genetic operators might not be able to generate better trade-offs. 
 %
 
