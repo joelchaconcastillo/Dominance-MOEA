@@ -2,15 +2,18 @@
 
 \subsection{Diversity Management in Evolutionary Algorithms}
 
+%In the \EAS{} field is well known that a proper balance between exploration and exploitation is one of the keys to attain quality solutions.
 The proper balance between exploration and exploitation is one of the keys to success in the design of \EAS{}.
 %
-In the single-objective domain it is known that properly managing the diversity in the variable space is a way to control this balance,
-so a large amount of techniques have been devised~\cite{Mohan:14}.
+In the single-objective domain it is known that properly managing the diversity in the variable space is a way to control such balance,
+as consequence a large amount of techniques have been devised~\cite{Mohan:14}.
 %
-The methods are classified, depending on the component of the \EA{} that is modified, into the following groups~\cite{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, 
+Particularly, these methods are classified depending on the modified component(s) of the \EA{}.
+%
+An adequate classification is defined into the following groups~\cite{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, 
 \textit{crossover/mutation-based}, \textit{fitness-based}, and \textit{replacement-based}.
 %
-Additionally, methods are referred to as \textit{uniprocess-driven} when a single component is altered, whereas the term
+Additionally, the methods are referred as \textit{uniprocess-driven} when a single component is altered, whereas the term
 \textit{multiprocess-driven} is used to refer to those methods that act on more than one component.
 
 Among the previous proposals, the replacement-based methods have attained high-quality results, so
@@ -36,7 +39,7 @@ Particularly, initial phases preserve a larger amount of diversity than the fina
 %
 This last method has inspired the design of the novel proposal developed in this paper for multi-objective optimization.
 %
-In the case of multi-objective optimization, much fewer works related to the maitenance of diversity in the variable space
+In the case of multi-objective optimization, much fewer works related to the maintenance of diversity in the variable space
 have been developed.
 %
 These works are detailed in the following section.
@@ -52,10 +55,12 @@ Therefore several taxonomies have been proposed with the aim of better classifyi
 %
 Particularly, a \MOEA{} can be designed based on Pareto dominance, indicators and/or decomposition~\cite{Joel:StateArt}.
 %
-Since there does not exist an algorithm with a remarkable superiority than the other ones, there is yet active
-research in the three fields.
+%Since there does not exist an algorithm with a remarkable superiority than the other ones, there is yet active
+%research in the three fields.
 %
-Taking this into account, this section introduces the three types of schemes, and some of the most popular approaches belonging to each category.
+Since none of them has a remarkable superiority in this work are taken into account all of them.
+%
+Therefore, this section introduces the three types of schemes, and some of the most popular approaches belonging to each category.
 %
 Then, at least one \MOEA{} of each category is selected to carry out the validation of \VSDMOEA{}.
 
@@ -67,8 +72,9 @@ are usually integrated with the aim to obtaining a proper spread and convergence
 %
 The most popular dominance-based \MOEA{} is the Non-Dominated Sorting Genetic Algorithm II (NSGA-II)~\cite{Joel:NSGAII}, which is selected to validate our proposal.
 %
-Another quite popular proposal that belongs to this category is the Generalized Differential Evolution (\GDEIII{})~\cite{Joel:GDE3}, which is an extension of the single-objective
-Differential Evolution that integrates a crowding mechanism.
+Another quite popular proposal that belongs to this category is the Generalized Differential Evolution (\GDEIII{})~\cite{Joel:GDE3}, which integrates a crowding mechanism, and is an extension of the single-objective
+Differential Evolution.
+%, that integrates a crowding mechanism.
 %
 \GDEIII{} is also used to validate our proposal.
 
@@ -78,7 +84,7 @@ In the indicator-based \MOEAS{}, the use of the Pareto dominance relation is sub
 performed by the \MOEA{}.
 %
 An advantage of indicator-based algorithms is that the indicator usually takes into account both the quality and diversity in objective space, so incorporating additional mechanisms
-to promote diversity in the objective space is not required.
+to promote diversity in the objective space are not required.
 %
 Among the different indicators, hypervolume is a widely accepted Pareto-compliance quality indicator.
 %
@@ -89,9 +95,9 @@ many-objective problems.
 %
 MOMBI-II might be considered as a hybrid indicator-based and domination-based algorithm because it also uses the Pareto dominance concept. 
 %
-In any case, its most important feauture is the use of the $R_2$ indicator. % \cite{Joel:R2_Indicator}.
+In any case, its most important feature is the use of the $R_2$ indicator. % \cite{Joel:R2_Indicator}.
 %
-MOMBI-II has been the indicator-based \MOEA{} selected to validate our proposal.
+MOMBI-II has been selected as the indicator-based \MOEA{} to validate our proposal.
 
 Finally, decomposition-based \MOEAS{}~\cite{Joel:MOEAD_AMS} are based on transforming the \MOP{} into a set of single-objective optimization problems that are tackled simultaneously.
 %
@@ -136,7 +142,7 @@ A different proposal combines the use of two selection operators~\cite{chan2005e
 %
 The first one promotes diversity and quality in the objective space whereas the second one promotes diversity in the decision space.
 %
-Modyfing the hypervolume to integrate the decision space diversity in a single metric was proposed in\cite{ulrich2010integrating}.
+Modifying the hypervolume to integrate the decision space diversity in a single metric was proposed in~\cite{ulrich2010integrating}.
 %
 In such approach, the proposed metric is used to guide the selection in the \MOEA{}.
 %
