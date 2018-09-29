@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.10.30)  13 SEP 2017 19:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.20)  29 SEP 2018 15:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,20 +679,22 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 85.
  [4])
 (./ExperimentalValidation.tex [5]
+Underfull \vbox (badness 5711) has occurred while \output is active []
+
 File: Images/DTLZ4_2obj.eps Graphic file (type eps)
- <Images/DTLZ4_2obj.eps>
+
+<Images/DTLZ4_2obj.eps>
 File: Images/UF5.eps Graphic file (type eps)
  <Images/UF5.eps>
 File: Images/DTLZ4_3obj.eps Graphic file (type eps)
-
-<Images/DTLZ4_3obj.eps>
+ <Images/DTLZ4_3obj.eps>
 File: Images/UF10.eps Graphic file (type eps)
- <Images/UF10.eps>
+
+<Images/UF10.eps>
 File: Surfaces/WFG2.eps Graphic file (type eps)
  <Surfaces/WFG2.eps>
 File: Surfaces/WFG8.eps Graphic file (type eps)
-
-<Surfaces/WFG8.eps>
+ <Surfaces/WFG8.eps>
 File: Surfaces/DTLZ7.eps Graphic file (type eps)
  <Surfaces/DTLZ7.eps>
 Overfull \hbox (30.84283pt too wide) in paragraph at lines 182--187
@@ -702,33 +704,47 @@ Overfull \hbox (30.84283pt too wide) in paragraph at lines 182--187
 ) (./Conclusion.tex [6]) (./chacon-ieeetec-17.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
-
-Underfull \vbox (badness 3536) has occurred while \output is active []
-
- [7]
-[8]
+ [7] [8]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ³ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
  [9])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 741.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 741.
- (./chacon-ieeetec-17.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 741.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 741.
+File: Photo_Authors/segura.eps Graphic file (type eps)
+
+<Photo_Authors/segura.eps>
+File: Photo_Authors/segura.eps Graphic file (type eps)
+ <Photo_Authors/segura.eps>
+File: Photo_Authors/coello.eps Graphic file (type eps)
+
+<Photo_Authors/coello.eps>
+File: Photo_Authors/coello.eps Graphic file (type eps)
+ <Photo_Authors/coello.eps> [10]
+File: Photo_Authors/hernandez.eps Graphic file (type eps)
+
+<Photo_Authors/hernandez.eps>
+File: Photo_Authors/hernandez.eps Graphic file (type eps)
+ <Photo_Authors/hernandez.eps>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 776.
+ [11
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 776.
+
+(./chacon-ieeetec-17.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 776.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 776.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
-(rerunfilecheck)             Checksum: E45BCFB8465954008311B612D2D57AE4;1073.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 741.
+(rerunfilecheck)             Checksum: 2AACC39A086A6AE8C40C421C4DA0DFC5;1091.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 776.
  ) 
 Here is how much of TeX's memory you used:
- 15170 strings out of 493305
- 271371 string characters out of 6139896
- 499607 words of memory out of 5000000
- 18342 multiletter control sequences out of 15000+600000
+ 15178 strings out of 493305
+ 271501 string characters out of 6139897
+ 503409 words of memory out of 5000000
+ 18346 multiletter control sequences out of 15000+600000
  33267 words of font info for 79 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  63i,17n,57p,490b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (10 pages, 174700 bytes).
+Output written on chacon-ieeetec-17.dvi (11 pages, 179484 bytes).
