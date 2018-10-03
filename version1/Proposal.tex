@@ -5,12 +5,15 @@ This principle might be incorporated with any of the three categories of \MOEAS{
 %
 In this paper, our decision was to incorporate it in a dominance-based approach.
 %
-Particularly, our proposal considers the application of the fast-non-dominated-sort approach so it might be considered as an extension
+Particularly, our proposal considers the application of the fast-non-dominated-sort procedure so it might be considered as an extension
 of \NSGAII{}~\cite{Joel:NSGAII}.
 %
-However, in addition to incorporating this modification, since the way of managing the objective space diversity have also been extended in several ways in \NSGAII{},
-Additionally, since the way in which \NSGAII{} preserve the diversity in the objective space  
-a more advanced way to control the diversity in the objective space was incorporated.
+Also, it takes into account a more advanced way to control the diversity in the objective space.
+%
+%
+%this modification, since the way of managing the objective space diversity have also been extended in several ways in \NSGAII{},
+%Additionally, since the way in which \NSGAII{} preserve the diversity in the objective space  
+%a more advanced way to control the diversity in the objective space was incorporated.
 %
 Overall, \VSDMOEA{} is a dominance-based \MOEA{} in which a novel replacement phase is provided,
 i.e. no novel components are incorporated in the parent selection and variation stages.
@@ -28,15 +31,21 @@ i.e. no novel components are incorporated in the parent selection and variation 
 The methodology used in the replacement phase considers some of the principles that were provided in the 
 development of replacement phases for the single-objective domain~\cite{Joel:MULTI_DYNAMIC}.
 %
-In these approaches, in a first stage individuals from the previous generation and offspring are joined.
+%In these approaches, the offspring and parent individuals are joined to conform the parent of the next generation.
+%and offspring individuals are joinethe individuals of the previous generation and offspring are joined to be selected.
+%
+In these approaches, at the begin of each generation the parents and offspring are joined.
 %
 Then, $N$ individuals must be selected to survive.
 %
 In order to take into account the diversity in the decision space, the 
 Distance to Closest Neighbor (\DCN{}) is used.
 %
-In each step, this distance is calculated with respect to those individuals that have already been selected to survive.
+In each step, this normalized distance (Eqn. \ref{eqn:distance}) is calculated with respect to those individuals that have already been selected to survive.
 %
+\begin{equation}\label{eqn:distance}
+Distance(A, B) = \left (\sum_{i=1}^n \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(L)}} \right )^2  \right)^{1/2}
+\end{equation}
 Thus, individuals with large \DCN{} values are those that contribute in a significant way to preserve exploration in different regions of the search space.
 %
 In order to avoid an excessive decrease of the exploration degree, individuals with a \DCN{} value lower than a threshold value are penalized, meaning that
@@ -57,7 +66,7 @@ A too large value might provoke the penalization of the whole set of individuals
 %
 However, too small value might not penalize at all the individuals, meaning that the approach might behave as a traditional non-diversity based approach.
 
-In order to better describe describe the principle of the replacement phase, we denote the individuals in the following way.
+In order to better describe the principle of the replacement phase, we denote the individuals in the following way.
 %
 The \textit{reference individuals} are those that have been selected to survive to the next generation. 
 %
@@ -65,7 +74,7 @@ The remaining ones are classified in \textit{penalized individuals} and \textit{
 %
 A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere}.
 %
-The left part of the figure show the decision space, whereas the right part is devoted to the objective space. 
+The left part of the figure shows the decision space, whereas the right part is devoted to the objective space. 
 %
 The reference individuals are marked with a red border.
 %
@@ -116,7 +125,7 @@ In each step, the candidate individual with lowest rank and, in case of a tie, w
 %
 In each generation, the first step (line 3) is to join the parents ($P_t$) and the offspring ($Q_t$) in $R_t$.
 %
-Then, the set of penalized individuals are the next population are emptied (lines 4 and 5).
+Then, the set of penalized individuals and the next population are emptied (lines 4 and 5).
 %
 Additionally, the radius of the hyperspheres ($D$) is uptated (line 6).
 %
@@ -152,7 +161,7 @@ Then, the fast-non-dominated-sort procedure is executed with such a set, stoppin
 %
 Then, for each candidate individual that belongs to the lowest front, the individual with higher contribution to the diversity in the objective space is selected (line \ref{alg:Diversity_Space}).
 %
-The specific way in which the diversity in the objective space is meassured is described in the next section.
+The specific way in which the diversity in the objective space is measured is described in the next section.
 %
 %Particularly, if several candidates belong to the same front, the individual less crowded wins, similar principle that in the NSGA-II paradigm.
 %
@@ -162,9 +171,9 @@ The specific way in which the diversity in the objective space is meassured is d
 
 Note also that, as part of the diversity calculation of the variable space, a metric should be selected.
 %
-Since our experimental validation is performed with continuous function, the normalized Euclidean distance is used.
+Since our experimental validation is performed with continuous domain, the normalized Euclidean distance is used.
 %
-However in discrete optimization, other distance metrics such as the Manhattan, or the Hamming distance might be considered, and the definition of
+However in discrete domains, other distance metrics such as the Manhattan, or the Hamming distance might be considered, and the definition of
 such distance might affect the performance of the approach~\cite{Segura:17}.
 
 
@@ -213,23 +222,26 @@ such distance might affect the performance of the approach~\cite{Segura:17}.
 Since the dominance definition is not related to the preservation of diversity in the objective space,
 dominance-based \MOEAS{} incorporate special procedures to maintain diverse solutions.
 %
-Several different approaches have been defined such as clustering and/or crowding with several different 
+Several different approaches have been defined, such as clustering and/or crowding with several different 
 variants each of them.
 %
-In this paper, we define a novel distance metric, and then, as previously described a greedy approach
-that selects an individual of the best front with the larger distance is selected.
+In this paper, we define a novel distance metric, and then, as previously described a greedy approach, which selects an individual of the best front and with the largest distance.
 %
 Specifically, the novel distance is called ``Improvement Distance'' (ID) and it 
 follows the same principles that guided the design of the IGD+ indicator~\cite{Joel:Inverted_Generational_Distance_Plus}.
 %
-The key idea is that, a direct Euclidean distance is used, those individuals that have very high values in some
-of the objectives might present very large distances which is not an adequate property.
+The main idea is to prefer those individuals whose quality in all objectives is similarly preserved.
 %
-In fact, improvements in an objective value should be related to larger selection probabilities and not the opposite.
+Particularly, a non-dominated individual can be very distant to the Pareto Front since that such individual could be the best in one objective but meaningly deteriorated in the rest of objectives, so as result it has high diversity in objective space.
+%----
+%The key idea is that, a direct Euclidean distance is used, those individuals that have very high values in some
+%of the objectives might present very large distances which is not an adequate property.
 %
-In order to take this principle into account, when calculating the distance between two individuals
+In fact, high improvements in an objective value are related to larger selection probabilities and not the opposite, thus this behaviour should be avoided.
+%
+%In order to take this principle into account, when calculating the distance between two individuals
 
-The key idea considers the dominance relation between the candidate and reference individual.% when the distance is computed.
+The key idea considers the dominance relation between the candidate and reference individuals. % when the distance is computed.
 %
 %
 Consequently, a reference and a candidate individuals are compared.
@@ -241,7 +253,7 @@ This distance can be viewed as an amount of inferiority of the solution in compa
 %
 The improvement distance is defined in (\ref{eq:ImprovementDistance}) where $R$ and $C$ are the reference and candidate solutions respectively. 
 \begin{equation} \label{eq:ImprovementDistance}
-ID(R, C) = \left (\sum_{i=0}^M \left (max(0, R_i - C_i \right ))^2  \right)^{1/2}
+ID(R, C) = \left (\sum_{i=1}^M \left (max(0, R_i - C_i \right ))^2  \right)^{1/2}
 \end{equation}
 Specifically, this distance is considered as a Weakly Pareto Compliant Indicator.
 %
