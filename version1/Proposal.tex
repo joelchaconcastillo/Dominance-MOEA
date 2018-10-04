@@ -49,18 +49,18 @@ Distance(A, B) = \left (\sum_{i=1}^n \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(
 Thus, individuals with large \DCN{} values are those that contribute in a significant way to preserve exploration in different regions of the search space.
 %
 In order to avoid an excessive decrease of the exploration degree, individuals with a \DCN{} value lower than a threshold value are penalized, meaning that
-they are just selected if no non-penalized individuals exist.
+they are just selected if non-penalized individuals exist.
 %
 In order to better visualize this principle, it can be considered that in each selection of a survivor, a hypersphere centered in such survivor is created.
 %
 Then, all the individuals that are inside a hypersphere are penalized.
 %
 One of the key novelties of the methodology is that the sizes of the hyperspheres are modified dynamically by taking into account the stopping criterion
-and elpased generations.
+and elapsed generations.
 %
 Particularly, the sizes are decreased in a linear way, to alter the behaviour from exploration towards intensification.
 %
-Note that, this method requires a parameter which is the initial radius of the hyperspheres, which in this paper is denoted as $D_I$. 
+Note that, this method requires a parameter which is the initial radius of the hyperspheres and is denoted as $D_I$. 
 %
 A too large value might provoke the penalization of the whole set of individuals, meaning that a non-useful diversity might be maintained in the initial generations.
 %
