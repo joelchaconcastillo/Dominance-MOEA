@@ -1,3 +1,5 @@
+This section is devoted to explain our proposal, whose main contributions rely in the replacement phase procedure and the improvement distance of the objective space.
+%
 \VSDMOEA{} is based on the principle of considering the diversity and stopping criterion in an explicit way, with the aim of altering gradually the optimization
 search capabilities from exploration to exploitation.
 %
@@ -78,14 +80,14 @@ The left part of the figure shows the decision space, whereas the right part is 
 %
 The reference individuals are marked with a red border.
 %
-It can be visualized that surrounding each of them there is a circle with radius D (in dimensions larger than three it would be a hypersphere).
+It can be visualized that a circle with radius $D$ is surrounding each one of them (in a larger dimension it would be a hypersphere).
 %
-Then, any candidate individual that are inside a circle are penalized.
+Then, any candidate individual that is inside of this circle is penalized.
 %
-Penalized individuals are shown in grey in the right part.
+In this figure the penalized individuals are shown in grey in the right part.
 %
-Once that individuals are penalized, any of the typical approaches that are used to select survivors might be taken into account
-by considering that penalized individuals do not exist.
+Once that the individuals are penalized, any of the typical approaches that are used to select survivors might be taken into account without considering the penalized individuals.
+%by considering that the penalized individuals do not exist.
 
 
 \begin{algorithm}[t]
@@ -94,24 +96,23 @@ by considering that penalized individuals do not exist.
 	\caption{Replacement Phase of VSD-MOEA} 
 \begin{algorithmic}[1]
 \STATE Input: $P_t$ (Population of current generation), $Q_t$ (Offspring of current Generation)
-    	\STATE Output: $P_{t+1}$
-        \STATE $R_t = P_t \cup Q_t$
-        \STATE $P_{t+1} = \emptyset$
-        \STATE $Penalized = \emptyset$
-				\STATE $D = D_I - D_I *2* \frac{G_{Elapsed}}{G_{End}}$ \label{DInicial} 			
-		\STATE move( $R_t$,  $P_{t+1}$, Best in any of the objectives) 
-        \label{alg:Extremos}
-        \WHILE{ $|P_t|$ $\leq$ N }
-			\STATE Compute \textbf{Diversity\_Variable\_Space} ($R_t$, $P_{t+1}$) \label{alg:Calculo_Diversidad_Primero}
-		\STATE move($R_t$, Penalized, Variable space diversity $ < $ D)  \label{alg:Calculo_Diversidad_Primero_Move}
-        \IF{$R_t$ is empty}
-				\STATE Compute \textbf{Diversity\_Variable\_Space} ($Penalized$, $P_{t+1}$) \label{alg:Penalized_Diversity}
-				\STATE move(Penalized, $R_t$, Largest variable space diversity) \label{alg:Penalized_Diversity_move}
+    	\STATE Output: $P_{t+1}$ 
+        \STATE $R_t = P_t \cup Q_t$ \label{alg:1}
+        \STATE $P_{t+1} = \emptyset$ \label{alg:2}
+        \STATE $Penalized = \emptyset$ \label{alg:3}
+				\STATE $D = D_I - D_I *2* \frac{G_{Elapsed}}{G_{End}}$ \label{alg:4}
+		\STATE move( $R_t$,  $P_{t+1}$, Best in any of the objectives) \label{alg:5}
+        \WHILE{ $|P_t|$ $\leq$ N } \label{alg:6}
+			\STATE Compute \textbf{Diversity\_Variable\_Space} ($R_t$, $P_{t+1}$) \label{alg:7}
+		\STATE move($R_t$, Penalized, Variable space diversity $ < $ D)  \label{alg:8}
+        \IF{$R_t$ is empty} \label{alg:9}
+				\STATE Compute \textbf{Diversity\_Variable\_Space} ($Penalized$, $P_{t+1}$) \label{alg:10}
+				\STATE move(Penalized, $R_t$, Largest variable space diversity) \label{alg:11}
         \ENDIF
-		\STATE $conditionally-non-dominated-sort(R_t \cup P_{t+1}) $\label{alg:rank}
-		\STATE Compute \textbf{Diversity\_Objective\_Space}($R_t$, $P_{t+1})$) \label{alg:Diversity_Space}
+		\STATE $conditionally-non-dominated-sort(R_t \cup P_{t+1}) $ \label{alg:12}
+		\STATE Compute \textbf{Diversity\_Objective\_Space}($R_t$, $P_{t+1})$) \label{alg:13}
         \ENDWHILE
-    	\RETURN $P_{t+1}$
+    	\RETURN $P_{t+1}$ \label{alg:14}
 	\end{algorithmic}
 \label{alg:Replacement_Phase}
 \end{algorithm}
@@ -123,11 +124,11 @@ Basically, it is the approach previously described integrated with a procedure t
 %
 In each step, the candidate individual with lowest rank and, in case of a tie, with the largest contribution to the diversity in the objective space is selected.
 %
-In each generation, the first step (line 3) is to join the parents ($P_t$) and the offspring ($Q_t$) in $R_t$.
+In each generation, the first step (line \ref{alg:1}) is to join the parents ($P_t$) and the offspring ($Q_t$) in $R_t$.
 %
-Then, the set of penalized individuals and the next population are emptied (lines 4 and 5).
+Then, the set of penalized individuals and the parents of the next generation ($P_{t+1}$) are emptied (lines \ref{alg:2} and \ref{alg:3}).
 %
-Additionally, the radius of the hyperspheres ($D$) is uptated (line 6).
+Additionally, the radius of the hyperspheres ($D$) is uptated (line \ref{alg:4}).
 %
 Note that in the formula applied $D_I$ is the initial size of the hypersphere, $G_{Elapsed}$ is the amount of generations that have been evolved and $G_{End}$
 is the stopping criterion, i.e. the number of generations that are to be evolved in the execution of \VSDMOEA{}.
@@ -139,27 +140,27 @@ in the final stages, a traditional \MOEA{} is applied.
 %
 The reason to induce such behaviour is that, we are not interested in obtaining a diverse set of solutions in the decision space at the end of the run.
 %
-Maintaining a diverse of solutions in the initial stages is just a way to promote exploration and reach a better Pareto front at the end of the execution.
+Maintaining diverse solutions in the initial stages is just a way to promote exploration which results in better approximations to the Pareto front at the end of the execution.
 %
-Finally, the next population is filled with the boundary solutions, i.e. for each objective the best candidate solution is selected to survive (line 9).
+Finally, the next population is filled with the boundary solutions, i.e. for each objective the best candidate solution is selected to survive (line \ref{alg:5}).
 %
-Then, until $N$ individuals are selected (line 8), the following steps are carried out.
+Then, until $N$ individuals are selected (line \ref{alg:6}), the following steps are carried out.
 %
-First, the \DCN{} value of each individual that has not been selected is calculated (line 9).
+First, the \DCN{} value of each individual that has not been selected is calculated (line \ref{alg:7}).
 %
-Then, those individuals with a \DCN{} value lower than $D$ are penalized (line 10).
+Then, those individuals with a \DCN{} value lower than $D$ are penalized (line \ref{alg:8}).
 %
-If all the candidate individuals are penalized (line 11), it means that the amount of exploration is lower than expected.
+If all the candidate individuals are penalized (line \ref{alg:9}), it means that the amount of exploration is lower than expected.
 %
-Thus, the individual with largest \DCN{} values is recovered, i.e. moved to the non-penalized individuals set (line 12).
+Thus, the individual with largest \DCN{} values is recovered, i.e. moved to the non-penalized individuals set (lines \ref{alg:10} and \ref{alg:11}).
 %
 Finally, the objective space is taken into account.
 %
 Specifically, the candidate individuals and the reference set are joined.
 %
-Then, the fast-non-dominated-sort procedure is executed with such a set, stopping as soon as a front with a candidate individual is found (line 14).
+Then, the fast-non-dominated-sort procedure is executed with such a set, stopping as soon as a front with a candidate individual is found (line \ref{alg:12}).
 %
-Then, for each candidate individual that belongs to the lowest front, the individual with higher contribution to the diversity in the objective space is selected (line \ref{alg:Diversity_Space}).
+Then, for each candidate individual that belongs to the lowest front, the individual with higher contribution to the diversity in the objective space is selected (line \ref{alg:13}).
 %
 The specific way in which the diversity in the objective space is measured is described in the next section.
 %
@@ -171,9 +172,9 @@ The specific way in which the diversity in the objective space is measured is de
 
 Note also that, as part of the diversity calculation of the variable space, a metric should be selected.
 %
-Since our experimental validation is performed with continuous domain, the normalized Euclidean distance is used.
+Since our experimental validation is performed with a continuous domain, the normalized Euclidean distance is used.
 %
-However in discrete domains, other distance metrics such as the Manhattan, or the Hamming distance might be considered, and the definition of
+However, in discrete domains other distance metrics such as the Manhattan, or the Hamming distance might be considered, and the definition of
 such distance might affect the performance of the approach~\cite{Segura:17}.
 
 
@@ -244,7 +245,7 @@ In fact, high improvements in an objective value are related to larger selection
 The key idea considers the dominance relation between the candidate and reference individuals. % when the distance is computed.
 %
 %
-Consequently, a reference and a candidate individuals are compared.
+Consequently, a reference and the candidate individuals are compared.
 %
 If the candidate individual is dominated by the reference individual, then the euclidean distance with no modification is implemented.
 %
@@ -263,11 +264,3 @@ This means a very low selection pressure toward the Pareto front in Pareto-domin
 %
 Principally, the improvement distance is effective with over-prioritization  of dominance-resist solutions i.e., solutions with exceptional performance in one objective and extremely poor performance in many others \cite{Joel:Failure_MOEAs}.
 %
-
-
-Through the literature several crossover operators have been proposed in MOEAs~\cite{Joel:ParentMeanCentricSelfAdaptation},  
-a popular operator is the Simulated Binary Crossover (SBX).4\cite{Joel:SBX1994}%, Joel:TAXONOMY_CROSSOVER, Joel:Kalyanmoy}
-%	
-In addition based in diversity-related properties the No-Reflection Dynamic SBX is implemented \cite{Joel:DNR_SBX}, which is considered as a variant of the SBX operator.
-
-
