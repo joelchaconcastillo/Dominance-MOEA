@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.20)  25 NOV 2018 19:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.20)  26 NOV 2018 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,25 +642,25 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 (./chacon-ieeetec-17.aux)
 \openout1 = `chacon-ieeetec-17.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 374.
-LaTeX Font Info:    ... okay on input line 374.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 374.
-LaTeX Font Info:    ... okay on input line 374.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 374.
-LaTeX Font Info:    ... okay on input line 374.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 374.
-LaTeX Font Info:    ... okay on input line 374.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 374.
-LaTeX Font Info:    ... okay on input line 374.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 374.
-LaTeX Font Info:    ... okay on input line 374.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 374.
-LaTeX Font Info:    ... okay on input line 374.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 375.
+LaTeX Font Info:    ... okay on input line 375.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 375.
+LaTeX Font Info:    ... okay on input line 375.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 375.
+LaTeX Font Info:    ... okay on input line 375.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 375.
+LaTeX Font Info:    ... okay on input line 375.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 375.
+LaTeX Font Info:    ... okay on input line 375.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 375.
+LaTeX Font Info:    ... okay on input line 375.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 375.
+LaTeX Font Info:    ... okay on input line 375.
 
 -- Lines per column: 58 (exact).
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring ON on input line 374.
+Package hyperref Info: Link coloring ON on input line 375.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -670,9 +670,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count149
 )
-LaTeX Info: Redefining \ref on input line 374.
-LaTeX Info: Redefining \pageref on input line 374.
-LaTeX Info: Redefining \nameref on input line 374.
+LaTeX Info: Redefining \ref on input line 375.
+LaTeX Info: Redefining \pageref on input line 375.
+LaTeX Info: Redefining \nameref on input line 375.
 
 (./chacon-ieeetec-17.out) (./chacon-ieeetec-17.out)
 \@outlinefile=\write4
@@ -687,7 +687,7 @@ File: Images/Fase_Remplazo_2.eps Graphic file (type eps)
 
 <Images/Fase_Remplazo_2.eps> [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 95.
+put line 98.
  [4]) (./ExperimentalValidation.tex [5]
 [6]
 File: Images/DTLZ4_2obj.eps Graphic file (type eps)
@@ -730,26 +730,26 @@ File: Photo_Authors/coello.eps Graphic file (type eps)
 <Photo_Authors/coello.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
  <Photo_Authors/coello.eps> [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 778.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 779.
  [10
 
 ] [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 778.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 779.
 
 (./chacon-ieeetec-17.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 778.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 778.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 779.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 779.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
 (rerunfilecheck)             Checksum: D179592EFB498B5D17F0C539F20FAB7C;1007.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 778.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 779.
  ) 
 Here is how much of TeX's memory you used:
  15650 strings out of 493305
  279666 string characters out of 6139897
- 502092 words of memory out of 5000000
+ 502219 words of memory out of 5000000
  18812 multiletter control sequences out of 15000+600000
  33267 words of font info for 79 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 63i,17n,57p,490b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,22n,57p,490b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (11 pages, 185804 bytes).
+Output written on chacon-ieeetec-17.dvi (11 pages, 185952 bytes).
