@@ -109,26 +109,17 @@ K.~Deb, A.~Pratap, S.~Agarwal, and T.~Meyarivan, ``{A fast and elitist
   multiobjective genetic algorithm: NSGA-II},'' \emph{IEEE Transactions on
   Evolutionary Computation}, vol.~6, no.~2, pp. 182--197, Apr 2002.
 
-\bibitem{Joel:GDE3}
-S.~Kukkonen and J.~Lampinen, ``{GDE3: the third evolution step of generalized
-  differential evolution},'' in \emph{2005 IEEE Congress on Evolutionary
-  Computation}, vol.~1, Sept 2005, pp. 443--450 Vol.1.
-
 \bibitem{Joel:IBEA}
 S.~S. Bhagavatula, S.~G. Sanjeevi, D.~Kumar, and C.~K. Yadav, ``Multi-objective
   indicator based evolutionary algorithm for portfolio optimization,'' in
   \emph{2014 IEEE International Advance Computing Conference (IACC)}, Feb 2014,
   pp. 1206--1210.
 
-\bibitem{Joel:MOMBI-II}
-\BIBentryALTinterwordspacing
-R.~Hern\'{a}ndez~G\'{o}mez and C.~A. Coello~Coello, ``Improved metaheuristic
-  based on the r2 indicator for many-objective optimization,'' in
-  \emph{Proceedings of the 2015 Annual Conference on Genetic and Evolutionary
-  Computation}, ser. GECCO '15.\hskip 1em plus 0.5em minus 0.4em\relax New
-  York, NY, USA: ACM, 2015, pp. 679--686. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/2739480.2754776}
-\BIBentrySTDinterwordspacing
+\bibitem{trautmann2013r2}
+H.~Trautmann, T.~Wagner, and D.~Brockhoff, ``R2-emoa: Focused multiobjective
+  search using r2-indicator-based selection,'' in \emph{International
+  Conference on Learning and Intelligent Optimization}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer, 2013, pp. 70--74.
 
 \bibitem{Joel:MOEAD_AMS}
 T.~C. Chiang and Y.~P. Lai, ``{MOEA/D-AMS: Improving MOEA/D by an adaptive
@@ -194,6 +185,12 @@ H.~Ishibuchi, H.~Masuda, Y.~Tanigaki, and Y.~Nojima, \emph{Modified Distance
   \url{https://doi.org/10.1007/978-3-319-15892-1_8}
 \BIBentrySTDinterwordspacing
 
+\bibitem{zitzler2003performance}
+E.~Zitzler, L.~Thiele, M.~Laumanns, C.~M. Fonseca, and V.~G. Da~Fonseca,
+  ``Performance assessment of multiobjective optimizers: An analysis and
+  review,'' \emph{IEEE Transactions on evolutionary computation}, vol.~7,
+  no.~2, pp. 117--132, 2003.
+
 \bibitem{Joel:Optimization_Of_Scalarizing_Functions_Through_Evolutionary_MOEAS}
 \BIBentryALTinterwordspacing
 H.~Ishibuchi and Y.~Nojima, \emph{Optimization of Scalarizing Functions Through
@@ -207,25 +204,6 @@ K.~Ikeda, H.~Kita, and S.~Kobayashi, ``Failure of pareto-based moeas: Does
   non-dominated really mean near to optimal?'' in \emph{Evolutionary
   Computation, 2001. Proceedings of the 2001 Congress on}, vol.~2.\hskip 1em
   plus 0.5em minus 0.4em\relax IEEE, 2001, pp. 957--962.
-
-\bibitem{Joel:ParentMeanCentricSelfAdaptation}
-\BIBentryALTinterwordspacing
-H.~Jain and K.~Deb, ``Parent to mean-centric self-adaptation in sbx operator
-  for real-parameter optimization,'' in \emph{Proceedings of the Second
-  International Conference on Swarm, Evolutionary, and Memetic Computing -
-  Volume Part I}, ser. SEMCCO'11.\hskip 1em plus 0.5em minus 0.4em\relax
-  Berlin, Heidelberg: Springer-Verlag, 2011, pp. 299--306. [Online]. Available:
-  \url{http://dx.doi.org/10.1007/978-3-642-27172-4_37}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Joel:SBX1994}
-R.~B. Agrawal, K.~Deb, K.~Deb, and R.~B. Agrawal, ``Simulated binary crossover
-  for continuous search space,'' Tech. Rep., 1994.
-
-\bibitem{Joel:DNR_SBX}
-J.~Chacón, C.~Segura, and A.~Hernández-Aguirre, in \emph{Proceedings of the
-  2017}, ser. COMIA '17 Companion.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
-  2017, p. In Press.
 
 \bibitem{Joel:WFG}
 S.~Huband, L.~Barone, L.~While, and P.~Hingston, \emph{{A Scalable
@@ -245,6 +223,25 @@ Q.~Zhang, A.~Zhou, S.~Zhao, P.~N. Suganthan, W.~Liu, and S.~Tiwari,
   technological University, Singapore, special session on performance
   assessment of multi-objective optimization algorithms, technical report},
   vol. 264, 2008.
+
+\bibitem{Joel:ParentMeanCentricSelfAdaptation}
+\BIBentryALTinterwordspacing
+H.~Jain and K.~Deb, ``Parent to mean-centric self-adaptation in sbx operator
+  for real-parameter optimization,'' in \emph{Proceedings of the Second
+  International Conference on Swarm, Evolutionary, and Memetic Computing -
+  Volume Part I}, ser. SEMCCO'11.\hskip 1em plus 0.5em minus 0.4em\relax
+  Berlin, Heidelberg: Springer-Verlag, 2011, pp. 299--306. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/978-3-642-27172-4_37}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Joel:SBX1994}
+R.~B. Agrawal, K.~Deb, K.~Deb, and R.~B. Agrawal, ``Simulated binary crossover
+  for continuous search space,'' Tech. Rep., 1994.
+
+\bibitem{Joel:DNR_SBX}
+J.~Chacón, C.~Segura, and A.~Hernández-Aguirre, in \emph{Proceedings of the
+  2017}, ser. COMIA '17 Companion.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
+  2017, p. In Press.
 
 \bibitem{Joel:Mutation}
 K.~Deb and M.~Goyal, ``A combined genetic adaptive search (geneas) for

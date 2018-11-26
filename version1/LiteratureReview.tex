@@ -2,7 +2,7 @@ This section is devoted to review some of the most important papers that are clo
 %
 First, some of the most popular ways of managing diversity in \EAS{} are presented.
 %
-Then, the state-of-the-art in \MOEAS{} is summarized.
+Then, a brief explanation related to the state-of-the-art in \MOEAS{} is showed.
 
 \subsection{Diversity Management in Evolutionary Algorithms}
 
@@ -75,7 +75,7 @@ our proposal.
 %
 This section introduces the three types of schemes and some of the most popular approaches belonging to each category.
 %
-At least one \MOEA{} of each category is selected to carry out the validation of \VSDMOEA{}.
+Thus, at least one \MOEA{} of each category is selected to carry out the validation of \VSDMOEA{}.
 
 The dominance-based category includes those schemes where the Pareto dominance relation is used to guide the 
 design of some of its components such as the fitness assignment, parent selection and replacement phase.
@@ -86,8 +86,8 @@ obtaining a proper spread and convergence to the Pareto front.
 %
 The most popular dominance-based \MOEA{} is the Non-Dominated Sorting Genetic Algorithm II (NSGA-II)~\cite{Joel:NSGAII}. 
 %
-Another quite popular proposal that belongs to this category is the Generalized Differential Evolution (\GDEIII{})~\cite{Joel:GDE3}, 
-which integrates a crowding mechanism, and is an extension of the single-objective Differential Evolution.
+%Another quite popular proposal that belongs to this category is the Generalized Differential Evolution (\GDEIII{})~\cite{Joel:GDE3}, 
+%which integrates a crowding mechanism, and is an extension of the single-objective Differential Evolution.
 
 In order to assess the performance of \MOEAS{}, several quality indicators have been devised.
 %
@@ -100,15 +100,21 @@ space is not required.
 %
 Among the different indicators, hypervolume is a widely accepted Pareto-compliance quality indicator.
 %
-The Indicator-Based Evolutionary Algorithm (IBEA)~\cite{Joel:IBEA} was the first method belonging to this category.
+The Indicator-Based Evolutionary Algorithm (\IBEA{})~\cite{Joel:IBEA} was the first method belonging to this category.
 %
-A more recent one is the Many-Objective Genetic Algorithm Based on the R2 Indicator (MOMBI-II)~\cite{Joel:MOMBI-II}, 
-which has reported quite promising performance both with multi-objective and many-objective problems.
+A more recent one is the R2-Indicator-Based Evolutionary Multi-objetive Algorithm (\RMOEA{})~\cite{trautmann2013r2}, 
 %
-MOMBI-II might be considered as a hybrid between indicator-based and dominance-based because it also uses the 
-Pareto dominance. 
 %
-In any case, its most important feature is the use of the $R_2$ indicator. % \cite{Joel:R2_Indicator}.
+which has reported a quite promising performance in multi-objective problems.
+%
+%Thereafter the Many-Objective Genetic Algorithm Based on the R2 Indicator (MOMBI-II)~\cite{Joel:MOMBI-II}.
+%which has reported quite promising performance both with multi-objective and many-objective problems.
+%
+%MOMBI-II might be considered as a hybrid between indicator-based and dominance-based because it also uses the 
+%Pareto dominance. 
+%
+Its most important feature is the use of the R2 indicator, which compute the mean difference in utilites through a set of weight vectors.
+%In any case, its most important feature is the use of the R2 indicator. % \cite{Joel:R2_Indicator}.
 %
 %MOMBI-II has been selected as the indicator-based \MOEA{} to validate our proposal.
 
@@ -180,8 +186,6 @@ obtained Pareto front are not so clear.
 We claim that one of the reasons of this behaviour might be that the diversity in the variable space is considered 
 in the whole optimization process.
 %
-However, in the single objective domain, when the objective is not to identify different optima,
-reducing the importance granted to the diversity in the decision space as the generations progress 
-is really important~\cite{Joel:MULTI_DYNAMIC}.
+However, in a similar way that in the single objective domain, reducing the importance granted to the diversity in the decision space as the generations progress is really important~\cite{Joel:MULTI_DYNAMIC}.
 %
 Currently, no \MOEA{} considers this idea, so this principle has guided the design of our novel \MOEA{}.

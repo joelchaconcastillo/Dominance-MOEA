@@ -1,7 +1,8 @@
-This section is devoted to explain our proposal, whose main contributions rely in the replacement phase procedure and the improvement distance of the objective space.
+This section is devoted to explain our proposal, whose main contributions rely in the replacement phase procedure and the density estimator approach of the objective space.
 %
-\VSDMOEA{} is based on the principle of considering the diversity and stopping criterion in an explicit way, with the aim of altering gradually the optimization
-search capabilities from exploration to exploitation.
+\VSDMOEA{} is based on the principle of considering the diversity and the stopping criterion explicitly.
+%
+Thus, the optimization search capabilities are altered gradually provoking a balance from exploration to explotation.
 %
 This principle might be incorporated with any of the three categories of \MOEAS{}.
 %
@@ -30,7 +31,7 @@ i.e. no novel components are incorporated in the parent selection and variation 
 
 \subsection{Replacement Phase of VSD-MOEA}
 
-The methodology used in the replacement phase considers some of the principles that were provided in the 
+The methodology used in the replacement phase considers several principles that were provided in the 
 development of replacement phases for the single-objective domain~\cite{Joel:MULTI_DYNAMIC}.
 %
 %In these approaches, the offspring and parent individuals are joined to conform the parent of the next generation.
@@ -66,7 +67,7 @@ Note that, this method requires a parameter which is the initial radius of the h
 %
 A too large value might provoke the penalization of the whole set of individuals, meaning that a non-useful diversity might be maintained in the initial generations.
 %
-However, too small value might not penalize at all the individuals, meaning that the approach might behave as a traditional non-diversity based approach.
+However, too small values might not penalize at all the individuals, meaning that the approach might behave as a traditional non-diversity based approach.
 
 In order to better describe the principle of the replacement phase, we denote the individuals in the following way.
 %
@@ -74,9 +75,7 @@ The \textit{reference individuals} are those that have been selected to survive 
 %
 The remaining ones are classified in \textit{penalized individuals} and \textit{candidate individuals}.
 %
-A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere}.
-%
-The left part of the figure shows the decision space, whereas the right part is devoted to the objective space. 
+A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere}, where in the left part is showed the decision space, and in the right side its objective space.
 %
 The reference individuals are marked with a red border.
 %
@@ -100,9 +99,9 @@ Once that the individuals are penalized, any of the typical approaches that are 
         \STATE $R_t = P_t \cup Q_t$ \label{alg:1}
         \STATE $P_{t+1} = \emptyset$ \label{alg:2}
         \STATE $Penalized = \emptyset$ \label{alg:3}
-				\STATE $D = D_I - D_I *2* \frac{G_{Elapsed}}{G_{End}}$ \label{alg:4}
-		\STATE move( $R_t$,  $P_{t+1}$, Best in any of the objectives) \label{alg:5}
-        \WHILE{ $|P_t|$ $\leq$ N } \label{alg:6}
+				\STATE $D = D_I - D_I * \frac{G_{Elapsed}}{0.9*G_{End}}$ \label{alg:4}
+		\STATE move( $R_t$,  $P_{t+1}$, Best in each objective according Equation (\ref{eqn:extremes})) \label{alg:5}
+        \WHILE{ $|P_{t+1}|$ $\leq$ N } \label{alg:6}
 			\STATE Compute \textbf{Diversity\_Variable\_Space} ($R_t$, $P_{t+1}$) \label{alg:7}
 		\STATE move($R_t$, Penalized, Variable space diversity $ < $ D)  \label{alg:8}
         \IF{$R_t$ is empty} \label{alg:9}
@@ -120,7 +119,7 @@ Once that the individuals are penalized, any of the typical approaches that are 
 
 The specific pseudocode of the replacement phase that is used in \VSDMOEA{} is shown in Algorithm~\ref{alg:Replacement_Phase}.
 %
-Basically, it is the approach previously described integrated with a procedure to meassure the contribution of each individual to the objective space.
+Basically, it is the approach previously described which is integrated through a procedure to meassure the contribution of each individual to the objective space.
 %
 In each step, the candidate individual with lowest rank and, in case of a tie, with the largest contribution to the diversity in the objective space is selected.
 %
@@ -130,19 +129,25 @@ Then, the set of penalized individuals and the parents of the next generation ($
 %
 Additionally, the radius of the hyperspheres ($D$) is uptated (line \ref{alg:4}).
 %
-Note that in the formula applied $D_I$ is the initial size of the hypersphere, $G_{Elapsed}$ is the amount of generations that have been evolved and $G_{End}$
+Note that in the formula applied $D_I$ is the initial size of the hypersphere, $G_{Elapsed}$ is the amount of generations that have been evolved, and $G_{End}$
 is the stopping criterion, i.e. the number of generations that are to be evolved in the execution of \VSDMOEA{}.
 %
-It is clear that after half of the generations, the $D$ value is lower than 0, meaning that no penalties are performed.
+It is clear that after the $90\%$ of the generations, the $D$ value is lower than 0, meaning that no penalties are performed.
 %
-This means that in the first half of the generations, more exploration than in traditional \MOEAS{} is induced, whereas 
+This means that in the first $90\%$ of the generations, more exploration than in traditional \MOEAS{} is induced, whereas 
 in the final stages, a traditional \MOEA{} is applied.
 %
-The reason to induce such behaviour is that, we are not interested in obtaining a diverse set of solutions in the decision space at the end of the run.
+The reason to induce such behaviour is that, we are not interested in obtaining a diverse set of solutions in the decision space --if it is not requiered by the problem-- at the end of the run.
 %
 Maintaining diverse solutions in the initial stages is just a way to promote exploration which results in better approximations to the Pareto front at the end of the execution.
 %
-Finally, the next population is filled with the boundary solutions, i.e. for each objective the best candidate solution is selected to survive (line \ref{alg:5}).
+Finally, the next population is filled with the boundary solutions (line \ref{alg:5}), i.e. for each $k$-objective the best candidate solution is selected to survive as is indicated by Equation (\ref{eqn:extremes}) where $\lambda_j = 1$ if $k=m$ and  $\lambda_k = 1 \times 10^5$ if $j \neq k$.
+\begin{equation}\label{eqn:extremes}
+\begin{split}
+ Best_k = &  min_{ \vec{x} \in P} \{max_{j \in \{1, ..., m\} } \{ \lambda_j | f_j( \vec{x} ) | \} \\
+& + 1 \times 10^{-4} \sum_{j=1}^m |f_j( \vec{x} ) | \}  
+\end{split}
+\end{equation}
 %
 Then, until $N$ individuals are selected (line \ref{alg:6}), the following steps are carried out.
 %
@@ -158,7 +163,7 @@ Finally, the objective space is taken into account.
 %
 Specifically, the candidate individuals and the reference set are joined.
 %
-Then, the fast-non-dominated-sort procedure is executed with such a set, stopping as soon as a front with a candidate individual is found (line \ref{alg:12}).
+Then, the \textit{fast-non-dominated-sort} procedure is executed with such a set, stopping as soon as a front with a candidate individual is found (line \ref{alg:12}).
 %
 Then, for each candidate individual that belongs to the lowest front, the individual with higher contribution to the diversity in the objective space is selected (line \ref{alg:13}).
 %
@@ -229,33 +234,45 @@ variants each of them.
 In this paper, we define a novel distance metric, and then, as previously described a greedy approach, which selects an individual of the best front and with the largest distance.
 %
 Specifically, the novel distance is called ``Improvement Distance'' (ID) and it 
-follows the same principles that guided the design of the IGD+ indicator~\cite{Joel:Inverted_Generational_Distance_Plus}.
+follows the same principles that guided the design of the IGD+ and $I_{\epsilon +}$ indicators~\cite{Joel:Inverted_Generational_Distance_Plus}, \cite{Joel:IBEA}, \cite{zitzler2003performance}.
 %
 The main idea is to prefer those individuals whose quality in all objectives is similarly preserved.
 %
-Particularly, a non-dominated individual can be very distant to the Pareto Front since that such individual could be the best in one objective but meaningly deteriorated in the rest of objectives, so as result it has high diversity in objective space.
+Particularly, a non-dominated individual can be very distant to the Pareto Front due that such individual could be the best in one objective but meaningly deteriorated in the rest of objectives, so as result it has high diversity in objective space.
 %----
 %The key idea is that, a direct Euclidean distance is used, those individuals that have very high values in some
 %of the objectives might present very large distances which is not an adequate property.
 %
-In fact, high improvements in an objective value are related to larger selection probabilities and not the opposite, thus this behaviour should be avoided.
+In fact, high improvements in one objective value are related to larger selection probabilities and not the opposite, therefore this behaviour should be avoided.
 %
 %In order to take this principle into account, when calculating the distance between two individuals
 
-The key idea considers the dominance relation between the candidate and reference individuals. % when the distance is computed.
+The key idea takes into account the dominance relation between the candidate and reference individuals. % when the distance is computed.
 %
 %
-Consequently, a reference and the candidate individuals are compared.
+Consequently, the reference and the candidate individuals are compared.
 %
-If the candidate individual is dominated by the reference individual, then the euclidean distance with no modification is implemented.
+If the reference individual is dominated by the candidate individual, then the euclidean distance with no modification is implemented.
 %
-However if they are non-dominated with each other, then is calculated the minimum distance from the reference point to the dominated region by the candidate individual. %
-This distance can be viewed as an amount of inferiority of the solution in comparison with the reference individual.	
+However if they are non-dominated with each other, then is calculated the minimum distance from the reference individual to the dominated region by the candidate individual. %
 %
-The improvement distance is defined in (\ref{eq:ImprovementDistance}) where $R$ and $C$ are the reference and candidate solutions respectively. 
+Additionally, if the candidate individual is dominanted by the reference individual, then is computed the $I_\epsilon$ indicator, that gives the minimum distance by which the candidate individual needs to or can be traslated in each dimension in objective space such that the reference individual is dominated.
+%
+Therefore, this distance can be viewed as an amount of inferiority of the solution in comparison with the reference individual.	
+%
+The improvement distance is defined in Equation (\ref{eq:ImprovementDistance}) which incorporates the $I_\epsilon$ indicador (Equation \ref{eqn:epsilonindicator})  where $R$ and $C$ are the reference and candidate solutions respectively. 
 \begin{equation} \label{eq:ImprovementDistance}
-ID(R, C) = \left (\sum_{i=1}^M \left (max(0, R_i - C_i \right ))^2  \right)^{1/2}
+\begin{split}
+ ID(R, C) = &  \left (\sum_{i=1}^M \left (max(0, R_i - C_i \right ))^2  \right)^{1/2} - I_\epsilon(R,C) \\
+% &I_\epsilon(R,C) = min_{\epsilon} \{ f_i(C) - \epsilon \leq f_i (R) \quad \forall i \in \{1,..,m \} \}
+\end{split}
 \end{equation}
+\begin{equation}\label{eqn:epsilonindicator}
+\begin{split}
+I_\epsilon(R,C) = min_{\epsilon} \{ f_i(C) - \epsilon \leq f_i (R) \} \quad \forall i \in \{1,..,m \}
+\end{split}
+\end{equation}
+
 Specifically, this distance is considered as a Weakly Pareto Compliant Indicator.
 %
 In addition, this metric relaxes some difficulties encountered when the number of objectives is increased, given that the solutions in many objectives are usually non-dominated with each other by using the Pareto dominance relation.
