@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  16 JAN 2019 15:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  17 JAN 2019 17:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -683,26 +683,28 @@ LaTeX Info: Redefining \nameref on input line 375.
 
 
 ]) (./LiteratureReview.tex [2]) (./Proposal.tex
-File: Images/Fase_Remplazo_2.eps Graphic file (type eps)
+(./Diagram.tex)
+Underfull \vbox (badness 1132) has occurred while \output is active []
 
-<Images/Fase_Remplazo_2.eps> [3]
+ [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 98.
- [4]) (./ExperimentalValidation.tex [5]
-[6]
+
+[4]) (./ExperimentalValidation.tex [5] [6]
 File: Images/DTLZ4_2obj.eps Graphic file (type eps)
  <Images/DTLZ4_2obj.eps>
 File: Images/UF5.eps Graphic file (type eps)
- <Images/UF5.eps>
+
+<Images/UF5.eps>
 File: Images/DTLZ4_3obj.eps Graphic file (type eps)
  <Images/DTLZ4_3obj.eps>
 File: Images/UF10.eps Graphic file (type eps)
-
-<Images/UF10.eps>
+ <Images/UF10.eps>
 File: Surfaces/WFG2.eps Graphic file (type eps)
  <Surfaces/WFG2.eps>
 File: Surfaces/WFG8.eps Graphic file (type eps)
- <Surfaces/WFG8.eps>
+
+<Surfaces/WFG8.eps>
 File: Surfaces/DTLZ7.eps Graphic file (type eps)
  <Surfaces/DTLZ7.eps>
 Overfull \hbox (30.84283pt too wide) in paragraph at lines 189--194
@@ -713,27 +715,26 @@ Overfull \hbox (30.84283pt too wide) in paragraph at lines 189--194
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
  [7]
-Underfull \vbox (badness 3536) has occurred while \output is active []
-
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ³ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
+
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
  [8])
 File: Photo_Authors/segura.eps Graphic file (type eps)
 
 <Photo_Authors/segura.eps>
 File: Photo_Authors/segura.eps Graphic file (type eps)
- <Photo_Authors/segura.eps>
+ <Photo_Authors/segura.eps> [9]
 File: Photo_Authors/coello.eps Graphic file (type eps)
 
 <Photo_Authors/coello.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
- <Photo_Authors/coello.eps> [9]
+ <Photo_Authors/coello.eps>
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 779.
- [10
-
-] [11]
+ [10] [11]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 779.
 
 (./chacon-ieeetec-17.aux)
@@ -744,12 +745,12 @@ Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 779.
  ) 
 Here is how much of TeX's memory you used:
- 15650 strings out of 493305
- 279666 string characters out of 6139897
- 501228 words of memory out of 5000000
- 18812 multiletter control sequences out of 15000+600000
+ 15780 strings out of 493305
+ 282251 string characters out of 6139897
+ 504923 words of memory out of 5000000
+ 18940 multiletter control sequences out of 15000+600000
  33267 words of font info for 79 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 63i,22n,57p,490b,587s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,22n,57p,490b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (11 pages, 185960 bytes).
+Output written on chacon-ieeetec-17.dvi (11 pages, 200320 bytes).
