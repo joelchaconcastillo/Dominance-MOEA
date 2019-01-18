@@ -32,7 +32,7 @@ i.e. no novel components are incorporated in the parent selection and variation 
 \subsection{Replacement Phase of VSD-MOEA}
 
 The methodology used in the replacement phase considers several principles that were provided in the 
-development of replacement phases for the single-objective domain~\cite{Joel:MULTI_DYNAMIC}.
+development of replacement phases in the single-objective domain~\cite{Joel:MULTI_DYNAMIC}.
 %
 %In these approaches, the offspring and parent individuals are joined to conform the parent of the next generation.
 %and offspring individuals are joinethe individuals of the previous generation and offspring are joined to be selected.
@@ -51,7 +51,7 @@ Distance(A, B) = \left (\sum_{i=1}^n \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(
 \end{equation}
 Thus, individuals with large \DCN{} values are those that contribute in a significant way to preserve exploration in different regions of the search space.
 %
-In order to avoid an excessive decrease of the exploration degree, individuals with a \DCN{} value lower than a threshold value are penalized, meaning that
+In order to avoid an excessive decrease of the exploration degree, individuals with a \DCN{} value lower than a threshold value are penalized, therefore
 they are just selected if non-penalized individuals exist.
 %
 In order to better visualize this principle, it can be considered that in each selection of a survivor, a hypersphere centered in such survivor is created.
@@ -61,11 +61,11 @@ Then, all the individuals that are inside a hypersphere are penalized.
 One of the key novelties of the methodology is that the sizes of the hyperspheres are modified dynamically by taking into account the stopping criterion
 and elapsed generations.
 %
-Particularly, the sizes are decreased in a linear way, to alter the behaviour from exploration towards intensification.
+Particularly, the sizes are decreased in a linear way, therefore it alters the behaviour from exploration towards intensification.
 %
-Note that, this method requires a parameter which is the initial radius of the hyperspheres and is denoted as $D_I$. 
+Note that, this method requires a parameter which is the initial radius of the hyperspheres which is denoted as $D_I$. 
 %
-A too large value might provoke the penalization of the whole set of individuals, meaning that a non-useful diversity might be maintained in the initial generations.
+Particularly, setting this parameter with a large value might provokes the penalization of the whole set of individuals, thus enough non-useful diversity might be maintained in the initial generations.
 %
 However, too small values might not penalize at all the individuals, meaning that the approach might behave as a traditional non-diversity based approach.
 
@@ -75,18 +75,18 @@ The \textit{reference individuals} are those that have been selected to survive 
 %
 The remaining ones are classified in \textit{penalized individuals} and \textit{candidate individuals}.
 %
-A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere}, where in the left part is showed the decision space, and in the right side its corresponding objective space.
+A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere}, where in the left side is showed the decision space, and in the right side its corresponding objective space.
 %
 The reference individuals are marked with a red border.
 %
 %It can be visualized that a circle with radius $D$ is surrounding each one of them (in a larger dimension it would be a hypersphere).
-It can be visualized that each one of them is surrounded by a circle with radius $D$.
+It can be visualized that each one of them is surrounded by a blue dash circle with radius $D$.
 %
 Following this principle, a larger dimension of this circle would be a hypersphere.
 %
 Then, any candidate individual that is inside of this circle is penalized.
 %
-In this figure the penalized individuals are shown in gray in the right part.
+In this figure the penalized individuals are shown with gray background in the right side.
 %
 Once that the individuals are penalized, any of the typical approaches that are used to select survivors might be taken into account without considering the penalized individuals.
 %by considering that the penalized individuals do not exist.
@@ -103,7 +103,7 @@ Once that the individuals are penalized, any of the typical approaches that are 
         \STATE $P_{t+1} = \emptyset$ \label{alg:2}
         \STATE $Penalized = \emptyset$ \label{alg:3}
 				\STATE $D = D_I - D_I * \frac{G_{Elapsed}}{0.9*G_{End}}$ \label{alg:4}
-		\STATE move( $R_t$,  $P_{t+1}$, Best in each objective according Equation (\ref{eqn:extremes})) \label{alg:5}
+		\STATE move($R_t$,  $P_{t+1}$, Best in each objective according Equation (\ref{eqn:extremes})) \label{alg:5}
         \WHILE{ $|P_{t+1}|$ $\leq$ N } \label{alg:6}
 			\STATE Compute \textbf{Diversity\_Variable\_Space} ($R_t$, $P_{t+1}$) \label{alg:7}
 		\STATE move($R_t$, Penalized, Variable space diversity $ < $ D)  \label{alg:8}
@@ -122,17 +122,19 @@ Once that the individuals are penalized, any of the typical approaches that are 
 
 The specific pseudocode of the replacement phase that is used in \VSDMOEA{} is shown in Algorithm~\ref{alg:Replacement_Phase}.
 %
-Basically, it is the approach previously described which is integrated through a procedure to meassure the contribution of each individual to the objective space.
+Basically, it is the approach previously described, it is integrated through a procedure which qualifies the contribution of each individual in the objective space.
 %
-In each step, the candidate individual with lowest rank and, in case of a tie, with the largest contribution to the diversity in the objective space is selected.
+In each step, the candidate individual with lowest rank is selected.
 %
-In each generation, the first step (line \ref{alg:1}) is to join the parents ($P_t$) and the offspring ($Q_t$) in $R_t$.
+In case of tie is selected the one with the largest contribution to the diversity in the objective space.
 %
-Then, the set of penalized individuals and the parents of the next generation ($P_{t+1}$) are emptied (lines \ref{alg:2} and \ref{alg:3}).
+In each generation, the first step (line \ref{alg:1}) consists in joinning the parents ($P_t$) and the offspring ($Q_t$) individuals denoted by $R_t$.
 %
-Additionally, the radius of the hyperspheres ($D$) is uptated (line \ref{alg:4}).
+Thereafter, the set of penalized individuals and the parents of the next generation ($P_{t+1}$) are emptied (lines \ref{alg:2} and \ref{alg:3}).
 %
-Note that in the formula applied $D_I$ is the initial size of the hypersphere, $G_{Elapsed}$ is the amount of generations that have been evolved, and $G_{End}$
+Additionally, the minimum threshold value or radius ($D$) is uptated (line \ref{alg:4}).
+%
+Note that the symbol $D_I$ denotes the initial radius or minimum threshold value, the amount of generations that have been evolved is indicated with $G_{Elapsed}$, and $G_{End}$
 is the stopping criterion, i.e. the number of generations that are to be evolved in the execution of \VSDMOEA{}.
 %
 It is clear that after the $90\%$ of the generations, the $D$ value is lower than 0, meaning that no penalties are performed.
