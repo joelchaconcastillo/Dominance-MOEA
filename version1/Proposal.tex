@@ -8,7 +8,7 @@ This principle might be incorporated with any of the three categories of \MOEAS{
 %
 In this paper, our decision was to incorporate it in a dominance-based approach.
 %
-Particularly, our proposal considers the application of the fast-non-dominated-sort procedure so it might be considered as an extension
+Particularly, our proposal considers the application of the fast-non-dominated-sort procedure, so it might be considered as an extension
 of \NSGAII{}~\cite{Joel:NSGAII}.
 %
 Also, it takes into account a more advanced way to control the diversity in the objective space.
@@ -51,8 +51,7 @@ Distance(A, B) = \left (\sum_{i=1}^n \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(
 \end{equation}
 Thus, individuals with large \DCN{} values are those that contribute in a significant way to preserve exploration in different regions of the search space.
 %
-In order to avoid an excessive decrease of the exploration degree, individuals with a \DCN{} value lower than a threshold value are penalized, therefore
-they are just selected if non-penalized individuals exist.
+In order to avoid an excessive decrease of the exploration degree, individuals with a \DCN{} value lower than a threshold value are penalized, however they can be selected if non-penalized individual exist.
 %
 In order to better visualize this principle, it can be considered that in each selection of a survivor, a hypersphere centered in such survivor is created.
 %
@@ -67,7 +66,7 @@ Note that, this method requires a parameter which is the initial radius of the h
 %
 Particularly, setting this parameter with a large value might provokes the penalization of the whole set of individuals, thus enough non-useful diversity might be maintained in the initial generations.
 %
-However, too small values might not penalize at all the individuals, meaning that the approach might behave as a traditional non-diversity based approach.
+However, too small values might not penalize to all the individuals, therefore this approach might behave as a traditional non-diversity based approach.
 
 In order to better describe the principle of the replacement phase, we denote the individuals in the following way.
 %
@@ -75,7 +74,7 @@ The \textit{reference individuals} are those that have been selected to survive 
 %
 The remaining ones are classified in \textit{penalized individuals} and \textit{candidate individuals}.
 %
-A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere}, where in the left side is showed the decision space, and in the right side its corresponding objective space.
+A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere}, where the decision and objective space are showed (left and right sides).
 %
 The reference individuals are marked with a red border.
 %
