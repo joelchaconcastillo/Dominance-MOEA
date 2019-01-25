@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.20)  25 JAN 2019 10:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.20)  25 JAN 2019 13:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -642,25 +642,25 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 (./chacon-ieeetec-17.aux)
 \openout1 = `chacon-ieeetec-17.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 375.
-LaTeX Font Info:    ... okay on input line 375.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 375.
-LaTeX Font Info:    ... okay on input line 375.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 375.
-LaTeX Font Info:    ... okay on input line 375.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 375.
-LaTeX Font Info:    ... okay on input line 375.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 375.
-LaTeX Font Info:    ... okay on input line 375.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 375.
-LaTeX Font Info:    ... okay on input line 375.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 375.
-LaTeX Font Info:    ... okay on input line 375.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 376.
+LaTeX Font Info:    ... okay on input line 376.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 376.
+LaTeX Font Info:    ... okay on input line 376.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 376.
+LaTeX Font Info:    ... okay on input line 376.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 376.
+LaTeX Font Info:    ... okay on input line 376.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 376.
+LaTeX Font Info:    ... okay on input line 376.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 376.
+LaTeX Font Info:    ... okay on input line 376.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 376.
+LaTeX Font Info:    ... okay on input line 376.
 
 -- Lines per column: 58 (exact).
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring ON on input line 375.
+Package hyperref Info: Link coloring ON on input line 376.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -670,9 +670,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count149
 )
-LaTeX Info: Redefining \ref on input line 375.
-LaTeX Info: Redefining \pageref on input line 375.
-LaTeX Info: Redefining \nameref on input line 375.
+LaTeX Info: Redefining \ref on input line 376.
+LaTeX Info: Redefining \pageref on input line 376.
+LaTeX Info: Redefining \nameref on input line 376.
 
 (./chacon-ieeetec-17.out) (./chacon-ieeetec-17.out)
 \@outlinefile=\write4
@@ -685,13 +685,9 @@ LaTeX Info: Redefining \nameref on input line 375.
 ]) (./LiteratureReview.tex [2]) (./Proposal.tex
 (./Diagram.tex) [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 98.
-
+put line 100.
+ [4]) (./ExperimentalValidation.tex [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4])
-(./ExperimentalValidation.tex [5]
-Underfull \vbox (badness 3635) has occurred while \output is active []
 
  [6]
 File: Images/DTLZ4_2obj.eps Graphic file (type eps)
@@ -718,6 +714,8 @@ Overfull \hbox (30.84283pt too wide) in paragraph at lines 192--197
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
  [7]
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ³ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -733,24 +731,24 @@ File: Photo_Authors/coello.eps Graphic file (type eps)
 <Photo_Authors/coello.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
  <Photo_Authors/coello.eps>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 779.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 780.
  [10] [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 779.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 780.
 
 (./chacon-ieeetec-17.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 779.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 779.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 780.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 780.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
-(rerunfilecheck)             Checksum: 32B6EF2F7426A1D1716CB92ED05EA85D;1181.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 779.
+(rerunfilecheck)             Checksum: 45B75EA3928B3F460E495EA3AB1E7CB5;1199.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 780.
  ) 
 Here is how much of TeX's memory you used:
- 15785 strings out of 493305
- 282334 string characters out of 6139897
- 503993 words of memory out of 5000000
- 18945 multiletter control sequences out of 15000+600000
- 33267 words of font info for 79 fonts, out of 8000000 for 9000
+ 15787 strings out of 493305
+ 282357 string characters out of 6139897
+ 506046 words of memory out of 5000000
+ 18947 multiletter control sequences out of 15000+600000
+ 33913 words of font info for 80 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  63i,22n,57p,490b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (11 pages, 201464 bytes).
+Output written on chacon-ieeetec-17.dvi (11 pages, 202044 bytes).

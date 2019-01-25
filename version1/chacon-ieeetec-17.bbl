@@ -176,6 +176,11 @@ G.~Rudolph, B.~Naujoks, and M.~Preuss, ``Capabilities of emoa to detect and
   Optimization}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2007, pp.
   36--50.
 
+\bibitem{deb2016optimality}
+K.~Deb and M.~Abouhawwash, ``An optimality theory-based proximity measure for
+  set-based multiobjective optimization,'' \emph{IEEE Transactions on
+  Evolutionary Computation}, vol.~20, no.~4, pp. 515--528, 2016.
+
 \bibitem{Joel:Inverted_Generational_Distance_Plus}
 \BIBentryALTinterwordspacing
 H.~Ishibuchi, H.~Masuda, Y.~Tanigaki, and Y.~Nojima, \emph{Modified Distance

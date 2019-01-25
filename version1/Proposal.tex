@@ -8,7 +8,7 @@ This principle might be incorporated with any of the three categories of \MOEAS{
 %
 In this paper, our decision was to incorporate it in a dominance-based approach.
 %
-Particularly, our proposal considers the application of the \textit{fast-non-dominated-sort} procidure, so it might be considered as an extension
+Particularly, our proposal considers the application of the \textit{fast-non-dominated-sort} procedure, so it might be considered as an extension
 of \NSGAII{}~\cite{Joel:NSGAII}.
 %
 Also, it takes into account a more advanced way to control the diversity in the objective space.
@@ -57,10 +57,10 @@ In order to better visualize this principle, it can be considered that in each s
 %
 Then, all the individuals that are inside a hypersphere are penalized.
 %
-One of the key novelties of the methodology is that the sizes of the hyperspheres are modified dynamically by taking into account the stopping criterion
+One of the key novelties of the methodology is that the radius of the hyperspheres are modified dynamically by taking into account the stopping criterion
 and elapsed generations.
 %
-Particularly, the sizes are decreased in a linear way, therefore it alters the behaviour from exploration towards intensification.
+Particularly, the radius is decreased in a linear way, therefore it alters the behaviour from exploration towards intensification.
 %
 Note that, this method requires a parameter which is the initial radius of the hyperspheres which is denoted as $D_I$. 
 %
@@ -68,6 +68,8 @@ Note that, this method requires a parameter which is the initial radius of the h
 Particularly, setting this parameter with a large value might provokes the penalization of the whole set of individuals, thus enough non-useful diversity might be maintained in the initial generations.
 %
 However, too small values might not penalize to all the individuals, therefore this approach might behave as a traditional non-diversity based approach.
+%
+Thus, this parameter depends of each \MOP.
 
 In order to better describe the principle of the replacement phase, we denote the individuals in the following way.
 %
@@ -80,7 +82,7 @@ A representation of this scheme can be visualized in Fig.~\ref{fig:Hypersphere},
 The reference individuals are marked with a red border.
 %
 %It can be visualized that a circle with radius $D$ is surrounding each one of them (in a larger dimension it would be a hypersphere).
-It can be visualized that each one of them is surrounded by a blue dash circle with radius $D$.
+It can be visualized that each one of them is surrounded by a blue dash circle with radius $D_t$.
 %
 Following this principle, a larger dimension of this circle would be a hypersphere.
 %
@@ -102,11 +104,11 @@ Once that the individuals are penalized, any of the typical approaches that are 
         \STATE $R_t = P_t \cup Q_t$ \label{alg:1}
         \STATE $P_{t+1} = \emptyset$ \label{alg:2}
         \STATE $Penalized = \emptyset$ \label{alg:3}
-				\STATE $D = D_I - D_I * \frac{G_{Elapsed}}{0.9*G_{End}}$ \label{alg:4}
-		\STATE move($R_t$,  $P_{t+1}$, Best in each objective according Equation (\ref{eqn:extremes})) \label{alg:5}
+				\STATE $D_t = D_I - D_I * \frac{G_{Elapsed}}{0.9*G_{End}}$ \label{alg:4}
+		\STATE move($R_t$,  $P_{t+1}$, Best in each objective according the \AASF{}) \label{alg:5}
         \WHILE{ $|P_{t+1}|$ $\leq$ N } \label{alg:6}
 			\STATE Compute \textbf{Diversity\_Variable\_Space} ($R_t$, $P_{t+1}$) \label{alg:7}
-		\STATE move($R_t$, Penalized, Variable space diversity $ < $ D)  \label{alg:8}
+		\STATE move($R_t$, Penalized, Variable space diversity $ < $ $D_t$)  \label{alg:8}
         \IF{$R_t$ is empty} \label{alg:9}
 				\STATE Compute \textbf{Diversity\_Variable\_Space} ($Penalized$, $P_{t+1}$) \label{alg:10}
 				\STATE move(Penalized, $R_t$, Largest variable space diversity) \label{alg:11}
@@ -122,7 +124,7 @@ Once that the individuals are penalized, any of the typical approaches that are 
 
 The specific pseudocode of the replacement phase that is used in \VSDMOEA{} is shown in Algorithm~\ref{alg:Replacement_Phase}.
 %
-Basically, it is the approach previously described, it is integrated through a procedure which qualifies the contribution of each individual in the objective space.
+Basically, it is the approach previously described, it is integrated with a sophisticated density estimator, which qualifies the contribution of each individual in the objective space.
 %
 In each step, the candidate individual with lowest rank is selected.
 %
@@ -132,12 +134,12 @@ In each generation, the first step (line \ref{alg:1}) consists in joinning the p
 %
 Thereafter, the set of penalized individuals and the parents of the next generation ($P_{t+1}$) are emptied (lines \ref{alg:2} and \ref{alg:3}).
 %
-Additionally, the minimum threshold value or radius ($D$) is uptated (line \ref{alg:4}).
+Additionally, the minimum threshold value or radius ($D_t$) is uptated (line \ref{alg:4}).
 %
 Note that the symbol $D_I$ denotes the initial radius or minimum threshold value, the amount of generations that have been evolved is indicated with $G_{Elapsed}$, and $G_{End}$
 is the stopping criterion, i.e. the number of generations that are to be evolved in the execution of \VSDMOEA{}.
 %
-It is clear that after the $90\%$ of the generations, the $D$ value is lower than 0, meaning that no penalties are performed.
+It is clear that after the $90\%$ of the generations, the $D_t$ value is lower than 0, meaning that no penalties are performed.n
 %
 This means that in the first $90\%$ of the generations, more exploration than in traditional \MOEAS{} is induced, whereas 
 in the final stages, a traditional \MOEA{} is applied.
@@ -145,20 +147,22 @@ in the final stages, a traditional \MOEA{} is applied.
 The reason to induce such behaviour is that, we are not interested in obtaining a diverse set of solutions in the decision space --if it is not requiered by the problem-- at the end of the run.
 %
 Maintaining diverse solutions in the initial stages is just a way to promote exploration which results in better approximations to the Pareto front at the end of the execution.
-%
-Finally, the next population is filled with the boundary solutions (line \ref{alg:5}), i.e. for each $k$-objective the best candidate solution is selected to survive as is indicated by Equation (\ref{eqn:extremes}) where $\lambda_j = 1$ if $k=j$ and  $\lambda_j = 1 \times 10^5$ if $j \neq k$.
-\begin{equation}\label{eqn:extremes}
-\begin{split}
- Best_{k \in \{1,..,m\}} = &  min_{ \vec{x} \in P} \{max_{j \in \{1, ..., m\} } \{ \lambda_j | f_j( \vec{x} ) | \} \\
-& + 1 \times 10^{-4} \sum_{j=1}^m |f_j( \vec{x} ) | \}  
-\end{split}
-\end{equation}
+%deb2016optimality
+Finally, the next population is filled with the boundary solutions (line \ref{alg:5}), i.e. for each $k$-objective the best candidate solution is selected to survive is indicated by the \textit{Augmented Achievement Scalarizing Function} (\AASF{}) \cite{deb2016optimality}.
+
+%as is indicated by Equation (\ref{eqn:extremes}) where $\lambda_j = 1$ if $k=j$ and  $\lambda_j = 1 \times 10^5$ if $j \neq k$.
+%\begin{equation}\label{eqn:extremes}
+%\begin{split}
+% Best_{k \in \{1,..,m\}} = &  min_{ \vec{x} \in P} \{max_{j \in \{1, ..., m\} } \{ \lambda_j | f_j( \vec{x} ) | \} \\
+%& + 1 \times 10^{-4} \sum_{j=1}^m |f_j( \vec{x} ) | \}  
+%\end{split}
+%\end{equation}
 %
 Then, until $N$ individuals are selected (line \ref{alg:6}), the following steps are carried out.
 %
 First, the \DCN{} value of each individual that has not been selected is calculated (line \ref{alg:7}).
 %
-Then, those individuals with a \DCN{} value lower than $D$ are penalized (line \ref{alg:8}).
+Then, those individuals with a \DCN{} value lower than $D_t$ are penalized (line \ref{alg:8}).
 %
 If all the candidate individuals are penalized (line \ref{alg:9}), it means that the amount of exploration is lower than expected.
 %
@@ -227,19 +231,15 @@ such distance might affect the performance of the approach~\cite{Segura:17}.
 %
 %Additionally, the algorithm empirically is enough stable, given that different values of $k$ does not provide drastically differences in the solutions.
 
-
-\subsection{Improvement distance in objective space}
+\subsection{A Sophisticated Density Estimator for the Objective Space}
 
 Since the dominance definition is not related to the preservation of diversity in the objective space,
-dominance-based \MOEAS{} incorporate special procedures to maintain diverse solutions.
+dominance-based \MOEAS{} incorporate special procedures to maintain diverse solutions, such as clustering and/or crowding.
 %
-Several different approaches have been defined, such as clustering and/or crowding with several different 
-variants each of them.
-%
-In this paper, we define a novel distance metric, and then, as previously described a greedy approach, which selects an individual of the best front and with the largest distance.
+In this paper, we define a novel distance metric, and an iteratvely heristic selection approach, which selects an individual of the best front and with the largest defined distance.
 %
 Specifically, the novel distance is called ``Improvement Distance'' (ID) and it 
-follows the same principles that guided the design of the IGD+ and $I_{\epsilon +}$ indicators~\cite{Joel:Inverted_Generational_Distance_Plus}, \cite{Joel:IBEA}, \cite{zitzler2003performance}.
+follows the same principles that guided the design of both indicators the IGD+ and $I_{\epsilon +}$~\cite{Joel:Inverted_Generational_Distance_Plus}, \cite{Joel:IBEA}, \cite{zitzler2003performance}.
 %
 The main idea is to prefer those individuals whose quality in all objectives is similarly preserved.
 %
@@ -290,3 +290,9 @@ This means a very low selection pressure toward the Pareto front in Pareto-domin
 %
 Principally, the improvement distance is effective with over-prioritization  of dominance-resist solutions i.e., solutions with exceptional performance in one objective and extremely poor performance in many others \cite{Joel:Failure_MOEAs}.
 %
+
+Given that the design of this MOEA is considered for long-term executions, the algorithm \ref{alg:Replacement_Phase} is implemented effciently.
+%
+Thus, the distances are pre-computed and are updated in each iteration, the same for the dominance count information that is used in the \textit{conditionally-non-dominated-sort}.
+%
+In fact, the worst case complexity of this algorithm is $O((3 N)^2 \times n)$, since that the dimension of the decision variable space is usually bigger than the number of objectives. 
