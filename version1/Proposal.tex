@@ -1,4 +1,4 @@
-This section is devoted to explain our proposal, whose main contributions rely in the replacement phase procedure and the density estimator approach of the objective space.
+This section is devoted to explain our proposal, whose main contributions rely in the replacement phase procedure and the density estimator, the latter is considered in the objective space.
 %
 \VSDMOEA{} is based on the principle of considering the diversity and the stopping criterion explicitly.
 %
@@ -8,7 +8,7 @@ This principle might be incorporated with any of the three categories of \MOEAS{
 %
 In this paper, our decision was to incorporate it in a dominance-based approach.
 %
-Particularly, our proposal considers the application of the fast-non-dominated-sort procedure, so it might be considered as an extension
+Particularly, our proposal considers the application of the \textit{fast-non-dominated-sort} procidure, so it might be considered as an extension
 of \NSGAII{}~\cite{Joel:NSGAII}.
 %
 Also, it takes into account a more advanced way to control the diversity in the objective space.
@@ -64,6 +64,7 @@ Particularly, the sizes are decreased in a linear way, therefore it alters the b
 %
 Note that, this method requires a parameter which is the initial radius of the hyperspheres which is denoted as $D_I$. 
 %
+%The larger this parameter is, the larger amount of penalized individual is.
 Particularly, setting this parameter with a large value might provokes the penalization of the whole set of individuals, thus enough non-useful diversity might be maintained in the initial generations.
 %
 However, too small values might not penalize to all the individuals, therefore this approach might behave as a traditional non-diversity based approach.
