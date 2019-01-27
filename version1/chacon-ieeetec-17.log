@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.20)  25 JAN 2019 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2019.1.26)  26 JAN 2019 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **chacon-ieeetec-17.tex
 (./chacon-ieeetec-17.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (./IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
@@ -118,40 +118,40 @@ Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box28
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+Package: amsmath 2016/03/10 v2.15b AMS math features
 \@mathmargin=\skip44
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
+Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
 \ex@=\dimen126
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen127
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count94
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count95
 \leftroot@=\count96
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count97
 \DOTSCASE@=\count98
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box29
 \strutbox@=\box30
 \big@size=\dimen128
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \macc@depth=\count99
 \c@MaxMatrixCols=\count100
 \dotsspace@=\muskip10
@@ -172,88 +172,45 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \multlinegap=\skip45
 \multlinetaggap=\skip46
 \mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks20
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2016/05/09 v1.0r Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/01/02 v1.10 sample graphics configuration
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: dvips.def on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+File: dvips.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
 ))
 \Gin@req@height=\dimen135
 \Gin@req@width=\dimen136
 )
-(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2016/01/06 v1.13 Data Visualization (1.13)
 
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count106
-\float@exts=\toks21
-\float@box=\box31
-\@float@everytoks=\toks22
-\@floatcapt=\box32
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\@float@every@algorithm=\toks23
-\c@algorithm=\count107
-)
-(/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
-Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
-Package: todonotes 2012/07/25
-
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
-\XKV@depth=\count108
-File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
-))
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: dvips.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-)
 (/usr/share/texmf/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks26
+\pgfutil@everybye=\toks21
 )
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box33
+\pgfutil@abb=\box31
 
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
@@ -269,11 +226,11 @@ Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks27
-\pgfkeys@temptoks=\toks28
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
 
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks29
+\pgfkeys@tmptoks=\toks24
 ))
 \pgf@x=\dimen137
 \pgf@y=\dimen138
@@ -285,10 +242,10 @@ Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 \pgf@yc=\dimen144
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count109
-\c@pgf@countb=\count110
-\c@pgf@countc=\count111
-\c@pgf@countd=\count112
+\c@pgf@counta=\count106
+\c@pgf@countb=\count107
+\c@pgf@countc=\count108
+\c@pgf@countd=\count109
 
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
@@ -300,16 +257,32 @@ File: pgfsys-dvips.def 2008/04/03  (rcs-revision 1.20)
 
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsys-common-postscript.def
 File: pgfsys-common-postscript.def 2008/10/01  (rcs-revision 1.22)
-\pgf@objectcount=\count113
+\pgf@objectcount=\count110
 )))
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
-\pgfsyssoftpath@smallbuffer@items=\count114
-\pgfsyssoftpath@bigbuffer@items=\count115
+\pgfsyssoftpath@smallbuffer@items=\count111
+\pgfsyssoftpath@bigbuffer@items=\count112
 )
 (/usr/share/texmf/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 ))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: dvips.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 
@@ -318,11 +291,11 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen145
-\pgfmath@count=\count116
-\pgfmath@box=\box34
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@count=\count113
+\pgfmath@box=\box32
+\pgfmath@toks=\toks25
+\pgfmath@stack@operand=\toks26
+\pgfmath@stack@operation=\toks27
 )
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
@@ -333,7 +306,7 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)))
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count117
+\c@pgfmathroundto@lastzeros=\count114
 ))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
@@ -364,10 +337,10 @@ File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
-\pgfpic=\box35
-\pgf@hbox=\box36
-\pgf@layerbox@main=\box37
-\pgf@picture@serial@count=\count118
+\pgfpic=\box33
+\pgf@hbox=\box34
+\pgf@layerbox@main=\box35
+\pgf@picture@serial@count=\count115
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
@@ -394,14 +367,14 @@ File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
 \pgf@max=\dimen168
-\pgf@sys@shading@range@num=\count119
+\pgf@sys@shading@range@num=\count116
 )
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
-\pgfexternal@startupbox=\box38
+\pgfexternal@startupbox=\box36
 ))
 (/usr/share/texmf/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
@@ -414,7 +387,7 @@ File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
-\pgfnodeparttextbox=\box39
+\pgfnodeparttextbox=\box37
 )
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
@@ -434,15 +407,15 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
 \pgffor@iter=\dimen171
 \pgffor@skip=\dimen172
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@stack=\toks28
+\pgffor@toks=\toks29
 ))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
-\pgf@plot@mark@count=\count120
+\pgf@plot@mark@count=\count117
 \pgfplotmarksize=\dimen173
 )
 \tikz@lastx=\dimen174
@@ -451,162 +424,341 @@ File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \tikz@lastysaved=\dimen177
 \tikzleveldistance=\dimen178
 \tikzsiblingdistance=\dimen179
-\tikz@figbox=\box40
-\tikz@tempbox=\box41
-\tikztreelevel=\count121
-\tikznumberofchildren=\count122
-\tikznumberofcurrentchild=\count123
-\tikz@fig@count=\count124
+\tikz@figbox=\box38
+\tikz@tempbox=\box39
+\tikztreelevel=\count118
+\tikznumberofchildren=\count119
+\tikznumberofcurrentchild=\count120
+\tikz@fig@count=\count121
 
 (/usr/share/texmf/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
-\pgfmatrixcurrentrow=\count125
-\pgfmatrixcurrentcolumn=\count126
-\pgf@matrix@numberofcolumns=\count127
+\pgfmatrixcurrentrow=\count122
+\pgfmatrixcurrentcolumn=\count123
+\pgf@matrix@numberofcolumns=\count124
 )
-\tikz@expandcount=\count128
+\tikz@expandcount=\count125
 
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks30
+\t@pgfplots@tokb=\toks31
+\t@pgfplots@tokc=\toks32
+\pgfplots@tmpa=\dimen180
+\c@pgfplots@coordindex=\count126
+\c@pgfplots@scanlineindex=\count127
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+Package pgfplots: loading complementary code for your PGF version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_misc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks33
+\pgfkeys@temptoks=\toks34
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks35
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count128
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2012/09/11 v2.10 (rcs-revision 1.17)
+\pgf@plot@mark@count=\count129
+\pgfplotmarksize=\dimen181
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgflibraryfpu.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2012/11/30  (rcs-revision 1.38)
+\pgfpic=\box40
+\pgf@hbox=\box41
+\pgf@layerbox@main=\box42
+\pgf@picture@serial@count=\count130
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2012/11/07  (rcs-revision 1.5)
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks36
+\t@pgf@tokb=\toks37
+\t@pgf@tokc=\toks38
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_trig_format.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count131
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count132
+\t@pgfplotstable@a=\toks39
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count133
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-dvips.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.code.tex
+(/usr/share/texmf/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen182
+\pgfdecoratedremainingdistance=\dimen183
+\pgfdecoratedinputsegmentcompleteddistance=\dimen184
+\pgfdecoratedinputsegmentremainingdistance=\dimen185
+\pgf@decorate@distancetomove=\dimen186
+\pgf@decorate@repeatstate=\count134
+\pgfdecorationsegmentamplitude=\dimen187
+\pgfdecorationsegmentlength=\dimen188
+)
+\tikz@lib@dec@box=\box43
+)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathmorphing.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.p
+athmorphing.code.tex))
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecor
+ations.pathreplacing.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.p
+athreplacing.code.tex))
+\pgfplots@numplots=\count135
+\pgfplots@xmin@reg=\dimen189
+\pgfplots@xmax@reg=\dimen190
+\pgfplots@ymin@reg=\dimen191
+\pgfplots@ymax@reg=\dimen192
+\pgfplots@zmin@reg=\dimen193
+\pgfplots@zmax@reg=\dimen194
+)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotm
+arks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
+
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2010/10/15 v2.10 (rcs-revision 1.12)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count136
+\float@exts=\toks40
+\float@box=\box44
+\@float@everytoks=\toks41
+\@floatcapt=\box45
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks42
+\c@algorithm=\count137
+)
+(/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
+)
+\XKV@depth=\count138
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryposit
 ioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count129
-\calc@Bcount=\count130
-\calc@Adimen=\dimen180
-\calc@Bdimen=\dimen181
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count139
+\calc@Bcount=\count140
+\calc@Adimen=\dimen195
+\calc@Bdimen=\dimen196
 \calc@Askip=\skip47
 \calc@Bskip=\skip48
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count131
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count141
 \calc@Cskip=\skip49
 )
-\c@@todonotes@numberoftodonotes=\count132
+\c@@todonotes@numberoftodonotes=\count142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+Package: hyperref 2016/05/05 v6.83n Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/10 v0.21 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode is ignored in DVI mode.
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+Package: atbegshi 2016/05/16 v1.17 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen182
-\Hy@linkcounter=\count133
-\Hy@pagecounter=\count134
+\@linkdim=\dimen197
+\Hy@linkcounter=\count143
+\Hy@pagecounter=\count144
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count135
+\Hy@SavedSpaceFactor=\count145
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
-Package hyperref Info: Hyper figures OFF on input line 4443.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4322.
+Package hyperref Info: Hyper figures OFF on input line 4446.
+Package hyperref Info: Link nesting OFF on input line 4451.
+Package hyperref Info: Hyper index ON on input line 4454.
+Package hyperref Info: Plain pages OFF on input line 4461.
+Package hyperref Info: Backreferencing OFF on input line 4466.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count136
+Package hyperref Info: Bookmarks ON on input line 4691.
+\c@Hy@tempcnt=\count146
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen183
-\Fld@menulength=\count137
-\Field@Width=\dimen184
-\Fld@charsize=\dimen185
-Package hyperref Info: Hyper figures OFF on input line 6295.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing OFF on input line 6310.
-Package hyperref Info: Link coloring ON on input line 6313.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count138
-\c@Item=\count139
-\c@Hfootnote=\count140
+LaTeX Info: Redefining \url on input line 5044.
+\XeTeXLinkMargin=\dimen198
+\Fld@menulength=\count147
+\Field@Width=\dimen199
+\Fld@charsize=\dimen256
+Package hyperref Info: Hyper figures OFF on input line 6298.
+Package hyperref Info: Link nesting OFF on input line 6303.
+Package hyperref Info: Hyper index ON on input line 6306.
+Package hyperref Info: backreferencing OFF on input line 6313.
+Package hyperref Info: Link coloring ON on input line 6316.
+Package hyperref Info: Link coloring with OCG OFF on input line 6323.
+Package hyperref Info: PDF/A mode OFF on input line 6328.
+LaTeX Info: Redefining \ref on input line 6368.
+LaTeX Info: Redefining \pageref on input line 6372.
+\Hy@abspage=\count148
+\c@Item=\count149
+\c@Hfootnote=\count150
 )
 
 Package hyperref Message: Driver (default): hdvips.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hdvips.def
-File: hdvips.def 2012/11/06 v6.83m Hyperref driver for dvips
+File: hdvips.def 2016/05/05 v6.83n Hyperref driver for dvips
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
-File: pdfmark.def 2012/11/06 v6.83m Hyperref definitions for pdfmark specials
-\pdf@docset=\toks35
-\pdf@box=\box42
-\pdf@toks=\toks36
-\pdf@defaulttoks=\toks37
-\HyField@AnnotCount=\count141
-\Fld@listcount=\count142
-\c@bookmark@seq@number=\count143
+File: pdfmark.def 2016/05/05 v6.83n Hyperref definitions for pdfmark specials
+\pdf@docset=\toks45
+\pdf@box=\box46
+\pdf@toks=\toks46
+\pdf@defaulttoks=\toks47
+\HyField@AnnotCount=\count151
+\Fld@listcount=\count152
+\c@bookmark@seq@number=\count153
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
@@ -614,141 +766,660 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count144
-\c@ALC@line=\count145
-\c@ALC@rem=\count146
-\c@ALC@depth=\count147
+\c@ALC@unique=\count154
+\c@ALC@line=\count155
+\c@ALC@rem=\count156
+\c@ALC@depth=\count157
 \ALC@tlm=\skip51
 \algorithmicindent=\skip52
 )
-(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
-Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2015/11/12 v1.18 mathematical typesetting tools
 
-(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count148
-\l_MT_multwidth_dim=\dimen186
+\g_MT_multlinerow_int=\count158
+\l_MT_multwidth_dim=\dimen257
 \origjot=\skip53
-\l_MT_shortvdotswithinadjustabove_dim=\dimen187
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen188
-\l_MT_above_intertext_sep=\dimen189
-\l_MT_below_intertext_sep=\dimen190
-\l_MT_above_shortintertext_sep=\dimen191
-\l_MT_below_shortintertext_sep=\dimen192
+\l_MT_shortvdotswithinadjustabove_dim=\dimen258
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen259
+\l_MT_above_intertext_sep=\dimen260
+\l_MT_below_intertext_sep=\dimen261
+\l_MT_above_shortintertext_sep=\dimen262
+\l_MT_below_shortintertext_sep=\dimen263
 )
-(./chacon-ieeetec-17.aux)
+(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryinter
+sections.code.tex
+(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
+\pgf@intersect@solutions=\count159
+))
+
+LaTeX Warning: File `Scalability_DTLZ4_2obj.dat' already exists on the system.
+               Not generating it from this source.
+
+
+LaTeX Warning: File `Scalability_UF4_2obj.dat' already exists on the system.
+               Not generating it from this source.
+
+
+LaTeX Warning: File `Scalability_DTLZ4_3obj.dat' already exists on the system.
+               Not generating it from this source.
+
+
+LaTeX Warning: File `Scalability_UF10.dat' already exists on the system.
+               Not generating it from this source.
+
+
+LaTeX Warning: File `InitialDistanceFactorHV.dat' already exists on the system.
+
+               Not generating it from this source.
+
+
+LaTeX Warning: File `InitialDistanceFactorIGD.dat' already exists on the system
+.
+               Not generating it from this source.
+
+
+LaTeX Warning: File `Diversity_all.dat' already exists on the system.
+               Not generating it from this source.
+
+No file chacon-ieeetec-17.aux.
 \openout1 = `chacon-ieeetec-17.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 376.
-LaTeX Font Info:    ... okay on input line 376.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 465.
+LaTeX Font Info:    ... okay on input line 465.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 465.
+LaTeX Font Info:    ... okay on input line 465.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 465.
+LaTeX Font Info:    ... okay on input line 465.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 465.
+LaTeX Font Info:    ... okay on input line 465.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 465.
+LaTeX Font Info:    ... okay on input line 465.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 465.
+LaTeX Font Info:    ... okay on input line 465.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 465.
+LaTeX Font Info:    ... okay on input line 465.
 -- Lines per column: 58 (exact).
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box43
-Package hyperref Info: Link coloring ON on input line 376.
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.13} (current compat level: 1.3).
 
+\AtBeginShipoutBox=\box47
+Package hyperref Info: Link coloring ON on input line 465.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count160
 )
-LaTeX Info: Redefining \ref on input line 376.
-LaTeX Info: Redefining \pageref on input line 376.
-LaTeX Info: Redefining \nameref on input line 376.
+LaTeX Info: Redefining \ref on input line 465.
+LaTeX Info: Redefining \pageref on input line 465.
+LaTeX Info: Redefining \nameref on input line 465.
 
 (./chacon-ieeetec-17.out) (./chacon-ieeetec-17.out)
 \@outlinefile=\write4
 \openout4 = `chacon-ieeetec-17.out'.
 
- (./Abstract.tex)
-(./Introduction.tex [1
 
 
-]) (./LiteratureReview.tex [2]) (./Proposal.tex
-(./Diagram.tex) [3]
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+(./Abstract.tex) (./Introduction.tex
+
+LaTeX Warning: Citation `Joel:Kalyanmoy' on page 1 undefined on input line 4.
+
+
+LaTeX Warning: Citation `Joel:BALANCE_DIVERSITY' on page 1 undefined on input l
+ine 40.
+
+
+LaTeX Warning: Citation `Joel:FUZZY_ADAPTIVE_GA' on page 1 undefined on input l
+ine 43.
+
+
+LaTeX Warning: Citation `Joel:CROSSOVER_DIVERSITY' on page 1 undefined on input
+ line 43.
+
+
+LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 1 undefined on input line 
+43.
+
+
+LaTeX Warning: Citation `Joel:SAWTOOTH' on page 1 undefined on input line 44.
+
+
+LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 1 undefined on input line 
+58.
+
+
+LaTeX Warning: Citation `Segura:17' on page 1 undefined on input line 65.
+
+
+LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 1 undefined on input line 
+66.
+
+
+LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 1 undefined on input line 78.
+
+
+
+LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 1 undefined on input line 88.
+
+
+[1
+
+
+]
+
+LaTeX Warning: Citation `Joel:MOEA_APPLICATIONS_BOOK_KCTAN' on page 2 undefined
+ on input line 109.
+
+
+LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 130.
+
+
+LaTeX Warning: Reference `Sec:LiteratureReview' on page 2 undefined on input li
+ne 134.
+
+
+LaTeX Warning: Reference `Sec:Proposal' on page 2 undefined on input line 137.
+
+
+LaTeX Warning: Reference `Sec:ExperimentalValidation' on page 2 undefined on in
+put line 139.
+
+
+LaTeX Warning: Reference `Sec:Conclusion' on page 2 undefined on input line 141
+.
+
+) (./LiteratureReview.tex
+
+LaTeX Warning: Citation `Mohan:14' on page 2 undefined on input line 13.
+
+
+LaTeX Warning: Citation `Joel:Crepinsek' on page 2 undefined on input line 18.
+
+
+LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 29.
+
+
+LaTeX Warning: Citation `Mengshoel:14' on page 2 undefined on input line 35.
+
+
+LaTeX Warning: Citation `Vidal:13' on page 2 undefined on input line 41.
+
+
+LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 46.
+
+
+LaTeX Warning: Citation `Joel:BOOK_MOEAs' on page 2 undefined on input line 69.
+
+
+
+LaTeX Warning: Citation `Joel:StateArt' on page 2 undefined on input line 71.
+
+[2]
+
+LaTeX Warning: Citation `Joel:NSGAII' on page 3 undefined on input line 87.
+
+
+LaTeX Warning: Citation `Joel:IBEA' on page 3 undefined on input line 103.
+
+
+LaTeX Warning: Citation `trautmann2013r2' on page 3 undefined on input line 105
+.
+
+
+LaTeX Warning: Citation `Joel:MOEAD_AMS' on page 3 undefined on input line 121.
+
+
+
+LaTeX Warning: Citation `Joel:Kalyanmoy' on page 3 undefined on input line 129.
+
+
+
+LaTeX Warning: Citation `Joel:MOEAD' on page 3 undefined on input line 131.
+
+
+LaTeX Warning: Citation `Joel:NPGA' on page 3 undefined on input line 148.
+
+
+LaTeX Warning: Citation `toffolo2003genetic' on page 3 undefined on input line 
+155.
+
+
+LaTeX Warning: Citation `deb2005omni' on page 3 undefined on input line 164.
+
+
+LaTeX Warning: Citation `shir2009enhancing' on page 3 undefined on input line 1
+64.
+
+
+LaTeX Warning: Citation `chan2005evolutionary' on page 3 undefined on input lin
+e 167.
+
+
+LaTeX Warning: Citation `ulrich2010integrating' on page 3 undefined on input li
+ne 171.
+
+
+LaTeX Warning: Citation `Joel:STUDY_MATTING_RESTRICTION' on page 3 undefined on
+ input line 177.
+
+
+LaTeX Warning: Citation `Joel:MOEAD_AMS' on page 3 undefined on input line 177.
+
+
+
+LaTeX Warning: Citation `deb2005omni' on page 3 undefined on input line 181.
+
+
+LaTeX Warning: Citation `rudolph2007capabilities' on page 3 undefined on input 
+line 181.
+
+
+LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 3 undefined on input line 
+189.
+
+) (./Proposal.tex
+
+LaTeX Warning: Citation `Joel:NSGAII' on page 3 undefined on input line 12.
+
+(./Diagram.tex)
+
+LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 3 undefined on input line 
+35.
+
+
+LaTeX Warning: Reference `eqn:distance' on page 3 undefined on input line 47.
+
+
+Underfull \vbox (badness 1132) has occurred while \output is active []
+
+ [3]
+
+LaTeX Warning: Reference `fig:Hypersphere' on page 4 undefined on input line 80
+.
+
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 100.
- [4]) (./ExperimentalValidation.tex [5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-File: Images/DTLZ4_2obj.eps Graphic file (type eps)
+LaTeX Warning: Reference `alg:Replacement_Phase' on page 4 undefined on input l
+ine 125.
 
-<Images/DTLZ4_2obj.eps>
-File: Images/UF5.eps Graphic file (type eps)
- <Images/UF5.eps>
-File: Images/DTLZ4_3obj.eps Graphic file (type eps)
- <Images/DTLZ4_3obj.eps>
-File: Images/UF10.eps Graphic file (type eps)
 
-<Images/UF10.eps>
-File: Surfaces/WFG2.eps Graphic file (type eps)
- <Surfaces/WFG2.eps>
-File: Surfaces/WFG8.eps Graphic file (type eps)
- <Surfaces/WFG8.eps>
-File: Surfaces/DTLZ7.eps Graphic file (type eps)
- <Surfaces/DTLZ7.eps>
-Overfull \hbox (30.84283pt too wide) in paragraph at lines 192--197
- [][] 
+LaTeX Warning: Reference `alg:1' on page 4 undefined on input line 133.
+
+
+LaTeX Warning: Reference `alg:2' on page 4 undefined on input line 135.
+
+
+LaTeX Warning: Reference `alg:3' on page 4 undefined on input line 135.
+
+
+LaTeX Warning: Reference `alg:4' on page 4 undefined on input line 137.
+
+
+LaTeX Warning: Reference `alg:5' on page 4 undefined on input line 151.
+
+
+LaTeX Warning: Citation `deb2016optimality' on page 4 undefined on input line 1
+51.
+
+
+LaTeX Warning: Reference `alg:6' on page 4 undefined on input line 161.
+
+
+LaTeX Warning: Reference `alg:7' on page 4 undefined on input line 163.
+
+
+LaTeX Warning: Reference `alg:8' on page 4 undefined on input line 165.
+
+
+LaTeX Warning: Reference `alg:9' on page 4 undefined on input line 167.
+
+
+LaTeX Warning: Reference `alg:10' on page 4 undefined on input line 169.
+
+
+LaTeX Warning: Reference `alg:11' on page 4 undefined on input line 169.
+
+
+LaTeX Warning: Reference `alg:12' on page 4 undefined on input line 175.
+
+
+LaTeX Warning: Reference `alg:13' on page 4 undefined on input line 177.
+
+[4]
+
+LaTeX Warning: Citation `Segura:17' on page 5 undefined on input line 192.
+
+
+LaTeX Warning: Citation `Joel:Inverted_Generational_Distance_Plus' on page 5 un
+defined on input line 242.
+
+
+LaTeX Warning: Citation `Joel:IBEA' on page 5 undefined on input line 242.
+
+
+LaTeX Warning: Citation `zitzler2003performance' on page 5 undefined on input l
+ine 242.
+
+
+LaTeX Warning: Reference `eq:ImprovementDistance' on page 5 undefined on input 
+line 268.
+
+
+LaTeX Warning: Reference `eqn:epsilonindicator' on page 5 undefined on input li
+ne 268.
+
+
+LaTeX Warning: Citation `Joel:Optimization_Of_Scalarizing_Functions_Through_Evo
+lutionary_MOEAS' on page 5 undefined on input line 289.
+
+
+LaTeX Warning: Citation `Joel:Failure_MOEAs' on page 5 undefined on input line 
+291.
+
+
+LaTeX Warning: Reference `alg:Replacement_Phase' on page 5 undefined on input l
+ine 294.
+
+) (./ExperimentalValidation.tex
+
+LaTeX Warning: Citation `Joel:WFG' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Joel:DTLZ' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Joel:CEC2009' on page 5 undefined on input line 14.
+
+
+LaTeX Warning: Citation `Joel:ParentMeanCentricSelfAdaptation' on page 5 undefi
+ned on input line 17.
+
+
+LaTeX Warning: Citation `Joel:SBX1994' on page 5 undefined on input line 18.
+
+
+LaTeX Warning: Citation `Joel:DNR_SBX' on page 5 undefined on input line 20.
+
+
+LaTeX Warning: Citation `Joel:DTLZ' on page 5 undefined on input line 30.
+
+[5]
+
+LaTeX Warning: Citation `Joel:Mutation' on page 6 undefined on input line 35.
+
+
+LaTeX Warning: Reference `tab:Parametrization' on page 6 undefined on input lin
+e 37.
+
+
+LaTeX Warning: Citation `Joel:MOEAD_Uniform_Design' on page 6 undefined on inpu
+t line 64.
+
+
+LaTeX Warning: Citation `Joel:Kuhn_Munkres' on page 6 undefined on input line 6
+4.
+
+
+LaTeX Warning: Citation `Joel:Uniform_Design' on page 6 undefined on input line
+ 64.
+
+
+LaTeX Warning: Citation `Joel:ScalabilityStudy' on page 6 undefined on input li
+ne 68.
+
+
+LaTeX Warning: Reference `tab:ReferencePoints' on page 6 undefined on input lin
+e 73.
+
+
+LaTeX Warning: Citation `Joel:Kuhn_Munkres' on page 6 undefined on input line 7
+3.
+
+
+LaTeX Warning: Citation `Joel:OperatorAHX' on page 6 undefined on input line 73
+.
+
+
+LaTeX Warning: Citation `Joel:StatisticalTest' on page 6 undefined on input lin
+e 90.
+
+
+LaTeX Warning: Reference `tab:StatisticsHV_2obj' on page 6 undefined on input l
+ine 104.
+
+
+LaTeX Warning: Reference `tab:StatisticsHV_3obj' on page 6 undefined on input l
+ine 104.
+
+
+LaTeX Warning: Citation `Joel:CEC2009' on page 6 undefined on input line 113.
+
+
+LaTeX Warning: Reference `tab:Effective_Test_2obj' on page 6 undefined on input
+ line 133.
+
+
+LaTeX Warning: Reference `tab:Effective_Test_3obj' on page 6 undefined on input
+ line 133.
+
+[6]
+
+LaTeX Warning: Citation `Joel:ScalabilityStudy' on page 7 undefined on input li
+ne 150.
+
+
+LaTeX Warning: Reference `fig:Scalability_Study_HV_1' on page 7 undefined on in
+put line 152.
+
+
+LaTeX Warning: Reference `fig:Scalability_Study_HV_2' on page 7 undefined on in
+put line 152.
+
+
+LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 7 undefined on input line 158
+.
+
+
+LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 7 undefined on input line 161
+.
+
+
+LaTeX Warning: Reference `fig:Attainment_Surfaces' on page 7 undefined on input
+ line 168.
+
+(./Graphic-Scalability-2obj.tex
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+Missing character: There is no x in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_UF4_2obj.dat}
+PGFPlots: reading {Scalability_UF4_2obj.dat}
+Missing character: There is no x in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+PGFPlots: reading {Scalability_UF4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_UF4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_UF4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+) (./Graphic-Scalability-3obj.tex
+PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
+PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
+Missing character: There is no x in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_UF4_2obj.dat}
+PGFPlots: reading {Scalability_UF10.dat}
+Missing character: There is no x in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+PGFPlots: reading {Scalability_UF10.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_UF10.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_UF10.dat}
+Missing character: There is no ] in font nullfont!
+)
+(./Graphic-Initial-Distance.tex
+PGFPlots: reading {InitialDistanceFactorHV.dat}
+PGFPlots: reading {InitialDistanceFactorHV.dat}
+PGFPlots: reading {InitialDistanceFactorHV.dat}
+PGFPlots: reading {InitialDistanceFactorIGD.dat}
+PGFPlots: reading {InitialDistanceFactorIGD.dat}
+PGFPlots: reading {InitialDistanceFactorIGD.dat}
+
+Overfull \hbox (9.65315pt too wide) in paragraph at lines 22--45
+ [] 
  []
 
-) (./Conclusion.tex) (./chacon-ieeetec-17.bbl
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
- [7]
-Underfull \vbox (badness 2486) has occurred while \output is active []
+) (./Graphic-Diversity.tex
+PGFPlots: reading {Diversity_all.dat}
+PGFPlots: reading {Diversity_all.dat}
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ³ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
- [8])
+
+! Package pgfplots Error: Sorry, could not retrieve column 'VSDkkk' from table 
+'\\pgfplotstableread@filename@@table@name '. Please check spelling (or introduc
+e name aliases)..
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 table [y=VSDkkk,x=X]{Diversity_all.dat};
+                                             ^^M
+? 
+
+! Package pgfplots Error: Sorry, the requested column number '' in table 'Diver
+sity_all.dat' does not exist!? Please verify you used the correct index 0 <= i 
+< N..
+
+See the pgfplots package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 table [y=VSDkkk,x=X]{Diversity_all.dat};
+                                             ^^M
+? 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+
+Package pgfplots Warning: the current plot has no coordinates (or all have been
+ filtered away) on input line 16.
+
+ [warning /pgfplots/warning/plot without coordinates]
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
+Missing character: There is no ] in font nullfont!
+PGFPlots: reading {InitialDistanceFactorIGD.dat}
+PGFPlots: reading {InitialDistanceFactorIGD.dat}
+PGFPlots: reading {InitialDistanceFactorIGD.dat}
+
+Overfull \hbox (9.65315pt too wide) in paragraph at lines 30--53
+ [] 
+ []
+
+) (./Tables/Table_HV_2obj.tex) (./Tables/Table_HV_3obj.tex)
+(./Tables/Table_IGDP_2obj.tex) (./Tables/Table_IGDP_3obj.tex)
+(./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)
+(./Tables/Tests_IGDP_2obj.tex) (./Tables/Tests_IGDP_3obj.tex))
+(./Conclusion.tex)
+No file chacon-ieeetec-17.bbl.
 File: Photo_Authors/segura.eps Graphic file (type eps)
-
 <Photo_Authors/segura.eps>
 File: Photo_Authors/segura.eps Graphic file (type eps)
- <Photo_Authors/segura.eps> [9]
+ <Photo_Authors/segura.eps> [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
 File: Photo_Authors/coello.eps Graphic file (type eps)
 
 <Photo_Authors/coello.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
  <Photo_Authors/coello.eps>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 780.
- [10] [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 780.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-(./chacon-ieeetec-17.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 780.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 780.
-Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
-(rerunfilecheck)             Checksum: 45B75EA3928B3F460E495EA3AB1E7CB5;1199.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 780.
+ [9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 869.
+
+[10
+
+] [11] [12] [13
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 869.
+ (./chacon-ieeetec-17.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 869.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 869.
+
+
+Package rerunfilecheck Warning: File `chacon-ieeetec-17.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `chacon-ieeetec-17.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  703494D8FE1CEFAC99AA8794A4D4A0BD;1238.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 869.
  ) 
 Here is how much of TeX's memory you used:
- 15787 strings out of 493305
- 282357 string characters out of 6139897
- 506046 words of memory out of 5000000
- 18947 multiletter control sequences out of 15000+600000
- 33913 words of font info for 80 fonts, out of 8000000 for 9000
- 960 hyphenation exceptions out of 8191
- 63i,22n,57p,490b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 24655 strings out of 493015
+ 566233 string characters out of 6135716
+ 1046829 words of memory out of 5000000
+ 27700 multiletter control sequences out of 15000+600000
+ 32468 words of font info for 75 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 63i,22n,84p,735b,2131s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (11 pages, 202044 bytes).
+Output written on chacon-ieeetec-17.dvi (13 pages, 300688 bytes).

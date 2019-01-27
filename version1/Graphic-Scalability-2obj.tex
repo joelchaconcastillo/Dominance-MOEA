@@ -1,0 +1,57 @@
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+ymin=0.5,
+%ymax=1.1,
+%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
+title={\textit{\textbf{Scalability DTLZ4}}},
+    xlabel=Number of Decision Variables,
+  ylabel=HV,
+  xticklabel style = {rotate=30},
+  legend style=
+    {cells={anchor=east},legend pos=outer north east,},
+  % enlargelimits = false,
+  xticklabels from table={Scalability_DTLZ4_2obj.dat}{mean},xtick=data]
+  
+\addplot[red,solid,mark=square*] 
+table [y=VSD_MOEA,x=X]{Scalability_DTLZ4_2obj.dat};
+\addlegendentry{VSD-MOEA}
+xlabel
+\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{Scalability_DTLZ4_2obj.dat};
+\addlegendentry{NSGA-II}]
+		
+\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{Scalability_DTLZ4_2obj.dat};
+\addlegendentry{R2-MOEA}]
+    
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{Scalability_DTLZ4_2obj.dat};
+\addlegendentry{MOEA/D}]
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}[scale=0.8]
+\begin{axis}[
+ymin=0.5    ,
+%ymax=1.1,
+%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
+title={\textit{\textbf{Scalability UF4}}},
+    xlabel=Number of Decision Variables,
+  ylabel=HV,
+  xticklabel style = {rotate=30},
+  legend style=
+    {cells={anchor=east},legend pos=outer north east,},
+  % enlargelimits = false,
+  xticklabels from table={Scalability_UF4_2obj.dat}{mean},xtick=data]
+  
+\addplot[red,solid,mark=square*] 
+table [y=VSD_MOEA,x=X]{Scalability_UF4_2obj.dat};
+\addlegendentry{VSD-MOEA}
+xlabel
+\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{Scalability_UF4_2obj.dat};
+\addlegendentry{NSGA-II}]
+		
+\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{Scalability_UF4_2obj.dat};
+\addlegendentry{R2-MOEA}]
+    
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{Scalability_UF4_2obj.dat};
+\addlegendentry{MOEA/D}]
+\end{axis}
+\end{tikzpicture}
+\caption{Scalability study of decision variables with two objectives}
