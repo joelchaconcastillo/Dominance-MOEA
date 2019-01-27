@@ -1,53 +1,48 @@
 \begin{tikzpicture}[scale=0.8]
 \begin{axis}[
-%ymin=0.5,
-%ymax=1.1,
-%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
-title={\textit{\textbf{Mean of the HV Value with Several Initial Distance Factor}}},
-    xlabel=Initial Distance Factor,
-  ylabel=HV,
+title={\textit{\textbf{Convergency of the MOEAs with Instance WFG1}}},
+  xlabel=Generation,
+  ylabel=DCN,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
-  % enlargelimits = false,
-  xticklabels from table={Diversity_all.dat}{mean},xtick=data]
+  xticklabels from table={\Diversity}{mean},xtick=data]
  
-\addplot[red,solid,mark=square*] 
-table [y=VSDkkk,x=X]{Diversity_all.dat};
+\addplot[red,solid,mark=square*] table [y=VSD_MOEA,x=X]{\Diversity};
 \addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{Scalability_DTLZ4_2obj.dat};
+\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{\Diversity};
 \addlegendentry{NSGA-II}]
 		
-\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{Scalability_DTLZ4_2obj.dat};
+\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\Diversity};
 \addlegendentry{R2-MOEA}]
     
-\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{Scalability_DTLZ4_2obj.dat};
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\Diversity};
 \addlegendentry{MOEA/D}]
 
 	
 \end{axis}
 \end{tikzpicture}
-\begin{tikzpicture}[scale=0.8]
-\begin{axis}[
-ymin=0.0    ,
-ymax=0.1,
-%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
-title={\textit{\textbf{Mean of the IGD+ Value with Several Initial Distance Factor}}},
-    xlabel=Initial Distance Factor,
-  ylabel=IGD+,
-  xticklabel style = {rotate=30},
-  %yticklabel style = {rotate=30},
-  legend style=
-    {cells={anchor=east},legend pos=outer north east,},
-  % enlargelimits = false,
-  xticklabels from table={InitialDistanceFactorIGD.dat}{mean},xtick=data]
-  
-\addplot[red,solid,mark=square*] 
-table [y=IGD2obj,x=X]{InitialDistanceFactorIGD.dat};
-\addlegendentry{IGD+ 2obj}
-\addplot[blue,dotted,mark=triangle*] table [y=IGD3obj,x=X]{InitialDistanceFactorIGD.dat};
-\addlegendentry{IGD+ 3obj}
-\end{axis}
-\end{tikzpicture}
-\caption{Scalability study of decision variables with two objectives}
+%\begin{tikzpicture}[scale=0.8]
+%\begin{axis}[
+%ymin=0.0    ,
+%ymax=0.1,
+%%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
+%title={\textit{\textbf{Mean of the IGD+ Value with Several Initial Distance Factor}}},
+%    xlabel=Initial Distance Factor,
+%  ylabel=IGD+,
+%  xticklabel style = {rotate=30},
+%  %yticklabel style = {rotate=30},
+%  legend style=
+%    {cells={anchor=east},legend pos=outer north east,},
+%  % enlargelimits = false,
+%  xticklabels from table={InitialDistanceFactorIGD.dat}{mean},xtick=data]
+%  
+%\addplot[red,solid,mark=square*] 
+%table [y=IGD2obj,x=X]{InitialDistanceFactorIGD.dat};
+%\addlegendentry{IGD+ 2obj}
+%\addplot[blue,dotted,mark=triangle*] table [y=IGD3obj,x=X]{InitialDistanceFactorIGD.dat};
+%\addlegendentry{IGD+ 3obj}
+%\end{axis}
+%\end{tikzpicture}
+\caption{Mean of Distances of MOEAs}

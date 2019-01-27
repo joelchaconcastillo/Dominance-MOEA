@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2019.1.26)  26 JAN 2019 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2019.1.26)  27 JAN 2019 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -793,423 +793,64 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen262
 \l_MT_below_shortintertext_sep=\dimen263
 )
-(/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryinter
-sections.code.tex
-(/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryintersections.code.tex
-\pgf@intersect@solutions=\count159
-))
+PGFPlots: reading {CSV/Scalability_DTLZ4_2obj.csv}
+PGFPlots: reading {CSV/Scalability_DTLZ4_3obj.csv}
+PGFPlots: reading {CSV/Scalability_UF4_2obj.csv}
+PGFPlots: reading {CSV/Scalability_UF10_3obj.csv}
+PGFPlots: reading {CSV/Initial_Distance_Factor_HV.csv}
+PGFPlots: reading {CSV/Initial_Distance_Factor_IGDP.csv}
+PGFPlots: reading {CSV/Diversity.csv}
 
-LaTeX Warning: File `Scalability_DTLZ4_2obj.dat' already exists on the system.
-               Not generating it from this source.
-
-
-LaTeX Warning: File `Scalability_UF4_2obj.dat' already exists on the system.
-               Not generating it from this source.
-
-
-LaTeX Warning: File `Scalability_DTLZ4_3obj.dat' already exists on the system.
-               Not generating it from this source.
-
-
-LaTeX Warning: File `Scalability_UF10.dat' already exists on the system.
-               Not generating it from this source.
-
-
-LaTeX Warning: File `InitialDistanceFactorHV.dat' already exists on the system.
-
-               Not generating it from this source.
-
-
-LaTeX Warning: File `InitialDistanceFactorIGD.dat' already exists on the system
-.
-               Not generating it from this source.
-
-
-LaTeX Warning: File `Diversity_all.dat' already exists on the system.
-               Not generating it from this source.
-
-No file chacon-ieeetec-17.aux.
+(./chacon-ieeetec-17.aux)
 \openout1 = `chacon-ieeetec-17.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 465.
-LaTeX Font Info:    ... okay on input line 465.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 465.
-LaTeX Font Info:    ... okay on input line 465.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 465.
-LaTeX Font Info:    ... okay on input line 465.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 465.
-LaTeX Font Info:    ... okay on input line 465.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 465.
-LaTeX Font Info:    ... okay on input line 465.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 465.
-LaTeX Font Info:    ... okay on input line 465.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 465.
-LaTeX Font Info:    ... okay on input line 465.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 394.
+LaTeX Font Info:    ... okay on input line 394.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 394.
+LaTeX Font Info:    ... okay on input line 394.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 394.
+LaTeX Font Info:    ... okay on input line 394.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 394.
+LaTeX Font Info:    ... okay on input line 394.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 394.
+LaTeX Font Info:    ... okay on input line 394.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 394.
+LaTeX Font Info:    ... okay on input line 394.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 394.
+LaTeX Font Info:    ... okay on input line 394.
+
 -- Lines per column: 58 (exact).
 ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.13} (current compat level: 1.3).
 
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring ON on input line 465.
+Package hyperref Info: Link coloring ON on input line 394.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count160
+\c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 465.
-LaTeX Info: Redefining \pageref on input line 465.
-LaTeX Info: Redefining \nameref on input line 465.
+LaTeX Info: Redefining \ref on input line 394.
+LaTeX Info: Redefining \pageref on input line 394.
+LaTeX Info: Redefining \nameref on input line 394.
 
 (./chacon-ieeetec-17.out) (./chacon-ieeetec-17.out)
 \@outlinefile=\write4
 \openout4 = `chacon-ieeetec-17.out'.
 
+ (./Abstract.tex)
+(./Introduction.tex [1
 
 
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
-(./Abstract.tex) (./Introduction.tex
-
-LaTeX Warning: Citation `Joel:Kalyanmoy' on page 1 undefined on input line 4.
-
-
-LaTeX Warning: Citation `Joel:BALANCE_DIVERSITY' on page 1 undefined on input l
-ine 40.
-
-
-LaTeX Warning: Citation `Joel:FUZZY_ADAPTIVE_GA' on page 1 undefined on input l
-ine 43.
-
-
-LaTeX Warning: Citation `Joel:CROSSOVER_DIVERSITY' on page 1 undefined on input
- line 43.
-
-
-LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 1 undefined on input line 
-43.
-
-
-LaTeX Warning: Citation `Joel:SAWTOOTH' on page 1 undefined on input line 44.
-
-
-LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 1 undefined on input line 
-58.
-
-
-LaTeX Warning: Citation `Segura:17' on page 1 undefined on input line 65.
-
-
-LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 1 undefined on input line 
-66.
-
-
-LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 1 undefined on input line 78.
-
-
-
-LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 1 undefined on input line 88.
-
-
-[1
-
-
-]
-
-LaTeX Warning: Citation `Joel:MOEA_APPLICATIONS_BOOK_KCTAN' on page 2 undefined
- on input line 109.
-
-
-LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 130.
-
-
-LaTeX Warning: Reference `Sec:LiteratureReview' on page 2 undefined on input li
-ne 134.
-
-
-LaTeX Warning: Reference `Sec:Proposal' on page 2 undefined on input line 137.
-
-
-LaTeX Warning: Reference `Sec:ExperimentalValidation' on page 2 undefined on in
-put line 139.
-
-
-LaTeX Warning: Reference `Sec:Conclusion' on page 2 undefined on input line 141
-.
-
-) (./LiteratureReview.tex
-
-LaTeX Warning: Citation `Mohan:14' on page 2 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Joel:Crepinsek' on page 2 undefined on input line 18.
-
-
-LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 24.
-
-
-LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 29.
-
-
-LaTeX Warning: Citation `Mengshoel:14' on page 2 undefined on input line 35.
-
-
-LaTeX Warning: Citation `Vidal:13' on page 2 undefined on input line 41.
-
-
-LaTeX Warning: Citation `Segura:17' on page 2 undefined on input line 46.
-
-
-LaTeX Warning: Citation `Joel:BOOK_MOEAs' on page 2 undefined on input line 69.
-
-
-
-LaTeX Warning: Citation `Joel:StateArt' on page 2 undefined on input line 71.
-
-[2]
-
-LaTeX Warning: Citation `Joel:NSGAII' on page 3 undefined on input line 87.
-
-
-LaTeX Warning: Citation `Joel:IBEA' on page 3 undefined on input line 103.
-
-
-LaTeX Warning: Citation `trautmann2013r2' on page 3 undefined on input line 105
-.
-
-
-LaTeX Warning: Citation `Joel:MOEAD_AMS' on page 3 undefined on input line 121.
-
-
-
-LaTeX Warning: Citation `Joel:Kalyanmoy' on page 3 undefined on input line 129.
-
-
-
-LaTeX Warning: Citation `Joel:MOEAD' on page 3 undefined on input line 131.
-
-
-LaTeX Warning: Citation `Joel:NPGA' on page 3 undefined on input line 148.
-
-
-LaTeX Warning: Citation `toffolo2003genetic' on page 3 undefined on input line 
-155.
-
-
-LaTeX Warning: Citation `deb2005omni' on page 3 undefined on input line 164.
-
-
-LaTeX Warning: Citation `shir2009enhancing' on page 3 undefined on input line 1
-64.
-
-
-LaTeX Warning: Citation `chan2005evolutionary' on page 3 undefined on input lin
-e 167.
-
-
-LaTeX Warning: Citation `ulrich2010integrating' on page 3 undefined on input li
-ne 171.
-
-
-LaTeX Warning: Citation `Joel:STUDY_MATTING_RESTRICTION' on page 3 undefined on
- input line 177.
-
-
-LaTeX Warning: Citation `Joel:MOEAD_AMS' on page 3 undefined on input line 177.
-
-
-
-LaTeX Warning: Citation `deb2005omni' on page 3 undefined on input line 181.
-
-
-LaTeX Warning: Citation `rudolph2007capabilities' on page 3 undefined on input 
-line 181.
-
-
-LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 3 undefined on input line 
-189.
-
-) (./Proposal.tex
-
-LaTeX Warning: Citation `Joel:NSGAII' on page 3 undefined on input line 12.
-
-(./Diagram.tex)
-
-LaTeX Warning: Citation `Joel:MULTI_DYNAMIC' on page 3 undefined on input line 
-35.
-
-
-LaTeX Warning: Reference `eqn:distance' on page 3 undefined on input line 47.
-
-
-Underfull \vbox (badness 1132) has occurred while \output is active []
-
- [3]
-
-LaTeX Warning: Reference `fig:Hypersphere' on page 4 undefined on input line 80
-.
-
+]) (./LiteratureReview.tex [2]) (./Proposal.tex
+(./Diagram.tex) [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 100.
-
-LaTeX Warning: Reference `alg:Replacement_Phase' on page 4 undefined on input l
-ine 125.
-
-
-LaTeX Warning: Reference `alg:1' on page 4 undefined on input line 133.
-
-
-LaTeX Warning: Reference `alg:2' on page 4 undefined on input line 135.
-
-
-LaTeX Warning: Reference `alg:3' on page 4 undefined on input line 135.
-
-
-LaTeX Warning: Reference `alg:4' on page 4 undefined on input line 137.
-
-
-LaTeX Warning: Reference `alg:5' on page 4 undefined on input line 151.
-
-
-LaTeX Warning: Citation `deb2016optimality' on page 4 undefined on input line 1
-51.
-
-
-LaTeX Warning: Reference `alg:6' on page 4 undefined on input line 161.
-
-
-LaTeX Warning: Reference `alg:7' on page 4 undefined on input line 163.
-
-
-LaTeX Warning: Reference `alg:8' on page 4 undefined on input line 165.
-
-
-LaTeX Warning: Reference `alg:9' on page 4 undefined on input line 167.
-
-
-LaTeX Warning: Reference `alg:10' on page 4 undefined on input line 169.
-
-
-LaTeX Warning: Reference `alg:11' on page 4 undefined on input line 169.
-
-
-LaTeX Warning: Reference `alg:12' on page 4 undefined on input line 175.
-
-
-LaTeX Warning: Reference `alg:13' on page 4 undefined on input line 177.
-
-[4]
-
-LaTeX Warning: Citation `Segura:17' on page 5 undefined on input line 192.
-
-
-LaTeX Warning: Citation `Joel:Inverted_Generational_Distance_Plus' on page 5 un
-defined on input line 242.
-
-
-LaTeX Warning: Citation `Joel:IBEA' on page 5 undefined on input line 242.
-
-
-LaTeX Warning: Citation `zitzler2003performance' on page 5 undefined on input l
-ine 242.
-
-
-LaTeX Warning: Reference `eq:ImprovementDistance' on page 5 undefined on input 
-line 268.
-
-
-LaTeX Warning: Reference `eqn:epsilonindicator' on page 5 undefined on input li
-ne 268.
-
-
-LaTeX Warning: Citation `Joel:Optimization_Of_Scalarizing_Functions_Through_Evo
-lutionary_MOEAS' on page 5 undefined on input line 289.
-
-
-LaTeX Warning: Citation `Joel:Failure_MOEAs' on page 5 undefined on input line 
-291.
-
-
-LaTeX Warning: Reference `alg:Replacement_Phase' on page 5 undefined on input l
-ine 294.
-
-) (./ExperimentalValidation.tex
-
-LaTeX Warning: Citation `Joel:WFG' on page 5 undefined on input line 14.
-
-
-LaTeX Warning: Citation `Joel:DTLZ' on page 5 undefined on input line 14.
-
-
-LaTeX Warning: Citation `Joel:CEC2009' on page 5 undefined on input line 14.
-
-
-LaTeX Warning: Citation `Joel:ParentMeanCentricSelfAdaptation' on page 5 undefi
-ned on input line 17.
-
-
-LaTeX Warning: Citation `Joel:SBX1994' on page 5 undefined on input line 18.
-
-
-LaTeX Warning: Citation `Joel:DNR_SBX' on page 5 undefined on input line 20.
-
-
-LaTeX Warning: Citation `Joel:DTLZ' on page 5 undefined on input line 30.
-
-[5]
-
-LaTeX Warning: Citation `Joel:Mutation' on page 6 undefined on input line 35.
-
-
-LaTeX Warning: Reference `tab:Parametrization' on page 6 undefined on input lin
-e 37.
-
-
-LaTeX Warning: Citation `Joel:MOEAD_Uniform_Design' on page 6 undefined on inpu
-t line 64.
-
-
-LaTeX Warning: Citation `Joel:Kuhn_Munkres' on page 6 undefined on input line 6
-4.
-
-
-LaTeX Warning: Citation `Joel:Uniform_Design' on page 6 undefined on input line
- 64.
-
-
-LaTeX Warning: Citation `Joel:ScalabilityStudy' on page 6 undefined on input li
-ne 68.
-
-
-LaTeX Warning: Reference `tab:ReferencePoints' on page 6 undefined on input lin
-e 73.
-
-
-LaTeX Warning: Citation `Joel:Kuhn_Munkres' on page 6 undefined on input line 7
-3.
-
-
-LaTeX Warning: Citation `Joel:OperatorAHX' on page 6 undefined on input line 73
-.
-
-
-LaTeX Warning: Citation `Joel:StatisticalTest' on page 6 undefined on input lin
-e 90.
-
-
-LaTeX Warning: Reference `tab:StatisticsHV_2obj' on page 6 undefined on input l
-ine 104.
-
-
-LaTeX Warning: Reference `tab:StatisticsHV_3obj' on page 6 undefined on input l
-ine 104.
-
-
-LaTeX Warning: Citation `Joel:CEC2009' on page 6 undefined on input line 113.
-
+ [4]) (./ExperimentalValidation.tex [5]
 
 LaTeX Warning: Reference `tab:Effective_Test_2obj' on page 6 undefined on input
  line 133.
@@ -1220,10 +861,6 @@ LaTeX Warning: Reference `tab:Effective_Test_3obj' on page 6 undefined on input
 
 [6]
 
-LaTeX Warning: Citation `Joel:ScalabilityStudy' on page 7 undefined on input li
-ne 150.
-
-
 LaTeX Warning: Reference `fig:Scalability_Study_HV_1' on page 7 undefined on in
 put line 152.
 
@@ -1232,194 +869,91 @@ LaTeX Warning: Reference `fig:Scalability_Study_HV_2' on page 7 undefined on in
 put line 152.
 
 
-LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 7 undefined on input line 158
-.
-
-
-LaTeX Warning: Citation `Joel:GDE3_CEC09' on page 7 undefined on input line 161
-.
-
-
 LaTeX Warning: Reference `fig:Attainment_Surfaces' on page 7 undefined on input
  line 168.
 
 (./Graphic-Scalability-2obj.tex
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
-Missing character: There is no x in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_UF4_2obj.dat}
-PGFPlots: reading {Scalability_UF4_2obj.dat}
-Missing character: There is no x in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-PGFPlots: reading {Scalability_UF4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_UF4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_UF4_2obj.dat}
 Missing character: There is no ] in font nullfont!
 ) (./Graphic-Scalability-3obj.tex
-PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
-PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
-Missing character: There is no x in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_3obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_UF4_2obj.dat}
-PGFPlots: reading {Scalability_UF10.dat}
-Missing character: There is no x in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-PGFPlots: reading {Scalability_UF10.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_UF10.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_UF10.dat}
 Missing character: There is no ] in font nullfont!
 )
 (./Graphic-Initial-Distance.tex
-PGFPlots: reading {InitialDistanceFactorHV.dat}
-PGFPlots: reading {InitialDistanceFactorHV.dat}
-PGFPlots: reading {InitialDistanceFactorHV.dat}
-PGFPlots: reading {InitialDistanceFactorIGD.dat}
-PGFPlots: reading {InitialDistanceFactorIGD.dat}
-PGFPlots: reading {InitialDistanceFactorIGD.dat}
-
-Overfull \hbox (9.65315pt too wide) in paragraph at lines 22--45
+Overfull \hbox (9.65315pt too wide) in paragraph at lines 18--37
  [] 
  []
 
 ) (./Graphic-Diversity.tex
-PGFPlots: reading {Diversity_all.dat}
-PGFPlots: reading {Diversity_all.dat}
-
-
-! Package pgfplots Error: Sorry, could not retrieve column 'VSDkkk' from table 
-'\\pgfplotstableread@filename@@table@name '. Please check spelling (or introduc
-e name aliases)..
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 table [y=VSDkkk,x=X]{Diversity_all.dat};
-                                             ^^M
-? 
-
-! Package pgfplots Error: Sorry, the requested column number '' in table 'Diver
-sity_all.dat' does not exist!? Please verify you used the correct index 0 <= i 
-< N..
-
-See the pgfplots package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 table [y=VSDkkk,x=X]{Diversity_all.dat};
-                                             ^^M
-? 
-NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
-o unbounded coords=jump). 
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been
- filtered away) on input line 16.
-
- [warning /pgfplots/warning/plot without coordinates]
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {Scalability_DTLZ4_2obj.dat}
 Missing character: There is no ] in font nullfont!
-PGFPlots: reading {InitialDistanceFactorIGD.dat}
-PGFPlots: reading {InitialDistanceFactorIGD.dat}
-PGFPlots: reading {InitialDistanceFactorIGD.dat}
+) (./Tables/Table_HV_2obj.tex)
+(./Tables/Table_HV_3obj.tex) (./Tables/Table_IGDP_2obj.tex)
+(./Tables/Table_IGDP_3obj.tex) (./Tables/Tests_HV_2obj.tex)
+(./Tables/Tests_HV_3obj.tex) (./Tables/Tests_IGDP_2obj.tex)
+(./Tables/Tests_IGDP_3obj.tex)) (./Conclusion.tex) (./chacon-ieeetec-17.bbl
+[7]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
 
-Overfull \hbox (9.65315pt too wide) in paragraph at lines 30--53
- [] 
- []
+Underfull \vbox (badness 8094) has occurred while \output is active []
 
-) (./Tables/Table_HV_2obj.tex) (./Tables/Table_HV_3obj.tex)
-(./Tables/Table_IGDP_2obj.tex) (./Tables/Table_IGDP_3obj.tex)
-(./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)
-(./Tables/Tests_IGDP_2obj.tex) (./Tables/Tests_IGDP_3obj.tex))
-(./Conclusion.tex)
-No file chacon-ieeetec-17.bbl.
-File: Photo_Authors/segura.eps Graphic file (type eps)
-<Photo_Authors/segura.eps>
-File: Photo_Authors/segura.eps Graphic file (type eps)
- <Photo_Authors/segura.eps> [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \vbox (badness 1748) has occurred while \output is active []
 
  [8]
+Underfull \vbox (badness 3354) has occurred while \output is active []
+
+
+Underfull \vbox (badness 3354) has occurred while \output is active []
+
+ [9]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ³ in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
+
+[10])
+File: Photo_Authors/segura.eps Graphic file (type eps)
+ <Photo_Authors/segura.eps>
+File: Photo_Authors/segura.eps Graphic file (type eps)
+ <Photo_Authors/segura.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
 
 <Photo_Authors/coello.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
  <Photo_Authors/coello.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 798.
+ [11] [12] [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 798.
 
- [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 869.
+(./chacon-ieeetec-17.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 798.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 798.
+Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
+(rerunfilecheck)             Checksum: 44ACAAB945E9F69CE001A93CD63D4ABB;1285.
 
-[10
-
-] [11] [12] [13
-
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 869.
- (./chacon-ieeetec-17.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 869.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 869.
-
-
-Package rerunfilecheck Warning: File `chacon-ieeetec-17.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `chacon-ieeetec-17.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  703494D8FE1CEFAC99AA8794A4D4A0BD;1238.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 869.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 798.
  ) 
 Here is how much of TeX's memory you used:
- 24655 strings out of 493015
- 566233 string characters out of 6135716
- 1046829 words of memory out of 5000000
- 27700 multiletter control sequences out of 15000+600000
+ 24576 strings out of 493015
+ 563470 string characters out of 6135716
+ 1043367 words of memory out of 5000000
+ 27622 multiletter control sequences out of 15000+600000
  32468 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 63i,22n,84p,735b,2131s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,22n,84p,735b,2130s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (13 pages, 300688 bytes).
+Output written on chacon-ieeetec-17.dvi (13 pages, 345852 bytes).

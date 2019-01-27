@@ -65,7 +65,7 @@
 \usepackage[noend]{algorithmic}
 \usepackage{mathtools}
 %\usepackage{mathabx}
-\usetikzlibrary{intersections}
+%\usetikzlibrary{intersections}
 
 \newcommand{\COMB}{{\sc comb}}
 \newcommand{\DCN}{{\sc dcn}}
@@ -89,86 +89,15 @@
 %%%%%%%%%%%%%data
 
 \pgfplotsset{compat=1.3}
-\begin{filecontents}{Scalability_DTLZ4_2obj.dat}
-X  mean	MOEA_D NSGA_II	R2_MOEA	VSD_MOEA
-1  50	0.6138382127	0.8621267117	0.7194506758	0.9902413274
-2  100	0.7181729563	0.8826304986	0.6984988241	0.9902413127
-3  250	0.6138381832	0.9242333295	0.6981506155	0.990241151
-4  500	0.6347051627	0.9654625147	0.8198548448	0.9902359243
-5  1000	0.6347063417	0.9859989297	0.7769987205	0.9853541053
-\end{filecontents}
-
-\begin{filecontents}{Scalability_UF4_2obj.dat}
-X  mean	MOEA_D NSGA_II	R2_MOEA	VSD_MOEA
-1 50	0.8658825164	0.8673872803	0.7267672162	0.895060765
-2 100	0.8438050064	0.8489580932	0.7135642646	0.8787200341
-3 250	0.8176348541	0.8363199303	0.7019646589	0.8594036788
-4 500	0.7815034541	0.8136237596	0.6943584211	0.8385283661
-5 1000	0.7295361265	0.7728188038	0.6885873415	0.7987154204
-\end{filecontents}
 
 
-\begin{filecontents}{Scalability_DTLZ4_3obj.dat}
-X  mean	MOEA_D NSGA_II	R2_MOEA	VSD_MOEA
-1 50	0.7918435122	0.8755615308	0.6971477186	0.9299700543
-2 100	0.7491218016	0.8689755648	0.7356453708	0.9300710321
-3 250	0.7063867186	0.8568831467	0.7447577733	0.92986603
-4 500	0.8131826015	0.8549321584	0.6480589681	0.9298984033
-5 1000	0.7918339018	0.8456414902	0.0887588291	0.9243632885
-\end{filecontents}
-
-\begin{filecontents}{Scalability_UF10.dat}
-X  mean	MOEA_D NSGA_II	R2_MOEA	VSD_MOEA
-1 50	0.2202970782	0.1353254423	0.3758549758	0.5013988243
-2 100	0.2105766514	0.0668119491	0.3177157922	0.4051949139
-3 250	0.214756007	0.0293856936	0.0001789489	0.422475629
-4 500	0.0953235668	0.000355286	0	0.4597394552
-5 1000	0.0455457067	0	0	0.0579703877
-\end{filecontents}
-
-\begin{filecontents}{InitialDistanceFactorHV.dat}
-X mean	HV2obj	HV3obj
-1 0.0	0.909	0.895
-2 0.1	0.936	0.899
-3 0.2	0.940	0.908
-4 0.3	0.949	0.909
-5 0.4	0.955	0.919
-6 0.5	0.953	0.916
-7 0.6	0.950	0.914
-8 0.7	0.949	0.913
-9 0.8	0.949	0.911
-10 0.9	0.947	0.912
-\end{filecontents}
-
-\begin{filecontents}{InitialDistanceFactorIGD.dat}
-X mean IGD2obj IGD3obj
-1 0.0 0.047 0.072 
-2 0.1 0.031 0.069
-3 0.2 0.028 0.068
-4 0.3 0.022 0.066
-5 0.4 0.019 0.058
-6 0.5 0.020 0.059
-7 0.6 0.022 0.062
-8 0.7 0.023 0.062
-9 0.8 0.022 0.064
-10 0.9 0.023 0.063
-\end{filecontents}
-
-\begin{filecontents}{Diversity_all.dat}
-X mean MOEA_D NSGA_II R2_MOEA VSDkkk
-1 0 1.400335 1.396598 1.401837 1.398110
-2 2500000 0.045308 0.049847 0.037247 1.725460
-3 5000000 0.042241 0.048953 0.030595 1.550751
-4 7500000 0.041902 0.048401 0.034543 1.349749
-5 1000000 0.040975 0.051100 0.036511 1.139154
-6 1250000 0.040612 0.049206 0.039198 0.920384
-7 1500000 0.040064 0.045872 0.039391 0.698825
-8 1750000 0.040220 0.047271 0.041174 0.477896
-9 2000000 0.039948 0.048539 0.042561 0.279292
-10 2250000 0.039662 0.048413 0.044314 0.137418
-11 2500000 0.039731 0.049387 0.042651 0.092609
-\end{filecontents}
-
+\pgfplotstableread[col sep = comma]{CSV/Scalability_DTLZ4_2obj.csv}\ScalabilityDTLZFourTwoObj
+\pgfplotstableread[col sep = comma]{CSV/Scalability_DTLZ4_3obj.csv}\ScalabilityDTLZFourThreeObj
+\pgfplotstableread[col sep = comma]{CSV/Scalability_UF4_2obj.csv}\ScalabilityUFFourTwoObj
+\pgfplotstableread[col sep = comma]{CSV/Scalability_UF10_3obj.csv}\ScalabilityUFTenThreeObj
+\pgfplotstableread[col sep = comma]{CSV/Initial_Distance_Factor_HV.csv}\DIHV
+\pgfplotstableread[col sep = comma]{CSV/Initial_Distance_Factor_IGDP.csv}\DIIGDP
+\pgfplotstableread[col sep = comma]{CSV/Diversity.csv}\Diversity
 
 
 

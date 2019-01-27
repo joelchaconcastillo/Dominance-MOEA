@@ -10,19 +10,18 @@ title={\textit{\textbf{Scalability DTLZ4}}},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
   % enlargelimits = false,
-  xticklabels from table={Scalability_DTLZ4_2obj.dat}{mean},xtick=data]
+  xticklabels from table={\ScalabilityDTLZFourTwoObj}{mean},xtick=data]
   
 \addplot[red,solid,mark=square*] 
-table [y=VSD_MOEA,x=X]{Scalability_DTLZ4_2obj.dat};
+table [y=VSD_MOEA,x=X]{\ScalabilityDTLZFourTwoObj};
 \addlegendentry{VSD-MOEA}
-xlabel
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{Scalability_DTLZ4_2obj.dat};
+\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II,x=X]{\ScalabilityDTLZFourTwoObj};
 \addlegendentry{NSGA-II}]
 		
-\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{Scalability_DTLZ4_2obj.dat};
+\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityDTLZFourTwoObj};
 \addlegendentry{R2-MOEA}]
     
-\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{Scalability_DTLZ4_2obj.dat};
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityDTLZFourTwoObj};
 \addlegendentry{MOEA/D}]
 \end{axis}
 \end{tikzpicture}
@@ -38,19 +37,18 @@ title={\textit{\textbf{Scalability UF4}}},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
   % enlargelimits = false,
-  xticklabels from table={Scalability_UF4_2obj.dat}{mean},xtick=data]
+  xticklabels from table={\ScalabilityUFFourTwoObj}{mean},xtick=data]
   
 \addplot[red,solid,mark=square*] 
-table [y=VSD_MOEA,x=X]{Scalability_UF4_2obj.dat};
+table [y=VSD_MOEA,x=X]{\ScalabilityUFFourTwoObj};
 \addlegendentry{VSD-MOEA}
-xlabel
-\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{Scalability_UF4_2obj.dat};
+\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{\ScalabilityUFFourTwoObj};
 \addlegendentry{NSGA-II}]
 		
-\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{Scalability_UF4_2obj.dat};
+\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityUFFourTwoObj};
 \addlegendentry{R2-MOEA}]
     
-\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{Scalability_UF4_2obj.dat};
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityUFFourTwoObj};
 \addlegendentry{MOEA/D}]
 \end{axis}
 \end{tikzpicture}

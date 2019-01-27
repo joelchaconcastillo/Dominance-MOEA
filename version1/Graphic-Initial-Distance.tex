@@ -1,21 +1,17 @@
 \begin{tikzpicture}[scale=0.8]
 \begin{axis}[
-%ymin=0.5,
-%ymax=1.1,
-%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
 title={\textit{\textbf{Mean of the HV Value with Several Initial Distance Factor}}},
     xlabel=Initial Distance Factor,
   ylabel=HV,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
-  % enlargelimits = false,
-  xticklabels from table={InitialDistanceFactorHV.dat}{mean},xtick=data]
+  xticklabels from table={\DIHV}{mean},xtick=data]
   
 \addplot[red,solid,mark=square*] 
-table [y=HV2obj,x=X]{InitialDistanceFactorHV.dat};
+table [y=HV2obj,x=X]{\DIHV};
 \addlegendentry{HV - 2obj}
-\addplot[blue,dotted,mark=triangle*] table[y= HV3obj,x=X]{InitialDistanceFactorHV.dat};
+\addplot[blue,dotted,mark=triangle*] table[y= HV3obj,x=X]{\DIHV};
 \addlegendentry{HV - 3obj}
 		
 \end{axis}
@@ -24,22 +20,18 @@ table [y=HV2obj,x=X]{InitialDistanceFactorHV.dat};
 \begin{axis}[
 ymin=0.0    ,
 ymax=0.1,
-%x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
 title={\textit{\textbf{Mean of the IGD+ Value with Several Initial Distance Factor}}},
     xlabel=Initial Distance Factor,
   ylabel=IGD+,
   xticklabel style = {rotate=30},
-  %yticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
-  % enlargelimits = false,
-  xticklabels from table={InitialDistanceFactorIGD.dat}{mean},xtick=data]
-  
+  xticklabels from table={\DIIGDP}{mean},xtick=data]
 \addplot[red,solid,mark=square*] 
-table [y=IGD2obj,x=X]{InitialDistanceFactorIGD.dat};
+table [y=IGD2obj,x=X]{\DIIGDP};
 \addlegendentry{IGD+ 2obj}
-\addplot[blue,dotted,mark=triangle*] table [y=IGD3obj,x=X]{InitialDistanceFactorIGD.dat};
+\addplot[blue,dotted,mark=triangle*] table [y=IGD3obj,x=X]{\DIIGDP};
 \addlegendentry{IGD+ 3obj}
 \end{axis}
 \end{tikzpicture}
-\caption{Scalability study of decision variables with two objectives}
+\caption{Mean of Inidicator Considering All Instances with Several Initial Distance Factors}
