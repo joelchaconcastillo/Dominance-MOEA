@@ -229,24 +229,9 @@ Q.~Zhang, A.~Zhou, S.~Zhao, P.~N. Suganthan, W.~Liu, and S.~Tiwari,
   assessment of multi-objective optimization algorithms, technical report},
   vol. 264, 2008.
 
-\bibitem{Joel:ParentMeanCentricSelfAdaptation}
-\BIBentryALTinterwordspacing
-H.~Jain and K.~Deb, ``Parent to mean-centric self-adaptation in sbx operator
-  for real-parameter optimization,'' in \emph{Proceedings of the Second
-  International Conference on Swarm, Evolutionary, and Memetic Computing -
-  Volume Part I}, ser. SEMCCO'11.\hskip 1em plus 0.5em minus 0.4em\relax
-  Berlin, Heidelberg: Springer-Verlag, 2011, pp. 299--306. [Online]. Available:
-  \url{http://dx.doi.org/10.1007/978-3-642-27172-4_37}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Joel:SBX1994}
 R.~B. Agrawal, K.~Deb, K.~Deb, and R.~B. Agrawal, ``Simulated binary crossover
   for continuous search space,'' Tech. Rep., 1994.
-
-\bibitem{Joel:DNR_SBX}
-J.~Chacón, C.~Segura, and A.~Hernández-Aguirre, in \emph{Proceedings of the
-  2017}, ser. COMIA '17 Companion.\hskip 1em plus 0.5em minus 0.4em\relax ACM,
-  2017, p. In Press.
 
 \bibitem{Joel:Mutation}
 K.~Deb and M.~Goyal, ``A combined genetic adaptive search (geneas) for

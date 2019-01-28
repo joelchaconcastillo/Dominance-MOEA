@@ -15,48 +15,47 @@ Database file #2: bibtex/bib/References.bib.bib
 Warning--empty year in Joel:BALANCE_DIVERSITY
 Warning--empty year in Joel:BOOK_MOEAs
 Warning--empty institution in Joel:SBX1994
-Warning--empty title in Joel:DNR_SBX
 
 Done.
-You've used 46 entries,
+You've used 44 entries,
             4039 wiz_defined-function locations,
-            1524 strings with 25890 characters,
-and the built_in function-call counts, 38069 in all, are:
-= -- 3062
-> -- 900
-< -- 360
-+ -- 496
-- -- 143
-* -- 1838
-:= -- 5512
-add.period$ -- 101
-call.type$ -- 46
-change.case$ -- 35
-chr.to.int$ -- 852
-cite$ -- 50
-duplicate$ -- 2650
-empty$ -- 3101
-format.name$ -- 187
-if$ -- 8898
+            1510 strings with 25390 characters,
+and the built_in function-call counts, 36367 in all, are:
+= -- 2919
+> -- 870
+< -- 350
++ -- 480
+- -- 138
+* -- 1759
+:= -- 5274
+add.period$ -- 96
+call.type$ -- 44
+change.case$ -- 34
+chr.to.int$ -- 828
+cite$ -- 47
+duplicate$ -- 2518
+empty$ -- 2946
+format.name$ -- 180
+if$ -- 8491
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 442
-newline$ -- 175
-num.names$ -- 46
-pop$ -- 1025
+int.to.str$ -- 44
+missing$ -- 419
+newline$ -- 167
+num.names$ -- 44
+pop$ -- 968
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2954
+skip$ -- 2811
 stack$ -- 0
-substring$ -- 2028
-swap$ -- 2281
-text.length$ -- 76
+substring$ -- 1955
+swap$ -- 2180
+text.length$ -- 74
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 46
-warning$ -- 4
-while$ -- 180
-width$ -- 48
-write$ -- 479
-(There were 4 warnings)
+type$ -- 44
+warning$ -- 3
+while$ -- 173
+width$ -- 46
+write$ -- 457
+(There were 3 warnings)
