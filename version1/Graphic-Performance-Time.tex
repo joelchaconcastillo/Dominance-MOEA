@@ -3,6 +3,8 @@
 title={\textit{\textbf{Mean of the HV Considering All the Problems}}},
   xlabel=Generation,
   ylabel=HV,
+  ymin=0.7,
+  ymax=1.0,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
@@ -36,16 +38,16 @@ title={\textit{\textbf{Diversity of the Distance Variables with WFG1}}},
   xticklabels from table={\Performancetimethree}{mean},xtick=data]
 
 
-\addplot[red,dashed,mark=square*] table [y=VSD_MOEA_Distance,x=X]{\Performancetimethree};
+\addplot[red,dashed,mark=square*] table [y=VSD_MOEA,x=X]{\Performancetimethree};
 \addlegendentry{VSD-MOEA}
 
-\addplot[blue,dashed,mark=triangle*] table[y= NSGA_II_Distance,x=X]{\Performancetimethree};
+\addplot[blue,dashed,mark=triangle*] table[y= NSGA_II,x=X]{\Performancetimethree};
 \addlegendentry{NSGA-II}
 		
-\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA_Distance,x=X]{\Performancetimethree};
+\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\Performancetimethree};
 \addlegendentry{R2-MOEA}
     
-\addplot[black,dashed,mark=pentagon*] table [y= MOEA_D_Distance,x=X]{\Performancetimethree};
+\addplot[black,dashed,mark=pentagon*] table [y= MOEA_D,x=X]{\Performancetimethree};
 \addlegendentry{MOEA/D}]
 
 

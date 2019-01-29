@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2016/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chacon-ieeetec-17.aux
 The style file: IEEEtran.bst
@@ -9,7 +9,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex/bib/IEEEabrv.bib
 Database file #2: bibtex/bib/References.bib.bib
--- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty year in Joel:BALANCE_DIVERSITY
@@ -18,16 +18,16 @@ Warning--empty institution in Joel:SBX1994
 
 Done.
 You've used 44 entries,
-            4039 wiz_defined-function locations,
-            1510 strings with 25390 characters,
-and the built_in function-call counts, 36367 in all, are:
+            4087 wiz_defined-function locations,
+            1521 strings with 25460 characters,
+and the built_in function-call counts, 36500 in all, are:
 = -- 2919
 > -- 870
 < -- 350
 + -- 480
 - -- 138
 * -- 1759
-:= -- 5274
+:= -- 5275
 add.period$ -- 96
 call.type$ -- 44
 change.case$ -- 34
@@ -36,7 +36,7 @@ cite$ -- 47
 duplicate$ -- 2518
 empty$ -- 2946
 format.name$ -- 180
-if$ -- 8491
+if$ -- 8623
 int.to.chr$ -- 0
 int.to.str$ -- 44
 missing$ -- 419
