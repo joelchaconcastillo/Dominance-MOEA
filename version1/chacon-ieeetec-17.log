@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  29 JAN 2019 22:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  29 JAN 2019 23:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -785,32 +785,37 @@ PGFPlots: reading {CSV/Scalability_UF4_2obj.csv}
 PGFPlots: reading {CSV/Scalability_UF10_3obj.csv}
 PGFPlots: reading {CSV/Initial_Distance_Factor_HV.csv}
 PGFPlots: reading {CSV/Initial_Distance_Factor_IGDP.csv}
-PGFPlots: reading {CSV/Diversity2obj.csv}
-PGFPlots: reading {CSV/Diversity3obj.csv}
+PGFPlots: reading {CSV/Diversity2objWFG1.csv}
+PGFPlots: reading {CSV/Diversity3objWFG1.csv}
+PGFPlots: reading {CSV/Diversity2objWFG5.csv}
+PGFPlots: reading {CSV/Diversity3objWFG5.csv}
 PGFPlots: reading {CSV/PerformanceTime2obj.csv}
 PGFPlots: reading {CSV/PerformanceTime3obj.csv}
 
 (./chacon-ieeetec-17.aux
 
-LaTeX Warning: Label `fig:Diversity' multiply defined.
+LaTeX Warning: Label `fig:Diversity_WFG1' multiply defined.
+
+
+LaTeX Warning: Label `fig:Diversity_WFG5' multiply defined.
 
 )
 \openout1 = `chacon-ieeetec-17.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 397.
-LaTeX Font Info:    ... okay on input line 397.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 399.
+LaTeX Font Info:    ... okay on input line 399.
 
 -- Lines per column: 58 (exact).
 ABD: EveryShipout initializing macros
@@ -818,7 +823,7 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.9} (current compat level: 1.3).
 
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring ON on input line 397.
+Package hyperref Info: Link coloring ON on input line 399.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -827,9 +832,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 397.
-LaTeX Info: Redefining \pageref on input line 397.
-LaTeX Info: Redefining \nameref on input line 397.
+LaTeX Info: Redefining \ref on input line 399.
+LaTeX Info: Redefining \pageref on input line 399.
+LaTeX Info: Redefining \nameref on input line 399.
 
 (./chacon-ieeetec-17.out) (./chacon-ieeetec-17.out)
 \@outlinefile=\write4
@@ -843,32 +848,319 @@ LaTeX Info: Redefining \nameref on input line 397.
 (./Diagram.tex) [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 100.
- [4]) (./ExperimentalValidation.tex (./Graphic-Diversity.tex) (./Graphic-Perfor
-mance-Time.tex
+ [4]) (./ExperimentalValidation.tex
+(./Graphic-Diversity_WFG1.tex) (./Graphic-Diversity_WFG5.tex
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+) (./Graphic-Performance-Time.tex
 Missing character: There is no ] in font nullfont!
 ) [5] [6]
-Underfull \vbox (badness 5711) has occurred while \output is active []
-
-
 
 LaTeX Warning: Reference `tab:Effective_Test_2obj' on page 7 undefined on input
- line 148.
+ line 157.
 
 
 LaTeX Warning: Reference `tab:Effective_Test_3obj' on page 7 undefined on input
- line 148.
+ line 157.
+
+[7]
+
+LaTeX Warning: Reference `fig:Scalability_Study_HV_1' on page 8 undefined on in
+put line 176.
 
 
-LaTeX Warning: Reference `fig:Scalability_Study_HV_1' on page 7 undefined on in
-put line 167.
+LaTeX Warning: Reference `fig:Scalability_Study_HV_2' on page 8 undefined on in
+put line 176.
 
 
-LaTeX Warning: Reference `fig:Scalability_Study_HV_2' on page 7 undefined on in
-put line 167.
-
-
-LaTeX Warning: Reference `fig:Attainment_Surfaces' on page 7 undefined on input
- line 183.
+LaTeX Warning: Reference `fig:Attainment_Surfaces' on page 8 undefined on input
+ line 192.
 
 (./Graphic-Scalability-2obj.tex
 Missing character: There is no ] in font nullfont!
@@ -890,7 +1182,296 @@ Overfull \hbox (9.65315pt too wide) in paragraph at lines 18--37
  [] 
  []
 
-) [7] (./Graphic-Diversity.tex) (./Tables/Table_HV_2obj.tex
+) (./Graphic-Diversity_WFG1.tex) (./Graphic-Diversity_WFG5.tex
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (,) has been dropped because of a coordinate filter. (see also
+ unbounded coords=jump). 
+NOTE: coordinate (1,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (2,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (3,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (4,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (5,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (6,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (7,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (8,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (9,) has been dropped because of a coordinate filter. (see als
+o unbounded coords=jump). 
+NOTE: coordinate (10,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+NOTE: coordinate (11,) has been dropped because of a coordinate filter. (see al
+so unbounded coords=jump). 
+) (./Tables/Table_HV_2obj.tex
 Overfull \hbox (7.99124pt too wide) in paragraph at lines 7--37
 [][] 
  []
@@ -912,17 +1493,17 @@ Overfull \hbox (7.99124pt too wide) in paragraph at lines 7--33
 
 ) (./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)
 (./Tables/Tests_IGDP_2obj.tex) (./Tables/Tests_IGDP_3obj.tex))
-(./Conclusion.tex) (./chacon-ieeetec-17.bbl [8]
+(./Conclusion.tex) (./chacon-ieeetec-17.bbl
+Underfull \vbox (badness 2875) has occurred while \output is active []
+
+ [8]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Underfull \vbox (badness 1838) has occurred while \output is active []
-
  [9]
-Underfull \vbox (badness 3590) has occurred while \output is active []
+Underfull \vbox (badness 1838) has occurred while \output is active []
 
 
 Underfull \vbox (badness 3590) has occurred while \output is active []
@@ -950,15 +1531,13 @@ File: Photo_Authors/coello.eps Graphic file (type eps)
 <Photo_Authors/coello.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
  <Photo_Authors/coello.eps>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 801.
- [14
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 801.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 803.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 803.
 
 (./chacon-ieeetec-17.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 801.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 801.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 803.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 803.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
 (rerunfilecheck)             Checksum: 44ACAAB945E9F69CE001A93CD63D4ABB;1285.
 
@@ -968,15 +1547,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 801.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 803.
  ) 
 Here is how much of TeX's memory you used:
- 24123 strings out of 493305
- 545750 string characters out of 6139897
- 1129341 words of memory out of 5000000
- 27086 multiletter control sequences out of 15000+600000
+ 24137 strings out of 493305
+ 545196 string characters out of 6139897
+ 1273582 words of memory out of 5000000
+ 27091 multiletter control sequences out of 15000+600000
  32468 words of font info for 75 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  63i,22n,84p,735b,2093s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (14 pages, 603184 bytes).
+Output written on chacon-ieeetec-17.dvi (14 pages, 823472 bytes).
