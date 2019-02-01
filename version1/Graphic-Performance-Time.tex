@@ -5,7 +5,8 @@ title={\textit{\textbf{Mean of the HV Two Objectives}}},
   ylabel=HV,
   ymin=0.7,
   ymax=1.0,
-  xticklabel style = {rotate=90, anchor=east,},
+  xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
+%  label style = {font=\small, },
 %xlabel style={yshift=-1cm},
 %  xmode=log,
 %  log basis x={2},
@@ -26,6 +27,7 @@ title={\textit{\textbf{Mean of the HV Two Objectives}}},
 \addplot[black,dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\Performancetimetwo};
 \addlegendentry{MOEA/D}
 \draw [black, dashed] (axis cs:10, 0) -- (axis cs:10, 1);
+\draw [black, dashed] (axis cs:19, 0) -- (axis cs:19, 1);
 \end{axis}
 \end{tikzpicture}
 
@@ -37,7 +39,7 @@ title={\textit{\textbf{Mean of the HV Three Objectives}}},
   ylabel=HV,
 %  ymin=0.5,
  % ymax=1.0,
-  xticklabel style = {rotate=90, anchor=east,},
+  xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
   xticklabels from table={\Performancetimethree}{mean},xtick=data]
@@ -54,6 +56,7 @@ title={\textit{\textbf{Mean of the HV Three Objectives}}},
 \addplot[black,dashed,mark=pentagon*] table [y= MOEA_D,x=X]{\Performancetimethree};
 \addlegendentry{MOEA/D};
 \draw [black, dashed] (axis cs:10, 0) -- (axis cs:10, 1);
+\draw [black, dashed] (axis cs:19, 0) -- (axis cs:19, 1);
 \end{axis}
 \end{tikzpicture}
 
