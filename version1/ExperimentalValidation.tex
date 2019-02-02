@@ -1,89 +1,67 @@
-\begin{figure}[t]
-\centering
-\input{Graphic-Diversity_WFG1.tex}
-\label{fig:Diversity_WFG1}
-\end{figure}
-
-
-\begin{figure}[t]
-\centering
-\input{Graphic-Diversity_WFG5.tex}
-\label{fig:Diversity_WFG5}
-\end{figure}
-
-
-
-
-\begin{figure}[t]
-\centering
-\input{Graphic-Performance-Time.tex}
-\label{fig:Performance_time}
-\end{figure}
-
-
-
-In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by state-of-art-MOEAs --principally with the difficultest problems--, thus several theorical especifications are explained.
+In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by state-of-art-MOEAs.
 %
-At first, the validation scheme with the \VSDMOEA{} and the state-of-the-art MOEAs is described.
+At the beginning, several theoretical especifications are explained, as is widely used in MOEAs comparison outline.
 %
-Thereafter, an analyzes of the scalability in the decision variables is presented.
+Therafter, with the motivation of describe in detail the benefits offered by our proposal (especifically for long-term executions) the following characteristics are analyzed.
 %
-In the same line, a sensitivity experiment of the initial factor distance parameter ($D_I$) required by the \VSDMOEA{} is reported.
+The scalability in the decision variable space is taken into account.
 %
-Given the well-known issue of premature convergence in MOEAs, an analyzes of the diversity in the decision variable space through the elapsed time is driven.
+This analyzes is narrowed through some specific and well known problems.
 %
-Since, the \VSDMOEA{} is highly-dependent of the total execution time it is taken into account through several term-executions.
-
-
+In the same line, with the intention to have a better understanding of the initial factor distance parameter ($D_I$) several settings of this parameter with all the test-problems are reported .
 %
-
+Finally, since that the mechanism imposed in our proposal, which avoid the premature convergency, highly depends on the elapsed time, we report the benefits of our proposal considering both short and long term executions.
+%
+Additionally, the latter experiments shows that the \VSDMOEA{} has a decent performance in short-term executions.
+%
 
 % which belong to jMetalcpp~\cite{Joel:JMETAL} framework.
 %
 To validate the proposed MOEA in this work are considered some of the most popular benchmark in the multi-objective field.
 %
-Particularly, the WFG \cite{Joel:WFG}, DTLZ \cite{Joel:DTLZ}  and UF \cite{Joel:CEC2009}  test problems have been used for our purpose. 
+Particularly, the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ} and UF~\cite{Joel:CEC2009} test problems have been used for our purpose. 
 %
 %Through the literature several crossover operators have been proposed in MOEAs~\cite{Joel:ParentMeanCentricSelfAdaptation},  
 %a popular operator is the Simulated Binary Crossover (SBX).4\cite{Joel:SBX1994}%, Joel:TAXONOMY_CROSSOVER, Joel:Kalyanmoy}
 Additionally, our experimental validation includes the VSD-MOEA, as well as three well-known state-of-the-art algorithms.
 %
-Given that all of them are stochastic algorithms, each execution was repeated 35 times with different seeds.
+Given that all of them are stochastic algorithms, each execution was repeated $35$ times with different seeds.
 %
-The common configuration in all of them was the following: the stopping criterion was set to $250,000$ generations, the population size was fixed to $100$, the WFG test problems were configured with two and three objectives, which are setted to 24 parameters, where 20 of them are distance parameters, and 4 are position parameters.
+The common configuration in all of them was the following: the stopping criterion was set to $250,000$ generations, the population size was fixed to $100$, the WFG test problems were configured with two and three objectives, which are setted to $24$ parameters, where $20$ of them are distance parameters, and $4$ are position parameters.
 %
 Additinally, in the DTLZ test instances, the number of decision variables is setted to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively, as is suggested by the authors \cite{Joel:DTLZ}.  
 % 
-The UF benchmark is composed of ten test instances, which is categorized in two groups bases in the number of objetive funcitons to solve, thus the former seven consists of two objectives and the latter of three objectives, where the number of decision variables taken into account in each one is $n=30$.
+The UF benchmark is composed of ten test instances, which is categorized in two groups that are based in the number of objetive functions to solve, thus the first seven consists of two objectives and the reaming problems of three objectives, where the number of decision variables taken into account in each one is $n=30$.
 %
 In general, the crossover and mutation operators are the Simulated Binary Crossover (SBX), and polynomial~\cite{Joel:SBX1994, Joel:Mutation}, which probabilities are setted to $0.9$ and $1/n$ respectively.
 %
 Also, the crossover and mutation distribution indexes were assigned to $20$ and $50$ respectively.
 %
-The extra-parametrization of each algorithm is showed in the table~\ref{tab:Parametrization}.
+The extra-parameterization of each algorithm is showed in the table~\ref{tab:Parametrization}.
 %
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
 \begin{table}[t]
 \centering
 \caption{Parameterization of each MOEA considered}
 \label{tab:Parametrization}
-\begin{tabular}{l|l}
+\begin{tabular}{|c|c|}
 \hline
 \textbf{Algorithm} & \textbf{Configuration} \\ \hline
-R2-MOEA & \\ \hline
-MOEA/D & \begin{tabular}[c]{@{}l@{}}size of neighborhood,= 20, \\ max updates by sub-problem (nr) = 2 and $\delta = 0.9$\end{tabular} \\ \hline
-VSD-MOEA & $D_I=\sqrt{n}*0.25$ \\ \hline
+\multirow{3}{*}{\textbf{MOEA/D}} & Neighbour size = 10, max. update by sub-problem (nr) = 2, \\
+ & probability local selection ($\delta$) = 0.9, tour selection = 10, \\
+ & period utility updating = 30 generations \\ \hline
+\textbf{VSD-MOEA} & $D_I=\sqrt{n}*0.25$ \\ \hline
 \end{tabular}
 \end{table}
 
-%\begin{itemize}
-% %\scriptsize
-% \item \textbf{GDE3}: CR = 0.9 and F = 0.5.
-% \item \textbf{MOMBI-II}: $\epsilon = 1e-3$, $\alpha = 0.5$, record size = 5 generations. 
-% \item \textbf{MOEA/D}: size of neighborhood  = 20, max updates by sub-problem (nr) = 2 and $\delta = 0.9$.
-% \item \textbf{VSD-MOEA}: $D_I=\sqrt{n}*0.25$.
-% \end{itemize}
+The MOEA/D and R2-EMOA are 
 
-Particularly, the algorithms MOEA/D and MOMBI-II require a set of vectors uniformly scattered on the unit-simplex, therefore the number of vectors generated increases nonlinearly with the number of objectives.
+employes utility functions the algorithms \MOEAD{} and R2-EMOA require a set of vectors uniformly scattered on the unit-simplex.
+%
+
+
+ therefore the number of vectors generated increases nonlinearly with the number of objectives.
 %
 Consequently, is applied the method proposed in \cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres} where the uniform design (UD) \cite{Joel:Uniform_Design} and good lattice point (glp) are combined.
 %
@@ -230,7 +208,23 @@ Although the GDE3 approximate the WFG2 and DTLZ7, this this algorithm is far in 
 \label{fig:Diversity_WFG5}
 \end{figure}
 
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Diversity_WFG6.tex}
+\label{fig:Diversity_WFG6}
+\end{figure}
+
+
 \subsection{Improving Dependece on the Execution}
+
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Performance-Time.tex}
+\label{fig:Performance_time}
+\end{figure}
+
 
 
 \input{Tables/Table_HV_2obj.tex}
