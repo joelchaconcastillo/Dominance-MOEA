@@ -30,25 +30,25 @@ table [y=VSD_MOEA,x=X]{\ScalabilityDTLZFourTwoObj};
 %ymin=0.5    ,
 %ymax=1.1,
 %x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
-title={\textit{\textbf{Scalability UF4}}},
+title={\textit{\textbf{Scalability UF5}}},
     xlabel=Number of Decision Variables,
   ylabel=HV,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
   % enlargelimits = false,
-  xticklabels from table={\ScalabilityUFFourTwoObj}{mean},xtick=data]
+  xticklabels from table={\ScalabilityUFFiveTwoObj}{mean},xtick=data]
   
 \addplot[red,solid,mark=square*] 
-table [y=VSD_MOEA,x=X]{\ScalabilityUFFourTwoObj};
+table [y=VSD_MOEA,x=X]{\ScalabilityUFFiveTwoObj};
 \addlegendentry{VSD-MOEA}
-\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{\ScalabilityUFFourTwoObj};
+\addplot[blue,dotted,mark=triangle*] table [y= NSGA_II,x=X]{\ScalabilityUFFiveTwoObj};
 \addlegendentry{NSGA-II}]
 		
-\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityUFFourTwoObj};
+\addplot[orange,dashed,mark=diamond*] table [y= R2_MOEA,x=X]{\ScalabilityUFFiveTwoObj};
 \addlegendentry{R2-MOEA}]
     
-\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityUFFourTwoObj};
+\addplot[black,loosely dotted,mark=pentagon*] table [y= MOEA_D,x=X]{\ScalabilityUFFiveTwoObj};
 \addlegendentry{MOEA/D}]
 \end{axis}
 \end{tikzpicture}

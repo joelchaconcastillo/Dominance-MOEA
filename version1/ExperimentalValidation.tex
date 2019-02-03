@@ -1,29 +1,31 @@
 In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by state-of-art-MOEAs.
 %
-At the beginning, several theoretical especifications are explained, as is widely used in MOEAs comparison outline.
+At the beginning, several technical specifications taken into account in our comparison outline are explained.
 %
-Therafter, with the motivation of describe in detail the benefits offered by our proposal (especifically for long-term executions) the following characteristics are analyzed.
+Therafter, to have a broad perception of the \VSDMOEA{} some scenaries are analyzed.
 %
-The scalability in the decision variable space is taken into account.
+Between them an analyzes driven to probe the scalability in the decision variable space is taken into account.
 %
 This analyzes is narrowed through some specific and well known problems.
 %
-In the same line, with the intention to have a better understanding of the initial factor distance parameter ($D_I$) several settings of this parameter with all the test-problems are reported .
+In the same line, with the intention to have a better understanding of the critial parameter that induces the initial amount of diversity is taken into account.
 %
-Finally, since that the mechanism imposed in our proposal, which avoid the premature convergency, highly depends on the elapsed time, we report the benefits of our proposal considering both short and long term executions.
+This is carried out through several settings and with all the test-problems.
 %
-Additionally, the latter experiments shows that the \VSDMOEA{} has a decent performance in short-term executions.
+Finally, since that the mechanism imposed in our proposal, which avoid the premature convergence, highly depends on the elapsed time, we reported the benefits of our proposal considering both short, and long term executions.
+%
+The latter experiments shows that the \VSDMOEA{} has a decent performance in short-term executions too.
 %
 
 % which belong to jMetalcpp~\cite{Joel:JMETAL} framework.
 %
 To validate the proposed MOEA in this work are considered some of the most popular benchmark in the multi-objective field.
 %
-Particularly, the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ} and UF~\cite{Joel:CEC2009} test problems have been used for our purpose. 
+Particularly, the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} test problems have been used for our purpose. 
 %
 %Through the literature several crossover operators have been proposed in MOEAs~\cite{Joel:ParentMeanCentricSelfAdaptation},  
 %a popular operator is the Simulated Binary Crossover (SBX).4\cite{Joel:SBX1994}%, Joel:TAXONOMY_CROSSOVER, Joel:Kalyanmoy}
-Additionally, our experimental validation includes the VSD-MOEA, as well as three well-known state-of-the-art algorithms.
+Additionally, our experimental validation includes the \VSDMOEA{}, as well as three well-known state-of-the-art algorithms.
 %
 Given that all of them are stochastic algorithms, each execution was repeated $35$ times with different seeds.
 %
@@ -31,7 +33,7 @@ The common configuration in all of them was the following: the stopping criterio
 %
 Additinally, in the DTLZ test instances, the number of decision variables is setted to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively, as is suggested by the authors \cite{Joel:DTLZ}.  
 % 
-The UF benchmark is composed of ten test instances, which is categorized in two groups that are based in the number of objetive functions to solve, thus the first seven consists of two objectives and the reaming problems of three objectives, where the number of decision variables taken into account in each one is $n=30$.
+The UF benchmark is composed of ten test instances, which is categorized in two groups that are based in the number of objetive functions to solve, thus the first seven consists of two objectives, and the reaming of three, where the number of decision variables taken into account in each one is $n=30$.
 %
 In general, the crossover and mutation operators are the Simulated Binary Crossover (SBX), and polynomial~\cite{Joel:SBX1994, Joel:Mutation}, which probabilities are setted to $0.9$ and $1/n$ respectively.
 %
@@ -48,9 +50,10 @@ The extra-parameterization of each algorithm is showed in the table~\ref{tab:Par
 \begin{tabular}{|c|c|}
 \hline
 \textbf{Algorithm} & \textbf{Configuration} \\ \hline
-\multirow{3}{*}{\textbf{MOEA/D}} & Neighbour size = 10, max. update by sub-problem (nr) = 2, \\
- & probability local selection ($\delta$) = 0.9, tour selection = 10, \\
- & period utility updating = 30 generations \\ \hline
+\multirow{3}{*}{\textbf{MOEA/D}} &Max. updates by sub-problem ($\eta_r$) = 2, \\
+ & tour selection = 10,   neighbour size = 10, \\
+ & period utility updating = 30 generations \\ 
+ & probability local selection ($\delta$) = 0.9,\\ \hline
 \textbf{VSD-MOEA} & $D_I=\sqrt{n}*0.25$ \\ \hline
 \end{tabular}
 \end{table}
@@ -185,6 +188,8 @@ Although the GDE3 approximate the WFG2 and DTLZ7, this this algorithm is far in 
 \input{Graphic-Scalability-3obj.tex}
 \label{fig:variable-decision-scalability-3obj}
 \end{figure}
+
+
 
 \subsection{Analyzes of the Intial Factor Distance}
 
