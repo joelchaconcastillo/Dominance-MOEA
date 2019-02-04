@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2019.1.26)  3 FEB 2019 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2019.1.26)  4 FEB 2019 08:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -816,43 +816,43 @@ PGFPlots: reading {CSV/Scalability_DTLZ4_3obj.csv}
 
 
 Package pgfplots Warning: Table 'CSV/Scalability_DTLZ4_3obj.csv' has an empty c
-olumn name; replacing it by '6'' on input line 97.
+olumn name; replacing it by '6'' on input line 98.
 
  [warning /pgfplots/warning/empty column name]
 
 Package pgfplots Warning: Table 'CSV/Scalability_DTLZ4_3obj.csv' has an empty c
-olumn name; replacing it by '7'' on input line 97.
+olumn name; replacing it by '7'' on input line 98.
 
  [warning /pgfplots/warning/empty column name]
 
 Package pgfplots Warning: Table 'CSV/Scalability_DTLZ4_3obj.csv' has an empty c
-olumn name; replacing it by '8'' on input line 97.
+olumn name; replacing it by '8'' on input line 98.
 
  [warning /pgfplots/warning/empty column name]
 
 Package pgfplots Warning: Table 'CSV/Scalability_DTLZ4_3obj.csv' has an empty c
-olumn name; replacing it by '9'' on input line 97.
+olumn name; replacing it by '9'' on input line 98.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {CSV/Scalability_UF5_2obj.csv}
 
 Package pgfplots Warning: Table 'CSV/Scalability_UF5_2obj.csv' has an empty col
-umn name; replacing it by '6'' on input line 98.
+umn name; replacing it by '6'' on input line 99.
 
  [warning /pgfplots/warning/empty column name]
 
 Package pgfplots Warning: Table 'CSV/Scalability_UF5_2obj.csv' has an empty col
-umn name; replacing it by '7'' on input line 98.
+umn name; replacing it by '7'' on input line 99.
 
  [warning /pgfplots/warning/empty column name]
 
 Package pgfplots Warning: Table 'CSV/Scalability_UF5_2obj.csv' has an empty col
-umn name; replacing it by '8'' on input line 98.
+umn name; replacing it by '8'' on input line 99.
 
  [warning /pgfplots/warning/empty column name]
 
 Package pgfplots Warning: Table 'CSV/Scalability_UF5_2obj.csv' has an empty col
-umn name; replacing it by '9'' on input line 98.
+umn name; replacing it by '9'' on input line 99.
 
  [warning /pgfplots/warning/empty column name]
 PGFPlots: reading {CSV/Scalability_UF10_3obj.csv}
@@ -869,20 +869,20 @@ PGFPlots: reading {CSV/PerformanceTime3obj.csv}
 (./chacon-ieeetec-17.aux)
 \openout1 = `chacon-ieeetec-17.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 403.
-LaTeX Font Info:    ... okay on input line 403.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 404.
+LaTeX Font Info:    ... okay on input line 404.
 
 -- Lines per column: 58 (exact).
 ABD: EveryShipout initializing macros
@@ -890,7 +890,7 @@ Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.13} (current compat level: 1.3).
 
 \AtBeginShipoutBox=\box47
-Package hyperref Info: Link coloring ON on input line 403.
+Package hyperref Info: Link coloring ON on input line 404.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -899,9 +899,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 403.
-LaTeX Info: Redefining \pageref on input line 403.
-LaTeX Info: Redefining \nameref on input line 403.
+LaTeX Info: Redefining \ref on input line 404.
+LaTeX Info: Redefining \pageref on input line 404.
+LaTeX Info: Redefining \nameref on input line 404.
 
 (./chacon-ieeetec-17.out) (./chacon-ieeetec-17.out)
 \@outlinefile=\write4
@@ -915,27 +915,18 @@ LaTeX Info: Redefining \nameref on input line 403.
 (./Diagram.tex) [3]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 100.
- [4]) (./ExperimentalValidation.tex [5]
-
-LaTeX Warning: Reference `tab:Effective_Test_2obj' on page 6 undefined on input
- line 138.
-
-
-LaTeX Warning: Reference `tab:Effective_Test_3obj' on page 6 undefined on input
- line 138.
-
-[6]
+ [4]) (./ExperimentalValidation.tex [5] [6]
 
 LaTeX Warning: Reference `fig:Scalability_Study_HV_1' on page 7 undefined on in
-put line 157.
+put line 225.
 
 
 LaTeX Warning: Reference `fig:Scalability_Study_HV_2' on page 7 undefined on in
-put line 157.
+put line 225.
 
 
 LaTeX Warning: Reference `fig:Attainment_Surfaces' on page 7 undefined on input
- line 173.
+ line 241.
 
 (./Graphic-Scalability-2obj.tex
 Missing character: There is no ] in font nullfont!
@@ -962,28 +953,20 @@ Overfull \hbox (9.65315pt too wide) in paragraph at lines 18--37
 Missing character: There is no ; in font nullfont!
 )
 (./Tables/Table_HV_2obj.tex
-Overfull \hbox (15.19113pt too wide) in paragraph at lines 7--37
-[][] 
+Overfull \hbox (19.53554pt too wide) in paragraph at lines 5--60
+ [][] 
  []
 
 ) (./Tables/Table_HV_3obj.tex
-Overfull \hbox (15.19113pt too wide) in paragraph at lines 7--33
-[][] 
+Overfull \hbox (19.53554pt too wide) in paragraph at lines 6--53
+ [][] 
  []
 
-) (./Tables/Table_IGDP_2obj.tex
-Overfull \hbox (15.19113pt too wide) in paragraph at lines 8--38
-[][] 
- []
+) (./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)) (./Conclusion.tex
+[7]) (./chacon-ieeetec-17.bbl
+Underfull \vbox (badness 1838) has occurred while \output is active []
 
-) (./Tables/Table_IGDP_3obj.tex
-Overfull \hbox (15.19113pt too wide) in paragraph at lines 7--33
-[][] 
- []
-
-) (./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)
-(./Tables/Tests_IGDP_2obj.tex) (./Tables/Tests_IGDP_3obj.tex))
-(./Conclusion.tex) (./chacon-ieeetec-17.bbl [7]
+ [8]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 
@@ -992,28 +975,13 @@ Underfull \vbox (badness 3590) has occurred while \output is active []
 
 Underfull \vbox (badness 1838) has occurred while \output is active []
 
- [8]
-Underfull \vbox (badness 1838) has occurred while \output is active []
-
-
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
  [9]
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1838) has occurred while \output is active []
+Underfull \vbox (badness 1057) has occurred while \output is active []
 
  [10]
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
-
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
- [11])
+[11])
 File: Photo_Authors/segura.eps Graphic file (type eps)
-
-<Photo_Authors/segura.eps>
+ <Photo_Authors/segura.eps>
 File: Photo_Authors/segura.eps Graphic file (type eps)
  <Photo_Authors/segura.eps> [12]
 File: Photo_Authors/coello.eps Graphic file (type eps)
@@ -1021,28 +989,30 @@ File: Photo_Authors/coello.eps Graphic file (type eps)
 <Photo_Authors/coello.eps>
 File: Photo_Authors/coello.eps Graphic file (type eps)
  <Photo_Authors/coello.eps>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 807.
- [13] [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 807.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 808.
+ [13
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 808.
 
 (./chacon-ieeetec-17.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 807.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 807.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 808.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 808.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
 (rerunfilecheck)             Checksum: 44ACAAB945E9F69CE001A93CD63D4ABB;1285.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 807.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 808.
  ) 
 Here is how much of TeX's memory you used:
- 25452 strings out of 493015
- 589336 string characters out of 6135716
- 1512418 words of memory out of 5000000
- 28457 multiletter control sequences out of 15000+600000
+ 25436 strings out of 493015
+ 588943 string characters out of 6135716
+ 1433766 words of memory out of 5000000
+ 28453 multiletter control sequences out of 15000+600000
  32468 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  56i,22n,84p,735b,2130s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (14 pages, 748112 bytes).
+Output written on chacon-ieeetec-17.dvi (13 pages, 703172 bytes).

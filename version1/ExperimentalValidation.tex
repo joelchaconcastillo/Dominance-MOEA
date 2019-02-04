@@ -55,44 +55,59 @@ The extra-parameterization of each algorithm is showed in the table~\ref{tab:Par
  & period utility updating = 30 generations \\ 
  & probability local selection ($\delta$) = 0.9,\\ \hline
 \textbf{VSD-MOEA} & $D_I=\sqrt{n}*0.25$ \\ \hline
+\textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
 \end{tabular}
 \end{table}
 
-The MOEA/D and R2-EMOA are 
 
-employes utility functions the algorithms \MOEAD{} and R2-EMOA require a set of vectors uniformly scattered on the unit-simplex.
+Despite the fact that the \MOEAD{}, and \RMOEA{} can be employed with the same utility function --in this case the Tchebycheff function-- each one of them is designed through a notorious dissimilar paradigm.
+%
+Thus, the weight vectors taken into consideration for each one of them were different.%, i.e. the confias it was originally proposed by the authors.
+%
+The main reason of this, is that the \RMOEA{} can be configured with a different population size than the number of weight vectors without been significantly affected on its performance.
+%
+Particularly, the \RMOEA{} employes $501$ and $496$ weight vectors for two and three objectives respectively.
+%
+Contrarily, in the \MOEAD{} each weight vector is identified as a subproblem, therefore the population should correpond to the number of weight vectors.
+%
+Also, the weight vectors used in the \MOEAD{} should be uniformly scattered on the unit-simplex, however it can be a complication since that the number of vectors requiered for this task increases non-linearly according the number of objectives.
+%
+Therefore, in this version is appled the method proposed in \cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres} where the uniform design (UD) \cite{Joel:Uniform_Design} and good lattice point (GLP) are combined.
+%
+In this way, the number of weight vectors that is required by this \MOEA{} is not affected by the number of objectives.
+
+
+Mainly, the experimental analyzes is carried out considering the hypervolume indicator (\HV{}).
+%
+The \HV{} metric measures the size of the objective space dominated by the approximated solutions given a reference point, so the solutions dominated by the reference point are not considered.
+%
+Particularly, the reference point is chosen to be a vector which values are sightly larger (ten percent) than the nadir point as is suggested in \cite{ishibuchi2017reference}.
+%
+Similarly that in \cite{li2015evolutionary}, and to have a fair comparison the normalized \HV{} is taken into account.
+%
+Specifically, the \HV{} reported is obtained as the division between the \HV{} reached by a set of solutions and the \HV{} of the optimal Pareto Front.
+%
+In this way, the more approximate to unity this metric is, the more a \MOEA{} reaches to the Pareto Front.
 %
 
 
- therefore the number of vectors generated increases nonlinearly with the number of objectives.
-%
-Consequently, is applied the method proposed in \cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres} where the uniform design (UD) \cite{Joel:Uniform_Design} and good lattice point (glp) are combined.
-%
-Thus the number weight of vectors is not affected by the number of objectives.
 
-In addition, our experimental analysis has been carry out with the hypervolume indicator, since the WFG benchmark variate the Pareto front shape with different distance parameters \cite{Joel:ScalabilityStudy}.
+%%\begin{table}[t]
+%%\centering
+%%\caption{References points for the HV indicator}
+%%\label{tab:ReferencePoints}
+%%\begin{tabular}{cc}
+%%\hline
+%%\textbf{Instances} & \textbf{Reference Point} \\ \hline
+%%WFG1-WFG9 & $[2.1, ...,2m+0.1]$ \\
+%%DTLZ 1, 2, 4 & $[1.1, ..., 1.1]$ \\
+%%DTLZ 3, 5, 6 & $[3, ..., 3]$ \\
+%%DTLZ7 & $[1.1, ..., 1.1, 2m]$ \\
+%%UF 1-10 & $[2, ..., 2]$ \\ \hline
+%%\end{tabular}
+%%\end{table}
 %
-
-In this work the reference points are chosen to be a vector with values slightly larger than the nadir point, also for complex problems the reference point is considered as nadir point plus the unity.
-%
-Therefore the reference points implemented in the hypervolume indicator are showed in the table \ref{tab:ReferencePoints} as used in \cite{Joel:Kuhn_Munkres, Joel:OperatorAHX}.
-
-\begin{table}[t]
-\centering
-\caption{References points for the HV indicator}
-\label{tab:ReferencePoints}
-\begin{tabular}{cc}
-\hline
-\textbf{Instances} & \textbf{Reference Point} \\ \hline
-WFG1-WFG9 & $[2.1, ...,2m+0.1]$ \\
-DTLZ 1, 2, 4 & $[1.1, ..., 1.1]$ \\
-DTLZ 3, 5, 6 & $[3, ..., 3]$ \\
-DTLZ7 & $[1.1, ..., 1.1, 2m]$ \\
-UF 1-10 & $[2, ..., 2]$ \\ \hline
-\end{tabular}
-\end{table}
-%
-In order to statistically compare the hypervolume results, a similar guideline than the proposed in~\cite{Joel:StatisticalTest} was used. 
+In order to statistically compare the \HV{} results, a similar guideline than the proposed in~\cite{Joel:StatisticalTest} was used. 
 %
 First a Shapiro-Wilk test was performed to check whatever or not the values of the results followed a Gaussian distribution. 
 %
@@ -103,52 +118,105 @@ If samples had equal variance, an ANOVA test was done; if not, a Welch test was 
 For non-Gaussian distributions, the nonparametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution. 
 %
 An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, if the mean and median obtained by $X$ are higher than the mean and median achieved by $Y$.
+%
+
+In the tables \ref{tab:StatisticsHV_2obj}, \ref{tab:StatisticsHV_3obj} are showed the normalized hypervolume with two an three objectives respectively.
+%
+From this empirical results, it is clear that the \VSDMOEA{} obteained the highest general mean \HV{} with both two and three objectives.
+%
+Even more, the standard deviation is the lowest in almost all the problems, thus this \MOEA{} shows to be stable, meaning that reach similar results with differents seeds.
+%
+The best general mean (last row) considering two objectives is achieved by the \VSDMOEA{} with $0.955$.
+%
+Also, the second general mean is obtained by the \NSGAII{} with $0.886$.
+%
+Its important to remark that the general mean can be unsteady, since that if one problem is far a way from the Pareto front then this measure could be highly degraded. 
+%
+However, all the state-of-the-art-\MOEAS{} achieved a general mean of $0.88$ considering two objectives, whilst the \VSDMOEA{} obtained $0.95$.
+%
+Considering three objectives the performance of the \NSGAII{} is highly affected, this might occurs since that density estimator employed in the \NSGAII{} highly depends on the dominance-relation, thus in some problems (e.g. multi-frontal problems UF10) the solutions do not converge adequatly to the Pareto front.
+%
+In the same line, the \VSDMOEA{} achieved the best \HV{} values in almost all the problems, in fact such values that are higher than $0.9$ are close enough to the Pareto Front.
+%
+The second best \MOEA{} based in the general mean is the \RMOEA{} with $0.855$, despite that it adopts the same utility function that the \MOEAD{}, the latter is lightly lower with $0.835$, this might occurs given that the \MOEAD{} has several paremeters to be tunned, and the selected configuration could be insuficient to long-term executions.
+%
+
+
+In the tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are showed the statistical tests with two an three objectives respectively.
+%
+In the column tagged with ``Diff'' is computed the difference between the mean of each algorithm and the best mean achieved.
+%
+Taking into account two objectives the \VSDMOEA{} achieved $52$ wins, in comparison the \RMOEA{} had $34$ wins.
+%
+In spite that the \NSGAII{} achieved a better general mean it won less times that the remaining \MOEAS{}.
+%
+Meaning that the \NSGAII{} obtains values close enough than the best \MOEA{}, this can be viewed in the last row where is computed the total sum of all the problems.
+%
+Generally speaking, the best results are obtained by the \VSDMOEA{}, since that the total sum of the ``Diff'' column is $0.061$, thus when this algorithm does not achieved the best results, it obtained near solutions to the best results.
+%
+Futhermore, the algorithms \RMOEA{} and \MOEAD{} achieved a similar total ``Diff'' values.
+%
+Particularly, the worst ``Diff'' value achieved by the \VSDMOEA{} is in the problem WFG6.
+%
+This problem is unimodal and non-separable, and this occurs since that the initial factor distance is very high, in fact through other experimental analyzes this instance was correctly solved with $D_I=0.1$ which mean achieved in this problem was of $0.917$ and $0.868$ for two and three objectievs respectively.
+%
+In addition, inspecting three objectives (table \ref{tab:Tests_HV_3obj}) it can be seen similar results, notably the \VSDMOEA{} improves its performance respectively to the remaining \MOEAS{}.
+%
+Particularly, the most complicated problems are better solved by the \VSDMOEA{} as are UF3, UF4, UF5, and UF6 in two objectives, and UF9, UF10 in three objectives.
+%
+The UF5 is considered as one of the most difficult problems since that the optimal Pareto front is conformed by $21$ points, also it has several suboptimal regions where the solutions can be stuck. 
+%
+Neverthless, the \MOEAS{} that considers weight vectors have more chances to get stuck, since that it is a highly disconected front.
+%
+It is showed, since that the \NSGAII{} has a lower ``Diff'' value ($0.048$) than the \MOEAD{} and \RMOEA{} ($0.205$ and $0.122$).
+%
+Diversely, the UF10 is a multi-frontal problem, this means that there exists different optimal non-dominated fronts that correspond to different locally optimal values \cite{huband2006review}, this characteristic increases the difficultness of the problem as the number of objectives increases.
+%
+Indeed, the latter problem has notably converged better in \VSDMOEA{} than the reamining \MOEAS{}.
+%
 
 %
 
-In the tables \ref{tab:StatisticsHV_2obj}, \ref{tab:StatisticsHV_3obj} are showed the hypervolume statistics with two an three objectives respectively.
+%The column \textit{Diff} indicate how far is the best HV mean from each algorithm, this field is computed as the difference between the mean of the each algorithm and the best mean.
 %
-The column \textit{Diff} indicate how far is the best HV mean from each algorithm, this field is computed as the difference between the mean of the each algorithm and the best mean.
-%
-Consequently, the best algorithm in each instance has assigned a zero.
+%Consequently, the best algorithm in each instance has assigned a zero.
 %
 
-Considering two objectives the GDE3 provides the best results, however the VSD-MOEA is very close to the GDE3 as is showed in the \textit{Diff} columns.
+%It is important to highlight that the DTLZ test suites have the next weaknesses \cite{Joel:CEC2009}.
+%The global optimum lies in the center or bounds, all are separable and the global optimum has the same parameter values for different dimensions.
 %
-It is important to highlight that the DTLZ test suites have the next weaknesses \cite{Joel:CEC2009}.
-The global optimum lies in the center or bounds, all are separable and the global optimum has the same parameter values for different dimensions.
-%
-Particularly the DTLZ5 and DTLZ6 are easy for the GDE3, since the global optimal are located in the low bound, thus if the differential operators locate a solution outside of bounds, the repair procedure could move the point among the optimal.
+%Particularly the DTLZ5 and DTLZ6 are easy for the GDE3, since the global optimal are located in the low bound, thus if the differential operators locate a solution outside of bounds, the repair procedure could move the point among the optimal.
 
 %
-Additionally, the GDE3 get worse according increases the number of objectives, even more the \textit{Diff} results are in average high, except for the DTLZ5 and DTLZ6 where the optimal set are located along the bounds.
+%Additionally, the GDE3 get worse according increases the number of objectives, even more the \textit{Diff} results are in average high, except for the DTLZ5 and DTLZ6 where the optimal set are located along the bounds.
 %
-Despite the fact that the VSD-MOEA does not have a repair procedure because it implements genetic operators, the results are fairly stable.
-%
-Also improves the hypervolume with three objectives, hence can be considered a robust algorithm, in fact considering more objectives it provides better results than the dominance-based algorithms\footnote{Experimentally with ten objectives the algorithm is best than dominance-based MOEAs.}.
-%
-A remarkable characteristic that can be appreciated in two and three objectives is that our  proposal provide the best results in the most difficult problems as are dependence, multi-modal and deceptiveness.
-
-%
-On average the VSD-EMOA has lower \textit{Diff} value than the rest of algorithms, therefore considering all best mean of each instance, the VSD-EMOA is not too far from the best means.
-%
-Even more, the min and max averages are better than the min and max of the state-of-art algorithms.
+%Despite the fact that the VSD-MOEA does not have a repair procedure because it implements genetic operators, the results are fairly stable.
 %
 
-The effective test showed in the tables \ref{tab:Effective_Test_2obj}, \ref{tab:Effective_Test_3obj} are conformed by two an three objectives respectively,  these metrics qualify the superiority of each algorithm with the rest through pair comparisons.
+%Also improves the hypervolume with three objectives, hence can be considered a robust algorithm, in fact considering more objectives it provides better results than the dominance-based algorithms\footnote{Experimentally with ten objectives the algorithm is best than dominance-based MOEAs.}.
 %
-Thus, an algorithm \textbf{A} is compared with algorithm \textbf{B}, if \textbf{A} wins, the difference with \textbf{B} is accumulated in wins $\uparrow$ of the algorithm \textbf{A}, the same process is for the algorithm \textbf{B} but it is accumulated in the lost field $\downarrow$.
+%A remarkable characteristic that can be appreciated in two and three objectives is that our  proposal provide the best results in the most difficult problems as are dependence, multi-modal and deceptiveness.
+
 %
-The column \textit{Score} is conformed by the difference between the win and lost values, therefore a high positive score indicate the superiority of the algorithm.
+%On average the VSD-EMOA has lower \textit{Diff} value than the rest of algorithms, therefore considering all best mean of each instance, the VSD-EMOA is not too far from the best means.
+%
+%Even more, the min and max averages are better than the min and max of the state-of-art algorithms.
 %
 
-In addition, our proposal has low negative scores in the DTLZ6 and WFG6 with two objectives, it might occurs because these instances are not a problem to long term executions, therefore they are totally defined by the crowding procedure.
+%The effective test showed in the tables \ref{tab:Effective_Test_2obj}, \ref{tab:Effective_Test_3obj} are conformed by two an three objectives respectively,  these metrics qualify the superiority of each algorithm with the rest through pair comparisons.
 %
-However, the negative scores in VSD-MOEA are not highly significant.
+%Thus, an algorithm \textbf{A} is compared with algorithm \textbf{B}, if \textbf{A} wins, the difference with \textbf{B} is accumulated in wins $\uparrow$ of the algorithm \textbf{A}, the same process is for the algorithm \textbf{B} but it is accumulated in the lost field $\downarrow$.
 %
-Additionally, considering three objectives, the VSD-MOEA provides the best and positive scores.
+%The column \textit{Score} is conformed by the difference between the win and lost values, therefore a high positive score indicate the superiority of the algorithm.
 %
-In general our proposal has the best scores in difficult instances as are the UF and some WFG problems.
+
+%In addition, our proposal has low negative scores in the DTLZ6 and WFG6 with two objectives, it might occurs because these instances are not a problem to long term executions, therefore they are totally defined by the crowding procedure.
+%
+%However, the negative scores in VSD-MOEA are not highly significant.
+%
+%Additionally, considering three objectives, the VSD-MOEA provides the best and positive scores.
+%
+%In general our proposal has the best scores in difficult instances as are the UF and some WFG problems.
 
 \subsection{Decision Variable Scalability Experiments}
 
@@ -234,9 +302,9 @@ Although the GDE3 approximate the WFG2 and DTLZ7, this this algorithm is far in 
 
 \input{Tables/Table_HV_2obj.tex}
 \input{Tables/Table_HV_3obj.tex}
-\input{Tables/Table_IGDP_2obj.tex}
-\input{Tables/Table_IGDP_3obj.tex}
+%\input{Tables/Table_IGDP_2obj.tex}
+%\input{Tables/Table_IGDP_3obj.tex}
 \input{Tables/Tests_HV_2obj.tex}
 \input{Tables/Tests_HV_3obj.tex}
-\input{Tables/Tests_IGDP_2obj.tex}
-\input{Tables/Tests_IGDP_3obj.tex}
+%\input{Tables/Tests_IGDP_2obj.tex}
+%\input{Tables/Tests_IGDP_3obj.tex}
