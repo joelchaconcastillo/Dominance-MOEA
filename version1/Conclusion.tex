@@ -1,25 +1,30 @@
 The evolutionary algorithms have been a most popular approaches to deal with complex optimization problems.
 %
-Particularly, the MOEAs works with different principles where the objective space is involved.
+Given that the quality of the \MOEAS{} is directly measured in the objective space, the majority of them incorporate sophisticated mechanisms with the aim of attain diverse solutions and well converged to the Pareto Front.
 %
-As it is seen in single-objective the diversity provides quality solutions specifically in complex problems.
+Since this, the diversity in the decision variables tend to be neglected.
+%
+However, equivalently than in single-objective problems, where the diversity in variable space has a critical role, the multi-objective problems should take into consideration the diversity to avoid premature convergence to sub-optimal regions.
 %
 
 In this work we have provided an algorithm with a particular replacement phase.
 %
 This phase considers the diversity in both spaces, specifically in the variable space the diversity is based in a decremental dynamic concept.
 %
-Thus, in the first stages the diversity in variables space is induced, and in a gradual way the last stages the replacement phase works as is usual.
+Thus, at the first stages the diversity in variables space is promoted, as the generations elapses this diversity is gradually reduces, thus at the laste stages the replacement phase works as a classic \MOEA{}.
 %
 
-Additionally a improvement distance is suggested, which is based in the IGD+ indicator and is considered as weakly Pareto compliant.
+In addition, is suggested a novel density estimator of the objective space, which is based in the IGD+ indicator being consdered as wafly Pareto compliant.
 %
-
-The experimental validation is carried out with long-term executions and the three popular benchmarks.
+In the experimental validation carried out, is showed that our proposal not only improves the state-of-the-art-\MOEAS{} in long-term execution, also offers a reasonable performance in short-term executions.
 %
-This validation shows that the VSD-MOEA is able to properly solve overall test problems, also in the most complex test instances shows the best hypervolume values.
+This validation shows that the VSD-MOEA is able to properly solve several test problems, also it attained better results than the remaining \MOEAS{} in the problems with the most difficult characteristics.
 %
+In addition, some scalability experiments with the decision variables are carry out through long-term executions, results indicate the superiority and stability mesured with the hypervolume indicator.
 
-In addition, some scalability experiments with the decision variables are carry out through long-term executions, results indicate the superiority and stability provided with the hypervolume indicator.
+Therefore, is shown the relevance in having a properly managment of the diversity in the variable space, and established a way to preserve the quality and diversity in both decision and objective space.
 
-We show the relevance of diversity in the variable space an established a way to preserve the diversity in explicitly in variable space.
+
+In future, we plan to develop an adaptive scheme to avoid setting the initial factor distance, even though the \VSDMOEA{} is not highly sensitive to this parameter adapting this parameter could result in a most robust \MOEA{}.
+%
+In addition, a multi-objective memetic algorithm with this principle should be proposed, since that this approach managments the diversity a local serch should provedes even better results.
