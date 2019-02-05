@@ -5,7 +5,7 @@ ymin=0.5,
 %x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
 title={\textit{\textbf{Scalability DTLZ4}}},
     xlabel=Number of Decision Variables,
-  ylabel=HV,
+  ylabel=Mean HV,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
@@ -32,7 +32,7 @@ table [y=VSD_MOEA,x=X]{\ScalabilityDTLZFourTwoObj};
 %x label style={at={(current axis.left of origin)},anchor=north, below=10mm},
 title={\textit{\textbf{Scalability UF5}}},
     xlabel=Number of Decision Variables,
-  ylabel=HV,
+  ylabel=Mean HV,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
@@ -52,4 +52,4 @@ table [y=VSD_MOEA,x=X]{\ScalabilityUFFiveTwoObj};
 \addlegendentry{MOEA/D}]
 \end{axis}
 \end{tikzpicture}
-\caption{Scalability study of decision variables with two objectives}
+\caption{Mean of the \HV{} (35 runs) considering two objectives.}

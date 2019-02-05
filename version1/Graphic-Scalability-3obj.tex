@@ -3,7 +3,7 @@
 ymin=0.0,
 title={\textit{\textbf{Scalability DTLZ4}}},
     xlabel=Number of Decision Variables,
-  ylabel=HV,
+  ylabel=Mean HV,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
@@ -27,7 +27,7 @@ table [y=VSD_MOEA,x=X]{\ScalabilityDTLZFourThreeObj};
 ymin=0.0,
 title={\textit{\textbf{Scalability UF10}}},
     xlabel=Number of Decision Variables,
-  ylabel=HV,
+  ylabel=Mean HV,
   xticklabel style = {rotate=30},
   legend style=
     {cells={anchor=east},legend pos=outer north east,},
@@ -46,4 +46,4 @@ table [y=VSD_MOEA,x=X]{\ScalabilityUFTenThreeObj};
 \addlegendentry{MOEA/D}]
 \end{axis}
 \end{tikzpicture}
-\caption{Scalability study of decision variables with three objectives}
+\caption{Mean of the \HV{} (35 runs) considering three objectives.}

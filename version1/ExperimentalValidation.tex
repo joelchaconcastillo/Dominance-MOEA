@@ -1,10 +1,10 @@
-In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by state-of-art-MOEAs.
+In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by the state-of-art-MOEAs.
 %
 At the beginning, several technical specifications taken into account in our comparison outline are explained.
 %
-Therafter, to have a broad perception of the \VSDMOEA{} some scenaries are analyzed.
+Thereafter, to have a broad perception of the \VSDMOEA{} some experiments are driven.
 %
-Between them an analyzes driven to probe the scalability in the decision variable space is taken into account.
+Between them an analyzes which is designed to test the scalability in the decision variable space of each \MOEA{}.
 %
 This analyzes is narrowed through some specific and well known problems.
 %
@@ -12,7 +12,7 @@ In the same line, with the intention to have a better understanding of the criti
 %
 This is carried out through several settings and with all the test-problems.
 %
-Finally, since that the mechanism imposed in our proposal, which avoid the premature convergence, highly depends on the elapsed time, we reported the benefits of our proposal considering both short, and long term executions.
+Finally, since that the mechanism imposed in our proposal, which avoid the premature convergence, highly depends on the elapsed time, we reported the benefits of it considering both short, and long term executions.
 %
 The latter experiments shows that the \VSDMOEA{} has a decent performance in short-term executions too.
 %
@@ -33,7 +33,7 @@ The common configuration in all of them was the following: the stopping criterio
 %
 Additinally, in the DTLZ test instances, the number of decision variables is setted to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively, as is suggested by the authors \cite{Joel:DTLZ}.  
 % 
-The UF benchmark is composed of ten test instances, which is categorized in two groups that are based in the number of objetive functions to solve, thus the first seven consists of two objectives, and the reaming of three, where the number of decision variables taken into account in each one is $n=30$.
+The UF benchmark is composed of ten test instances, which is categorized in two groups that are based in the number of objetive functions to solve, thus the first seven consists of two objectives, and the reaming of three, alsoalso  the number of decision variables taken into account in each one is $n=30$.
 %
 In general, the crossover and mutation operators are the Simulated Binary Crossover (SBX), and polynomial~\cite{Joel:SBX1994, Joel:Mutation}, which probabilities are setted to $0.9$ and $1/n$ respectively.
 %
@@ -47,14 +47,14 @@ The extra-parameterization of each algorithm is showed in the table~\ref{tab:Par
 \centering
 \caption{Parameterization of each MOEA considered}
 \label{tab:Parametrization}
-\begin{tabular}{|c|c|}
+\begin{tabular}{c|c}
 \hline
 \textbf{Algorithm} & \textbf{Configuration} \\ \hline
 \multirow{3}{*}{\textbf{MOEA/D}} &Max. updates by sub-problem ($\eta_r$) = 2, \\
  & tour selection = 10,   neighbour size = 10, \\
  & period utility updating = 30 generations \\ 
  & probability local selection ($\delta$) = 0.9,\\ \hline
-\textbf{VSD-MOEA} & $D_I=\sqrt{n}*0.25$ \\ \hline
+\textbf{VSD-MOEA} & $D_I=0.4$ \\ \hline
 \textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
 \end{tabular}
 \end{table}
@@ -62,7 +62,8 @@ The extra-parameterization of each algorithm is showed in the table~\ref{tab:Par
 
 Despite the fact that the \MOEAD{}, and \RMOEA{} can be employed with the same utility function --in this case the Tchebycheff function-- each one of them is designed through a notorious dissimilar paradigm.
 %
-Thus, the weight vectors taken into consideration for each one of them were different.%, i.e. the confias it was originally proposed by the authors.
+Thus, the weight vectors taken into consideration for each one of them were different.
+%, i.e. the confias it was originally proposed by the authors. 
 %
 The main reason of this, is that the \RMOEA{} can be configured with a different population size than the number of weight vectors without been significantly affected on its performance.
 %
@@ -130,7 +131,7 @@ The best general mean (last row) considering two objectives is achieved by the \
 %
 Also, the second general mean is obtained by the \NSGAII{} with $0.886$.
 %
-Its important to remark that the general mean can be unsteady, since that if one problem is far a way from the Pareto front then this measure could be highly degraded. 
+It is important to remark that the general mean can be unsteady, this mean that very low \HV{} values could affect highly this measurement.
 %
 However, all the state-of-the-art-\MOEAS{} achieved a general mean of $0.88$ considering two objectives, whilst the \VSDMOEA{} obtained $0.95$.
 %
@@ -142,13 +143,13 @@ The second best \MOEA{} based in the general mean is the \RMOEA{} with $0.855$, 
 %
 
 
-In the tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are showed the statistical tests with two an three objectives respectively.
+In the tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are showed the statistical tests with two and three objectives respectively.
 %
-In the column tagged with ``Diff'' is computed the difference between the mean of each algorithm and the best mean achieved.
+In the column tagged ``Diff'' is computed the difference between the mean of each algorithm and the best mean achieved.
 %
-Taking into account two objectives the \VSDMOEA{} achieved $52$ wins, in comparison the \RMOEA{} had $34$ wins.
+Taking into account two objectives the \VSDMOEA{} achieved $52$ wins, in comparison the \RMOEA{} has $34$ wins.
 %
-In spite that the \NSGAII{} achieved a better general mean it won less times that the remaining \MOEAS{}.
+In spite that the \NSGAII{} achieved a better general mean, it won less times that the remaining \MOEAS{}.
 %
 Meaning that the \NSGAII{} obtains values close enough than the best \MOEA{}, this can be viewed in the last row where is computed the total sum of all the problems.
 %
@@ -166,7 +167,7 @@ Particularly, the most complicated problems are better solved by the \VSDMOEA{} 
 %
 The UF5 is considered as one of the most difficult problems since that the optimal Pareto front is conformed by $21$ points, also it has several suboptimal regions where the solutions can be stuck. 
 %
-Neverthless, the \MOEAS{} that considers weight vectors have more chances to get stuck, since that it is a highly disconected front.
+Neverthless, since that it is a disconected front, the \MOEAS{} that considers weight vectors have more chances to get stuck.
 %
 It is showed, since that the \NSGAII{} has a lower ``Diff'' value ($0.048$) than the \MOEAD{} and \RMOEA{} ($0.205$ and $0.122$).
 %
@@ -220,29 +221,46 @@ Indeed, the latter problem has notably converged better in \VSDMOEA{} than the r
 
 \subsection{Decision Variable Scalability Experiments}
 
+ 
 The scalability of each MOEA is also evaluated respect with the number of decision variables \cite{Joel:ScalabilityStudy}. 
 %
-The figures \ref{fig:Scalability_Study_HV_1}, \ref{fig:Scalability_Study_HV_2} show the hypervolume performance of 30, 100, 250 and 500 variables respectively.
+The figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} show the mean of \HV{} attained with $50$, $100$, $250$, $500$, and $1000$ variables respectively.
 %
-Particularly,  the scalability study was realized in DTLZ4, UF5 with two objectives and DTLZ4, UF10 with three objectives.
+The scalability study was taken into consideration with some problems conformed by easy and difficult characteristics.
 %
-In some instances the GDE3 degrades relatively fast according increases the number of decision variables as is showed in UF5, UF10 and DTLZ4 with three objectives.
+Particularly, the problems considered in this analyzes were the DTLZ4, UF5 which are conformed by two objectives, and DTLZ4, UF10 with three objectives.
 %
-Also, the GDE3 show a non-stable performance with the parameter configurations, as is explained by J. Lampinen et al.\cite{Joel:GDE3_CEC09}, where they indicate that a high value for CR might lead to premature convergence with respect to one objective compared to another.
-
+In addition, each selected problem was repeated $35$ times, thus the mean of all the \HV{} values are reported.
 %
-Specifically, the instance UF10 with GDE3 has an increment of HV for 100 variables, this irregularity is related with diversity issues \cite{Joel:GDE3_CEC09}
+The \VSDMOEA{} attained the best results in two objectives with both problems, however its remarkable to notice that \HV{} value reported by the \NSGAII{} improves as the number of variables decision is increased.
 %
-On the other hand the VSD-MOEA is enough stable, also it provides the best HV values.
+Specifically, the DTLZ4 is uni-modal, and its Pareto shape is concave, also it has a polynomial bias.
 %
-It is interesting that the MOEA/D and MOMBI-II required an extra-parametrization, hence the stability could be compromised.
-
+This interesting behaviour is also showed by the \RMOEA{}, and can be explained as follows.
 %
-The 50\% attainment surfaces WFG2, WFG8 and DTLZ7 instances are showed in the figure \ref{fig:Attainment_Surfaces}.
+The probability to get stuck in certain sub-optimal regions can be avoided increasing the decision variables space.
 %
-The analyses shows that our proposal provide solutions approximated to the Pareto front.
+This highly depends in the operators taken into account (in this case the SBX), thus in some circumstances the more bigger the variable decision space is, the better quality solutions are reached.
 %
-Although the GDE3 approximate the WFG2 and DTLZ7, this this algorithm is far in some regions of the Pareto front with the WFG8 instance. 
+This can be lightly seen in the \MOEAD{} after $250$ variables, however we believe that this \MOEA{} is highly parameter-sensitive.
+%
+Contrarily, as the decision variable space is increased in the UF5 the performance of the \MOEAS{} is highly affected, in spite of this the \VSDMOEA{} still attained the best \HV{} values.
+%
+However, the \VSDMOEA{} is not the best \MOEA{}, it can be seen considering three objectives (figure \ref{fig:variable-decision-scalability-3obj}).
+%
+Specifically, where the number of variables is increased to one thousand in both problems (DTLZ4 an d UF10).
+%
+This might occurs for several reasons, perhaps the most important is related with the distance employed in the variable space (Euclidean distance), this is \textit{The Curse of Dimensionality} \cite{trunk1979problem, beyer1999nearest}.
+%
+This drawback means that under certain broad conditions, as dimensionality increases, the distance to the nearest neighbor approaches the distance to the farthest neighbor.
+%
+In other words, the contrast in distances to different data points becomes noexistent.
+%
+The remaining \MOEAS{} show a similar behavior with the DTLZ4 with two and three objectives.
+%
+As previoudly mentioned the performance of \VSDMOEA{} is seriourly deteriored, however it is still better than the \NSGAII{}.
+%
+Also, the \RMOEA{} seems to be enough stable with three objectives in the problems DTLZ4 and UF10.
 
 \begin{figure}[t]
 \centering
@@ -250,24 +268,103 @@ Although the GDE3 approximate the WFG2 and DTLZ7, this this algorithm is far in 
 \label{fig:variable-decision-scalability-2obj}
 \end{figure}
 
-
 \begin{figure}[t]
 \centering
 \input{Graphic-Scalability-3obj.tex}
 \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
-
-
 \subsection{Analyzes of the Intial Factor Distance}
 
+The \VSDMOEA{} induces the diversity of the decision variable space thorugh the initial distance factor ($D_I$), such parameter is decreased as the number of generations elapses.
+%
+Given that this paramater influences the performance of the algorithm, a detailed empirical analyzes is taken into account as follows.
+%
+Since that this parameter is computed as a fraction of the main normalized diagonal which belong to the unitary hypercube, the portions considered are $ D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\}$.
+%
+In the figure \ref{fig:Initial-distance-factor} is shown the general mean of the \HV{} for each configuration with two and three objectives respectively.
+%
+Particularly, the initial parameter $D_I=0.0$, which does not promote diversity, should have a similar performance than a classic \MOEA{}.
+%
+In spite that none diversity is promoted, the \VSDMOEA{} achieves better general mean values than the remaining \MOEAS{}, those values are $0.905$, $0.895$ for two and three objectives respectively.
+%
+Even more, the benefits of promoting diversity are outstanding.
+%
+It seems that such benefits are more notorius with two objectives than with three.
+%
+This might occurs given that the population size could not been enough to cover the entire objective space.
+%
+Giving this empirical results, the most suitable parameter configuration should be setted with $D_I = 0.4$.
+%
 \begin{figure}[t]
 \centering
 \input{Graphic-Initial-Distance.tex}
 \label{fig:Initial-distance-factor}
 \end{figure}
 
-\subsection{Convergence of the Diversity of WFG1}
+\subsection{Diversity of the \MOEAS{} Through Generations}
+
+In order, to have a better understanding of the diversity behaviour some WFG problems have been selected.
+%
+The WFG problems divide the decision variables in two kinds of parameter: the distance parameters and the position parameters.
+%
+A parameter $x_i$ is a distance parameter when for all parameter vectors $\mathbf{a}$, modifying $x_i$ in $\mathbf{a}$ results in a parameter vector that dominates $\mathbf{a}$, is equivalent to $\mathbf{a}$, or is dominated by $\mathbf{a}$.
+%
+However, if $x_i$ is a position parameter, modifying $x_i$ in $\mathbf{a}$ always results in a vector that is incomparable or equivalent to $\mathbf{a}$~\cite{huband2005scalable}.
+%
+
+In this section we show that state-of-the-art-\MOEAS{} do not always maintain high enough diversity.
+%
+Particularly, the selected problems are used to show that premature convergence appears in the set of distance parameters.
+%
+Consequently, the operators involved lose its exploraty strength.
+%
+We select the WFG1, WFG5, and WFG6 problems, because they have simple definition, but most MOEAs faces difficulties with them. 
+%
+In addition, those problems were taken into account given that the WFG1 and WFG5 were better solved by the \VSDMOEA{}.
+%
+Generally speaking, the WFG1 converged to the Pareto Front with our proposal, this since that the accuracy obtained was of $0.993$.
+%
+In contrast, the WFG5 was still far away of the pareto Front which \HV{} mean  was of $0.923$.
+%
+Contrarily, the WFG6 was chosen since that the \VSDMOEA{} achieved the worst results.
+%
+Whereas the WFG1 and WFG6 are uni-modal, the WFG5 is a highly deceptive problem.
+%
+Also, the WFG1 and WFG5 are conformed by separable properties in the objective functions.
+%
+In fact, the distance parameters values associated to Pareto optimal solutions for WFG1-WFG7 have exactly the same values in the distance parameters.
+%
+This values is shown as follows:
+\begin{equation}
+   x_{i=k+1:n} = 2i \times 0.35
+\end{equation}
+%
+Taking into account the sochastic behavior of \MOEAS{}, $35$ independent executions were run by each selected problem.
+%
+In all of them, the stopping criterion was set to $250,000$ generations.
+%
+In order to analyze the diversity, the average Euclidean distance among individuals (ADI) is calculated, i.e. the mean value of all pairwise distances among individuals in the population is reported.
+%
+In the figures \ref{fig:Diversity_WFG1}, \ref{fig:Diversity_WFG5}, and \ref{fig:Diversity_WFG6} are showed the evolution of diversity of the WFG1, WFG5, and WFG6 respectively.
+%
+In those figures each \MOEA{} is showed by dashed and solid lines that represents two and three objectives respectively.
+%
+Particularly, the \VSDMOEA{} properly maintains diversity in both kind of parameters, while in the remaining algorithms the diversity in the distance parameters is lost after the $10\%$ (generation $2500$) of total generations.
+%
+Thus, after those \MOEAS{} converges, they are bascally modifying the position parameters, so the majority of the time is improving further the diversity in the objectives space and the convergency is neglected.
+%
+In fact, this diversity issue is also present in the WFG5.
+%
+However, all the \MOEAS{} have a minimum lower bound of diversity in the position parameters of those selected problems.
+%
+Contrastively, considering the WFG6 (figure \ref{fig:Diversity_WFG5}) the \VSDMOEA{} does not converge at all in the distance parameters with three objectives, this might be an effect of promoting too much diversity.
+%
+Besides this issue, the \VSDMOEA{} still achieves the best \HV{} values.
+%
+In addition, this drawback is more notorious in the problem WFG6, in fact both two and three objectives does not converged in the distance parameters, and the position variables are still more diversified as usual.
+
+
 \begin{figure}[t]
 \centering
 \input{Graphic-Diversity_WFG1.tex}
@@ -289,8 +386,36 @@ Although the GDE3 approximate the WFG2 and DTLZ7, this this algorithm is far in 
 \end{figure}
 
 
-\subsection{Improving Dependece on the Execution}
+\subsection{Performance of the \MOEAS{} Related with the Criteria Stop}
 
+In spite that the \VSDMOEA{} is specially designed to attain quality solutions in long-term executions.
+%
+In this section is showed the performance of the \MOEAS{} variating the criteria stop.
+%
+Mainly, three ranges of criteria stop were reviwed.
+%
+Each range was split in ten intervals, such ranges considered were $[300, 2500]$, $[2500, 25000]$ and $[25000, 250000]$ respectively.
+%
+In the figure \ref{fig:Performance_time} are showed the mean \HV{} values attained with each \MOEA{} with two and three objectives respectively.
+%
+This shows that the \VSDMOEA{} attains the worst \HV{} values considering only $300$ generations.
+%
+However, as the number of generations increases the \HV{} values are improved significatly, in fact after $2500$ generations the \VSDMOEA{} has a notorious improvement respect to the state-of-the-art-\MOEAS{} in both two and three objectives.
+%
+It can be seen that as the maximum number of generations is higher than $25000$ the remaining \MOEAS{} seems to be stuck, specifically considering two objectives.
+%
+In spite that in three objectives the \RMOEA{} shows an improvement after $100000$ generations, it still has lower values than the \VSDMOEA{}.
+%
+In addition, taking into account three objectives the best general mean value achieved was above $0.9$, there is still possible that increasing the number of generations the \VSDMOEA{} achieves better results.
+%
+However, in some situations, as seems to be in the case of two objetive, could not be available achieved a better accuracy, and a upper bound could be present.
+%
+Its significant important to note how the performance of the \NSGAII{} is degreaded in three objectives, differntly to the \RMOEA{} and the \MOEAD{}.
+%
+Even more, the \MOEAD{} seems to be stuck after $25000$ generations, this might occurs for the greedy selection approach that this \MOEA{} has incorpored.
+%
+In fact the \MOEAD{} attained better results than the \RMOEA{} in short-term executions.
+%
 
 \begin{figure}[t]
 \centering

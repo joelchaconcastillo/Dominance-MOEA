@@ -47,7 +47,7 @@ Distance to Closest Neighbor (\DCN{}) is used.
 In each step, this normalized distance (Eqn. \ref{eqn:distance}) is calculated with respect to those individuals that have already been selected to survive.
 %
 \begin{equation}\label{eqn:distance}
-Distance(A, B) = \left (\sum_{i=1}^n \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(L)}} \right )^2  \right)^{1/2}
+Distance(A, B) =   \left ( \frac{1}{n}  \sum_{i=1}^n \left ( \frac{A_i - B_i}{x_i^{(U)} - x_i^{(L)}} \right )^2  \right)^{1/2}
 \end{equation}
 Thus, individuals with large \DCN{} values are those that contribute in a significant way to preserve exploration in different regions of the search space.
 %

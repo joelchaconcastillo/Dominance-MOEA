@@ -1,6 +1,6 @@
 \begin{tikzpicture}[scale=0.8]
 \begin{axis}[
-title={\textit{\textbf{Diversity of the Position Variables with WFG6}}},
+title={\textit{\textbf{Diversity of the Position Variables}}},
   xlabel=Generation,
   ylabel=ADI,
   xticklabel style = {rotate=30},
@@ -41,7 +41,7 @@ title={\textit{\textbf{Diversity of the Position Variables with WFG6}}},
 
 \begin{tikzpicture}[scale=0.8]
 \begin{axis}[
-title={\textit{\textbf{Diversity of the Distance Variables with WFG6}}},
+title={\textit{\textbf{Diversity of the Distance Variables}}},
   xlabel=Generation,
   ylabel=ADI,
   xticklabel style = {rotate=30},
@@ -49,16 +49,16 @@ title={\textit{\textbf{Diversity of the Distance Variables with WFG6}}},
     {cells={anchor=east},legend pos=outer north east,},
   xticklabels from table={\DiversityTwoWFGSix}{mean},xtick=data]
 
-\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_Position,x=X]{\DiversityTwoWFGSix};
+\addplot[red,dotted,mark=square*] table [y=VSD_MOEA_Distance,x=X]{\DiversityTwoWFGSix};
 \addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_Position,x=X]{\DiversityTwoWFGSix};
+\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_Distance,x=X]{\DiversityTwoWFGSix};
 \addlegendentry{NSGA-II}
 		
-\addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_Position,x=X]{\DiversityTwoWFGSix};
+\addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_Distance,x=X]{\DiversityTwoWFGSix};
 \addlegendentry{R2-MOEA}
     
-\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D_Position,x=X]{\DiversityTwoWFGSix};
+\addplot[black,dotted,mark=pentagon*] table [y= MOEA_D_Distance,x=X]{\DiversityTwoWFGSix};
 \addlegendentry{MOEA/D}
 
 
@@ -80,7 +80,7 @@ title={\textit{\textbf{Diversity of the Distance Variables with WFG6}}},
 
 \begin{tikzpicture}[scale=0.8]
 \begin{axis}[
-title={\textit{\textbf{Diversity of the Variables with WFG6}}},
+title={\textit{\textbf{Diversity of the Variables}}},
   xlabel=Generation,
   ylabel=ADI,
   xticklabel style = {rotate=30},
@@ -117,7 +117,5 @@ title={\textit{\textbf{Diversity of the Variables with WFG6}}},
 \end{axis}
 \end{tikzpicture}
 
+\caption{Evolution of the diversity for the problem WFG6}
 
-
-
-\caption{Mean of Distances of MOEAs}
