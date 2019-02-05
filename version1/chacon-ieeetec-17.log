@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2019.1.26)  4 FEB 2019 23:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=latex 2019.1.26)  5 FEB 2019 12:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,6 +725,7 @@ File: pd1enc.def 2016/05/05 v6.83n Hyperref: PDFDocEncoding definition (HO)
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 4322.
+Package hyperref Info: Option `breaklinks' set `true' on input line 4322.
 Package hyperref Info: Hyper figures OFF on input line 4446.
 Package hyperref Info: Link nesting OFF on input line 4451.
 Package hyperref Info: Hyper index ON on input line 4454.
@@ -764,6 +765,12 @@ File: hdvips.def 2016/05/05 v6.83n Hyperref driver for dvips
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pdfmark.def
 File: pdfmark.def 2016/05/05 v6.83n Hyperref definitions for pdfmark specials
+
+
+Package hyperref Warning: You have enabled option `breaklinks'.
+(hyperref)                But driver `hdvips.def' does not suppport this.
+(hyperref)                Expect trouble with the link areas of broken links.
+
 \pdf@docset=\toks46
 \pdf@box=\box46
 \pdf@toks=\toks47
@@ -771,7 +778,6 @@ File: pdfmark.def 2016/05/05 v6.83n Hyperref definitions for pdfmark specials
 \HyField@AnnotCount=\count151
 \Fld@listcount=\count152
 \c@bookmark@seq@number=\count153
-
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
@@ -931,36 +937,43 @@ Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 )
-(./Graphic-Initial-Distance.tex) [7] [8] (./Graphic-Diversity_WFG1.tex)
-(./Graphic-Diversity_WFG5.tex) (./Graphic-Diversity_WFG6.tex)
-(./Graphic-Performance-Time.tex
+(./Graphic-Initial-Distance.tex)
+Underfull \vbox (badness 1953) has occurred while \output is active []
+
+ [7]
+[8] (./Graphic-Diversity_WFG1.tex) (./Graphic-Diversity_WFG5.tex)
+(./Graphic-Diversity_WFG6.tex) (./Graphic-Performance-Time.tex
 Missing character: There is no ; in font nullfont!
-) (./Tables/Table_HV_2obj.tex
-Overfull \hbox (18.73555pt too wide) in paragraph at lines 5--60
- [][] 
- []
-
-) (./Tables/Table_HV_3obj.tex
-Overfull \hbox (18.73555pt too wide) in paragraph at lines 6--53
- [][] 
- []
-
-) (./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)) (./Conclusion.tex
-[9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 )
+(./Tables/Table_HV_2obj.tex) (./Tables/Table_HV_3obj.tex)
+(./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)) (./Conclusion.tex
+[9]
+Underfull \vbox (badness 6493) has occurred while \output is active []
+
+ [10])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-(./chacon-ieeetec-17.bbl
+
+(./chacon-ieeetec-17.bbl [11]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
+ [12]
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
+[]\OT1/ptm/m/n/8 MOEA/D. [On-line]. Avail-able:
+ []
 
-Underfull \vbox (badness 3590) has occurred while \output is active []
 
- [11]
-[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 239--242
+[][][]$\OT1/ptm/m/n/8 http : / / www3 . ntu . edu . sg / home / epnsugan / inde
+x[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--248
+[]\OT1/ptm/m/n/8 R2-EMOA. [On-line]. Avail-able:
+ []
+
+[13]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no œ in font ptmr7t!
@@ -978,25 +991,23 @@ File: Photo_Authors/coello.eps Graphic file (type eps)
 File: Photo_Authors/coello.eps Graphic file (type eps)
  <Photo_Authors/coello.eps>
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 808.
- [14
-
-]
+ [14]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 808.
 
 (./chacon-ieeetec-17.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 808.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 808.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
-(rerunfilecheck)             Checksum: 54E67C84D1803B8379973C9D53E46C85;1310.
+(rerunfilecheck)             Checksum: BE3C65154628C24E96D4B34C06EB82BE;1311.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 808.
  ) 
 Here is how much of TeX's memory you used:
- 25421 strings out of 493015
- 588628 string characters out of 6135716
- 1324941 words of memory out of 5000000
- 28438 multiletter control sequences out of 15000+600000
+ 25425 strings out of 493015
+ 588686 string characters out of 6135716
+ 1326649 words of memory out of 5000000
+ 28442 multiletter control sequences out of 15000+600000
  32468 words of font info for 75 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  56i,22n,84p,735b,2130s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (14 pages, 703412 bytes).
+Output written on chacon-ieeetec-17.dvi (14 pages, 707024 bytes).

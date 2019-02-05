@@ -3,102 +3,111 @@
 %Thus, differently to single-objective optimization, \MOPS{} 
 involve the simultaneous optimization of several objective functions that are usually in conflict~\cite{Joel:Kalyanmoy}. 
 %
-A continuous box-constrained minimization \MOP{} can be defined as follows:
+A continuous box-constrained minimization \MOP{}, which is the kind of problem addressed in this paper, can be defined as follows:
 \begin{equation}
    \begin{split}
-    minimize \quad & f_m(\vec{\mathbf{x}}), \quad m = 1, 2,...,M;\\
+    minimize \quad & \vec{F} = [f_1(\vec{\mathbf{x}}), f_2(\vec{\mathbf{x}}), ..., f_M(\vec{\mathbf{x}})] \\
    subject \quad to \quad &  x_i^{(L)} \leq x_i \leq x_i^{(U)}, \quad i=1,2,..., n. \\
    %& \vec{\mathbf{x}} \in \Omega
    \end{split}
 \end{equation}
-where $n$ corresponds to the dimension of the variable space, and $\vec{\mathbf{x}}$ is a vector of $n$ decision variables $\vec{\mathbf{x}}=(x_1, ..., x_n) \in R^n$, which are constrained by $x_i^{(L)}$ and $x_i^{(U)}$, i.e. the lower bound and upper bound.
+where $n$ corresponds to the dimension of the variable space, $\vec{\mathbf{x}}$ is a vector of $n$ 
+decision variables $\vec{\mathbf{x}}=(x_1, ..., x_n) \in R^n$, which are constrained by $x_i^{(L)}$ 
+and $x_i^{(U)}$, i.e. the lower bound and upper bound, and $M$ is the number of objective functions
+to optimize.
+%
+The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$, 
+each solution is mapped to the objective space with the function $F : \Omega \rightarrow R^M$, 
+which consist of $M$ real-valued objective functions and $R^M$ is called the \textit{objective space}. 
 
+Given two solutions $\vec{\mathbf{x}}$, $\vec{\mathbf{y}}$ $\in \Omega$, $\vec{\mathbf{x}}$ dominates $\vec{\mathbf{y}}$, 
+mathematically denoted by $\vec{\mathbf{x}} \prec \vec{\mathbf{y}}$, iff $\forall m \in {1,2,...,M} : 
+f_m(\vec{\mathbf{x}}) \leq f_m(\vec{\mathbf{y}})$ and $\exists  m \in {1,2,...,M} : f_m(\vec{\mathbf{x}}) < f_m(\vec{\mathbf{y}})$.
 %
-The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$ in the following.
-%
-Each solution is mapped to the objective space with the function $F : \Omega \rightarrow R^m$, which consist of $m$ real-valued objective functions, and $R^m$ is called the \textit{objective space}. 
-%
-%In multi-objective optimization, 
-Given two solutions $\vec{\mathbf{x}}$, $\vec{\mathbf{y}}$ $\in \Omega$, $\vec{\mathbf{x}}$ dominates $\vec{\mathbf{y}}$, mathematically denoted by $\vec{\mathbf{x}} \prec \vec{\mathbf{y}}$, iff $\forall m \in {1,2,...,M} : f_m(x_i) \leq f_m(y_i)$ and $\exists  m \in {1,2,...,M} : f_m(x_i) < f_m(y_i)$.
-%
-%This means that the solution $\vec{\mathbf{x}}$ is not worse than $\vec{\mathbf{y}}$ in any of the objectives and $\vec{\mathbf{x}}$ is strictly better than $\vec{\mathbf{y}}$ in at least one objective.
-%
-The Pareto dominance definition states that the best solutions of a multi-objective optimization problem are those whose objective vectors are not dominated by any other feasible vector.
+The best solutions of a \MOP{} are those whose objective vectors are not dominated by any other feasible vector.
 %
 These solutions are known as the Pareto optimal solutions.
-%
-%A solution $\vec{\mathbf{x^*}} \in \Omega$ is known as Pareto optimal solution if no other solution $\vec{\mathbf{x}} \in \Omega$ dominates $\vec{\mathbf{x^*}}$.
 %
 The Pareto set is the set of all Pareto optimal solutions, and the Pareto front are the images of the Pareto set. 
 %
 The goal of multi-objective optimization approaches is to obtain a proper approximation of the Pareto front, i.e., 
 a set of well distributed solutions that are close to the Pareto front.
-%
 
 One of the most popular metaheuristics used to deal with \MOPS{} is the Evolutionary Algorithm (\EA{}).
 %
-In single-objective \EAS{}, it has been shown in several problems that inducing a proper balance between exploration and exploitation is highly important to 
-attain high quality solutions~\cite{Joel:BALANCE_DIVERSITY}.
+In single-objective \EAS{}, it has been shown that taking into account the diversity of the variable space
+to properly balance between exploration and exploitation is highly important to attain high quality 
+solutions~\cite{Joel:BALANCE_DIVERSITY}.
 %
-Particularly, those schemes that explicitly take into account the diversity in the variable space to perform this control have led to important benefits in several cases.
-%
-Diversity can be taken into account in the design of several components such as in the variation stage~\cite{Joel:FUZZY_ADAPTIVE_GA,Joel:CROSSOVER_DIVERSITY}, 
-replacement phase~\cite{Joel:MULTI_DYNAMIC} and/or population model~\cite{Joel:SAWTOOTH}.
+Diversity can be taken into account in the design of several components such as in the variation 
+stage~\cite{Joel:FUZZY_ADAPTIVE_GA,Joel:CROSSOVER_DIVERSITY}, replacement phase~\cite{Joel:MULTI_DYNAMIC} 
+and/or population model~\cite{Joel:SAWTOOTH}.
 %In the uniprocess-driven proposals only one component is affected, whereas in the multiprocess-driven ones, several components are redesigned~\cite{Joel:Crepinsek}. 
 %
-One of the key issues that affects the performance of population-based metaheuristics is the premature convergence, which appears
-when most of the population members are placed in a small region of the search space and the components selected do not allow escaping from this region.
+%One of the key issues that affects the performance of population-based metaheuristics is the premature convergence, which appears
+%when most of the population members are placed in a small region of the search space and the components selected do not allow escaping from this region.
 %
-The explicit consideration of diversity leads to improvements in terms of premature convergence avoidance, meaning that taking into account the diversity in the design of \EAS{} is specially important when dealing with long-term executions.
-%when dealing with long-term executions.
+The explicit consideration of diversity leads to improvements in terms of premature convergence avoidance, 
+meaning that taking into account the diversity in the design of \EAS{} is specially important when dealing 
+with long-term executions.
 %
-Recently, some diversity management algorithms that combine the information of diversity, stopping criterion and elapsed time have been devised.
+Recently, some diversity management algorithms that combine the information of diversity, stopping criterion and elapsed 
+generations have been devised.
 %
-They have allowed to provide a gradual loss of diversity that depends on the time or evaluations granted to the execution~\cite{Joel:MULTI_DYNAMIC}.
+They have allowed to provide a gradual loss of diversity that depends on the time or evaluations granted to the 
+execution~\cite{Joel:MULTI_DYNAMIC}.
 %
-Particularly the aim of such methodology is to promote exploration in the initial generations and gradually alter the behaviour towards intensification.
+Particularly the aim of such methodology is to promote exploration in the initial generations and gradually alter the 
+behaviour towards intensification.
 %
 These schemes have provided really promising results.
 %
-For instance, new best-known solutions for some well-known variants of the frequency assignment problem~\cite{Segura:17} and for a two-dimensional packing problem~\cite{Joel:MULTI_DYNAMIC} have been attained
-using such methodology.
+For instance, new best-known solutions for some well-known variants of the frequency assignment problem~\cite{Segura:17},
+and for a two-dimensional packing problem~\cite{Joel:MULTI_DYNAMIC} have been attained using such methodology.
 %
-Additionally, this principle guided the design of the winning strategy of the Second Wind Farm Layout Optimization Competition\footnote{https://www.irit.fr/wind-competition/}, which was held in the Genetic and Evolutionary 
+Additionally, this principle guided the design of the winning strategy of the Second Wind Farm Layout Optimization 
+Competition\footnote{https://www.irit.fr/wind-competition/}, which was held in the Genetic and Evolutionary 
 Computation Conference.
 %
 Thus, the benefits of such methodology have been shown in several different single-objective optimization problems.
 
-One of the goals in the design of \MOEAS{} is to obtain a well-spread set of solutions in the objective space.
+One of the goals in the design of Multi-objective Evolutionary Algorithms (\MOEAS{}) is to obtain a well-spread 
+set of solutions in the objective space.
 %
 The maintenance of some degree of diversity in the objective space implies that complete convergence 
 does not appear in the variable space~\cite{Joel:GDE3_CEC09}.
 %
-In some way, the variable space inherits some degree of diversity due to the way in which the objective space is taken into account. 
+In some way, the variable space inherits some degree of diversity due to the way in which the objective space is 
+taken into account. 
 %
-However, this is just an indirect way of preserving the diversity in the variable space, so in some cases the level of diversity might not be large enough to ensure
-a high degree of exploration.
+However, this is just an indirect way of preserving the diversity in the variable space, so 
+in some cases the level of diversity might not be large enough to ensure a high degree of exploration.
 %
-For instance, it has been shown that with some of the \WFG{} benchmarks, in most of the state-of-the-art \MOEAS{} the distance parameters quickly converge, meaning that the approach
-focuses just on optimizing the position parameters~\cite{Joel:GDE3_CEC09}.
+For instance, it has been shown that with some of the \WFG{} benchmarks, in most of the state-of-the-art \MOEAS{} 
+the distance parameters quickly converge, meaning that the approach focuses just on optimizing the 
+position parameters for a long period of the optimization process~\cite{Joel:GDE3_CEC09}.
 %
-Thus, while some degree of diversity is mantained, a similar situation to premature convergence is presented
+Thus, while some degree of diversity is maintained, a similar situation to premature convergence is presented
 meaning that genetic operators might not be able to generate better trade-offs. 
-%
 
-This paper proposes a novel \MOEA{}, the Variable-Space-Diversity based \MOEA{} (\VSDMOEA{}), that is based on controlling the amount of diversity in the variable space in an explicit way.
+Attending to the differences between state-of-the-art single-objective \EAS{} and \MOEAS{}, 
+this paper proposes a novel \MOEA{}, the Variable-Space-Diversity based \MOEA{} (\VSDMOEA{}), 
+that is based on controlling the amount of diversity in the variable space in an explicit way.
 %
-Similarly to the successful methodology applied in single-objective optimization, the stopping criterion and the amount of evaluations performed are used
-to vary the amount of desired diversity.
+Similarly to the successful methodology applied in single-objective optimization, the stopping criterion and the 
+amount of evaluations performed are used to vary the amount of desired diversity.
 %
-The main difference with respect to the single-objective case is that the objective space must be simultaneously considered.
+The main difference with respect to the single-objective case is that the objective space is simultaneously considered.
 %
 Particularly, the approach grants more importance to the diversity of the variable space in the initial stages, whereas 
 as the generations evolve, it gradually grants more importance to the diversity of the objective space.
 %
 In fact, at the end of the execution, the diversity of the variable space is neglected, so in the last phases the proposal is similar to current state-of-the-art approaches.
 %
-Since there exist currently a quite large amount of different \MOEAS{}~\cite{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, four popular schemes have been selected to
-validate our proposal.
+To our knowledge, this is the first \MOEA{} whose design follows this principle.
+%
+Since there exist currently a quite large amount of different \MOEAS{}~\cite{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
+three popular schemes have been selected to validate our proposal.
 %
 %Most current taxonomies classify \MOEAS{} into three categories: non-domination based, based on decomposition and based on metrics.
 %
@@ -116,12 +125,16 @@ The important benefits of properly taking into account the diversity of the vari
 clearly shown in this paper.
 %
 Particularly, the advantages are clearer in the most complex problems.
+%
+Note that this is consistent with the single-objective case, where the most important benefits have been obtained
+in complex multi-modal cases~\cite{Segura:17}.
 
 The rest of this paper is organized as follows. 
 %
 Section~\ref{Sec:LiteratureReview} provides a review of related papers.
 %
-Some key components related to diversity and the \VSDMOEA{} proposal are detailed in section~\ref{Sec:Proposal}.
+%Some key components related to diversity, and the \VSDMOEA{} proposal are detailed in section~\ref{Sec:Proposal}.
+Several critical components that are highly related with diversity, and the \VSDMOEA{} proposal are detailed in section~\ref{Sec:Proposal}.
 %
 Section~\ref{Sec:ExperimentalValidation} is devoted to the experimental validation of the novel proposal.
 %

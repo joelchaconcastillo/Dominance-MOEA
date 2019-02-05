@@ -9,22 +9,22 @@ However, equivalently than in single-objective problems, where the diversity in 
 
 In this work we have provided an algorithm with a particular replacement phase.
 %
-This phase considers the diversity in both spaces, specifically in the variable space the diversity is based in a decremented dynamic concept.
+This phase considers the diversity in both spaces, specifically in the variable space the diversity is based in a decremental dynamic concept.
 %
 Thus, at the first stages the diversity in variables space is promoted, as the generations elapses this diversity is gradually reduced, thus at the last stages the replacement phase works as a classic \MOEA{}.
 %
 
-In addition, is suggested a novel density estimator of the objective space, which is based in the IGD+ indicator being considered as weakly Pareto compliant.
+In addition, is suggested a novel density estimator of the objective space, which is based in the IGD+ indicator being consdered as weakly Pareto compliant.
 %
 In the experimental validation carried out, is showed that our proposal not only improves the state-of-the-art-\MOEAS{} in long-term execution, also offers a reasonable performance in short-term executions.
 %
 This validation shows that the VSD-MOEA is able to properly solve several test problems, also it attained better results than the remaining \MOEAS{} in the problems with the most difficult characteristics.
 %
-In addition, some scalability experiments with the decision variables are carry out through long-term executions, results indicate the superiority and stability measured with the hypervolume indicator.
+In addition, some scalability experiments with the decision variables are carry out through long-term executions, results indicate the superiority and stability mesured with the hypervolume indicator.
 
-Therefore, is shown the relevance in having a properly management of the diversity in the variable space, and established a way to preserve the quality and diversity in both decision and objective space.
+Therefore, is shown the relevance in having a properly managment of the diversity in the variable space, and established a way to preserve the quality and diversity in both decision and objective space.
 
 
 In future, we plan to develop an adaptive scheme to avoid setting the initial factor distance, even though the \VSDMOEA{} is not highly sensitive to this parameter adapting this parameter could result in a most robust \MOEA{}.
 %
-In addition, a multi-objective memetic algorithm with this principle should be proposed, since that this approach managements the diversity a local search should provides even better results.
+In addition, a multi-objective memetic algorithm with this principle should be proposed, since that this approach managments the diversity a local serch should provedes even better results.

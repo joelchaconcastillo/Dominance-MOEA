@@ -229,6 +229,29 @@ Q.~Zhang, A.~Zhou, S.~Zhao, P.~N. Suganthan, W.~Liu, and S.~Tiwari,
   assessment of multi-objective optimization algorithms, technical report},
   vol. 264, 2008.
 
+\bibitem{Joel:jMetal}
+\BIBentryALTinterwordspacing
+jMetalcpp. [Online]. Available: \url{http://jmetalcpp.sourceforge.net/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{MOEADCode}
+\BIBentryALTinterwordspacing
+MOEA/D. [Online]. Available:
+  \url{http://www3.ntu.edu.sg/home/epnsugan/index_files/CEC09-MOEA/CEC09-MOEA.htm}
+\BIBentrySTDinterwordspacing
+
+\bibitem{R2EMOACode}
+\BIBentryALTinterwordspacing
+R2-EMOA. [Online]. Available:
+  \url{http://inriadortmund.gforge.inria.fr/r2emoa/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{zhang2009performance}
+Q.~Zhang, W.~Liu, and H.~Li, ``The performance of a new version of moea/d on
+  cec09 unconstrained mop test instances,'' in \emph{Evolutionary Computation,
+  2009. CEC'09. IEEE Congress on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
+  2009, pp. 203--208.
+
 \bibitem{Joel:SBX1994}
 R.~B. Agrawal, K.~Deb, K.~Deb, and R.~B. Agrawal, ``Simulated binary crossover
   for continuous search space,'' Tech. Rep., 1994.
