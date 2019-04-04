@@ -13,7 +13,7 @@ Instead it integrates information of both the variable and objective space.
 Particularly, the novel objective-space density estimator is used inside the replacement phase.
 %
 The main principle behind the design of the novel replacement is to use the stopping criterion and 
-elpased generations with the aim of gradually moving from exploration to exploitation during the search process.
+elapsed generations with the aim of gradually moving from exploration to exploitation during the search process.
 %
 Note that this principle might be incorporated in any of the three categories of \MOEAS{}.
 %
@@ -22,7 +22,7 @@ a low number of objectives.
 %
 Particularly, our proposal is quite standard except for the replacement phase.
 %
-Algorithm~\ref{fig:vsd-moea} shows the pseudocode of \VSDMOEA{}.
+Algorithm~\ref{alg:vsd-moea} shows the pseudocode of \VSDMOEA{}.
 %
 The parent selection is performed with binary tournament based on the dominance raking with ties broken randomly.
 %
@@ -37,9 +37,27 @@ estimator.
 \input{Diagram.tex}
 %\includegraphics[width=0.45\textwidth]{Images/Fase_Remplazo_2.eps}
 \caption{Penalty Method of the Replacement Phase - The left side represents the variables space and the right side the 
-objective space}
-\label{fig:Hypersphere}
+objective space} \label{fig:Hypersphere}
 \end{figure}
+
+\begin{algorithm}[t]
+\algsetup{linenosize=\tiny}
+  \scriptsize
+	\caption{Main procedure of VSD-MOEA} 
+\begin{algorithmic}[1]
+ 	\STATE \textbf{Initialization}: Generate an initial population $P_0$ with $N$ individuals.
+	\STATE Assign $t=0$
+	\WHILE{ (not stopping criterion)  }
+	   \STATE \textbf{Evaluation}: Evaluate all individuals in the population.
+	   \STATE \textbf{Mating selection}: Perform binary tournament selection based in the rank (ties are broken randomly) on $P_t$ in order to fill the mating pool.
+	   \STATE \textbf{Variation}: Apply SBX crossover and Polynomial mutation to the mating pool to create a child population $Q_t$
+	   \STATE \textbf{Survivor selecction}: Combine $P_t$ and $Q_t$, and apply the replacement scheme (Algorithm \ref{alg:Replacement_Phase}) to create $P_{t+1}$.
+	   \STATE $t=t+1$
+	\ENDWHILE
+	\end{algorithmic}
+\label{alg:vsd-moea}
+\end{algorithm}
+
 
 
 \subsection{Replacement Phase of VSD-MOEA}
@@ -47,7 +65,7 @@ objective space}
 The replacement phase of \EAS{} is in charge of deciding in each generation which are the survivors 
 among the members of the previous population and offspring.
 %
-The novel replacement promotes a gradual movement from exploration to exploitation, which has been a quite i
+The novel replacement promotes a gradual movement from exploration to exploitation, which has been a quite 
 beneficial principle in the design of single-objective optimizers~\cite{Joel:MULTI_DYNAMIC}.
 %
 Particularly, the replacement phase operates as follows.
@@ -136,7 +154,7 @@ The robustness of the proposal with respect to this additional parameter is stud
         \STATE $Penalized = \emptyset$ \label{alg:3}
 				\STATE $D_t = D_I - D_I * \frac{G_{Elapsed}}{0.9*G_{End}}$ \label{alg:4}
 				\FOR{$k \in {1...M}$}
-					\STATE Move to $P_{t+1}$ the individual that optimize $AWF_k$ (Eq.~\ref{eqn:extremes})
+					\STATE Move to $P_{t+1}$ the individual that optimize $AWF_k$ (Eq.~\ref{eqn:extremes}) \label{alg:5}
 				\ENDFOR
         \WHILE{ $|P_{t+1}|$ $\leq$ N } \label{alg:6}
 					\STATE Compute $DCN$ of individuals in $R_t$ with $P_{t+1}$ used as reference set \label{alg:7}
@@ -174,12 +192,12 @@ in the execution of \VSDMOEA{}.
 The linear decrease is calculated so that after the $90\%$ of the generations, the $D_t$ value is lower than 0, 
 meaning that no penalties are performed.
 %
-This means that in the first $90\%$ of the generations, more exploration than in traditional \MOEAS{} is induced, 
+This means that in the first $90\%$ of the generations, more exploration than in traditional MOEAs is induced, 
 whereas in the final stages, a traditional \MOEA{} is applied.
 %
-Finally, for each objective a hiqh-quality candidate solution is selected to survive.
+Finally, for each objective a high-quality candidate solution is selected to survive.
 %
-Note that selecting the best solution for each objective might provoke some drawbacks realated to accepting small improvement
+Note that selecting the best solution for each objective might provoke some drawbacks related to accepting small improvement
 in an objective at the cost of important worsening in other objectives~\cite{deb2016optimality}.
 %
 To solve this issue augmented functions can be applied, which has been the alternative used in this paper.
@@ -333,7 +351,7 @@ This means a very low selection pressure toward the Pareto front in Pareto-domin
 Principally, the improvement distance is effective with over-prioritization  of dominance-resist solutions i.e., solutions with exceptional performance in one objective and extremely poor performance in many others \cite{Joel:Failure_MOEAs}.
 %
 
-Given that the design of this MOEA is considered for long-term executions, the algorithm \ref{alg:Replacement_Phase} is implemented efficiently.
+Given that the design of this MOEA is considered for long-term executions, the Algorithm \ref{alg:Replacement_Phase} is implemented efficiently.
 %
 Thus, the distances are pre-computed and are updated in each iteration, the same for the dominance count information that is used in the \textit{conditionally-non-dominated-sort}.
 %
