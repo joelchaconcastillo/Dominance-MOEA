@@ -1,8 +1,8 @@
-This section is devoted to review some of the most important papers that are closely related with the trend dealt by our proposal.
+This section is devoted to review some of the most important papers that are closely related to our proposal.
 %
 First, some of the most popular ways of managing diversity in \EAS{} are presented.
 %
-Then, a brief explanation related to the state-of-the-art in \MOEAS{} is showed.
+Then, the state-of-the-art in \MOEAS{} is summarized.
 
 \subsection{Diversity Management in Evolutionary Algorithms}
 
@@ -25,11 +25,11 @@ Among the previous proposals, the replacement-based methods have attained very h
 this alternative was selected with the aim of designing a novel \MOEA{} incorporating an explicit way to control the diversity 
 in the variable space.
 %
-The basic principle of these methods is to manage the level of exploration in successive generations by 
+The basic principle of these methods is to bias the level of exploration in successive generations by 
 controlling the diversity of the survivors of the population~\cite{Segura:17}.
 %
-Since the most common problem is the premature convergence, the modifications are usually performed with the aim
-of slowing down the convergence.
+Since premature convergence is one of the most commond drawbacks in the design of \EAS{}, 
+modifications are usually performed with the aim of slowing down the convergence.
 %
 One of the most popular proposals belonging to this group is the \textit{crowding} method which
 is based on the principle that offspring should replace similar individuals from the previous generation~\cite{Mengshoel:14}.
@@ -52,7 +52,7 @@ This last method has inspired the design of the novel proposal put forth in this
 %
 %Thus, our proposal can be classified as an \textit{uniprocess-driven} and \textit{replacement-based} method.
 
-Its important to remark that in the case of multi-objective optimization, few works related to the maintenance of 
+It is important to remark that in the case of multi-objective optimization, few works related to the maintenance of 
 diversity in the variable space have been developed.
 %
 The following section reviews some of the most important \MOEAS{} and introduces some of the works that consider
@@ -75,7 +75,7 @@ our proposal.
 %
 This section introduces the three types of schemes and some of the most popular approaches belonging to each category.
 %
-Thus, at least one \MOEA{} of each category is selected to carry out the validation of \VSDMOEA{}.
+Then, one \MOEA{} of each category is selected to carry out the validation of \VSDMOEA{}.
 
 The dominance-based category includes those schemes where the Pareto dominance relation is used to guide the 
 design of some of its components such as the fitness assignment, parent selection and replacement phase.
@@ -113,7 +113,8 @@ which has reported a quite promising performance in multi-objective problems.
 %MOMBI-II might be considered as a hybrid between indicator-based and dominance-based because it also uses the 
 %Pareto dominance. 
 %
-Its most important feature is the use of the R2 indicator, which compute the mean difference in utilities through a set of weight vectors.
+Its most important feature is the use of the R2 indicator, which computes the mean difference in utilities through a set 
+of weight vectors.
 %In any case, its most important feature is the use of the R2 indicator. % \cite{Joel:R2_Indicator}.
 %
 %MOMBI-II has been selected as the indicator-based \MOEA{} to validate our proposal.
@@ -157,7 +158,7 @@ Diversity Evolutionary Algorithm (GDEA)~\cite{toffolo2003genetic}.
 In this case, each individual is assigned with a diversity-based objective which is calculated as the
 Euclidean distance in the genotype space to the remaining individuals in the population.
 %
-Then, a ranking that considers both the original objectives and the diversity objective is used
+Then, a ranking that considers both the original objectives and the diversity objectiv is used
 to sort individuals.
 %
 Another somewhat popular approach is to calculate distances between candidate solutions by taking
@@ -180,7 +181,7 @@ Attending to the analyses of the previous approaches, it is clear that they migh
 because the final solutions obtained by these methods present a larger decision space diversity than the ones obtained
 by traditional approaches~\cite{deb2005omni, rudolph2007capabilities}.
 %
-Thus, while clear improvements are obtained when taking into account metrics related to the Pareto Set, the benefits in terms of the 
+Thus, while clear improvements are obtained when taking into account metrics related to the Pareto set, the benefits in terms of the 
 obtained Pareto front are not so clear.
 %
 We claim that one of the reasons of this behavior might be that the diversity in the variable space is considered 
