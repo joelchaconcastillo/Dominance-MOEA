@@ -50,7 +50,7 @@ objective space} \label{fig:Hypersphere}
 	\WHILE{ (not stopping criterion)  }
 	   \STATE \textbf{Evaluation}: Evaluate all individuals in the population.
 	   \STATE \textbf{Mating selection}: Perform binary tournament selection based in the rank (ties are broken randomly) on $P_t$ in order to fill the mating pool.
-	   \STATE \textbf{Variation}: Apply SBX crossover and Polynomial mutation to the mating pool to create a child population $Q_t$
+	   \STATE \textbf{Variation}: Apply SBX crossover and Polynomial mutation to the mating pool to create a child population $Q_t$.
 	   \STATE \textbf{Survivor selecction}: Combine $P_t$ and $Q_t$, and apply the replacement scheme (Algorithm \ref{alg:Replacement_Phase}) to create $P_{t+1}$.
 	   \STATE $t=t+1$
 	\ENDWHILE
