@@ -30,10 +30,10 @@ These solutions are known as the Pareto optimal solutions.
 %
 The Pareto set is the set of all Pareto optimal solutions, and the Pareto front are the images of the Pareto set. 
 %
-The goal of multi-objective optimization approaches is to obtain a proper approximation of the Pareto front, i.e., 
+The goal of most multi-objective optimizers is to obtain a proper approximation of the Pareto front, i.e., 
 a set of well distributed solutions that are close to the Pareto front.
 
-One of the most popular meta-heuristics used to deal with \MOPS{} is the Evolutionary Algorithm (\EA{}).
+One of the most popular metaheuristics used to deal with \MOPS{} is the Evolutionary Algorithm (\EA{}).
 %
 In single-objective \EAS{}, it has been shown that taking into account the diversity of the variable space
 to properly balance between exploration and exploitation is highly important to attain high quality 
@@ -57,19 +57,19 @@ generations have been devised.
 They have allowed to provide a gradual loss of diversity that depends on the time or evaluations granted to the 
 execution~\cite{Joel:MULTI_DYNAMIC}.
 %
-Particularly the aim of such methodology is to promote exploration in the initial generations and gradually alter the 
+Particularly the aim of such a methodology is to promote exploration in the initial generations and gradually alter the 
 behavior towards intensification.
 %
 These schemes have provided really promising results.
 %
 For instance, new best-known solutions for some well-known variants of the frequency assignment problem~\cite{Segura:17},
-and for a two-dimensional packing problem~\cite{Joel:MULTI_DYNAMIC} have been attained using such methodology.
+and for a two-dimensional packing problem~\cite{Joel:MULTI_DYNAMIC} have been attained using the same principles.
 %
 Additionally, this principle guided the design of the winning strategy of the Second Wind Farm Layout Optimization 
 Competition\footnote{https://www.irit.fr/wind-competition/}, which was held in the Genetic and Evolutionary 
 Computation Conference.
 %
-Thus, the benefits of such methodology have been shown in several different single-objective optimization problems.
+Thus, the benefits of such kind of design patterns have been shown in several different single-objective optimization problems.
 
 One of the goals in the design of Multi-objective Evolutionary Algorithms (\MOEAS{}) is to obtain a well-spread 
 set of solutions in the objective space.
@@ -84,8 +84,8 @@ However, this is just an indirect way of preserving the diversity in the variabl
 in some cases the level of diversity might not be large enough to ensure a high degree of exploration.
 %
 For instance, it has been shown that with some of the \WFG{} benchmarks, in most of the state-of-the-art \MOEAS{} 
-the distance parameters quickly converge, meaning that the approach focuses just on optimizing the 
-position parameters for a long period of the optimization process~\cite{Joel:GDE3_CEC09}.
+the \textit{distance parameters} quickly converge, meaning that the approach focuses just on optimizing the 
+\textit{position parameters} for a long period of the optimization process~\cite{Joel:GDE3_CEC09}.
 %
 Thus, while some degree of diversity is maintained, a similar situation to premature convergence is presented
 meaning that genetic operators might not be able to generate better trade-offs. 
@@ -97,14 +97,16 @@ that is based on controlling the amount of diversity in the variable space in an
 Similarly to the successful methodology applied in single-objective optimization, the stopping criterion and the 
 amount of evaluations performed are used to vary the amount of desired diversity.
 %
-The main difference with respect to the single-objective case is that the objective space is simultaneously considered.
+The main difference with respect to the single-objective case is that the objective space is simultaneously considered, which
+is performed with a novel objective-space density estimator.
 %
 Particularly, the approach grants more importance to the diversity of the variable space in the initial stages, whereas 
 as the generations evolve, it gradually grants more importance to the diversity of the objective space.
 %
-In fact, at the end of the execution, the diversity of the variable space is neglected, so in the last phases the proposal is similar to current state-of-the-art approaches.
+In fact, at the last period of the execution, the diversity of the variable space is neglected, so in the last phases the proposal 
+is quite similar to current state-of-the-art approaches.
 %
-To our knowledge, this is the first \MOEA{} whose design follows this principle.
+To our knowledge, this is the first \MOEA{} whose design follows this adaptive principle.
 %
 Since there exist currently a quite large amount of different \MOEAS{}~\cite{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
 three popular schemes have been selected to validate our proposal.
@@ -133,8 +135,9 @@ The rest of this paper is organized as follows.
 %
 Section~\ref{Sec:LiteratureReview} provides a review of related papers.
 %
-%Some key components related to diversity, and the \VSDMOEA{} proposal are detailed in section~\ref{Sec:Proposal}.
-Several critical components that are highly related with diversity, and the \VSDMOEA{} proposal are detailed in section~\ref{Sec:Proposal}.
+Some key components related to diversity and the \VSDMOEA{} design are discussed.
+%
+The \VSDMOEA{} proposal is detailed in section~\ref{Sec:Proposal}.
 %
 Section~\ref{Sec:ExperimentalValidation} is devoted to the experimental validation of the novel proposal.
 %
