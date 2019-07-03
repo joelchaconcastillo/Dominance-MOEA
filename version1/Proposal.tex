@@ -167,10 +167,10 @@ Note that $D_I$ denotes the initial threshold value, $G_{Elapsed}$ is the amount
 been evolved, and $G_{End}$ is the stopping criterion, i.e. the number of generations that are to be evolved 
 in the execution of \VSDMOEA{}.
 %
-The linear decrease is calculated so that after the $90\%$ of the generations, the $D_t$ value is lower than 0, 
+The linear decrease is calculated so that after the $50\%$ of the generations, the $D_t$ value is lower than 0, 
 meaning that no penalties are performed.
 %
-This means that in the first $90\%$ of the generations, more exploration than in traditional MOEAs is induced.
+This means that in the first $50\%$ of the generations, more exploration than in traditional MOEAs is induced.
 %
 
 \begin{algorithm}[t]
@@ -195,7 +195,7 @@ This means that in the first $90\%$ of the generations, more exploration than in
 						\STATE Move to $R_t$ the individual in $Penalized$ with largest $DCS$ \label{alg:11}
         	\ENDIF
 					\STATE Identify the first front ($F$) in $R_t \cup P_{t+1}$ with an individual $I \in R_t$ \label{alg:12}
-					\STATE Use the novel density estimator (Algorithm~\ref{alg:Replacement_Phase}) to select a new survivor 
+					\STATE Use the novel density estimator (Algorithm~\ref{alg:Density_Estimator}) to select a new survivor 
 					from $F$ and move it to $P_{t+1}$\label{alg:13}
         \ENDWHILE
     	\RETURN $P_{t+1}$ \label{alg:14}
@@ -293,9 +293,9 @@ This front contains at least one individual belonging to $R_t$ and it might also
 of $P_{t+1}$.
 %
 The aim behind the selection of the next survivor is to pick up an individual of the input front
-that contributes significantly in terms of objective-space quality and diversity and belongs to $R_t$.
+that contributes significantly in terms of objective-space quality and diversity. % to $R_t$.
 
-Algorithm~\ref{alg:density-estimator} describes the selection of the next survivor.
+Algorithm~\ref{alg:Density_Estimator} describes the selection of the next survivor.
 %
 First, similarly to most state-of-the-art algorithms, an action to promote the selection of boundary solutions
 is executed.
@@ -306,10 +306,10 @@ in an objective at the cost of important worsening in other objectives~\cite{deb
 To solve this issue augmented functions can be applied, which has been the alternative used in this paper.
 %
 Particularly, iteratively, for each objective $k$ the candidate solution that minimizes the Augmented Weighted Function (AWF)
-given in Eq.~\ref{eqn:extremes} is calcualated (line XXX).
+given in Eq.~\ref{eqn:extremes} is calculated (lines \ref{alg:density_for} to \ref{alg:density_endfor}).
 %
 If such an individual belongs to $R_t$, i.e., it has not been selected yet as a survivor, the next survivor is such an individual
-and the process finalizes (line YYY).
+and the process finalizes (line \ref{alg:density_2}).
 %
 Note that, augmented functions usually take into account weight vectors with the aim of dealing with objectives
 that present very different scales.
@@ -323,7 +323,7 @@ AWF_k (\vec{x}) = f_k(\vec{x}) + 10^{-4} \times  \sum_{j=1}^M f_j( \vec{x} )
 
 
 In cases where the individuals that optimize each $AWF_K$ function are already in $P_{t+1}$, a contribution
-to objective-space diversity is calculated by taking into account the current survivors of the front (line XXX).
+to objective-space diversity is calculated by taking into account the current survivors of the front (lines \ref{alg:density_for2} to \ref{alg:density_4}).
 %
 %Then, the one with a higher contribution is selected (line XXX).
 %
@@ -343,9 +343,38 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 
 %
 Denoting as $FS$ the members of the input front that are already in $P_{t+1}$, the contribution to diversity
-of each member of the input front that belongs to $R_t$ is calculated as $\displaystyle{\min_{s \in S}\ ID(I, s)}$.
+of each member of the input front that belongs to $R_t$ is calculated as $\displaystyle{\min_{s \in FS}\ ID(I, s)}$.
 %
-Then, the individual with a higher contribution is selected as the next survivor, with ties broken randomly (line XXX).
+Then, the individual with a higher contribution is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
+
+\begin{algorithm}[t]
+\algsetup{linenosize=\tiny}
+	\caption{Density estimator} 
+\begin{small}
+\begin{algorithmic}[1]
+\STATE Input: $P_{t+1}$ (Survivors), $R_t$ (Candidates), $F$ (Current front)
+    	\STATE Output: $I \in R_t$ 
+        \STATE $FS = P_{t+1} \cap F$
+        \FOR{$k \in$ number of objectives}\label{alg:density_for}
+	      \STATE Select the best individual $I \in F$ of $k$ according to Eq.~\ref{eqn:extremes}.\label{alg:density_1}
+	  	\IF{ $I \in R_{t}$}
+	  	 \RETURN $I$ \label{alg:density_2}
+	  	\ENDIF
+	\ENDFOR\label{alg:density_endfor}
+	\STATE $MaxID = 0$ \label{alg:density_for2}
+	\FOR{ $ Ic \in R_t$}
+	\STATE $Improvement = \displaystyle{\min_{s \in FS}\ ID(Ic, s)}$ 
+	\IF{ $Improvement > MaxID$} \label{alg:density_if2}
+	   \STATE $MaxID = Improvement$
+	   \STATE $I = Ic$ 
+	\ENDIF \label{alg:density_endif2}
+	\ENDFOR	\label{alg:density_endfor2}
+    	\RETURN $I$ \label{alg:density_4}
+	\end{algorithmic}
+\end{small}
+\label{alg:Density_Estimator}
+\end{algorithm}
+
 
 %
 %The main idea is to define distances in terms of regions of dominance, instead of using a more direct
