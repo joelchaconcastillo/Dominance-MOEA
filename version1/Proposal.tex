@@ -97,7 +97,7 @@ Distance(A, B) =   \left ( \frac{1}{n}  \sum_{i=1}^n \left ( \frac{A_i - B_i}{x_
 Note that individuals with larger \DCS{} values are those that contribute more significantly to promote exploration.
 %
 In order to avoid an excessive decrease of the exploration degree, individuals with a \DCS{} value lower 
-than a threshold value are penalized and they can only be selected if non-penalized individuals do not exist.
+than a threshold value are penalized and they can only be selected if non-penalized individuals are missing.%do not exist.
 %
 Then, among the non-penalized individuals, an objective-space density estimator is used to select the additional
 survivor of the iteration.
@@ -330,7 +330,7 @@ to objective-space diversity is calculated by taking into account the current su
 Particularly, the ``Improvement Distance'' ($ID$) defined for the indicator IGD+~\cite{Joel:Inverted_Generational_Distance_Plus}
 is used.
 %
-The $ID$ of an individual $A$ with respect to an individual $B$ is calculated by taking into account only the functions
+The $ID$ of an individual $A$ with respect to an individual $B$ is calculated by taking into account only the objectives
 where $A$ is better.
 %
 Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
@@ -342,7 +342,7 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 \end{equation}
 
 %
-Denoting as $FS$ the members of the input front that are already in $P_{t+1}$, the contribution to diversity
+Denoting as $FS$ the members of the input front that are already in $P_{t+1}$ (line \ref{alg:FS}), the contribution to diversity
 of each member of the input front that belongs to $R_t$ is calculated as $\displaystyle{\min_{s \in FS}\ ID(I, s)}$.
 %
 Then, the individual with a higher contribution is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
@@ -354,13 +354,13 @@ Then, the individual with a higher contribution is selected as the next survivor
 \begin{algorithmic}[1]
 \STATE Input: $P_{t+1}$ (Survivors), $R_t$ (Candidates), $F$ (Current front)
     	\STATE Output: $I \in R_t$ 
-        \STATE $FS = P_{t+1} \cap F$
         \FOR{$k \in$ number of objectives}\label{alg:density_for}
 	      \STATE Select the best individual $I \in F$ of $k$ according to Eq.~\ref{eqn:extremes}.\label{alg:density_1}
 	  	\IF{ $I \in R_{t}$}
 	  	 \RETURN $I$ \label{alg:density_2}
 	  	\ENDIF
 	\ENDFOR\label{alg:density_endfor}
+	\STATE $FS = P_{t+1} \cap F$ \label{alg:FS}
 	\STATE $MaxID = 0$ \label{alg:density_for2}
 	\FOR{ $ Ic \in R_t$}
 	\STATE $Improvement = \displaystyle{\min_{s \in FS}\ ID(Ic, s)}$ 
