@@ -1,50 +1,86 @@
-In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by the state-of-art-MOEAs.
+In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by the state-of-art-MOEAs at least in long-term executions.
 %
-Firstly, several technical specifications taken into account in our comparison outline are explained.
+The analysis carried out in this section is carefully designed to get a clear understanding of the balance induced between exploration and exploitation in the \VSDMOEA{}.
 %
-Thereafter, to have a broad perception of the \VSDMOEA{} some experiments are driven.
+First, several technical specifications of the implemented agorithms, and test problems are described.
 %
-Between them an analyzes which is designed to test the scalability in the decision variable space of each \MOEA{}.
+Thereafter, a core comparison between \VSDMOEA{} and the state-of-the-art is presented.
 %
-This analyzes is narrowed through some specific and well known problems.
+Additionally, to have a broad perception of the \VSDMOEA{} three extra experiments are driven.
 %
-In the same line, with the intention to have a better understanding of the critical parameter that induces the initial amount of diversity is taken into account.
+Such analyses are aimed to test the scalability in the decision variable space, the diversity parameter required by \VSDMOEA{}, and several stopping criterion settings.
 %
-This is carried out through several settings and with all the test-problems.
-%
-Finally, since that the mechanism imposed in our proposal, which avoid the premature convergence, highly depends on the elapsed time, we reported the benefits of it considering short-term and long-term executions.
-%
-The latter experiments shows that the \VSDMOEA{} has a decent performance in midterm executions.
-%
+Particularly, the latter is probed with several terms-execution, i.e. from short-term to long-term executions.
+
 
 %
-To validate the proposed MOEA, in this work are considered some of the most popular benchmark in the multi-objective field.
+%Firstly, several technical specifications taken into account in our comparison outline are explained.
 %
-Particularly, the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} test problems have been used for our purpose. 
+%Thereafter, to have a broad perception of the \VSDMOEA{} some experiments are driven.
+%
+%Between them an analyzes which is designed to test the scalability in the decision variable space of each \MOEA{}.
+%
+%This analyzes is narrowed through some specific and well known problems.
+%
+%In the same line, with the intention to have a better understanding of the critical parameter that induces the initial amount of diversity is taken into account.
+%
+%This is carried out through several settings and with all the test-problems.
+%
+%Finally, since that the mechanism imposed in our proposal, which avoid the premature convergence, highly depends on the elapsed time, we reported the benefits of it considering short-term and long-term executions.
+%
+%The latter experiments shows that the \VSDMOEA{} has a decent performance in midterm executions.
+%
+
+This work is validated through some of the most popular bechmarks in the multi-objective field.
+%
+Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009}.
+%
+Furthermore, the experimental validation includes three well-known state-of-the-art MOEAs and the \VSDMOEA{}.
+%
+The MOEAs taken into account are the \NSGAII{}~\cite{Joel:jMetal} , the \MOEAD{}~\cite{MOEADCode}, and the \RMOEA{}~\cite{R2EMOACode}, that can be classified as based-dominance, based-decomposition, and based-indicators respectively.
+%
+Particularly, the \MOEAD{} implementation belongs to the first place in the ``Congress on Evolutionary Computation 2009'' (CEC) \cite{zhang2009performance}.
+%
+Given that all the considered algorithms are stochastic, each execution was repeated $35$ times with different seeds.
+%
+The common configuration in all the executions was the following: the stopping criterion was set to $250,000$ generations, the population size was fixed to $100$, the WFG test problems were configured with two and three objectives, which are set to $24$ parameters, where $20$ of them are distance parameters, and $4$ are position parameters.
+%
+Additionally, in the DTLZ test instances, the number of decision variables is set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively, as is suggested by the authors \cite{Joel:DTLZ}.  
+% 
+The UF benchmark is conformed by seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10), such problems are set with $30$ decision variables.
+%
+The operators employed on all the MOEAs are the Simulatied Binary Crossover (SBX), and the polynomial mutation~\cite{Joel:SBX1994, Joel:Mutation}.
+%
+In the crossover the probability and distribution index are set to $0.9$ and $2$ respectively.
+%
+Similarly, the mutation probability and distribution index are set to $1/n$ and $50$ respectively.
+%
+%
+%The crossover and mutation probabilities are set to $0.9$ and $1/n$ respectively.
+%
+%In general, the crossover and mutation operators are the Simulated Binary Crossover (SBX), and polynomial~\cite{Joel:SBX1994, Joel:Mutation}, which probabilities are set to $0.9$ and $1/n$ respectively.
+%
+%Also, the crossover and mutation distribution indexes were assigned to $2$ and $50$ respectively.
+%
+In addition, the extra-parameterization of each algorithm is shown in the Table~\ref{tab:Parametrization}.
+
+
+%In order, to validate the proposed MOEA, in this work are considered some of the most popular benchmark in the multi-objective field.
+%
+%Particularly, the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} test problems have been used for our purpose. 
 %
 %Through the literature several crossover operators have been proposed in MOEAs~\cite{Joel:ParentMeanCentricSelfAdaptation},  
 %a popular operator is the Simulated Binary Crossover (SBX).4\cite{Joel:SBX1994}%, Joel:TAXONOMY_CROSSOVER, Joel:Kalyanmoy}
 %Additionally, our experimental validation includes the \VSDMOEA{}, as well as three well-known state-of-the-art algorithms.
 %
-In addition, out experimental validation includes the \VSDMOEA{}, as well three well-known state-of-the-art MOEAs.
+%In addition, out experimental validation includes the \VSDMOEA{}, as well three well-known state-of-the-art MOEAs.
 %
-There are the \NSGAII{}~\cite{Joel:jMetal} , the \MOEAD{}~\cite{MOEADCode}, and the \RMOEA{}~\cite{R2EMOACode}, that can be classified as based-dominance, based-decomposition, and based-indicators respectively.
+%There are the \NSGAII{}~\cite{Joel:jMetal} , the \MOEAD{}~\cite{MOEADCode}, and the \RMOEA{}~\cite{R2EMOACode}, that can be classified as based-dominance, based-decomposition, and based-indicators respectively.
 %
-The \MOEAD{} implementation taken into account belongs to the first place in the ``Congress on Evolutionary Computation 2009'' (CEC) \cite{zhang2009performance}.
+%The \MOEAD{} implementation taken into account belongs to the first place in the ``Congress on Evolutionary Computation 2009'' (CEC) \cite{zhang2009performance}.
 %
-Given that all the considered algorithms are stochastic, each execution was repeated $35$ times with different seeds.
 %
-The common configuration in all of them was the following: the stopping criterion was set to $250,000$ generations, the population size was fixed to $100$, the WFG test problems were configured with two and three objectives, which are set to $24$ parameters, where $20$ of them are distance parameters, and $4$ are position parameters.
-%
-Additionally, in the DTLZ test instances, the number of decision variables is set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively, as is suggested by the authors \cite{Joel:DTLZ}.  
-% 
-The UF benchmark is composed of ten test instances, which is categorized in two groups that are based in the number of objective functions to solve, thus the first seven consists of two objectives, and the reaming of three, also the number of decision variables taken into account in each one is $n=30$.
-%
-In general, the crossover and mutation operators are the Simulated Binary Crossover (SBX), and polynomial~\cite{Joel:SBX1994, Joel:Mutation}, which probabilities are set to $0.9$ and $1/n$ respectively.
-%
-Also, the crossover and mutation distribution indexes were assigned to $2$ and $50$ respectively.
-%
-The extra-parameterization of each algorithm is showed in the Table~\ref{tab:Parametrization}.
+
 %
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
@@ -126,7 +162,7 @@ For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used 
 An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, if the mean and median obtained by $X$ are higher than the mean and median achieved by $Y$.
 %
 
-In the Tables \ref{tab:StatisticsHV_2obj}, \ref{tab:StatisticsHV_3obj} are showed the normalized hypervolume with two an three objectives respectively.
+In the Tables \ref{tab:StatisticsHV_2obj}, \ref{tab:StatisticsHV_3obj} are shown the normalized hypervolume with two an three objectives respectively.
 %
 From this empirical results, it is clear that the \VSDMOEA{} achieves the highest general mean \HV{} with both two and three objectives (last row).
 %
@@ -148,7 +184,7 @@ The second best \MOEA{} based in the general mean is the \RMOEA{} with $0.855$, 
 %
 
 
-In the Tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are showed the statistical tests with two and three objectives respectively.
+In the Tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are shown the statistical tests with two and three objectives respectively.
 %
 In the column tagged ``Diff'' is computed the difference between the mean of each algorithm and the best mean achieved.
 %
