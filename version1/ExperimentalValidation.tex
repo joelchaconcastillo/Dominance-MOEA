@@ -105,15 +105,15 @@ In addition, the extra-parameterization of each algorithm is shown in the Table~
 
 In addition, \MOEAD{} and \RMOEA{} are configured with the Tchebycheff approach as utility function.
 %
-According to their implementation each algorithm takes into account different weight vectors.
+According to their implementations each algorithm takes into account different weight vectors.
 %
-Particularly, the \RMOEA{} can be configured with a different quatity of weight vectors than the population size.
+Particularly, \RMOEA{} can be configured with a different quatity of weight vectors than the population size.
 %
 Thus, it employs $501$ and $496$ weight vectors for two and three objectives respectively.
 %
-In contrast, the \MOEAD{} requires the same number of weight vectors than the population size.
+In contrast, \MOEAD{} requires the same number of weight vectors than the population size.
 %
-As a result, to have the same population size in all the algorithms, the weight vectors are generated with the combination of the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
+As a result, to have the same population size in all the algorithms, the weight vectors are generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
 
 %Despite the fact that the \MOEAD{}, and \RMOEA{} can be employed with the same utility function --in this case the Tchebycheff function-- each one of them is designed through a notorious dissimilar paradigm.
 %
@@ -135,13 +135,13 @@ As a result, to have the same population size in all the algorithms, the weight 
 
 Mainly, the experimental analyzes is carried out considering the hypervolume indicator (\HV{}).
 %
-The \HV{} metric measures the size of the objective space dominated by the approximated solutions given a reference point, so the solutions dominated by the reference point are not considered.
+The \HV{} metric measures the objective space dominated by the approximated solutions given a reference point, so the solutions dominated by the reference point are not considered.
 %
-Particularly, the reference point is chosen to be a vector which values are sightly larger (ten percent) than the nadir point as is suggested in \cite{ishibuchi2017reference}.
+Particularly, the reference point is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point as is suggested in \cite{ishibuchi2017reference}.
 %
-Similarly that in \cite{li2015evolutionary}, and to have a fair comparison the normalized \HV{} is taken into account.
+Similarly that in \cite{li2015evolutionary}, and to have a fair comparison the normalized \HV{} is estimated.
 %
-Specifically, the \HV{} reported is computed as the ratio between the \HV{} reached by a set of solutions and the \HV{} of the optimal Pareto Front.
+Specifically, the \HV{} reported is computed as the ratio between the \HV{} reached by a set of solutions and the \HV{} of a set of solutions which belong to the Pareto Front.
 %
 In this way, the more approximated to the unity this metric is, the more converged are the solutions to the Pareto Front.
 %
@@ -176,61 +176,96 @@ For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used 
 An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, if the mean and median obtained by $X$ are higher than the mean and median achieved by $Y$.
 %
 
-In the Tables \ref{tab:StatisticsHV_2obj}, \ref{tab:StatisticsHV_3obj} are shown the normalized hypervolume with two an three objectives respectively.
+In Tables \ref{tab:StatisticsHV_2obj} and \ref{tab:StatisticsHV_3obj} are shown the normalized hypervolume with two and three objectives respectively.
 %
-From this empirical results, it is clear that the \VSDMOEA{} achieves the highest general mean \HV{} with both two and three objectives (last row).
+In this empirical results the \VSDMOEA{} achieved the best general mean, and the standard deviation achieved is not significantly high, meaning that this MOEA is quite stable to different random initialization of the population.
 %
-Even more, the standard deviation is the lowest in almost all the problems, therefore this \MOEA{} shows to be stable, consequently it is able to attain similar results through several runs.
+According to table \ref{tab:StatisticsHV_2obj} the dominance-based algorithms improved the remaining MOEAs.
 %
-The best general mean considering two objectives is achieved by the \VSDMOEA{} with $0.955$.
+However, the general mean of \NSGAII{} (second best algorithm with $0.886$) is quite similar than \MOEAD{} ($0.881$) and \RMOEA{} ($0.882$), in contrast \VSDMOEA{} achieved a high \HV{} value ($0.951$).
 %
-Also, the second general mean is obtained by the \NSGAII{} with $0.886$.
+In particular, the dominance-based algorihms gave the best values in the kind of problems with disconnected Pareto geometries (WFG2, UF5 and UF6).
 %
-It is important to remark that the general mean can be unsteady to atypical measurements, thus very low values could affect highly the general mean.
+Taking into account three objectives \NSGAII{} is placed as the worst algorithm ($0.785$), this might occurs by its density estimator, which has some inconvenients in the most difficult problems with three objectives (e.g. multi-frontality).
 %
-However, all the state-of-the-art-\MOEAS{} achieved a general mean of $0.88$ considering two objectives, whilst the \VSDMOEA{} obtained $0.95$.
-%
-Considering three objectives the performance of the \NSGAII{} is seriously affected, this might occurs since that the density estimator employed in the \NSGAII{} highly depends on the dominance-relation, thus in some problems (e.g. multi-frontal problems UF10) the solutions do not converge adequately to the Pareto front.
-%
-In the same line, the \VSDMOEA{} achieved the best \HV{} values in almost all the problems, in fact such values that are higher than $0.9$ are close enough to the Pareto Front.
-%
-The second best \MOEA{} based in the general mean is the \RMOEA{} with $0.855$, despite that it adopts the same utility function that the \MOEAD{}, the latter is lightly lower with $0.835$, this might occurs given that the \MOEAD{} has several parameters to be tuned, and the selected configuration could be insufficient to long-term executions.
+The second place is attained by \RMOEA{} ($0.855$), which is still quite low compared with \VSDMOEA{} ($0.916$).
 %
 
 
-In the Tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are shown the statistical tests with two and three objectives respectively.
+Given that the general mean can be unsteady to atypical measurements, which is found in results with high standard deviation, in Tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are shown the statistical tests with two and three objectives respectively.
 %
-In the column tagged ``Diff'' is computed the difference between the mean of each algorithm and the best mean achieved.
+Such tables incorpore the difference between the mean in each algorithm and the best mean achieved for each problem, which is tagged with ``Diff''.
 %
-Taking into account two objectives the \VSDMOEA{} attains the best score of $52$ wins, the second best score is attained by the \RMOEA{} with $34$ wins.
+A representative value of each column is shown in the last row, which is conformed by the sum of the enterely column.
 %
-In spite that the \NSGAII{} achieves a better general mean, it wins less times that the remaining \MOEAS{}.
+The algorithm which attained more wins in the pair-wise comparison is the \VSDMOEA{} with $48$ and $52$ wins in two and three objectives respectively.
 %
-Meaning that the \NSGAII{} obtains values close enough than the best \MOEA{}, this can be viewed in the last row where is computed the total sum of all the problems.
+Besides that \VSDMOEA{} lost in several pair-wise comparisons it is enough close to the best results, it is noted with the differences obtained with the best result.
 %
-Generally speaking, the best results are obtained by the \VSDMOEA{}, since that the total sum of the ``Diff'' column is $0.061$, thus when this algorithm does not achieved the best results, it obtained near solutions to the best results.
+In fact, \VSDMOEA{} achieved $0.060$ and $0.027$ in contrast the second bests algorithms are \NSGAII{} and \RMOEA{} in two and three objectives respectively.
 %
-Furthermore, the algorithms \RMOEA{} and \MOEAD{} achieved a similar total ``Diff'' values.
+Particularly, the worst ``Diff'' value achieved by the \VSDMOEA{} is with the WFG6 test-problem ($0.045$ and $0.024$), which is uni-modal and non-separable.
 %
-Particularly, the worst ``Diff'' value achieved by the \VSDMOEA{} is with the problem WFG6.
+Nevertheless, this problem was correctly solved with $D_I=0.1$ whose mean achieved was of $0.913$, and $0.868$ for two and three objectives respectively.
 %
-This problem is uni-modal and non-separable, and this might occurs since that the initial factor distance is very high.
+Therefore, this test-problem is improved inducing less diversity at the initial stages of the execution.
 %
-In fact through other experimental analyzes this problem was correctly solved with $D_I=0.1$ whose mean achieved  was of $0.917$, and $0.868$ for two and three objectives respectively.
+%This problem is uni-modal and non-separable, and this might occurs since that the initial factor distance is very high.
+
 %
-In addition, a similar behavior can be seen with three objectives (Table \ref{tab:Tests_HV_3obj}), where the \VSDMOEA{} improves significantly in comparison to the state-of-the-art-MOEAs.
+
+%It is important to remark that the general mean can be unsteady to atypical measurements, which is found in high standar deviation results, thus very low values could affect highly the general mean.
 %
-Particularly, the most complicated problems are better solved by the \VSDMOEA{} as are UF3, UF4, UF5, and UF6 composed by two objectives, and UF9, UF10 with three objectives.
+%The second best \MOEA{} based in the general mean is the \RMOEA{} with $0.855$, despite that it adopts the same utility function that the \MOEAD{}, the latter is lightly lower with $0.835$, this might occurs given that the \MOEAD{} has several parameters to be tuned, and the selected configuration could be insufficient to long-term executions.
 %
-The UF5 is considered as one of the most difficult problems since that the optimal Pareto front is conformed by $21$ points, also it has several sub-optimal regions where the solutions could suffer stagnation. 
+
+%From this empirical results, it is clear that the \VSDMOEA{} achieves the highest general mean \HV{} with both two and three objectives (last row).
 %
-Nevertheless, since that it is a disconnected Pareto front, the \MOEAS{} that considers weight vectors faces several difficulties (e.g. knee regions), consequently they have more chances to stagnate.
+%Even more, the standard deviation is the lowest in almost all the problems, therefore this \MOEA{} shows to be stable, consequently it is able to attain similar results through several runs.
 %
-In fact in the latter problem the \NSGAII{} has a lower ``Diff'' value ($0.048$) than the \MOEAD{} and \RMOEA{} ($0.205$ and $0.122$).
+%The best general mean considering two objectives is achieved by the \VSDMOEA{} with $0.955$.
 %
-Diversely, the UF10 is a multi-frontal problem, this means that there exists different sub-optimal non-dominated fronts that correspond to different locally optimal values \cite{huband2006review}, this characteristic increases the difficulties of the problem as the number of objectives increases.
+%Also, the second general mean is obtained by the \NSGAII{} with $0.886$.
 %
-However, the latter problem has notably converged better in \VSDMOEA{} ($0.627$) than in the remaining \MOEAS{} (second best $0.413$).
+%
+%However, all the state-of-the-art-\MOEAS{} achieved a general mean of $0.88$ considering two objectives, whilst the \VSDMOEA{} obtained $0.95$.
+%
+%Considering three objectives the performance of the \NSGAII{} is seriously affected, this might occurs since that the density estimator employed in the \NSGAII{} highly depends on the dominance-relation, thus in some problems (e.g. multi-frontal problems UF10) the solutions do not converge adequately to the Pareto front.
+%
+%In the same line, the \VSDMOEA{} achieved the best \HV{} values in almost all the problems, in fact such values that are higher than $0.9$ are close enough to the Pareto Front.
+%
+%
+
+
+%In the Tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are shown the statistical tests with two and three objectives respectively.
+%%
+%In the column tagged ``Diff'' is computed the difference between the mean of each algorithm and the best mean achieved.
+%
+%Taking into account two objectives the \VSDMOEA{} attains the best score of $52$ wins, the second best score is attained by the \RMOEA{} with $34$ wins.
+%
+%In spite that the \NSGAII{} achieves a better general mean, it wins less times that the remaining \MOEAS{}.
+%
+%Meaning that the \NSGAII{} obtains values close enough than the best \MOEA{}, this can be viewed in the last row where is computed the total sum of all the problems.
+%
+%Generally speaking, the best results are obtained by the \VSDMOEA{}, since that the total sum of the ``Diff'' column is $0.061$, thus when this algorithm does not achieved the best results, it obtained near solutions to the best results.
+%
+%Furthermore, the algorithms \RMOEA{} and \MOEAD{} achieved a similar total ``Diff'' values.
+%
+%
+%
+%In addition, a similar behavior can be seen with three objectives (Table \ref{tab:Tests_HV_3obj}), where the \VSDMOEA{} improves significantly in comparison to the state-of-the-art-MOEAs.
+%
+%Particularly, the most complicated problems are better solved by the \VSDMOEA{} as are UF3, UF4, UF5, and UF6 composed by two objectives, and UF9, UF10 with three objectives.
+%
+%The UF5 is considered as one of the most difficult problems since that the optimal Pareto front is conformed by $21$ points, also it has several sub-optimal regions where the solutions could suffer stagnation. 
+%
+%Nevertheless, since that it is a disconnected Pareto front, the \MOEAS{} that considers weight vectors faces several difficulties (e.g. knee regions), consequently they have more chances to stagnate.
+%
+%In fact in the latter problem the \NSGAII{} has a lower ``Diff'' value ($0.048$) than the \MOEAD{} and \RMOEA{} ($0.205$ and $0.122$).
+%
+%Diversely, the UF10 is a multi-frontal problem, this means that there exists different sub-optimal non-dominated fronts that correspond to different locally optimal values \cite{huband2006review}, this characteristic increases the difficulties of the problem as the number of objectives increases.
+%
+%However, the latter problem has notably converged better in \VSDMOEA{} ($0.627$) than in the remaining \MOEAS{} (second best $0.413$).
 %
 
 

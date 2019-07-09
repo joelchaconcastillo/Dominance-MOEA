@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: chacon-ieeetec-17.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -9,7 +9,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex/bib/IEEEabrv.bib
 Database file #2: bibtex/bib/References.bib.bib
--- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty year in Joel:BALANCE_DIVERSITY
@@ -17,45 +17,45 @@ Warning--empty year in Joel:BOOK_MOEAs
 Warning--empty institution in Joel:SBX1994
 
 Done.
-You've used 49 entries,
-            4039 wiz_defined-function locations,
-            1523 strings with 25343 characters,
-and the built_in function-call counts, 39391 in all, are:
-= -- 3145
-> -- 920
-< -- 379
-+ -- 512
-- -- 144
-* -- 1873
-:= -- 5706
-add.period$ -- 106
-call.type$ -- 49
-change.case$ -- 38
-chr.to.int$ -- 903
-cite$ -- 52
-duplicate$ -- 2747
-empty$ -- 3218
-format.name$ -- 187
-if$ -- 9188
+You've used 48 entries,
+            4087 wiz_defined-function locations,
+            1530 strings with 25243 characters,
+and the built_in function-call counts, 38567 in all, are:
+= -- 3062
+> -- 895
+< -- 368
++ -- 498
+- -- 140
+* -- 1824
+:= -- 5566
+add.period$ -- 104
+call.type$ -- 48
+change.case$ -- 37
+chr.to.int$ -- 879
+cite$ -- 51
+duplicate$ -- 2681
+empty$ -- 3152
+format.name$ -- 182
+if$ -- 9108
 int.to.chr$ -- 0
-int.to.str$ -- 49
-missing$ -- 460
-newline$ -- 184
-num.names$ -- 49
-pop$ -- 1088
+int.to.str$ -- 48
+missing$ -- 449
+newline$ -- 181
+num.names$ -- 48
+pop$ -- 1067
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 3036
+skip$ -- 2961
 stack$ -- 0
-substring$ -- 2134
-swap$ -- 2348
-text.length$ -- 78
+substring$ -- 2077
+swap$ -- 2286
+text.length$ -- 75
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 49
+type$ -- 48
 warning$ -- 3
-while$ -- 191
-width$ -- 51
-write$ -- 496
+while$ -- 186
+width$ -- 50
+write$ -- 485
 (There were 3 warnings)
