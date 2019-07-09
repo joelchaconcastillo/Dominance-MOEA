@@ -17,45 +17,45 @@ Warning--empty year in Joel:BOOK_MOEAs
 Warning--empty institution in Joel:SBX1994
 
 Done.
-You've used 50 entries,
+You've used 49 entries,
             4039 wiz_defined-function locations,
-            1531 strings with 25580 characters,
-and the built_in function-call counts, 39846 in all, are:
-= -- 3182
-> -- 929
+            1523 strings with 25343 characters,
+and the built_in function-call counts, 39391 in all, are:
+= -- 3145
+> -- 920
 < -- 379
-+ -- 516
-- -- 146
-* -- 1895
-:= -- 5790
-add.period$ -- 108
-call.type$ -- 50
++ -- 512
+- -- 144
+* -- 1873
+:= -- 5706
+add.period$ -- 106
+call.type$ -- 49
 change.case$ -- 38
 chr.to.int$ -- 903
-cite$ -- 53
-duplicate$ -- 2779
-empty$ -- 3267
-format.name$ -- 190
-if$ -- 9290
+cite$ -- 52
+duplicate$ -- 2747
+empty$ -- 3218
+format.name$ -- 187
+if$ -- 9188
 int.to.chr$ -- 0
-int.to.str$ -- 50
-missing$ -- 467
-newline$ -- 189
-num.names$ -- 50
-pop$ -- 1107
+int.to.str$ -- 49
+missing$ -- 460
+newline$ -- 184
+num.names$ -- 49
+pop$ -- 1088
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 3076
+skip$ -- 3036
 stack$ -- 0
 substring$ -- 2134
-swap$ -- 2368
+swap$ -- 2348
 text.length$ -- 78
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 50
+type$ -- 49
 warning$ -- 3
-while$ -- 192
-width$ -- 52
-write$ -- 507
+while$ -- 191
+width$ -- 51
+write$ -- 496
 (There were 3 warnings)

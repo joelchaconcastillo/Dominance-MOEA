@@ -101,22 +101,36 @@ In addition, the extra-parameterization of each algorithm is shown in the Table~
 \end{table}
 
 
-Despite the fact that the \MOEAD{}, and \RMOEA{} can be employed with the same utility function --in this case the Tchebycheff function-- each one of them is designed through a notorious dissimilar paradigm.
 %
-Thus, the weight vectors taken into consideration for each one of them were different.
+
+In addition, \MOEAD{} and \RMOEA{} are configured with the Tchebycheff approach as utility function.
+%
+According to their implementation each algorithm takes into account different weight vectors.
+%
+Particularly, the \RMOEA{} can be configured with a different quatity of weight vectors than the population size.
+%
+Thus, it employs $501$ and $496$ weight vectors for two and three objectives respectively.
+%
+In contrast, the \MOEAD{} requires the same number of weight vectors than the population size.
+%
+As a result, to have the same population size in all the algorithms, the weight vectors are generated with the combination of the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
+
+%Despite the fact that the \MOEAD{}, and \RMOEA{} can be employed with the same utility function --in this case the Tchebycheff function-- each one of them is designed through a notorious dissimilar paradigm.
+%
+%Thus, the weight vectors taken into consideration for each one of them were different.
 %, i.e. the confias it was originally proposed by the authors. 
 %
-The main reason of this, is that the \RMOEA{} can be configured with a different population size than the number of weight vectors without been significantly affected.
+%The main reason of this, is that the \RMOEA{} can be configured with a different population size than the number of weight vectors without been significantly affected.
 %
-Particularly, the \RMOEA{} employs $501$ and $496$ weight vectors for two and three objectives respectively.
+%Particularly, the \RMOEA{} employs $501$ and $496$ weight vectors for two and three objectives respectively.
 %
-Contrarily, in the \MOEAD{} each weight vector is identified as a sub-problem, therefore the population should correspond to the same number of weight vectors.
+%Contrarily, in the \MOEAD{} each weight vector is identified as a sub-problem, therefore the population should correspond to the same number of weight vectors.
 %
-In addition, the weight vectors used in the \MOEAD{} should be uniformly scattered on the unit-simplex, however it can be a drawback since that the number of vectors required for this task increases non-linearly according the number of objectives.
+%In addition, the weight vectors used in the \MOEAD{} should be uniformly scattered on the unit-simplex, however it can be a drawback since that the number of vectors required for this task increases non-linearly according the number of objectives.
 %
-Therefore, in this version is applied the method proposed in \cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres} where the uniform design (UD) \cite{Joel:Uniform_Design} and good lattice point method (GLP) are combined.
+%Therefore, in this version is applied the method proposed in \cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres} where the uniform design (UD) \cite{Joel:Uniform_Design} and good lattice point method (GLP) are combined.
 %
-In this way, the number of weight vectors that is required by this \MOEA{} is not affected by the number of objectives.
+%In this way, the number of weight vectors that is required by this \MOEA{} is not affected by the number of objectives.
 
 
 Mainly, the experimental analyzes is carried out considering the hypervolume indicator (\HV{}).

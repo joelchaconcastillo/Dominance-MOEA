@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  8 JUL 2019 18:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2018.4.16)  9 JUL 2019 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -882,21 +882,24 @@ Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 )
 (./Graphic-Initial-Distance.tex) [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 LaTeX Warning: Reference `fig:Diversity_WFG1' on page 8 undefined on input line
- 352.
+ 366.
 
 
 LaTeX Warning: Reference `fig:Diversity_WFG5' on page 8 undefined on input line
- 352.
+ 366.
 
 
 LaTeX Warning: Reference `fig:Diversity_WFG6' on page 8 undefined on input line
- 352.
+ 366.
 
 
 LaTeX Warning: Reference `fig:Diversity_WFG5' on page 8 undefined on input line
- 364.
+ 378.
 
 [8] (./Graphic-Diversity_2obj.tex
 Overfull \hbox (4.65715pt too wide) in paragraph at lines 53--54
@@ -931,19 +934,20 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 3.
 
 ) (./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)) (./Conclusion.tex
+[9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
+)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-(./chacon-ieeetec-17.bbl [11]
+ [10]
+(./chacon-ieeetec-17.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
- [12]
+
+Underfull \vbox (badness 3590) has occurred while \output is active []
+
+ [11]
 Underfull \hbox (badness 10000) in paragraph at lines 228--231
 []\OT1/ptm/m/n/8 MOEA/D. [On-line]. Avail-able:
  []
@@ -959,6 +963,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--237
 []\OT1/ptm/m/n/8 R2-EMOA. [On-line]. Avail-able:
  []
 
+[12]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no œ in font ptmr7t!
@@ -993,12 +998,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 809.
  ) 
 Here is how much of TeX's memory you used:
- 24587 strings out of 493305
- 560982 string characters out of 6139897
- 1139687 words of memory out of 5000000
- 27543 multiletter control sequences out of 15000+600000
+ 24586 strings out of 493305
+ 560961 string characters out of 6139897
+ 1138062 words of memory out of 5000000
+ 27542 multiletter control sequences out of 15000+600000
  33267 words of font info for 79 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  56i,17n,84p,735b,2095s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (13 pages, 552604 bytes).
+Output written on chacon-ieeetec-17.dvi (13 pages, 550468 bytes).
