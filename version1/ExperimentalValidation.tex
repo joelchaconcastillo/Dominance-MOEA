@@ -271,21 +271,33 @@ Therefore, this test-problem is improved inducing less diversity at the initial 
 
 \subsection{Decision Variable Scalability Analysis}
 
-In order, to study the scalability of the decision variables, and following a similar validation scheme, the algorithms were test with $50$, $100$, and $250$ variables.
+In order, to study the scalability of the decision variables, and following the same guideline of validation, the algorithms were test with $50$, $100$, and $250$ variables.
 %
-Particularly, given that long-term executions (250000 generations) are time-consuming with all the algorithms this analysis is carried out with middle-term executions (25000 generations).
+Particularly, since that long-term executions (250000 generations) are time-consuming, this analysis is carried out with middle-term executions (25000 generations).
 %
-In Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} are shown normalized mean of the \HV{} results for two and three objectives respectively.
+In Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} are shown the normalized mean of the \HV{} results for two and three objectives respectively.
 %
 All the algorithms were deteriorated as the number of variables is increased.
 %
-In fact, the based-dominance algorithms are the best considering only two objectives.
+In fact, the based-dominance algorithms are the best in problems of two objectives.
 %
-In contrast, taking into account three objectives the weight-vector based algorithms are enough stable increasing the number of variables and superior than the \NSGAII{}.
+In contrast, taking into account problems of three objectives, the weight-vector based algorithms show to be enough stable according the increment of the variables in comparison to the dominance-based algorithms.
 %
-Additionally, the weight-vector based algorithms have a similar performance increasing the number of decision variables.
+In addition, the weight-vector based algorithms have a similar performance increasing the number of decision variables.
 %
-However, \VSDMOEA{} achieved the best \HV{} values in both two and three objectives.
+However, \VSDMOEA{} is still the best algorithm in both two and three objectives.
+% 
+In problems of three objectives, \VSDMOEA{} is deteriorated with the number of variables in comparison to the weight-vector based algorithms, this might by caused for several reasons, perhaps two of the most important are the time-execution involved and the distance metric used in the magnament of diversity.
+%
+The latter is popularly known as \textit{The Curse of Dimensionality} \cite{trunk1979problem, beyer1999nearest}, meaning that under certain broad conditions, as dimensionality is increased, the distance to the nearest neighbor approaches the distance to the farthest neighbor.
+%
+In other words, the contrast in distances to different data points becomes no-existent.
+
+
+%
+%This might occurs for several reasons, perhaps the most important is related with the measurement employed in the variable space (Euclidean distance), this inconvenient is popularly known as \textit{The Curse of Dimensionality} \cite{trunk1979problem, beyer1999nearest}.
+
+%
 
 %to analyse the scalability of the decision variable space, each algorithm is evaluated through $50$, $100$ and $250$ variables.
 
@@ -300,37 +312,33 @@ However, \VSDMOEA{} achieved the best \HV{} values in both two and three objecti
 %
 %In addition, each selected problem was repeated $35$ times, thus the mean of all the \HV{} values are reported.
 %
-The \VSDMOEA{} attained the best results in two objectives with both problems, however it is remarkable to notice that the \HV{} value reported by the \NSGAII{} improves as the number of decision variables is increased.
+%The \VSDMOEA{} attained the best results in two objectives with both problems, however it is remarkable to notice that the \HV{} value reported by the \NSGAII{} improves as the number of decision variables is increased.
 %
-Specifically, the DTLZ4 is uni-modal, and its Pareto shape is concave, also it has a polynomial bias.
+%Specifically, the DTLZ4 is uni-modal, and its Pareto shape is concave, also it has a polynomial bias.
 %
-This interesting behavior is also showed by the \RMOEA{}, and can be explained as follows.
+%This interesting behavior is also showed by the \RMOEA{}, and can be explained as follows.
 %
-The probability of stagnation in certain sub-optimal regions can be avoided increasing the decision variables space.
+%The probability of stagnation in certain sub-optimal regions can be avoided increasing the decision variables space.
 %
-It highly depends in the operators that are taken into account (in this case the SBX and polynomial mutation), thus in some circumstances the more bigger the variable decision space is, the better quality solutions are reached.
+%It highly depends in the operators that are taken into account (in this case the SBX and polynomial mutation), thus in some circumstances the more bigger the variable decision space is, the better quality solutions are reached.
 %
-This can be lightly seen in the \MOEAD{} after $250$ variables, however we believe that this \MOEA{} is highly parameter-sensitive.
+%This can be lightly seen in the \MOEAD{} after $250$ variables, however we believe that this \MOEA{} is highly parameter-sensitive.
 %
-A differently effect is presented in the UF5, in this problem the more bigger the variable space is, the less quality solutions are obtained.
+%A differently effect is presented in the UF5, in this problem the more bigger the variable space is, the less quality solutions are obtained.
 %
-Despite this the \VSDMOEA{} still attains the best \HV{} values.
+%Despite this the \VSDMOEA{} still attains the best \HV{} values.
 %
-However, the \VSDMOEA{} is not the best \MOEA{} in all the circumstances, it can be seen considering three objectives (Figure \ref{fig:variable-decision-scalability-3obj}).
+%However, the \VSDMOEA{} is not the best \MOEA{} in all the circumstances, it can be seen considering three objectives (Figure \ref{fig:variable-decision-scalability-3obj}).
 %
-Specifically, where the number of variables is increased to one thousand in both problems (DTLZ4 an d UF10) its performance is highly degraded.
+%Specifically, where the number of variables is increased to one thousand in both problems (DTLZ4 an d UF10) its performance is highly degraded.
 %
-This might occurs for several reasons, perhaps the most important is related with the measurement employed in the variable space (Euclidean distance), this inconvenient is popularly known as \textit{The Curse of Dimensionality} \cite{trunk1979problem, beyer1999nearest}.
 %
-This drawback means that under certain broad conditions, as dimensionality increases, the distance to the nearest neighbor approaches the distance to the farthest neighbor.
 %
-In other words, the contrast in distances to different data points becomes no-existent.
+%The remaining \MOEAS{} show a similar behavior with the DTLZ4 with two and three objectives.
 %
-The remaining \MOEAS{} show a similar behavior with the DTLZ4 with two and three objectives.
+%As previously mentioned the performance of \VSDMOEA{} is seriously deteriorated, however it is still better than the \NSGAII{}.
 %
-As previously mentioned the performance of \VSDMOEA{} is seriously deteriorated, however it is still better than the \NSGAII{}.
-%
-Also, the \RMOEA{} seems to be enough stable with three objectives in the problems DTLZ4 and UF10.
+%Also, the \RMOEA{} seems to be enough stable with three objectives in the problems DTLZ4 and UF10.
 
 \begin{figure}[t]
 \centering
@@ -344,69 +352,100 @@ Also, the \RMOEA{} seems to be enough stable with three objectives in the proble
 \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
-\subsection{Diversity of the \MOEAS{} Through Generations}
+%\subsection{Diversity of the \MOEAS{} Through Generations}
 
-In order, to have a better understanding of the diversity behavior some WFG problems have been selected.
+In order, to have a better understanding of the algorithms and following the guideline of middle-term executions, the diversity in the decision variable space is computed with some WFG problems.
 %
-The WFG problems divide the decision variables in two kinds of parameter: the distance parameters and the position parameters.
+Particularly, these problems divide the decision variables in two kinds of patameters: the distance parameters and the position parameters.
 %
 A parameter $x_i$ is a distance parameter when for all parameter vectors $\vec{F}(\mathbf{x})$, modifying $x_i$ in $\vec{F}(\mathbf{x})$ results in a parameter vector that dominates $\vec{F}(\mathbf{x})$, is equivalent to $\vec{F}(\mathbf{x})$, or is dominated by $\vec{F}(\mathbf{x})$.
 %
 However, if $x_i$ is a position parameter, modifying $x_i$ in $\vec{F}(\mathbf{x})$ always results in a vector that is incomparable or equivalent to $\vec{F}(\mathbf{x})$~\cite{huband2005scalable}.
 %
 
-In this section we show that state-of-the-art-\MOEAS{} do not always maintain high enough diversity.
+%In this section we show that state-of-the-art-\MOEAS{} do not always maintain high enough diversity.
 %
-Particularly, the selected problems are used to show that premature convergence appears in the set of distance parameters.
+Particularly, the selected problems are used to show that premature convergence or stagnation appears in the set of distance parameters.
 %
 Consequently, the operators involved lose its exploratory strength.
 %
-We select the WFG1, WFG5, and WFG6 problems, because they have simple definition, but most MOEAs faces difficulties with them. 
+%We select the first seven WFG problems (WFG1-7), because they have simple definition, but most MOEAs faces difficulties with them. 
 %
-In addition, those problems were taken into account given that the WFG1 and WFG5 were better solved by the \VSDMOEA{}.
+%In addition, those problems were taken into account given that the WFG1 and WFG5 were better solved by the \VSDMOEA{}.
 %
-Generally speaking, the WFG1 converged to the Pareto Front with our proposal, this since that the accuracy obtained was of $0.993$.
+%Generally speaking, the WFG1 converged to the Pareto Front with our proposal, this since that the accuracy obtained was of $0.993$.
 %
-In contrast, the WFG5 was still far away of the Pareto Front which \HV{} mean  was of $0.923$.
+%In contrast, the WFG5 was still far away of the Pareto Front which \HV{} mean  was of $0.923$.
 %
-Contrarily, the WFG6 was chosen since that the \VSDMOEA{} achieved the worst results.
+%Contrarily, the WFG6 was chosen since that the \VSDMOEA{} achieved the worst results.
 %
-Whereas the WFG1 and WFG6 are uni-modal, the WFG5 is a highly deceptive problem.
+%Whereas the WFG1 and WFG6 are uni-modal, the WFG5 is a highly deceptive problem.
 %
-Moreover, the WFG1 and WFG5 are conformed by the separable properties of its objective functions.
+%Moreover, the WFG1 and WFG5 are conformed by the separable properties of its objective functions.
 %
-In fact, the distance parameters values associated to Pareto optimal solutions for WFG1-WFG7 have exactly the same values in the distance parameters.
+We select the WFG1-WFG7 problems because their distance parameters values associated to Pareto optimal solutions have exactly the same values.
+%In fact, the distance parameters values associated to Pareto optimal solutions for WFG1-WFG7 have exactly the same values in the distance parameters.
 %
 This values is shown as follows:
 \begin{equation}
    x_{i=k+1:n} = 2i \times 0.35
 \end{equation}
 %
-Taking into account the stochastic behavior of \MOEAS{}, $35$ independent executions were run by each selected problem.
+%Taking into account the stochastic behavior of \MOEAS{}, $35$ independent executions were run by each selected problem.
 %
-In all of them, the stopping criterion was set to $250,000$ generations.
+%In all of them, the stopping criterion was set to $25,000$ generations.
 %
 In order to analyze the diversity, the average Euclidean distance among individuals (ADI) is calculated, i.e. the mean value of all pairwise distances among individuals in the population is reported.
 %
-In the Figures \ref{fig:Diversity_WFG1}, \ref{fig:Diversity_WFG5}, and \ref{fig:Diversity_WFG6} are showed the evolution of diversity of the WFG1, WFG5, and WFG6 respectively.
+In Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} are shown the evolution of diverstiy with two and three objectives.
 %
-In those figures each \MOEA{} is showed by dashed and solid lines that represents two and three objectives respectively.
+Concretely, each figure shows the diversity maintained with the position parameters and the distance parameters.
 %
-Particularly, the \VSDMOEA{} properly maintains diversity in both kind of parameters, while in the remaining algorithms the diversity in the distance parameters is lost after the $10\%$ (generation $2500$) of total generations.
+The diversity is calculated for $50$, $100$, and $250$ variables with all the algorithms.
 %
-Thus, after those \MOEAS{} converges, they are basically modifying the position parameters, so the majority of the time is improving further the diversity in the objectives space and the convergence is neglected.
+Principally, state-of-the-art algorithms converges to certain promising regions in distance parameters after the $10\%$ of total time-execution.
 %
-In fact, this diversity issue is also present in the WFG5.
+Nevertheless, in relation with state-of-the-art, the diversity in position parameters increases as the time elapses, meaning that the remaining $90\%$ is devoted to improve the quality in the objective space.
 %
-However, all the \MOEAS{} have a minimum lower bound of diversity in the position parameters of those selected problems.
+Therefore, the algorithms tend to stagnate after that the distance parameters converges to promising regions (it could be non-optimal region).
 %
-Contrastively, considering the WFG5 (Figure \ref{fig:Diversity_WFG5}) the \VSDMOEA{} does not converge at all in the distance parameters with three objectives, this might be an effect of promoting too much diversity.
+In contrast, \VSDMOEA{} keeps diverse solutions in both kind of parameters until the $50\%$ of the time elapsed.
 %
-Besides this issue, the \VSDMOEA{} still achieves the best \HV{} values.
+
+
+The diversity maintained in problems of three objectives is larger than with problems of two objectives, this might occurs since that the quantity of prominent solutions increases meaninfully between two and three objectives.
 %
-In addition, this drawback is more notorious in the problem WFG6.
+Therefore, there is present an implicit relation of diversity between the number of objectives and the decision variables space, in this situation three objectives keeps implictly more diversity than two objectives.
 %
-In fact in two and three objectives this \MOEA{} did not converges in the distance parameters, and the position variables are still more diversified as in WFG1.
+However, this implicit diversity maintained is not enough to avoid stagnation in several problems.
+%
+Thus, considering long-term executions in state-of-the-art algorithms could not improve meaningfully.
+%
+In contrast, \VSDMOEA{} could improve even more with long-term executions, since that it keeps diversity at several stages.
+%
+In general, as the number of variables is increased, the convergence in the distance parameters is even more slow, therefore to have quality solutions is required a greater time-execution, for example with $250$ variables the distance parameters are still moving.
+%
+
+%
+%In the Figures \ref{fig:Diversity_WFG1}, \ref{fig:Diversity_WFG5}, and \ref{fig:Diversity_WFG6} are showed the evolution of diversity of the WFG1, WFG5, and WFG6 respectively.
+%
+%In those figures each \MOEA{} is showed by dashed and solid lines that represents two and three objectives respectively.
+%
+%Particularly, the \VSDMOEA{} properly maintains diversity in both kind of parameters, while in the remaining algorithms the diversity in the distance parameters is lost after the $10\%$ (generation $2500$) of total generations.
+%
+%Thus, after those \MOEAS{} converges, they are basically modifying the position parameters, so the majority of the time is improving further the diversity in the objectives space and the convergence is neglected.
+%
+%In fact, this diversity issue is also present in the WFG5.
+%
+%However, all the \MOEAS{} have a minimum lower bound of diversity in the position parameters of those selected problems.
+%
+%Contrastively, considering the WFG5 (Figure \ref{fig:Diversity_WFG5}) the \VSDMOEA{} does not converge at all in the distance parameters with three objectives, this might be an effect of promoting too much diversity.
+%
+%Besides this issue, the \VSDMOEA{} still achieves the best \HV{} values.
+%
+%In addition, this drawback is more notorious in the problem WFG6.
+%
+%In fact in two and three objectives this \MOEA{} did not converges in the distance parameters, and the position variables are still more diversified as in WFG1.
 
 
 \begin{figure}[t]
@@ -428,6 +467,74 @@ In fact in two and three objectives this \MOEA{} did not converges in the distan
 %\input{Graphic-Diversity_WFG6.tex}
 %\label{fig:Diversity_WFG6}
 %\end{figure}
+
+\subsection{Stagnation with \MOEAS{}}
+
+
+This section is devoted to test the perfomance of the algorithms with several term-executions.
+%
+As was previously discussed, state-of-the-art algorithms might suffer of stagnation.
+%
+Thereforei, the solutions could converge in promising (but non-optimal) regions at the first stages of the execution and wasting a meaningfull quantity of time-execution.
+%
+To deal with this issue, \VSDMOEA{} maintains diversity at different stages as long as the stopping criterion is reached.
+%
+Accordingly, to have a better understanding of the behavour that the algorithms have with different term-executions, the mean of normalized \HV{} of all the problems for two and three objectives are computed.
+%
+Mainly, three ranges of stopping criterion were probed.
+%
+Each range was split in ten intervals, such ranges considered were $[300, 2500]$, $[2500, 25000]$ and $[25000, 250000]$ respectively.
+%
+In Figure \ref{fig:Performance_time} are showed the mean \HV{} values attained with each \MOEA{} with two and three objectives respectively.
+%
+This shows that \VSDMOEA{} atteined competitive results considering short-term executions.
+%
+Even more, as the time-execution is increased its performance is improved.
+%
+In fact after $2500$ generations the \VSDMOEA{} has a notorious improvement respect to the state-of-the-art-\MOEAS{} in both two and three objectives.
+%
+In problems with two objectives state-of-the-art algorithms attained quite similar \HV{} values in long-term executions (250000 generations).
+%
+The weight-vector based algorithms had a similar behaviour in relation with the stopping criterion.
+%
+Particularly, \RMOEA{} improved state-of-the-art algoriths in the problems of three objectives.
+%
+Moreover, this algorithm showed a lightly constant improving in relation if the stopping criterion.
+%
+However, \VSDMOEA{} attained the best results in long-term executions.
+
+%
+%In spite that the \VSDMOEA{} is specially designed to attain quality solutions in long-term executions.
+%
+%In this section is showed the performance of the \MOEAS{} modifying the criteria stop.
+%
+%Mainly, three ranges of criteria stop were reviewed.
+%
+%
+%
+%
+%
+%It can be seen that as the maximum number of generations is higher than $25000$ the remaining \MOEAS{} seems to be stagnated, specifically considering two objectives.
+%
+%Moreover, considering three objectives the \RMOEA{} shows improvements after $100000$ generations, however it still has lower values than the \VSDMOEA{}.
+%
+%In addition, taking into account three objectives the best general mean value achieved was above $0.9$, there is still possible that increasing the number of generations the \VSDMOEA{} achieves better results.
+%
+%However, in some circumstances, as seems to be in the case of two objectives, might not be able to achieve a better accuracy, thus an upper bound could be present.
+%
+%It is significant important to note how the performance of the \NSGAII{} is degraded in three objectives, differently to the \RMOEA{}, and the \MOEAD{}.
+%
+%Even more, the \MOEAD{} seems to be stagnated after $25000$ generations, this might occurs for the greedy selection approach that this \MOEA{} incorporates.
+%
+%In fact the \MOEAD{} attained better results than the \RMOEA{} in short-term executions.
+%
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Performance-Time.tex}
+\label{fig:Performance_time}
+\end{figure}
+
 \subsection{Analyzes of the Initial Factor Distance}
 
 The \VSDMOEA{} induces the diversity of the decision variable space through the initial distance factor ($D_I$), such parameter is decreased as the number of generations elapses.
@@ -454,44 +561,6 @@ Based on this empirical results, the most suitable parameter configuration shoul
 \centering
 \input{Graphic-Initial-Distance.tex}
 \label{fig:Initial-distance-factor}
-\end{figure}
-
-
-\subsection{Performance of the \MOEAS{} Related with the Criteria Stop}
-
-In spite that the \VSDMOEA{} is specially designed to attain quality solutions in long-term executions.
-%
-In this section is showed the performance of the \MOEAS{} modifying the criteria stop.
-%
-Mainly, three ranges of criteria stop were reviewed.
-%
-Each range was split in ten intervals, such ranges considered were $[300, 2500]$, $[2500, 25000]$ and $[25000, 250000]$ respectively.
-%
-In the Figure \ref{fig:Performance_time} are showed the mean \HV{} values attained with each \MOEA{} with two and three objectives respectively.
-%
-This shows that the \VSDMOEA{} attains the worst \HV{} values considering only $300$ generations.
-%
-However, as the number of generations increases the \HV{} values are improved significantly, in fact after $2500$ generations the \VSDMOEA{} has a notorious improvement respect to the state-of-the-art-\MOEAS{} in both two and three objectives.
-%
-It can be seen that as the maximum number of generations is higher than $25000$ the remaining \MOEAS{} seems to be stagnated, specifically considering two objectives.
-%
-Moreover, considering three objectives the \RMOEA{} shows improvements after $100000$ generations, however it still has lower values than the \VSDMOEA{}.
-%
-In addition, taking into account three objectives the best general mean value achieved was above $0.9$, there is still possible that increasing the number of generations the \VSDMOEA{} achieves better results.
-%
-However, in some circumstances, as seems to be in the case of two objectives, might not be able to achieve a better accuracy, thus an upper bound could be present.
-%
-It is significant important to note how the performance of the \NSGAII{} is degraded in three objectives, differently to the \RMOEA{}, and the \MOEAD{}.
-%
-Even more, the \MOEAD{} seems to be stagnated after $25000$ generations, this might occurs for the greedy selection approach that this \MOEA{} incorporates.
-%
-In fact the \MOEAD{} attained better results than the \RMOEA{} in short-term executions.
-%
-
-\begin{figure}[t]
-\centering
-\input{Graphic-Performance-Time.tex}
-\label{fig:Performance_time}
 \end{figure}
 
 
