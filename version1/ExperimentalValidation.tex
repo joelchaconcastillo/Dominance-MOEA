@@ -141,7 +141,7 @@ Particularly, the reference point is chosen to be a vector whose values are sigh
 %
 Similarly that in \cite{li2015evolutionary}, and to have a fair comparison the normalized \HV{} is estimated.
 %
-Specifically, the \HV{} reported is computed as the ratio between the \HV{} reached by a set of solutions and the \HV{} of a set of solutions which belong to the Pareto Front.
+Specifically, the \HV{} reported is computed as the ratio between the \HV{} reached by a set of solutions and the \HV{} of a set of points that belong to the Pareto Front.
 %
 In this way, the more approximated to the unity this metric is, the more converged are the solutions to the Pareto Front.
 %
@@ -178,15 +178,15 @@ An algorithm $X$ is said to win algorithm $Y$ when the differences between them 
 
 In Tables \ref{tab:StatisticsHV_2obj} and \ref{tab:StatisticsHV_3obj} are shown the normalized hypervolume with two and three objectives respectively.
 %
-In this empirical results the \VSDMOEA{} achieved the best general mean, and the standard deviation achieved is not significantly high, meaning that this MOEA is quite stable to different random initialization of the population.
+In this empirical results the \VSDMOEA{} achieved the best general mean, and its standard deviation achieved is not significantly high, meaning being quite stable to different random initialization of the population.
 %
-According to table \ref{tab:StatisticsHV_2obj} the dominance-based algorithms improved the remaining MOEAs.
+According to Table \ref{tab:StatisticsHV_2obj} the dominance-based algorithms improved the remaining MOEAs.
 %
 However, the general mean of \NSGAII{} (second best algorithm with $0.886$) is quite similar than \MOEAD{} ($0.881$) and \RMOEA{} ($0.882$), in contrast \VSDMOEA{} achieved a high \HV{} value ($0.951$).
 %
 In particular, the dominance-based algorihms gave the best values in the kind of problems with disconnected Pareto geometries (WFG2, UF5 and UF6).
 %
-Taking into account three objectives \NSGAII{} is placed as the worst algorithm ($0.785$), this might occurs by its density estimator, which has some inconvenients in the most difficult problems with three objectives (e.g. multi-frontality).
+Taking into account three objectives, \NSGAII{} is placed as the worst algorithm ($0.785$) and this might occurs by its density estimator, which has some drawbacks in the most difficult problems with three objectives (e.g. multi-frontality).
 %
 The second place is attained by \RMOEA{} ($0.855$), which is still quite low compared with \VSDMOEA{} ($0.916$).
 %
@@ -198,7 +198,7 @@ Such tables incorpore the difference between the mean in each algorithm and the 
 %
 A representative value of each column is shown in the last row, which is conformed by the sum of the enterely column.
 %
-The algorithm which attained more wins in the pair-wise comparison is the \VSDMOEA{} with $48$ and $52$ wins in two and three objectives respectively.
+The algorithm that attained more wins in the pair-wise comparison is the \VSDMOEA{} with $48$ and $52$ wins in two and three objectives respectively.
 %
 Besides that \VSDMOEA{} lost in several pair-wise comparisons it is enough close to the best results, it is noted with the differences obtained with the best result.
 %
@@ -206,7 +206,7 @@ In fact, \VSDMOEA{} achieved $0.060$ and $0.027$ in contrast the second bests al
 %
 Particularly, the worst ``Diff'' value achieved by the \VSDMOEA{} is with the WFG6 test-problem ($0.045$ and $0.024$), which is uni-modal and non-separable.
 %
-Nevertheless, this problem was correctly solved with $D_I=0.1$ whose mean achieved was of $0.913$, and $0.868$ for two and three objectives respectively.
+Nevertheless, this problem was better approximated with $D_I=0.1$ whose means were of $0.913$ and $0.868$ for two and three objectives respectively.
 %
 Therefore, this test-problem is improved inducing less diversity at the initial stages of the execution.
 %
@@ -269,18 +269,36 @@ Therefore, this test-problem is improved inducing less diversity at the initial 
 %
 
 
-\subsection{Decision Variable Scalability Experiments}
+\subsection{Decision Variable Scalability Analysis}
 
- 
-The scalability of each MOEA is also evaluated respect with the number of decision variables \cite{Joel:ScalabilityStudy}. 
+In order, to study the scalability of the decision variables, and following a similar validation scheme, the algorithms were test with $50$, $100$, and $250$ variables.
 %
-The figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} show the mean of \HV{} attained with $50$, $100$, $250$, $500$, and $1000$ variables respectively.
+Particularly, given that long-term executions (250000 generations) are time-consuming with all the algorithms this analysis is carried out with middle-term executions (25000 generations).
 %
-The scalability study was taken into consideration with some problems conformed by easy and difficult characteristics.
+In Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} are shown normalized mean of the \HV{} results for two and three objectives respectively.
 %
-Particularly, the problems considered in this analyzes were the DTLZ4, UF5 which are conformed by two objectives, and DTLZ4, UF10 with three objectives.
+All the algorithms were deteriorated as the number of variables is increased.
 %
-In addition, each selected problem was repeated $35$ times, thus the mean of all the \HV{} values are reported.
+In fact, the based-dominance algorithms are the best considering only two objectives.
+%
+In contrast, taking into account three objectives the weight-vector based algorithms are enough stable increasing the number of variables and superior than the \NSGAII{}.
+%
+Additionally, the weight-vector based algorithms have a similar performance increasing the number of decision variables.
+%
+However, \VSDMOEA{} achieved the best \HV{} values in both two and three objectives.
+
+%to analyse the scalability of the decision variable space, each algorithm is evaluated through $50$, $100$ and $250$ variables.
+
+
+%The scalability of each MOEA is also evaluated respect with the number of decision variables \cite{Joel:ScalabilityStudy}. 
+%
+%The figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} show the mean of \HV{} attained with $50$, $100$, $250$, $500$, and $1000$ variables respectively.
+%
+%The scalability study was taken into consideration with some problems conformed by easy and difficult characteristics.
+%
+%Particularly, the problems considered in this analyzes were the DTLZ4, UF5 which are conformed by two objectives, and DTLZ4, UF10 with three objectives.
+%
+%In addition, each selected problem was repeated $35$ times, thus the mean of all the \HV{} values are reported.
 %
 The \VSDMOEA{} attained the best results in two objectives with both problems, however it is remarkable to notice that the \HV{} value reported by the \NSGAII{} improves as the number of decision variables is increased.
 %
@@ -324,34 +342,6 @@ Also, the \RMOEA{} seems to be enough stable with three objectives in the proble
 \centering
 \input{Graphic-Scalability-3obj.tex}
 \label{fig:variable-decision-scalability-3obj}
-\end{figure}
-
-\subsection{Analyzes of the Initial Factor Distance}
-
-The \VSDMOEA{} induces the diversity of the decision variable space through the initial distance factor ($D_I$), such parameter is decreased as the number of generations elapses.
-%
-Given that this parameter influences the performance of the algorithm, a detailed empirical analyzes is taken into account as follows.
-%
-Since that this parameter is computed as a fraction of the main normalized diagonal which belongs to the unitary hyper-cube, the portions considered are $ D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\}$.
-%
-In the Figure \ref{fig:Initial-distance-factor} is shown the general mean of the \HV{} for each configuration with two and three objectives respectively.
-%
-Particularly, the initial parameter $D_I=0.0$, which does not promote diversity, should have a similar performance than a classic \MOEA{}.
-%
-In spite that none diversity is promoted, the \VSDMOEA{} achieves better general mean values than the remaining \MOEAS{}, those values are $0.905$, $0.895$ for two and three objectives respectively.
-%
-Even more, the benefits of promoting diversity are outstanding from $0.909$ and $0.895$ of two and three objectives to $0.936$ and $0.899$ with $D_I=0.1$.
-%
-It seems that such benefits are more notorious with two objectives than with three.
-%
-This might occurs given that the population size might not been enough to cover the entire objective space.
-%
-Based on this empirical results, the most suitable parameter configuration should be set with $D_I = 0.4$.
-%
-\begin{figure}[t]
-\centering
-\input{Graphic-Initial-Distance.tex}
-\label{fig:Initial-distance-factor}
 \end{figure}
 
 \subsection{Diversity of the \MOEAS{} Through Generations}
@@ -438,6 +428,33 @@ In fact in two and three objectives this \MOEA{} did not converges in the distan
 %\input{Graphic-Diversity_WFG6.tex}
 %\label{fig:Diversity_WFG6}
 %\end{figure}
+\subsection{Analyzes of the Initial Factor Distance}
+
+The \VSDMOEA{} induces the diversity of the decision variable space through the initial distance factor ($D_I$), such parameter is decreased as the number of generations elapses.
+%
+Given that this parameter influences the performance of the algorithm, a detailed empirical analyzes is taken into account as follows.
+%
+Since that this parameter is computed as a fraction of the main normalized diagonal which belongs to the unitary hyper-cube, the portions considered are $ D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\}$.
+%
+In the Figure \ref{fig:Initial-distance-factor} is shown the general mean of the \HV{} for each configuration with two and three objectives respectively.
+%
+Particularly, the initial parameter $D_I=0.0$, which does not promote diversity, should have a similar performance than a classic \MOEA{}.
+%
+In spite that none diversity is promoted, the \VSDMOEA{} achieves better general mean values than the remaining \MOEAS{}, those values are $0.905$, $0.895$ for two and three objectives respectively.
+%
+Even more, the benefits of promoting diversity are outstanding from $0.909$ and $0.895$ of two and three objectives to $0.936$ and $0.899$ with $D_I=0.1$.
+%
+It seems that such benefits are more notorious with two objectives than with three.
+%
+This might occurs given that the population size might not been enough to cover the entire objective space.
+%
+Based on this empirical results, the most suitable parameter configuration should be set with $D_I = 0.4$.
+%
+\begin{figure}[t]
+\centering
+\input{Graphic-Initial-Distance.tex}
+\label{fig:Initial-distance-factor}
+\end{figure}
 
 
 \subsection{Performance of the \MOEAS{} Related with the Criteria Stop}

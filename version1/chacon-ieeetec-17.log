@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  9 JUL 2019 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2019.6.3)  10 JUL 2019 13:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -901,23 +901,22 @@ Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
 Missing character: There is no ] in font nullfont!
-)
-(./Graphic-Initial-Distance.tex) [7]
+) [7]
 
 LaTeX Warning: Reference `fig:Diversity_WFG1' on page 8 undefined on input line
- 401.
+ 391.
 
 
 LaTeX Warning: Reference `fig:Diversity_WFG5' on page 8 undefined on input line
- 401.
+ 391.
 
 
 LaTeX Warning: Reference `fig:Diversity_WFG6' on page 8 undefined on input line
- 401.
+ 391.
 
 
 LaTeX Warning: Reference `fig:Diversity_WFG5' on page 8 undefined on input line
- 413.
+ 403.
 
 (./Graphic-Diversity_2obj.tex
 Overfull \hbox (4.65715pt too wide) in paragraph at lines 53--54
@@ -939,9 +938,10 @@ Overfull \hbox (1.45685pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
-) [8] (./Graphic-Performance-Time.tex
+) (./Graphic-Initial-Distance.tex) [8] (./Graphic-Performance-Time.tex
 Missing character: There is no ; in font nullfont!
-) (./Tables/Table_HV_2obj.tex
+)
+(./Tables/Table_HV_2obj.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 3.
@@ -951,19 +951,20 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 3.
 
-) (./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)) (./Conclusion.tex)
-(./chacon-ieeetec-17.bbl [9]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
- [10]
-Underfull \vbox (badness 1838) has occurred while \output is active []
+) (./Tables/Tests_HV_2obj.tex) (./Tables/Tests_HV_3obj.tex)) (./Conclusion.tex
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Underfull \vbox (badness 1838) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10])
+(./chacon-ieeetec-17.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Underfull \vbox (badness 1365) has occurred while \output is active []
-
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¡ in font ptmr7t!
 
 Underfull \hbox (badness 10000) in paragraph at lines 228--231
 []\OT1/ptm/m/n/8 MOEA/D. [On-line]. Avail-able:
@@ -1008,7 +1009,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 809.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 809.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 809.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
-(rerunfilecheck)             Checksum: 75949D5BAC82D83D503104B8631AC366;1303.
+(rerunfilecheck)             Checksum: 437427917151DF89D44D7BDE24562C4C;1300.
 
 
 LaTeX Warning: There were undefined references.
@@ -1016,12 +1017,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 809.
  ) 
 Here is how much of TeX's memory you used:
- 28612 strings out of 492983
- 702966 string characters out of 6134923
- 1319460 words of memory out of 5000000
- 31667 multiletter control sequences out of 15000+600000
+ 28611 strings out of 492983
+ 702943 string characters out of 6134923
+ 1217976 words of memory out of 5000000
+ 31666 multiletter control sequences out of 15000+600000
  33267 words of font info for 79 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  62i,17n,100p,735b,2270s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on chacon-ieeetec-17.dvi (13 pages, 547664 bytes).
+Output written on chacon-ieeetec-17.dvi (13 pages, 547580 bytes).
