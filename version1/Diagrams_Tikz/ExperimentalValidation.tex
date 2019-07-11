@@ -340,21 +340,6 @@ In other words, the contrast in distances to different data points becomes no-ex
 %
 %Also, the \RMOEA{} seems to be enough stable with three objectives in the problems DTLZ4 and UF10.
 
-\begin{figure}[t]
-\centering
-%\includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.pdf}
-\includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.eps}
-%\input{Graphic-Scalability-2obj.tex}
-\caption{Mean of the \HV{} (35 runs) considering two objectives.}\label{fig:variable-decision-scalability-2obj}
-\end{figure}
-
-\begin{figure}[t]
-\centering
-%\includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.pdf}
-\includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
-%\input{Graphic-Scalability-3obj.tex}
-\caption{Mean of the \HV{} (35 runs) considering three objectives.} \label{fig:variable-decision-scalability-3obj}
-\end{figure}
 
 %\subsection{Diversity of the \MOEAS{} Through Generations}
 
@@ -451,26 +436,6 @@ In general, as the number of variables is increased, the convergence in the dist
 %
 %In fact in two and three objectives this \MOEA{} did not converges in the distance parameters, and the position variables are still more diversified as in WFG1.
 
-
-\begin{figure}[t]
-\centering
-%\input{Graphic-Diversity_2obj.tex}
-%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure0.pdf} \\
-\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure0.eps} \\
-%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure1.pdf}
-\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure1.eps}
-\caption{Evolution of Average Distance Individuals of the Problems WFG1-WFG7 with two objectives.}\label{fig:Diversity_2obj}
-\end{figure}
-
-\begin{figure}[t]
-\centering
-%\input{Graphic-Diversity_3obj.tex}
-%\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure0.pdf} \\
-\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure0.eps} \\
-%\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure1.pdf}
-\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
-\caption{Evolution of Average Distance Individuals of the Problems WFG1-WFG7 with three objectives.}\label{fig:Diversity_3obj}
-\end{figure}
 %\begin{figure}[t]
 %\centering
 %\input{Graphic-Diversity_WFG6.tex}
@@ -539,17 +504,6 @@ However, \VSDMOEA{} attained the best results in long-term executions and could 
 %
 %In fact the \MOEAD{} attained better results than the \RMOEA{} in short-term executions.
 %
-
-\begin{figure}[t]
-\centering
-%\input{Graphic-Performance-Time.tex}
-%\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure0.pdf} \\
-\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure0.eps} \\
-%\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure1.pdf} \\
-\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure1.eps}
-\caption{Performance of the \MOEAS{} considerin several maximum number of generations.}\label{fig:Performance_time}
-\end{figure}
-
 \subsection{Analyzes of the Initial Factor Distance}
 
 Avoidance of premature convergence and stagnation in long-term executions is a dificult task mainly in multi-objective problems since that --depending of the problem-- the objective space implicitly involves a relation of diversity in the decision variable space.
@@ -597,12 +551,46 @@ In addition, the behaviour of setting several initial distance factor is similar
 %
 %Based on this empirical results, the most suitable parameter configuration should be set with $D_I = 0.4$.
 %
+
 \begin{figure}[t]
 \centering
-%\includegraphics[]{Images/Graphic-Initial-Distance_tikz-figure0.pdf} \\
-\includegraphics[]{Images/Graphic-Initial-Distance_tikz-figure0.eps} \\
-%\input{Graphic-Initial-Distance.tex}
-\caption{Mean of Inidicator Considering All Instances with Several Initial Distance Factors.}\label{fig:Initial-distance-factor}
+\input{Graphic-Scalability-2obj.tex}
+\label{fig:variable-decision-scalability-2obj}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Scalability-3obj.tex}
+\label{fig:variable-decision-scalability-3obj}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Diversity_2obj.tex}
+\label{fig:Diversity_2obj}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Diversity_3obj.tex}
+\label{fig:Diversity_3obj}
+\end{figure}
+
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Performance-Time.tex}
+\label{fig:Performance_time}
+\end{figure}
+
+
+
+\begin{figure}[t]
+\centering
+\input{Graphic-Initial-Distance.tex}
+\label{fig:Initial-distance-factor}
 \end{figure}
 
 
