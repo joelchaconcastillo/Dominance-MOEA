@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.4.16)  11 JUL 2019 18:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.4.16)  12 JUL 2019 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,15 +914,15 @@ LaTeX Info: Redefining \nameref on input line 403.
 ])
 (./LiteratureReview.tex [2]) (./Proposal.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 33.
-
-<Images/Diagram.pdf, id=158, 194.63716pt x 82.47813pt>
+put line 35.
+ [3]
+<Images/Diagram.pdf, id=179, 194.63716pt x 82.47813pt>
 File: Images/Diagram.pdf Graphic file (type pdf)
 
 <use Images/Diagram.pdf>
-Package pdftex.def Info: Images/Diagram.pdf used on input line 58.
+Package pdftex.def Info: Images/Diagram.pdf used on input line 104.
 (pdftex.def)             Requested size: 232.19843pt x 98.40062pt.
- [3] [4 <./Images/Diagram.pdf>])
+ [4 <./Images/Diagram.pdf>])
 (./ExperimentalValidation.tex [5] [6]
 Package epstopdf Info: Source file: <Images/Graphic-Scalability-2obj_tikz-figur
 e0.eps>
@@ -935,20 +935,20 @@ e0-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Scalability
 -2obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Scalability-2obj_tikz-fi
 gure0.eps>
-(epstopdf)             \includegraphics on input line 346.
+(epstopdf)             \includegraphics on input line 344.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf, id=343, 258
+<Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf, id=342, 258
 .9675pt x 164.615pt>
 File: Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Scalability-2obj_tikz-figure0-eps-conve
-rted-to.pdf used on input line 346.
+rted-to.pdf used on input line 344.
 (pdftex.def)             Requested size: 258.96684pt x 164.6146pt.
 
-Overfull \hbox (6.96684pt too wide) in paragraph at lines 346--348
+Overfull \hbox (6.96684pt too wide) in paragraph at lines 344--346
  [][] 
  []
 
@@ -963,20 +963,20 @@ e0-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Scalability
 -3obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Scalability-3obj_tikz-fi
 gure0.eps>
-(epstopdf)             \includegraphics on input line 354.
+(epstopdf)             \includegraphics on input line 352.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf, id=344, 258
+<Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf, id=343, 258
 .9675pt x 164.615pt>
 File: Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Scalability-3obj_tikz-figure0-eps-conve
-rted-to.pdf used on input line 354.
+rted-to.pdf used on input line 352.
 (pdftex.def)             Requested size: 258.96684pt x 164.6146pt.
 
-Overfull \hbox (6.96684pt too wide) in paragraph at lines 354--356
+Overfull \hbox (6.96684pt too wide) in paragraph at lines 352--354
  [][] 
  []
 
@@ -993,20 +993,20 @@ Package epstopdf Info: Source file: <Images/Graphic-Diversity_2obj_tikz-figure0
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_2
 obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Diversity_2obj_tikz-figure
 0.eps>
-(epstopdf)             \includegraphics on input line 459.
+(epstopdf)             \includegraphics on input line 457.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Diversity_2obj_tikz-figure0-eps-converted-to.pdf, id=379, 259.9
+<Images/Graphic-Diversity_2obj_tikz-figure0-eps-converted-to.pdf, id=378, 259.9
 7125pt x 158.5925pt>
 File: Images/Graphic-Diversity_2obj_tikz-figure0-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Images/Graphic-Diversity_2obj_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Diversity_2obj_tikz-figure0-eps-convert
-ed-to.pdf used on input line 459.
+ed-to.pdf used on input line 457.
 (pdftex.def)             Requested size: 259.97061pt x 158.59209pt.
 
-Overfull \hbox (7.97061pt too wide) in paragraph at lines 459--459
+Overfull \hbox (7.97061pt too wide) in paragraph at lines 457--457
  [][] 
  []
 
@@ -1021,20 +1021,20 @@ Package epstopdf Info: Source file: <Images/Graphic-Diversity_2obj_tikz-figure1
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_2
 obj_tikz-figure1-eps-converted-to.pdf Images/Graphic-Diversity_2obj_tikz-figure
 1.eps>
-(epstopdf)             \includegraphics on input line 461.
+(epstopdf)             \includegraphics on input line 459.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf, id=380, 259.9
+<Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf, id=379, 259.9
 7125pt x 158.5925pt>
 File: Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Diversity_2obj_tikz-figure1-eps-convert
-ed-to.pdf used on input line 461.
+ed-to.pdf used on input line 459.
 (pdftex.def)             Requested size: 259.97061pt x 158.59209pt.
 
-Overfull \hbox (7.97061pt too wide) in paragraph at lines 461--462
+Overfull \hbox (7.97061pt too wide) in paragraph at lines 459--460
  [][] 
  []
 
@@ -1049,20 +1049,20 @@ Package epstopdf Info: Source file: <Images/Graphic-Diversity_3obj_tikz-figure0
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_3
 obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Diversity_3obj_tikz-figure
 0.eps>
-(epstopdf)             \includegraphics on input line 469.
+(epstopdf)             \includegraphics on input line 467.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Diversity_3obj_tikz-figure0-eps-converted-to.pdf, id=381, 259.9
+<Images/Graphic-Diversity_3obj_tikz-figure0-eps-converted-to.pdf, id=380, 259.9
 7125pt x 158.5925pt>
 File: Images/Graphic-Diversity_3obj_tikz-figure0-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Images/Graphic-Diversity_3obj_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Diversity_3obj_tikz-figure0-eps-convert
-ed-to.pdf used on input line 469.
+ed-to.pdf used on input line 467.
 (pdftex.def)             Requested size: 259.97061pt x 158.59209pt.
 
-Overfull \hbox (7.97061pt too wide) in paragraph at lines 469--469
+Overfull \hbox (7.97061pt too wide) in paragraph at lines 467--467
  [][] 
  []
 
@@ -1077,20 +1077,20 @@ Package epstopdf Info: Source file: <Images/Graphic-Diversity_3obj_tikz-figure1
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_3
 obj_tikz-figure1-eps-converted-to.pdf Images/Graphic-Diversity_3obj_tikz-figure
 1.eps>
-(epstopdf)             \includegraphics on input line 471.
+(epstopdf)             \includegraphics on input line 469.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf, id=382, 259.9
+<Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf, id=381, 259.9
 7125pt x 158.5925pt>
 File: Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Diversity_3obj_tikz-figure1-eps-convert
-ed-to.pdf used on input line 471.
+ed-to.pdf used on input line 469.
 (pdftex.def)             Requested size: 259.97061pt x 158.59209pt.
 
-Overfull \hbox (7.97061pt too wide) in paragraph at lines 471--472
+Overfull \hbox (7.97061pt too wide) in paragraph at lines 469--470
  [][] 
  []
 
@@ -1105,20 +1105,20 @@ e0-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Performance
 -Time_tikz-figure0-eps-converted-to.pdf Images/Graphic-Performance-Time_tikz-fi
 gure0.eps>
-(epstopdf)             \includegraphics on input line 547.
+(epstopdf)             \includegraphics on input line 545.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Performance-Time_tikz-figure0-eps-converted-to.pdf, id=384, 176
+<Images/Graphic-Performance-Time_tikz-figure0-eps-converted-to.pdf, id=383, 176
 .66pt x 258.9675pt>
 File: Images/Graphic-Performance-Time_tikz-figure0-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use Images/Graphic-Performance-Time_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Performance-Time_tikz-figure0-eps-conve
-rted-to.pdf used on input line 547.
+rted-to.pdf used on input line 545.
 (pdftex.def)             Requested size: 176.65956pt x 258.96684pt.
 
-Overfull \hbox (6.96684pt too wide) in paragraph at lines 547--547
+Overfull \hbox (6.96684pt too wide) in paragraph at lines 545--545
  [][] 
  []
 
@@ -1133,29 +1133,30 @@ e1-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Performance
 -Time_tikz-figure1-eps-converted-to.pdf Images/Graphic-Performance-Time_tikz-fi
 gure1.eps>
-(epstopdf)             \includegraphics on input line 549.
+(epstopdf)             \includegraphics on input line 547.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Performance-Time_tikz-figure1-eps-converted-to.pdf, id=385, 176
+<Images/Graphic-Performance-Time_tikz-figure1-eps-converted-to.pdf, id=384, 176
 .66pt x 257.96375pt>
 File: Images/Graphic-Performance-Time_tikz-figure1-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use Images/Graphic-Performance-Time_tikz-figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Performance-Time_tikz-figure1-eps-conve
-rted-to.pdf used on input line 549.
+rted-to.pdf used on input line 547.
 (pdftex.def)             Requested size: 176.65956pt x 257.9631pt.
 
-Overfull \hbox (5.9631pt too wide) in paragraph at lines 549--550
+Overfull \hbox (5.9631pt too wide) in paragraph at lines 547--548
  [][] 
  []
 
-[8 <./Images/Graphic-Diversity_2obj_tikz-figure0-eps-converted-to.pdf> <./Image
-s/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf> <./Images/Graphic-D
-iversity_3obj_tikz-figure0-eps-converted-to.pdf> <./Images/Graphic-Diversity_3o
-bj_tikz-figure1-eps-converted-to.pdf>]
-Underfull \vbox (badness 1515) has occurred while \output is active []
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8 <./Images/Graphic-Diversity_2obj_tikz-figure0-eps-converted-to.pdf> <./Imag
+es/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf> <./Images/Graphic-
+Diversity_3obj_tikz-figure0-eps-converted-to.pdf> <./Images/Graphic-Diversity_3
+obj_tikz-figure1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Graphic-Initial-Distance_tikz-figur
 e0.eps>
 (epstopdf)                    date: 2019-07-11 18:51:07
@@ -1170,7 +1171,7 @@ gure0.eps>
 (epstopdf)             \includegraphics on input line 603.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/Graphic-Initial-Distance_tikz-figure0-eps-converted-to.pdf, id=424, 260
+<Images/Graphic-Initial-Distance_tikz-figure0-eps-converted-to.pdf, id=423, 260
 .975pt x 164.615pt>
 File: Images/Graphic-Initial-Distance_tikz-figure0-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1201,14 +1202,14 @@ ic-Initial-Distance_tikz-figure0-eps-converted-to.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
-(./chacon-ieeetec-17.bbl [10]
+(./chacon-ieeetec-17.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¡ in font ptmr7t!
 
-Underfull \vbox (badness 3590) has occurred while \output is active []
-
-
-Underfull \vbox (badness 1838) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
 Missing character: There is no â in font ptmr7t!
@@ -1230,7 +1231,7 @@ onverted-to.pdf Photo_Authors/segura.eps>
 (epstopdf)             \includegraphics on input line 734.
 Package epstopdf Info: Output file is already uptodate.
 
-<Photo_Authors/segura-eps-converted-to.pdf, id=477, 118.4425pt x 157.58875pt>
+<Photo_Authors/segura-eps-converted-to.pdf, id=476, 118.4425pt x 157.58875pt>
 File: Photo_Authors/segura-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Photo_Authors/segura-eps-converted-to.pdf>
@@ -1255,8 +1256,40 @@ Package pdftex.def Info: Photo_Authors/segura-eps-converted-to.pdf used on inpu
 t line 734.
 (pdftex.def)             Requested size: 72.2715pt x 90.33868pt.
  [12 <./Photo_Authors/segura-eps-converted-to.pdf>]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
+Package epstopdf Info: Source file: <Photo_Authors/joel.eps>
+(epstopdf)                    date: 2019-07-12 09:12:57
+(epstopdf)                    size: 123025 bytes
+(epstopdf)             Output file: <Photo_Authors/joel-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-07-12 09:13:44
+(epstopdf)                    size: 15442 bytes
+(epstopdf)             Command: <repstopdf --outfile=Photo_Authors/joel-eps-con
+verted-to.pdf Photo_Authors/joel.eps>
+(epstopdf)             \includegraphics on input line 742.
+Package epstopdf Info: Output file is already uptodate.
+
+<Photo_Authors/joel-eps-converted-to.pdf, id=490, 133.49875pt x 145.54375pt>
+File: Photo_Authors/joel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Photo_Authors/joel-eps-converted-to.pdf>
+Package pdftex.def Info: Photo_Authors/joel-eps-converted-to.pdf used on input 
+line 742.
+(pdftex.def)             Requested size: 72.27156pt x 90.33833pt.
+Package epstopdf Info: Source file: <Photo_Authors/joel.eps>
+(epstopdf)                    date: 2019-07-12 09:12:57
+(epstopdf)                    size: 123025 bytes
+(epstopdf)             Output file: <Photo_Authors/joel-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-07-12 09:13:44
+(epstopdf)                    size: 15442 bytes
+(epstopdf)             Command: <repstopdf --outfile=Photo_Authors/joel-eps-con
+verted-to.pdf Photo_Authors/joel.eps>
+(epstopdf)             \includegraphics on input line 742.
+Package epstopdf Info: Output file is already uptodate.
+File: Photo_Authors/joel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Photo_Authors/joel-eps-converted-to.pdf>
+Package pdftex.def Info: Photo_Authors/joel-eps-converted-to.pdf used on input 
+line 742.
+(pdftex.def)             Requested size: 72.27156pt x 90.33833pt.
 Package epstopdf Info: Source file: <Photo_Authors/coello.eps>
 (epstopdf)                    date: 2019-01-16 09:46:51
 (epstopdf)                    size: 166813 bytes
@@ -1269,7 +1302,7 @@ onverted-to.pdf Photo_Authors/coello.eps>
 (epstopdf)             \includegraphics on input line 749.
 Package epstopdf Info: Output file is already uptodate.
 
-<Photo_Authors/coello-eps-converted-to.pdf, id=491, 49.18375pt x 63.23625pt>
+<Photo_Authors/coello-eps-converted-to.pdf, id=493, 49.18375pt x 63.23625pt>
 File: Photo_Authors/coello-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Photo_Authors/coello-eps-converted-to.pdf>
@@ -1296,20 +1329,22 @@ t line 749.
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 810.
  [13
 
- <./Photo_Authors/coello-eps-converted-to.pdf>]
+ <./Photo_Authors/joel-eps-converted-to.pdf> <./Photo_Authors/coello-eps-conver
+ted-to.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 810.
- (./chacon-ieeetec-17.aux)
+
+(./chacon-ieeetec-17.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 810.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 810.
 Package rerunfilecheck Info: File `chacon-ieeetec-17.out' has not changed.
-(rerunfilecheck)             Checksum: 7C31A47533A6EBB4F50EF2B7FC39EEA2;1208.
+(rerunfilecheck)             Checksum: 9E61FB5883FA3E354AB45F1FD4B2066A;1195.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 810.
  ) 
 Here is how much of TeX's memory you used:
- 25133 strings out of 493304
- 564495 string characters out of 6139871
- 792419 words of memory out of 5000000
- 27907 multiletter control sequences out of 15000+600000
+ 25138 strings out of 493304
+ 564678 string characters out of 6139871
+ 792836 words of memory out of 5000000
+ 27911 multiletter control sequences out of 15000+600000
  51901 words of font info for 96 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  56i,17n,74p,734b,648s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1335,10 +1370,10 @@ cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on chacon-ieeetec-17.pdf (13 pages, 414043 bytes).
+Output written on chacon-ieeetec-17.pdf (13 pages, 427224 bytes).
 PDF statistics:
- 601 PDF objects out of 1000 (max. 8388607)
- 539 compressed objects within 6 object streams
+ 607 PDF objects out of 1000 (max. 8388607)
+ 541 compressed objects within 6 object streams
  137 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

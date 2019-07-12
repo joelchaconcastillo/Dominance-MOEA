@@ -9,8 +9,10 @@ elapsed generations with the aim of gradually moving from exploration to exploit
 %
 Note that this principle might be incorporated in any of the three categories of \MOEAS{}.
 %
-In this paper, our decision was to incorporate it in a dominance-based approach and apply it to problems with 
-a low number of objectives.
+In this paper, our decision was to incorporate it in a dominance-based approach 
+and in the field of multi-objective problems which involves two and three objectives.
+%apply it to problems with 
+%a low number of objectives.
 %
 Thus, some of our design decisions might not be suitable for dealing with many-objective optimization problems.
 
@@ -49,16 +51,6 @@ estimator.
 	\end{small}
 \label{alg:vsd-moea}
 \end{algorithm}
-
-
-\begin{figure}[t]
-\centering
-%\input{Images/Diagram.tex}
-%\includepdf[pages=-]{Images/Diagram.pdf}
-\includegraphics[width=0.45\textwidth]{Images/Diagram.pdf}
-\caption{Penalty Method of the Replacement Phase - The left side represents the variables space and the right side the 
-objective space} \label{fig:Hypersphere}
-\end{figure}
 
 
 \subsection{Replacement Phase of VSD-MOEA}
@@ -105,12 +97,23 @@ survivor of the iteration.
 %
 In our case, the novel density estimator described in the next subsection is used. 
 
+\begin{figure}[t]
+\centering
+%\input{Images/Diagram.tex}
+%\includepdf[pages=-]{Images/Diagram.pdf}
+\includegraphics[width=0.45\textwidth]{Images/Diagram.pdf}
+\caption{Penalty Method of the Replacement Phase - The left side represents the variables space and the right side the 
+objective space} \label{fig:Hypersphere}
+\end{figure}
+
+
+
 In order to better understand the penalty method, it can be visualized in the following way.
 %
-After selecting each survivor, a hyper-sphere 
+After selecting each survivor, a hypersphere 
 centered in such a candidate solution --- in the variable space --- is created.
 %
-Then, all the individuals that are inside a hyper-sphere are penalized and the objective-space estimator takes 
+Then, all the individuals that are inside a hypersphere are penalized and the objective-space estimator takes 
 into account only the survivors and non-penalized individuals.
 %
 This is illustrated in Fig.~\ref{fig:Hypersphere}, which represents a state where three individuals have been 
@@ -131,7 +134,7 @@ exploration, it makes sense to reduce this value during the optimization process
 %
 This is precisely one of the keys of our proposal.
 %
-The sizes of the hyper-spheres are modified dynamically by taking into account the stopping 
+The sizes of the hyperspheres are modified dynamically by taking into account the stopping 
 criterion and elapsed generations.
 %
 Particularly, the radius is decreased in a linear way starting from an initial distance.
@@ -141,7 +144,7 @@ This means that in the initial phases exploration is promoted.
 However, as the size of the radius decreases only very close individuals are penalized, meaning that more 
 exploitation is allowed.
 %
-Note that this method requires a parameter which is the initial radius of the hyper-spheres which is denoted as $D_I$. 
+Note that this method requires a parameter which is the initial radius of the hyperspheres which is denoted as $D_I$. 
 %
 Setting this parameter with a large value might provoke the penalization of a lot of individuals,
 thus non-useful diversity might be maintained.
@@ -343,10 +346,9 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 \end{equation}
 
 %
-Denoting as $FS$ the members of the input front that are already in $P_{t+1}$ (line \ref{alg:FS}), the contribution to diversity
-of each member of the input front that belongs to $R_t$ is calculated as $\displaystyle{\min_{s \in FS}\ ID(I, s)}$.
+Denoting as $FS$ the selected members of the input front that are already in $P_{t+1}$ (line \ref{alg:FS}), the contribution of each member which belongs to the input front and that has not been selected ($R_t$) is calculated as $\displaystyle{\min_{s \in FS}\ ID(I, s)}$.
 %
-Then, the individual with a higher contribution is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
+Then, the individual with the higher contribution to the objective space is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
 
 \begin{algorithm}[t]
 \algsetup{linenosize=\tiny}
