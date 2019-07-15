@@ -18,7 +18,7 @@ Thus, some of our design decisions might not be suitable for dealing with many-o
 
 The general framework of \VSDMOEA{} is quite standard.
 %
-Algorithm~\ref{alg:vsd-moea} shows the pseudo-code of \VSDMOEA{}.
+Algorithm~\ref{alg:vsd-moea} shows the pseudocode of \VSDMOEA{}.
 %
 The parent selection is performed with binary tournament based on the dominance raking with ties broken randomly.
 %
@@ -43,7 +43,7 @@ estimator.
 		 based on the non-dominated ranks (ties are broken randomly).
 	   \STATE \textbf{Variation}: Apply SBX crossover and Polynomial mutation to the mating pool to create a child population $Q_t$.
 		 \STATE \textbf{Evaluation}: Evaluate all individuals in $Q_t$.
-	   \STATE \textbf{Survivor selection}: Generate $P_{t+1}$ by applying the replacement scheme 
+	   \STATE \textbf{Survivor selecction}: Generate $P_{t+1}$ by applying the replacement scheme 
 		 described in Algorithm \ref{alg:Replacement_Phase}, using $P_t$ and $Q_t$ as input.
 	   \STATE $t=t+1$
 	\ENDWHILE
@@ -110,10 +110,10 @@ objective space.} \label{fig:Hypersphere}
 
 In order to better understand the penalty method, it can be visualized in the following way.
 %
-After selecting each survivor, a hyper-sphere 
+After selecting each survivor, a hypersphere 
 centered in such a candidate solution --- in the variable space --- is created.
 %
-Then, all the individuals that are inside a hyper-sphere are penalized and the objective-space estimator takes 
+Then, all the individuals that are inside a hypersphere are penalized and the objective-space estimator takes 
 into account only the survivors and non-penalized individuals.
 %
 This is illustrated in Fig.~\ref{fig:Hypersphere}, which represents a state where three individuals have been 
@@ -129,12 +129,12 @@ In this situation, the penalized individuals are the number 4, 5, and 6.
 In the objective space --- right side --- penalized individuals are shown with gray background, indicating
 that the objective-space density estimator does not take them into account.
 
-Since penalizing with a large threshold value --- radius of the hyper-spheres --- induces a large degree of 
+Since penalizing with a large threshold value --- radius of the hyperspheres --- induces a large degree of 
 exploration, it makes sense to reduce this value during the optimization process.
 %
 This is precisely one of the keys of our proposal.
 %
-The sizes of the hyper-spheres are modified dynamically by taking into account the stopping 
+The sizes of the hyperspheres are modified dynamically by taking into account the stopping 
 criterion and elapsed generations.
 %
 Particularly, the radius is decreased in a linear way starting from an initial distance.
@@ -144,7 +144,7 @@ This means that in the initial phases exploration is promoted.
 However, as the size of the radius decreases only very close individuals are penalized, meaning that more 
 exploitation is allowed.
 %
-Note that this method requires a parameter which is the initial radius of the hyper-spheres which is denoted as $D_I$. 
+Note that this method requires a parameter which is the initial radius of the hyperspheres which is denoted as $D_I$. 
 %
 Setting this parameter with a large value might provoke the penalization of a lot of individuals,
 thus non-useful diversity might be maintained.
@@ -159,7 +159,7 @@ Algorithm~\ref{alg:Replacement_Phase} fully describes the replacement phase of \
 First, the population of the previous generation ($P_t$) and the offspring ($Q_t$) are joined
 in $R_t$ (line \ref{alg:1}).
 %
-The multi-set $R_t$ contains, at each iteration, the remaining non-penalized individuals that might be selected 
+The multiset $R_t$ contains, at each iteration, the remaining non-penalized individuals that might be selected 
 to survive.
 %
 The population of survivors ($P_{t+1}$) and the set containing the penalized individuals are initialized to

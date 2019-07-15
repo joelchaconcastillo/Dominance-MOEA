@@ -33,7 +33,7 @@ The Pareto set is the set of all Pareto optimal solutions, and the Pareto front 
 The goal of most multi-objective optimizers is to obtain a proper approximation of the Pareto front, i.e., 
 a set of well distributed solutions that are close to the Pareto front.
 
-One of the most popular meta-heuristics used to deal with \MOPS{} is the Evolutionary Algorithm (\EA{}).
+One of the most popular metaheuristics used to deal with \MOPS{} is the Evolutionary Algorithm (\EA{}).
 %
 In single-objective \EAS{}, it has been shown that taking into account the diversity of the variable space
 to properly balance between exploration and exploitation is highly important to attain high quality 
