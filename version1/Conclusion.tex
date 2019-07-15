@@ -4,31 +4,30 @@ The performance of multi-objective algorithms is measured directly in the object
 %
 Nevertheless, the multi-objective problems are build with some difficulties which mislead several algorithms and drive to premature convergence or stagnation.
 %
-Mainly, in difficult problems and with long-term executions stagnation could be present wasting important resources.
+Mainly, in difficult problems and with long-term executions stagnation could be present wasting important computational resources.
 %
 In evolutionary algorithms, the diversity of the decision variable space has showed a critical role to avoid premature convergence or stagnation.
 %
 Particularly, stagnation could converge in sub-optimal regions provoking that the operators lose its exploratiory strength.
 %
-For this reason, a potential strategy to mitigate those drawbacks dwell in leading the search process through different diversity levels, which change as the stopping criterion is reached.
+For this reason, a potential strategy to mitigate those drawbacks dwell in leading the search process through different diversity stages, which change as the stopping criterion is reached.
 
 Mainly, in this work two contributions applied in the multi-objective field are described.
 %
 First, is presented a mechanism to simultaneoulsy manage the diversity in the variable space and the objective space.
 %
-This strategy is incorporated in the replacement phase, specifically the diversity maintained in the decision variable space is decrement according the elapsed time and the stopping criterion.
+This strategy is incorporated in the replacement phase, specifically the diversity maintained in the decision variable space is decremented according the elapsed time and the stopping criterion.
 %
 Second, a novel density estimator of the objective space, which is based in the IGD+ indicator, is suggested.
 %
 In the experimental validation carried out, is shown that our proposal not only improves the state-of-the-art algorithms in long-term executions, also offers a competitive performance in short-term executions.
 %
-%This validation shows that the VSD-MOEA is able to properly solve several test problems, also it attained better results than the remaining \MOEAS{} in the problems with the most difficult characteristics.
 %
 In addition, some scalability experiments in the decision variable space are carried out with middle-term executions, results indicate the superiority and stability measured with the hypervolume indicator.
 %
 In the same line, the evolution of diversity in the variable space with some specific problems is analysed.
 %
-Showing that with problems of two objectives maintain implicitly less diveristy in decision variable space than the problems with three objectives.
+Showing that the problems of two objectives maintain implicitly less diveristy in decision variable space than the problems of three objectives.
 %
 
 
@@ -36,22 +35,5 @@ In the future, we plan to develop an adaptive scheme for the initial threshold v
 %
 In order, to attain even better results, these strategies are going to be incorporated in a multi-objective memetic algorithm.
 %
-Finally, the integration of the replacement phase in a different multi-objective paradigm (indicator or decomposition) seems to be promising.
+Finally, the integration of the replacement phase in a different multi-objective paradigm (indicator or decomposition) seems to be promising to give an emphasis of the diversity implications in the multi-objective field.
 
-%The quality of the solutions in a multi-objective problem is directly measured in the objective space, therefore the main 
-%
-%Given that the quality of the \MOEAS{} is directly measured in the objective space, the majority of them incorporate sophisticated mechanisms with the aim to attain diverse and converged solutions to the Pareto Front.
-%
-%Since this, the diversity in the decision variables tend to be neglected.
-%
-%However, equivalently than in single-objective problems, where the diversity in variable space has a critical role, the multi-objective problems should take into consideration the diversity in both spaces to avoid premature convergence in sub-optimal regions.
-%
-%In this work we have provided an algorithm with a particular replacement phase.
-%
-%This phase considers the diversity in both spaces, specifically in the variable space the diversity is based in a decremented dynamic concept.
-%
-%Thus, at the first stages the diversity in variables space is promoted, as the generations elapses this diversity is gradually reduced, thus at the last stages the replacement phase works as a classic \MOEA{}.
-%
-
-%
-%
