@@ -1,4 +1,4 @@
-rm *pdf *ps *dpth *log *dvi *aux *lock
+rm *pdf *ps *dpth *log *dvi *aux *lock *md5
 for i in Diagram_tikz Graphic-Initial-Distance_tikz Graphic-Scalability-3obj_tikz Graphic-Diversity_2obj_tikz Graphic-Performance-Time_tikz Graphic-Diversity_3obj_tikz Graphic-Scalability-2obj_tikz
 do
    latex --shell-escape $i.tex
@@ -7,7 +7,7 @@ do
 done
 
 
-rm *.ps *dpth *log *dvi *aux *lock
+#rm *.ps *dpth *log *dvi *aux *lock *md5
 
                 
 

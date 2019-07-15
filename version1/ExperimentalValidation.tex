@@ -6,11 +6,11 @@ First, several technical specifications of the implemented agorithms, and test p
 %
 Thereafter, one of the most meaningful comparisons between \VSDMOEA{} and state-of-the-art algorithms is presented.
 %
-Additionally, to have a broad perception of the \VSDMOEA{} three extra experiments are driven.
+Additionally, to have a broad perception of the \VSDMOEA{} three experiments are driven.
 %
-Such analyses are designed to test the scalability in the decision variable space, the performance with different stopping criteria and the behaviour with different initial threshold which belong to the \VSDMOEA{}.
+Such analyses are designed to test the scalability in the decision variable space, the performance with different stopping criteria and the behaviour with different initial thresholds which belong to the \VSDMOEA{}.
 %
-Particularly, the second is probed with several terms, i.e. from short-term to long-term executions.
+Particularly, the second one is probed with several execution times as stopping criterion, i.e. from short-term to long-term executions.
 
 
 %
@@ -31,26 +31,28 @@ Particularly, the second is probed with several terms, i.e. from short-term to l
 %The latter experiments shows that the \VSDMOEA{} has a decent performance in midterm executions.
 %
 
-This work is validated through some of the most popular bechmarks which belong to the multi-objective field.
+This work is validated through some of the most popular bechmarks which are widely applied in the multi-objective field.
 %
 Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009}.
 %
 Furthermore, the experimental validation includes three well-known state-of-the-art-MOEAs and \VSDMOEA{}.
 %
-The MOEAs that are taken into account are \NSGAII{}~\cite{Joel:jMetal} , \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode}, which can be classified as based-dominance, based-decomposition, and based-indicators respectively.
+The \MOEAS{} that are taken into account are \NSGAII{}~\cite{Joel:jMetal} , \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode}, which can be classified as based-dominance, based-decomposition, and based-indicators respectively.
 %
 Particularly, the \MOEAD{} implementation belongs to the first place in the ``Congress on Evolutionary Computation 2009'' (CEC) \cite{zhang2009performance}.
 %
 Given that all the considered algorithms are stochastic, each execution was repeated $35$ times with different seeds.
 %
-The common configuration in all the executions was the following: the stopping criterion was set to $250,000$ generations, the population size was fixed to $100$, the WFG test problems were configured with two and three objectives, which are set to $24$ parameters, where $20$ of them are distance parameters, and $4$ are position parameters.
+The common configuration in all the executions was the following: the stopping criterion was set to $250,000$ generations, the population size was fixed to $100$, the WFG test problems were configured with two and three objectives.
 %
-Additionally, in the DTLZ test instances, the number of decision variables is set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively.
+This set of problems were set with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
+%
+In relation with the DTLZ test instances, the number of decision variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively.
 %, which is suggested by the authors \cite{Joel:DTLZ}.  
 % 
-The UF benchmark is conformed by seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10), all of them are set with $30$ decision variables.
+The UF benchmark is conformed by seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10), all of them were set with $30$ decision variables.
 %
-The operators employed on all the MOEAs are the Simulatied Binary Crossover (SBX), and the polynomial mutation~\cite{Joel:SBX1994, Joel:Mutation}.
+The operators employed on all the MOEAs were the Simulatied Binary Crossover (SBX), and polynomial mutation~\cite{Joel:SBX1994, Joel:Mutation}.
 %
 Especifically, the crossover was set with the probability and distribution index values of $0.9$ and $2$ respectively.
 %
@@ -175,15 +177,15 @@ An algorithm $X$ is said to win algorithm $Y$ when the differences between them 
 
 In Tables \ref{tab:StatisticsHV_2obj} and \ref{tab:StatisticsHV_3obj} are shown the normalized hypervolume with two and three objectives respectively.
 %
-In this empirical results the \VSDMOEA{} achieved the best general mean and with low variability, being quite stable with different runs.
+In this empirical results the \VSDMOEA{} achieved the best general mean and the lowest variability, being quite stable to different runs.
 %
 According to Table \ref{tab:StatisticsHV_2obj} the dominance-based algorithms improved the remaining MOEAs.
 %
-However, the general mean of \NSGAII{} (second best algorithm with $0.886$) is quite similar than \MOEAD{} ($0.881$) and \RMOEA{} ($0.882$), in contrast \VSDMOEA{} achieved a high \HV{} value ($0.951$).
+However, the general mean of \NSGAII{} (second best algorithm with $0.886$) is quite similar to \MOEAD{} ($0.881$) and \RMOEA{} ($0.882$), in contrast \VSDMOEA{} achieved the highest \HV{} value ($0.951$).
 %
 In particular, the dominance-based algorihms gave the best values in the kind of problems with disconnected Pareto geometries (WFG2, UF5 and UF6).
 %
-Contrarily, taking into account three objectives, \NSGAII{} was placed as the worst algorithm ($0.785$), perhaps provoked by its density estimator, which has some drawbacks in the most difficult problems with three objectives (e.g. multi-frontality).
+Differently, taking into account three objectives, \NSGAII{} was placed as the worst algorithm ($0.785$), perhaps provoked by its density estimator, which has some drawbacks in the most difficult problems with three objectives (e.g. multi-frontal problems).
 %
 The second place is attained by \RMOEA{} ($0.855$), which is still quite low compared with \VSDMOEA{} ($0.916$).
 %
@@ -191,17 +193,17 @@ The second place is attained by \RMOEA{} ($0.855$), which is still quite low com
 
 Given that the general mean can be unsteady to atypical measurements, i.e. high variability, in Tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are shown the statistical tests with two and three objectives respectively.
 %
-In addition, those tables incorpore the difference between the mean in each algorithm and the best mean achieved for each problem, which is tagged with ``Diff''.
+In addition, those tables incorporate the difference between the mean of each algorithm and the best mean achieved for each problem, which is tagged with ``Diff''.
 %
-A representative value of each column is shown in the last row, which is conformed by the sum of the enterely column.
+A representative value of each column is shown in the last row which is conformed by the sum of the enterely column.
 %
 The algorithm that attained more wins in the pair-wise comparison is the \VSDMOEA{} with $48$ and $52$ wins in two and three objectives respectively.
 %
-Besides that \VSDMOEA{} lost in several pair-wise comparisons it is enough close to the best results, it is noted with a small ``Diff'' value.
+Besides that \VSDMOEA{} lost in few pair-wise comparisons, this algorithm is enough close to the best results, this can be seen through small ``Diff'' values.
 %
-In fact, \VSDMOEA{} achieved $0.060$ and $0.027$ in contrast to the two second bests algorithms that are \NSGAII{} and \RMOEA{} of two and three objectives respectively.
+In fact, \VSDMOEA{} achieved $0.060$ and $0.027$ in contrast to the two second bests algorithms that are \NSGAII{} ($1.542$) and \RMOEA{} ($1.172$) of two and three objectives respectively.
 %
-The worst ``Diff'' value achieved by the \VSDMOEA{} is in the WFG6 test-problem ($0.045$ and $0.024$), which is uni-modal and non-separable.
+Especifically, the worst ``Diff'' value achieved by the \VSDMOEA{} is with the WFG6 test-problem ($0.045$ and $0.024$), which is uni-modal and non-separable.
 %
 Nevertheless, this problem was better approximated with $D_I=0.1$ whose means were of $0.913$ and $0.868$ for two and three objectives respectively.
 %
@@ -274,18 +276,17 @@ Particularly, since that long-term executions ($250,000$ generations) are time-c
 %
 In Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} are shown the normalized mean of the \HV{} results for two and three objectives respectively.
 %
-All the algorithms were deteriorated increasing the number of variables.
+Especially, increasing the number of variables provoked a degradation in the performance with all the algorithms.
 %
-In fact, the based-dominance algorithms are the best in problems of two objectives.
+Nevertheless, the based-dominance algorithms are the best with problems of two objectives.
 %
 In contrast, taking into account problems of three objectives, the weight-vector based algorithms showed to be more stable than the dominance-based algorithms.
-
 %
-In addition, the weight-vector based algorithms have a similar performance increasing the number of decision variables.
+%The former had similar performance increasing the number of decision variables.
 %
 However, \VSDMOEA{} is still the best algorithm in both two and three objectives.
 % 
-In problems of three objectives, \VSDMOEA{} is deteriorated with the number of variables in comparison to the weight-vector based algorithms, this might by caused for several reasons, perhaps two of the most important are the time-execution involved and the distance metric used in the magnament of diversity.
+In problems of three objectives, \VSDMOEA{} performance seems to be more affected increasing the number of variables in comparison to the weight-vector based algorithms, this might by caused for several reasons, perhaps two of the most important are that the stopping criterion is not enough to attain an adequatly convergence and the distance metric used in the magnament of diversity.
 %
 The latter is popularly known as \textit{The Curse of Dimensionality} \cite{trunk1979problem, beyer1999nearest}, meaning that under certain broad conditions, as dimensionality is increased, the distance to the nearest neighbour approaches the distance to the farthest neighbour.
 %
@@ -407,25 +408,26 @@ The diversity is calculated with $50$, $100$, and $250$ variables for each algor
 %
 Principally, state-of-the-art algorithms converged to promising regions in the distance parameters after the $10\%$ of total time-execution.
 %
-Nevertheless, concerning the state-of-the-art-\MOEAS{}, the diversity in position parameters increased as the time elapses, meaning that the remaining $90\%$ is devoted to promote diverse solutions in the objective space.
+However, their diversity in position parameters increases as the time elapses, meaning that the remaining $90\%$ is devoted to promote diverse solutions in the objective space.
 %
-The algorithms tended to stagnate after the convergence of promising solutions, even though those regions could not be the optimal.
+In spite this, it seems that the algorithms converge on the distance parameters to promising regions, even though those regions could not be the optimal.
 %
 In contrast, \VSDMOEA{} keeps diverse solutions in both kind of parameters until the $50\%$ of the time elapsed.
 %
 
 
-The diversity maintained in problems of three objectives was larger than with problems of two objectives, this might occurs since that the quantity of prominent solutions increases meaninfully between two and three objectives.
+In relation with the state-of-the-art algorithms, the diversity maintained in problems of three objectives was larger than with problems of two objectives, this might occurs since that the quantity of prominent solutions increases meaninfully between two and three objectives.
 %
 Therefore, there is present an implicit relation of diversity between the number of objectives and the decision variables space, in this situation three objectives keeps implictly more diversity than two objectives.
 %
 However, this implicit diversity maintained is not enough to avoid stagnation in several problems.
 %
-Thus, considering long-term executions in state-of-the-art algorithms could not improve meaningfully.
+Thus, the consideration of long-term executions in the state-of-the-art algorithms could not provide meaningfully improvements.
 %
 In contrast, \VSDMOEA{} could improve even more with long-term executions, since that it keeps diversity at several stages.
 %
-In general, as the number of variables is increased, the convergence in the distance parameters is even more slow, therefore to have quality solutions should be required a greater time-execution, for example with $250$ variables the distance parameters are still exploring.
+In general, as the number of variables is increased, the convergence in the distance parameters is even more slow, therefore to have quality solutions should be required a greater time-execution.
+%, for example with $250$ variables the distance parameters are still exploring.
 %
 
 %
@@ -480,13 +482,15 @@ In general, as the number of variables is increased, the convergence in the dist
 
 This section is devoted to test the perfomance of the algorithms with several term-executions.
 %
-As was previously discussed, state-of-the-art algorithms might suffer of stagnation.
+As it is previously discussed, state-of-the-art algorithms might suffer of premature convergence or stagnation.
 %
-Therefore, the solutions could converge in promising (but non-optimal) regions at the first stages of the execution, wasting a meaningfull quantity of time-execution.
+Therefore, the solutions could converge to promising --but not optimal-- regions at the first stages of the execution, wasting a meaningfull quantity of time-execution.
 %
 To deal with this issue, \VSDMOEA{} maintains diversity at different stages as long as the stopping criterion is reached.
 %
-Accordingly, to have a better understanding of the behavour that the algorithms have with different term-executions, the mean of normalized \HV{} of all the problems for two and three objectives are computed.
+Accordingly, to have a better understanding of the performance obtained in each algorithm with different term-executions, several stopping criteria have been probed.
+%
+In those runs the mean of normalized \HV{} of all the problems for two and three objectives are computed.
 %
 Mainly, three ranges of stopping criterion were explored.
 %
@@ -560,7 +564,7 @@ Nevertheless, the latter strategy, which is incorpored in \VSDMOEA{}, requires a
 Accordingly, this initial threshold value is decreasing as the time elapses.
 %Therefore, different stages are induced decreasing this parameter as the time elapses.
 %
-In order, to have a better insight about the effect raised of inducing several initial diversity stages, \VSDMOEA{} is tested with several initial threshold values and in long-term executions ($250000$ generations).
+In order, to have a better insight about the effect raised of inducing several initial diversity stages, \VSDMOEA{} is tested with several initial threshold values and in long-term executions ($250,000$ generations).
 %
 Particularly, this parameter is computed as a fraction of the main normalized diagonal, which belongs to the unitary hyper-cube, the portions considered are $D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\}$.
 %
