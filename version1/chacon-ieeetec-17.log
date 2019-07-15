@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.4.16)  15 JUL 2019 17:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.4.16)  15 JUL 2019 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,11 +910,11 @@ Package pdftex.def Info: Images/Diagram.pdf used on input line 104.
 (./ExperimentalValidation.tex [5] [6]
 Package epstopdf Info: Source file: <Images/Graphic-Scalability-2obj_tikz-figur
 e0.eps>
-(epstopdf)                    date: 2019-07-15 17:50:29
+(epstopdf)                    date: 2019-07-15 17:53:31
 (epstopdf)                    size: 93306 bytes
 (epstopdf)             Output file: <Images/Graphic-Scalability-2obj_tikz-figur
 e0-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-07-15 17:50:48
+(epstopdf)                    date: 2019-07-15 17:54:06
 (epstopdf)                    size: 12849 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Scalability
 -2obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Scalability-2obj_tikz-fi
@@ -933,11 +933,11 @@ rted-to.pdf used on input line 167.
 (pdftex.def)             Requested size: 251.94063pt x 170.63707pt.
 Package epstopdf Info: Source file: <Images/Graphic-Scalability-3obj_tikz-figur
 e0.eps>
-(epstopdf)                    date: 2019-07-15 17:50:22
+(epstopdf)                    date: 2019-07-15 17:53:24
 (epstopdf)                    size: 93005 bytes
 (epstopdf)             Output file: <Images/Graphic-Scalability-3obj_tikz-figur
 e0-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-07-15 17:50:48
+(epstopdf)                    date: 2019-07-15 17:54:06
 (epstopdf)                    size: 12714 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Scalability
 -3obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Scalability-3obj_tikz-fi
@@ -956,11 +956,11 @@ rted-to.pdf used on input line 175.
 (pdftex.def)             Requested size: 251.94063pt x 170.63707pt.
 Package epstopdf Info: Source file: <Images/Graphic-Diversity_2obj_tikz-figure0
 .eps>
-(epstopdf)                    date: 2019-07-15 17:50:23
+(epstopdf)                    date: 2019-07-15 17:53:26
 (epstopdf)                    size: 125767 bytes
 (epstopdf)             Output file: <Images/Graphic-Diversity_2obj_tikz-figure0
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2019-07-15 17:50:49
+(epstopdf)                    date: 2019-07-15 17:54:07
 (epstopdf)                    size: 17477 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_2
 obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Diversity_2obj_tikz-figure
@@ -984,11 +984,11 @@ Overfull \hbox (4.95937pt too wide) in paragraph at lines 222--222
 
 Package epstopdf Info: Source file: <Images/Graphic-Diversity_2obj_tikz-figure1
 .eps>
-(epstopdf)                    date: 2019-07-15 17:50:25
+(epstopdf)                    date: 2019-07-15 17:53:27
 (epstopdf)                    size: 125103 bytes
 (epstopdf)             Output file: <Images/Graphic-Diversity_2obj_tikz-figure1
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2019-07-15 17:50:49
+(epstopdf)                    date: 2019-07-15 17:54:07
 (epstopdf)                    size: 17235 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_2
 obj_tikz-figure1-eps-converted-to.pdf Images/Graphic-Diversity_2obj_tikz-figure
@@ -1014,11 +1014,11 @@ Overfull \hbox (1.94812pt too wide) in paragraph at lines 224--225
 ges/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Graphic-Diversity_3obj_tikz-figure0
 .eps>
-(epstopdf)                    date: 2019-07-15 17:50:26
+(epstopdf)                    date: 2019-07-15 17:53:29
 (epstopdf)                    size: 125333 bytes
 (epstopdf)             Output file: <Images/Graphic-Diversity_3obj_tikz-figure0
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2019-07-15 17:50:50
+(epstopdf)                    date: 2019-07-15 17:54:08
 (epstopdf)                    size: 17524 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_3
 obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Diversity_3obj_tikz-figure
@@ -1042,11 +1042,11 @@ Overfull \hbox (4.95937pt too wide) in paragraph at lines 247--247
 
 Package epstopdf Info: Source file: <Images/Graphic-Diversity_3obj_tikz-figure1
 .eps>
-(epstopdf)                    date: 2019-07-15 17:50:27
+(epstopdf)                    date: 2019-07-15 17:53:30
 (epstopdf)                    size: 125254 bytes
 (epstopdf)             Output file: <Images/Graphic-Diversity_3obj_tikz-figure1
 -eps-converted-to.pdf>
-(epstopdf)                    date: 2019-07-15 17:50:50
+(epstopdf)                    date: 2019-07-15 17:54:08
 (epstopdf)                    size: 17366 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_3
 obj_tikz-figure1-eps-converted-to.pdf Images/Graphic-Diversity_3obj_tikz-figure
@@ -1073,11 +1073,11 @@ s/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf> <./Images/Graphic-D
 iversity_3obj_tikz-figure0-eps-converted-to.pdf> <./Images/Graphic-Diversity_3o
 bj_tikz-figure1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Time_tikz-figure0.eps>
-(epstopdf)                    date: 2019-07-15 17:50:30
+(epstopdf)                    date: 2019-07-15 17:53:33
 (epstopdf)                    size: 137305 bytes
 (epstopdf)             Output file: <Images/Time_tikz-figure0-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-07-15 17:50:51
+(epstopdf)                    date: 2019-07-15 17:54:09
 (epstopdf)                    size: 15597 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure0-e
 ps-converted-to.pdf Images/Time_tikz-figure0.eps>
@@ -1092,11 +1092,11 @@ Package pdftex.def Info: Images/Time_tikz-figure0-eps-converted-to.pdf used on
 input line 305.
 (pdftex.def)             Requested size: 218.61842pt x 57.21417pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure1.eps>
-(epstopdf)                    date: 2019-07-15 17:50:31
+(epstopdf)                    date: 2019-07-15 17:53:34
 (epstopdf)                    size: 104588 bytes
 (epstopdf)             Output file: <Images/Time_tikz-figure1-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-07-15 17:50:51
+(epstopdf)                    date: 2019-07-15 17:54:09
 (epstopdf)                    size: 10416 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure1-e
 ps-converted-to.pdf Images/Time_tikz-figure1.eps>
@@ -1111,11 +1111,11 @@ Package pdftex.def Info: Images/Time_tikz-figure1-eps-converted-to.pdf used on
 input line 306.
 (pdftex.def)             Requested size: 168.02904pt x 46.3736pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure2.eps>
-(epstopdf)                    date: 2019-07-15 17:50:32
+(epstopdf)                    date: 2019-07-15 17:53:35
 (epstopdf)                    size: 131408 bytes
 (epstopdf)             Output file: <Images/Time_tikz-figure2-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-07-15 17:50:52
+(epstopdf)                    date: 2019-07-15 17:54:10
 (epstopdf)                    size: 14487 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure2-e
 ps-converted-to.pdf Images/Time_tikz-figure2.eps>
@@ -1130,11 +1130,11 @@ Package pdftex.def Info: Images/Time_tikz-figure2-eps-converted-to.pdf used on
 input line 307.
 (pdftex.def)             Requested size: 168.02904pt x 68.05476pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure3.eps>
-(epstopdf)                    date: 2019-07-15 17:50:33
+(epstopdf)                    date: 2019-07-15 17:53:36
 (epstopdf)                    size: 138005 bytes
 (epstopdf)             Output file: <Images/Time_tikz-figure3-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-07-15 17:50:53
+(epstopdf)                    date: 2019-07-15 17:54:10
 (epstopdf)                    size: 15772 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure3-e
 ps-converted-to.pdf Images/Time_tikz-figure3.eps>
@@ -1149,11 +1149,11 @@ Package pdftex.def Info: Images/Time_tikz-figure3-eps-converted-to.pdf used on
 input line 320.
 (pdftex.def)             Requested size: 218.61842pt x 57.21417pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure4.eps>
-(epstopdf)                    date: 2019-07-15 17:50:34
+(epstopdf)                    date: 2019-07-15 17:53:37
 (epstopdf)                    size: 104488 bytes
 (epstopdf)             Output file: <Images/Time_tikz-figure4-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-07-15 17:50:53
+(epstopdf)                    date: 2019-07-15 17:54:11
 (epstopdf)                    size: 10339 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure4-e
 ps-converted-to.pdf Images/Time_tikz-figure4.eps>
@@ -1168,11 +1168,11 @@ Package pdftex.def Info: Images/Time_tikz-figure4-eps-converted-to.pdf used on
 input line 321.
 (pdftex.def)             Requested size: 165.01776pt x 46.3736pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure5.eps>
-(epstopdf)                    date: 2019-07-15 17:50:35
+(epstopdf)                    date: 2019-07-15 17:53:38
 (epstopdf)                    size: 131937 bytes
 (epstopdf)             Output file: <Images/Time_tikz-figure5-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-07-15 17:50:54
+(epstopdf)                    date: 2019-07-15 17:54:11
 (epstopdf)                    size: 14632 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure5-e
 ps-converted-to.pdf Images/Time_tikz-figure5.eps>
@@ -1191,12 +1191,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package epstopdf Info: Source file: <Images/Graphic-Initial-Distance_tikz-figur
 e0.eps>
-(epstopdf)                    date: 2019-07-15 17:50:20
-(epstopdf)                    size: 93635 bytes
+(epstopdf)                    date: 2019-07-15 17:53:23
+(epstopdf)                    size: 93582 bytes
 (epstopdf)             Output file: <Images/Graphic-Initial-Distance_tikz-figur
 e0-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-07-15 17:50:54
-(epstopdf)                    size: 12629 bytes
+(epstopdf)                    date: 2019-07-15 17:54:12
+(epstopdf)                    size: 12626 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Initial-Dis
 tance_tikz-figure0-eps-converted-to.pdf Images/Graphic-Initial-Distance_tikz-fi
 gure0.eps>
@@ -1405,7 +1405,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/times/utmri8a.pfb>
-Output written on chacon-ieeetec-17.pdf (13 pages, 444263 bytes).
+Output written on chacon-ieeetec-17.pdf (13 pages, 444060 bytes).
 PDF statistics:
  687 PDF objects out of 1000 (max. 8388607)
  609 compressed objects within 7 object streams
