@@ -1,0 +1,39 @@
+The evolutionary algorithms have been one of the most popular approaches to deal with complex optimization problems.
+%
+The performance of multi-objective algorithms is measured directly in the objective space, therefore the majority of algorithms incorporate sophisticated mechanisms to attain well spread and converged solutions among the Pareto front.
+%
+Nevertheless, the multi-objective problems are build with some difficulties which mislead several algorithms and drive to premature convergence or stagnation.
+%
+Mainly, in difficult problems and with long-term executions stagnation could be present wasting important computational resources.
+%
+In evolutionary algorithms, the diversity of the decision variable space has showed a critical role to avoid premature convergence or stagnation.
+%
+Particularly, stagnation could converge in sub-optimal regions provoking that the operators lose its exploratiory strength.
+%
+For this reason, a potential strategy to mitigate those drawbacks dwell in leading the search process through different diversity stages, which change as the stopping criterion is reached.
+
+Mainly, in this work two contributions applied in the multi-objective field are described.
+%
+First, is presented a mechanism to simultaneoulsy manage the diversity in the variable space and the objective space.
+%
+This strategy is incorporated in the replacement phase, specifically the diversity maintained in the decision variable space is decremented according the elapsed time and the stopping criterion.
+%
+Second, a novel density estimator of the objective space, which is based in the IGD+ indicator, is suggested.
+%
+In the experimental validation carried out, is shown that our proposal not only improves the state-of-the-art algorithms in long-term executions, also offers a competitive performance in short-term executions.
+%
+%
+In addition, some scalability experiments in the decision variable space are carried out with middle-term executions, results indicate the superiority and stability measured with the hypervolume indicator.
+%
+In the same line, the evolution of diversity in the variable space with some specific problems is analysed.
+%
+Showing that the problems of two objectives maintain implicitly less diveristy in decision variable space than the problems of three objectives.
+%
+
+
+In the future, we plan to develop an adaptive scheme for the initial threshold value, as well the development of alternatives in short-term executions to provide improved solutions.
+%
+In order, to attain even better results, these strategies are going to be incorporated in a multi-objective memetic algorithm.
+%
+Finally, the integration of the replacement phase in a different multi-objective paradigm (indicator or decomposition) seems to be promising to give an emphasis of the diversity implications in the multi-objective field.
+
