@@ -1,45 +1,67 @@
-In this section the experimental validation is carried out, showing that controlling the diversity in the variable space is a way to improve further some of the results obtained by the state-of-art-MOEAs.
+This section describes the experimental validation carried out to validate the performance and
+to get a clear understanding of the particularities of \VSDMOEA{}.
 %
-The analyses carried out in this section are carefully designed to get a clear understanding of the particularities of \VSDMOEA{}.
+Results clearly show that controlling the diversity in the variable space is a way to improve further some of the results 
+obtained by the state-of-art \MOEAS{}.
 %
-First, several technical specifications of the implemented algorithms, and test problems are described.
+First, some technical specifications of the benchmark problems and implemented algorithms are discussed.
 %
-Thereafter, one of the most meaningful comparisons between \VSDMOEA{} and state-of-the-art algorithms is presented.
+Thereafter, a comparison between \VSDMOEA{} and state-of-the-art algorithms is presented.
 %
-In addition, to have a broad perception of the \VSDMOEA{} three experiments are driven.
+Then, three additional experiments to fully validate \VSDMOEA{} are included.
 %
-Such analyses are designed to test the scalability in the decision variable space, the performance with different stopping criteria, and the behavior with different initial thresholds which belong to the \VSDMOEA{}.
-%
-Particularly, the second one is probed with several execution times as stopping criterion, i.e. from short-term to long-term executions.
+Such analyses are designed to test the scalability in the decision variable space, the performance with different stopping criteria, 
+and the behavior with different initial penalty thresholds.
 
+This work takes into account some of the most popular benchmarks that are widely applied in the multi-objective field.
+%
+Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} configured in a quite
+standard way.
+%
+The WFG test problems were used with two and three objectives
+and configured with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
+%
+In the DTLZ test problems, the number of decision variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
+% 
+The UF benchmark comprises seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10).
+%
+All of them were configured with $30$ decision variables.
 
-This work is validated through some of the most popular benchmarks which are widely applied in the multi-objective field.
+The experimental validation includes three well-known state-of-the-art-MOEAs and \VSDMOEA{}.
 %
-Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009}.
+The \MOEAS{} that are taken into account are \NSGAII{}~\cite{Joel:jMetal}, \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode}, 
+which can be classified as dominance-based, decomposition-based, and indicator-based, respectively.
 %
-Furthermore, the experimental validation includes three well-known state-of-the-art-MOEAs and \VSDMOEA{}.
+In the case of \MOEAD{} several variants have been devised.
 %
-The \MOEAS{} that are taken into account are \NSGAII{}~\cite{Joel:jMetal}, \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode}, which can be classified as based-dominance, based-decomposition, and based-indicator respectively.
-%
-Particularly, the \MOEAD{} implementation belongs to the first place in the ``Congress on Evolutionary Computation 2009'' (CEC) \cite{zhang2009performance}.
+The \MOEAD{} implementation that has been considered is the one that attained the first place in the Congress on Evolutionary Computation 
+2009 MOP Competition~\cite{zhang2009performance}.
 %
 Given that all the considered algorithms are stochastic, each execution was repeated $35$ times with different seeds.
+
+Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term.
 %
-The common configuration in all the executions was the following: the stopping criterion was set to $250,000$ generations, the population size was fixed to $100$, the WFG test problems were configured with two and three objectives.
+The common configuration in all the executions was the following: the stopping criterion was set to $250,000$ generations, 
+the population size was fixed to $100$, and the genetic operators were the Simulated Binary Crossover (SBX) and polynomial 
+mutation~\cite{Joel:SBX1994, Joel:Mutation}.
 %
-This set of problems were set with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
+Specifically, the crossover probability was set to $0.9$ and the crossover distribution index was
+set to $2$.
 %
-In relation with the DTLZ test instances, the number of decision variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7 respectively.
-% 
-The UF benchmark is conformed by seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10), all of them were set with $30$ decision variables.
+Similarly, the mutation probability and distribution index were fixed to $1/n$ and $50$, respectively.
 %
-The operators employed on all the MOEAs were the Simulated Binary Crossover (SBX), and polynomial mutation~\cite{Joel:SBX1994, Joel:Mutation}.
+The additional parameterization required by each algorithm is shown in Table~\ref{tab:Parametrization}.
 %
-Specifically, the crossover was set with the probability and distribution index values of $0.9$ and $2$ respectively.
+Note that in \MOEAD{} and \RMOEA{} scalarization functions are required.
 %
-Similarly, the mutation probability and distribution index were fixed to $1/n$ and $50$ respectively.
+In both cases the Tchebycheff approach is used.
 %
-In addition, the extra-parameterization of each algorithm is shown in Table~\ref{tab:Parametrization}.
+The procedure to generate the weight vectors differs in \MOEAD{} and \RMOEA{}.
+%
+\RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives respectively.
+%
+In contrast, \MOEAD{} requires the same number of weight vectors than the population size, therefore the weight vectors were generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
+
 
 
 %
@@ -61,15 +83,6 @@ In addition, the extra-parameterization of each algorithm is shown in Table~\ref
 \end{tabular}
 \end{table}
 
-
-%
-In addition, the weight-vector based algorithms (\MOEAD{} and \RMOEA{}) are configured with the Tchebycheff approach as utility function.
-%
-According to their implementations each algorithm takes into account different quantity and distribution of weight vectors.
-%
-Particularly, since that \RMOEA{} can be configured with a different number of weight vectors than the population size, it was applied with $501$ and $496$ weight vectors for two and three objectives respectively.
-%
-In contrast, \MOEAD{} requires the same number of weight vectors than the population size, therefore the weight vectors were generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
 
 
 The experimental analyses were carried out taking into account the hyper-volume indicator (\HV{}).
