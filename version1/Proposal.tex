@@ -89,13 +89,16 @@ Distance(A, B) =   \left ( \frac{1}{n}  \sum_{i=1}^n \left ( \frac{A_i - B_i}{x_
 Note that individuals with larger \DCS{} values are those that contribute more significantly to promote exploration.
 %
 In order to avoid an excessive decrease of the exploration degree, individuals with a \DCS{} value lower 
-than a threshold value are penalized and they can only be selected if all remaining individuals have also been penalized.
-%do not exist.
+than a threshold value are penalized.
 %
 Then, among the non-penalized individuals, an objective-space density estimator is used to select the additional
 survivor of the iteration.
 %
 In our case, the novel density estimator described in the next subsection is used. 
+%
+Note that it might happen that all individuals are penalized.
+%
+In such a case, the individual with a larger contribution to variable-space diversity is selected.
 
 \begin{figure}[t]
 \centering
