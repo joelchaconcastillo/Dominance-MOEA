@@ -9,12 +9,11 @@ elapsed generations with the aim of gradually moving from exploration to exploit
 %
 Note that this principle might be incorporated in any of the three categories of \MOEAS{}.
 %
-In this paper, our decision was to incorporate it in a dominance-based approach 
-and in the field of multi-objective problems which involves two and three objectives.
-%apply it to problems with 
-%a low number of objectives.
+In this paper, our decision was to incorporate it in a dominance-based approach.
 %
-Thus, some of our design decisions might not be suitable for dealing with many-objective optimization problems.
+Note that this category has been particularly suitable for problems with two and three objectives.
+%
+Thus, some of our design decisions might not be convenient for dealing with many-objective optimization problems.
 
 The general framework of \VSDMOEA{} is quite standard.
 %
@@ -90,7 +89,8 @@ Distance(A, B) =   \left ( \frac{1}{n}  \sum_{i=1}^n \left ( \frac{A_i - B_i}{x_
 Note that individuals with larger \DCS{} values are those that contribute more significantly to promote exploration.
 %
 In order to avoid an excessive decrease of the exploration degree, individuals with a \DCS{} value lower 
-than a threshold value are penalized and they can only be selected if non-penalized individuals are missing.%do not exist.
+than a threshold value are penalized and they can only be selected if all remaining individuals have also been penalized.
+%do not exist.
 %
 Then, among the non-penalized individuals, an objective-space density estimator is used to select the additional
 survivor of the iteration.
@@ -233,7 +233,7 @@ a candidate individual is found, i.e. with an individual of $R_t$ (line \ref{alg
 Then, taking the identified front as input, a novel objective-space density estimator is used to select
 the next survivor (line \ref{alg:13}).
 %
-The specific way in which the diversity in the objective space is measured is described in the next section.
+The specific way in which the contribution to diversity in the objective space of each individual is measured is described in the next section.
 %
 
 %Note also that, as part of the diversity calculation of the variable space, a metric should be selected.
@@ -302,7 +302,7 @@ that contributes significantly in terms of objective-space quality and diversity
 Algorithm~\ref{alg:Density_Estimator} describes the selection of the next survivor.
 %
 First, similarly to most state-of-the-art algorithms, an action to promote the selection of boundary solutions
-is executed.
+is included.
 %
 Note that selecting the best solution for each objective might provoke some drawbacks related to accepting small improvement
 in an objective at the cost of important worsening in other objectives~\cite{deb2016optimality}.
