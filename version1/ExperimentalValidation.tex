@@ -1,4 +1,4 @@
-This section describes the experimental validation carried out to validate the performance and
+This section describes the experimental validation carried out to study the performance and
 to get a clear understanding of the particularities of \VSDMOEA{}.
 %
 Results clearly show that controlling the diversity in the variable space is a way to improve further some of the results 
@@ -15,7 +15,7 @@ and the behavior with different initial penalty thresholds.
 
 This work takes into account some of the most popular benchmarks that are widely applied in the multi-objective field.
 %
-Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} configured in a quite
+Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} configured in a 
 standard way.
 %
 The WFG test problems were used with two and three objectives
@@ -36,8 +36,36 @@ In the case of \MOEAD{} several variants have been devised.
 %
 The \MOEAD{} implementation that has been considered is the one that attained the first place in the Congress on Evolutionary Computation 
 2009 MOP Competition~\cite{zhang2009performance}.
-%
+
 Given that all the considered algorithms are stochastic, each execution was repeated $35$ times with different seeds.
+%
+In order to compare the different schemes, the hypervolume indicator (\HV{}) is used.
+%
+Note that in the supplementary material they are also compared with the IGD+ and conclusions are similar.
+%
+The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point 
+as is suggested in~\cite{ishibuchi2017reference}.
+%
+In order to facilitate the interpretation of the attained results, the normalized \HV{} is used~\cite{li2015evolutionary}
+and the value reported is computed as the ratio between the normalized \HV{} reached and the maximum attainable 
+normalized \HV{}.
+%
+In this way, a value equal to one means a perfect approximation.
+%
+Note that a value equal to one is not attainable because a discrete approximation is obtained by \MOEAS{}.
+%
+In order to statistically compare the \HV{} ratios, a similar guideline than the proposed in~\cite{Joel:StatisticalTest} was used. 
+%
+First a Shapiro-Wilk test was performed to check whatever or not the values of the results followed a Gaussian distribution. 
+%
+If, so, the Levene test was used to check for the homogeneity of the variances. 
+%
+If samples had equal variance, an ANOVA test was done; if not, a Welch test was performed. 
+%
+For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution. 
+%
+An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, and the mean and median \HV{} ratio 
+obtained by $X$ are higher than the mean and median achieved by $Y$.
 
 Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term.
 %
@@ -45,8 +73,7 @@ The common configuration in all the executions was the following: the stopping c
 the population size was fixed to $100$, and the genetic operators were the Simulated Binary Crossover (SBX) and polynomial 
 mutation~\cite{Joel:SBX1994, Joel:Mutation}.
 %
-Specifically, the crossover probability was set to $0.9$ and the crossover distribution index was
-set to $2$.
+The crossover probability was set to $0.9$ and the crossover distribution index was set to $2$.
 %
 Similarly, the mutation probability and distribution index were fixed to $1/n$ and $50$, respectively.
 %
@@ -60,7 +87,9 @@ The procedure to generate the weight vectors differs in \MOEAD{} and \RMOEA{}.
 %
 \RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives respectively~\cite{trautmann2013r2}.
 %
-In contrast, \MOEAD{} requires the same number of weight vectors than the population size, therefore the weight vectors were generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
+Differently, \MOEAD{} requires the same number of weight vectors than the population size.
+%
+They were generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
 
 
 
@@ -77,7 +106,7 @@ In contrast, \MOEAD{} requires the same number of weight vectors than the popula
 \multirow{3}{*}{\textbf{MOEA/D}} &Max. updates by sub-problem ($\eta_r$) = 2, \\
  & tour selection = 10,   neighbor size = 10, \\
  & period utility updating = 30 generations, \\ 
- & probability local selection ($\delta$) = 0.9,\\ \hline
+ & local selection probability ($\delta$) = 0.9,\\ \hline
 \textbf{VSD-MOEA} & $D_I=0.4$ \\ \hline
 \textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
 \end{tabular}
@@ -85,93 +114,110 @@ In contrast, \MOEAD{} requires the same number of weight vectors than the popula
 
 
 
-The experimental analyses were carried out taking into account the hyper-volume indicator (\HV{}).
-%
-The \HV{} metric measures the objective space dominated by the approximated solutions given a reference point, so the solutions dominated by the reference point were not considered.
-%
-Particularly, the reference point is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point as is suggested in \cite{ishibuchi2017reference}.
-%
-Similarly that in \cite{li2015evolutionary}, and to have a fair comparison the normalized \HV{} is estimated.
-%
-Specifically, the \HV{} reported is computed as the ratio between the \HV{} reached by a set of solutions and the \HV{} of a set of points that belong to the Pareto Front.
-%
-In this way, the more approximated to the unity this metric is, the more converged are the solutions to the Pareto Front.
-%
+\input{Tables/Table_HV_2obj.tex}
+\input{Tables/Table_HV_3obj.tex}
 
+Tables \ref{tab:StatisticsHV_2obj} shows the attained \HV{} ratio for the benchmark functions
+with two objectives.
 %
-In order to statistically compare the \HV{} results, a similar guideline than the proposed in~\cite{Joel:StatisticalTest} was used. 
+Specifically, the minimum, maximum, mean and standard deviation of the \HV{} ratio is shown for each tested method and function.
 %
-First a Shapiro-Wilk test was performed to check whatever or not the values of the results followed a Gaussian distribution. 
+The last row shows the results considering all the functions together.
 %
-If, so, the Levene test was used to check for the homogeneity of the variances. 
+In each function, the data of the method that attained the largest mean is shown in bold face.
 %
-If samples had equal variance, an ANOVA test was done; if not, a Welch test was performed. 
+Additionally, all the methods that were not statistically inferior than such a method are shown in bold face.
 %
-For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution. 
+From here on, the methods shown in bold face in a given problem are reffered to as the winning methods.
 %
-An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, if the mean and median obtained by $X$ are higher than the mean and median achieved by $Y$.
+Attending to the amount of functions where each method is shown is bold-face for the cases 
+with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 13 and 11, respectively.
 %
+Thus, while \VSDMOEA{} is the most competitive one, its superiority does not seem impressive
+attending to these numbers.
+%
+However, the mean \HV{} ratio attained by \VSDMOEA{} when considering all the problems simultaneously is quite larger
+than the one attained by \RMOEA{}.
+%
+In fact, the total mean of \RMOEA{} ($0.882$), \NSGAII{} ($0.886$) and \MOEAD{} ($0.881$) are quite similar.
+%
+In contrast \VSDMOEA{} achieved a much higher value ($0.951$).
+%
+If the data is inspected carefully, it is clear that when \VSDMOEA{} loses, the difference with respect to the
+best method is not really large.
+%
+For instance, the difference between the \HV{} ratio attained by \VSDMOEA{} and by the best method was never larger
+than $0.1$.
+%
+However, all the other methods presented a deteriation larger than $0.1$ in several cases.
+%
+Particularly, it happened in $5$, $5$ and $6$ problems for \RMOEA{}, \NSGAII{} and \MOEAD{}, respectively.
+%
+This means that even if \VSDMOEA{} loses in some cases, its deteriotation is always small showing a much more 
+robust behaviour than any other method.
 
-In Tables \ref{tab:StatisticsHV_2obj} and \ref{tab:StatisticsHV_3obj} are shown the normalized hyper-volume with two and three objectives respectively.
+In order to better clarify these findings pair-wise statistical tests were done among each tested method in each
+function.
 %
-In this empirical results the \VSDMOEA{} achieved the best general mean and the lowest variability, therefore it is quite stable to different runs.
+Table~\ref{tab:Tests_HV_2obj} shows for the two-objective cases, the amount of times that each method won (column $\uparrow$),
+lost (column $\downarrow$) and tied (column $\leftrightarrow$).
 %
-According to Table \ref{tab:StatisticsHV_2obj} the dominance-based algorithms improved the remaining MOEAs.
+Additionally, for each method $M$ we calculated the sum of the differences between the mean \HV{} ratio attained by the best method (the ones with largest mean)
+and the method $M$, for each problem where the best method won $M$.
 %
-However, the general mean of \NSGAII{} (second best algorithm with $0.886$) is quite similar to \MOEAD{} ($0.881$) and \RMOEA{} ($0.882$), in contrast \VSDMOEA{} achieved the highest \HV{} value ($0.951$).
+This value is shown in the Total Deterioration column.
 %
-In particular, the dominance-based algorithms gave the best values in the kind of problems with disconnected Pareto geometries (WFG2, UF5 and UF6).
-%
-Differently, taking into account three objectives, \NSGAII{} was placed as the worst algorithm ($0.785$), perhaps provoked by its density estimator, which has some drawbacks in the most difficult problems with three objectives (e.g. multi-frontal problems).
-%
-The second place is attained by \RMOEA{} ($0.855$), which is still quite low compared with \VSDMOEA{} ($0.916$).
-%
+The calculated data confirms that the number of wins is close in \VSDMOEA{} and \RMOEA{}, but the total deterioration is quite lower in the case of \VSDMOEA{}.
 
 
-Given that the general mean can be unsteady to atypical measurements, i.e. high variability, in Tables \ref{tab:Tests_HV_2obj} and \ref{tab:Tests_HV_3obj} are shown the statistical tests with two and three objectives respectively.
+Tables~\ref{tab:StatisticsHV_2obj} and \ref{tab:Tests_HV_2obj} shows the same information for the problems with three objectives.
 %
-In addition, those tables incorporate the difference between the mean of each algorithm and the best mean achieved for each problem, which is tagged with ``Diff''.
+In this case, the superiority of \VSDMOEA{} is even clearer.
 %
-A representative value of each column is shown in the last row which is conformed by the sum of the entirely column.
+Taking into account the mean of all functions, \VSDMOEA{} attained again a much larger mean \HV{} ratio than the other methods.
 %
-The algorithm that attained more wins in the pairwise comparison is the \VSDMOEA{} with $48$ and $52$ wins in two and three objectives respectively.
+Particularly, \VSDMOEA{} attained the value $0.916$, whereas the second raked algorithm (\RMOEA{}) attained the value $0.855$.
 %
-Besides that \VSDMOEA{} lost in few pairwise comparisons, in such problems this algorithm is close enough to the best results, this can be seen through the small ``Diff'' values attained.
+Once again, the difference between the \HV{} ratio attained by \VSDMOEA{} and by the best method was never larger
+than $0.1$.
 %
-In fact, \VSDMOEA{} achieved $0.060$ and $0.027$ in contrast to the two second bests algorithms that are \NSGAII{} ($1.542$) and \RMOEA{} ($1.172$) for two and three objectives respectively.
+However, all the other methods presented a deteriation larger than $0.1$ in several cases.
 %
-Specifically, the worst ``Diff'' value achieved by the \VSDMOEA{} is with the WFG6 test-problem ($0.045$ and $0.024$), which is uni-modal and non-separable.
+Particularly, it happened in $5$, $6$ and $6$ problems for \RMOEA{}, \NSGAII{} and \MOEAD{}, respectively.
 %
-Nevertheless, this problem was better approximated with $D_I=0.1$ whose means were of $0.913$ and $0.868$ for two and three objectives respectively.
+Moreover, in this case, \VSDMOEA{} is much superior than the other methods not only in terms of total deterioration but also
+in terms of total wins (see Table~\ref{tab:Tests_HV_2obj} and data shown in bold face).
 %
-Indicating that this problem is improved inducing less diversity at the initial stages of the execution.
-%
+\VSDMOEA{} was in the group of the winning methods in 17 out of 19 functions, whereas the second best ranked algorithm (\RMOEA{})
+belonged to the group of winning methods only in 3 functions.
 
 \subsection{Decision Variable Scalability Analysis}
 
-In order, to study the scalability of the decision variables, and following the same configuration, the algorithms were test with $50$, $100$, and $250$ variables.
+In order to study the scalability of \VSDMOEA{} in terms of the number of decision variables, all the already described algorithms were tested with
+the same benchmark functions but considering $50$, $100$, and $250$ variables.
 %
-Particularly, since that long-term executions ($250,000$ generations) are time-consuming, this analysis is carried out taking into account middle-term executions ($25,000$ generations).
+Since increasing the number of variables highly increases the required computing time, this study takes into account middle-term executions ($25,000$ generations).
 %
-In Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} are shown the normalized mean of the \HV{} results for two and three objectives respectively.
+Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} shows the mean \HV{} ratio for the four tested algorithms,
+considering the problems with two and three objectives, respectively.
 %
-Especially, increasing the number of variables provoked a degradation to different levels on the performance of each algorithm.
+As expected, the \HV{} ratio decrease as the number of variables increases.
 %
-Nevertheless, the based-dominance algorithms are the best with problems of two objectives.
+In the two-objective case, the deterioration is similar in every algorithm, so the superiority of \VSDMOEA{} is clear regardless of the amount of decision
+variables.
 %
-In contrast, taking into account problems of three objectives, the weight-vector based algorithms showed to be more stable than the dominance-based algorithms.
+Differently, in the three-objective case, the deterioration of \VSDMOEA{} is larger than the one of \RMOEA{} and \MOEAD{}.
 %
-%The former had similar performance increasing the number of decision variables.
+In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just slightly superior than the one of \RMOEA{}.
+
+
+%In problems of three objectives, the \VSDMOEA{} performance seems to be more affected increasing the number of variables in comparison to the weight-vector based algorithms.
 %
-However, \VSDMOEA{} is still the best algorithm in both two and three objectives.
-% 
-In problems of three objectives, the \VSDMOEA{} performance seems to be more affected increasing the number of variables in comparison to the weight-vector based algorithms.
+%This might by caused for several reasons, perhaps two of the most important are the stopping criterion which might not be enough to attain an adequately convergence and the distance metric taken into consideration for the management of diversity.
 %
-This might by caused for several reasons, perhaps two of the most important are the stopping criterion which might not be enough to attain an adequately convergence and the distance metric taken into consideration for the management of diversity.
+%The latter is popularly known as \textit{The Curse of Dimensionality} \cite{trunk1979problem, beyer1999nearest}, meaning that under certain broad conditions, as dimensionality is increased, the distance to the nearest neighbor tends to be the same to the farthest neighbor.
 %
-The latter is popularly known as \textit{The Curse of Dimensionality} \cite{trunk1979problem, beyer1999nearest}, meaning that under certain broad conditions, as dimensionality is increased, the distance to the nearest neighbor tends to be the same to the farthest neighbor.
-%
-In other words, the contrast in distances to different data points becomes no-existent.
+%In other words, the contrast in distances to different data points becomes no-existent.
 
 
 \begin{figure}[t]
@@ -190,44 +236,78 @@ In other words, the contrast in distances to different data points becomes no-ex
 \caption{Mean of the \HV{} (35 runs) considering three objectives.} \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
-In order, to have a better understanding of the algorithms and following the guideline of middle-term executions, the diversity in the decision variable space with some WFG problems is calculated.
+In order to better understand this behaviour, we selected the WFG1 to WFG7 problems.
 %
-Particularly, these problems divide the decision variables in two kinds of parameters: the distance parameters and the position parameters.
+WFG problems divide the decision variables in two kinds of parameters: the distance parameters and the position parameters.
 %
-A parameter $x_i$ is a distance parameter when for all parameter vectors $\vec{F}(\mathbf{x})$, modifying $x_i$ in $\vec{F}(\mathbf{x})$ results in a parameter vector that dominates $\vec{F}(\mathbf{x})$, is equivalent to $\vec{F}(\mathbf{x})$, or is dominated by $\vec{F}(\mathbf{x})$.
+Note that, a parameter $i$ is a distance parameter when for all $\vec{\mathbf{x}}$, modifying $x_i$ results in a new solution 
+that dominates $\vec{\mathbf{x}}$, is equivalent to $\vec{\mathbf{x}}$, or is dominated by $\vec{\mathbf{x}}$.
 %
-However, if $x_i$ is a position parameter, modifying $x_i$ in $\vec{F}(\mathbf{x})$ always results in a vector that is incomparable or equivalent to $\vec{F}(\mathbf{x})$~\cite{huband2005scalable}.
+However, if $i$ is a position parameter, modifying $x_i$ in $\vec{\mathbf{x}}$ always results in a vector that is incomparable or 
+equivalent to $\vec{\mathbf{x}}$~\cite{huband2005scalable}.
 %
-
-%
-Particularly, the selected problems were used to show that either premature convergence or stagnation appears in the set of distance parameters.
-%
-Consequently, the operators involved lose its exploratory strength.
-%
-We select the WFG1-WFG7 problems because their distance parameters values associated to Pareto optimal solutions have exactly the same values.
+Additionally, note that we selected the WFG1-WFG7 problems because their distance parameters values associated to all Pareto optimal solutions 
+have exactly the same values.
 %
 This values is shown as follows:
 \begin{equation}
    x_{i=k+1:n} = 2i \times 0.35
 \end{equation}
 %
+This is really important because it has been shown that for some cases, state-of-the-art
+\MOEAS{} provoke a quick convergence in \textit{distance parameters}, resulting in an effect that is similar to premature convergence
+in the single-objective case.
+
+For each algorithms, we calculated the avarege Euclidean distance among individuals (ADI) in the population by considering only 
+the distance parameters.
 %
-In order to analyze the diversity, the average Euclidean distance among individuals (ADI) is calculated, i.e. the mean value of all pairwise distances among individuals in the population is reported.
+Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} shows the ADI evolution for the two-objective and three-objective problems.
 %
-In Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} are shown the evolution of diversity with two and three objectives.
+In order to not sature this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 decision variables is shown.
+
 %
-Concretely, each figure shows the diversity maintained in the position parameters and the distance parameters.
+The first evident issue is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
-The diversity is calculated with $50$, $100$, and $250$ variables for each algorithm.
+In this way, the difference between the diversity maintained in the first generation and the one maintained after 10\% of the execution,
+is much larger in \RMOEA{} than in \VSDMOEA{}.
 %
-Mainly, the state-of-the-art algorithms converged to promising regions in the distance parameters after the $10\%$ of the total time-execution.
+In the case of \VSDMOEA{}, the decrease in ADI is quite linear until the 50\% of the execution.
 %
-However, their diversity in position parameters increases as the time elapses, meaning that the remaining $90\%$ is devoted to promote diverse solutions in the objective space.
+This is due to the way in which the threshold distance value ($D_t$) is calculated.
 %
-In spite this, it seems that the algorithms converge on the distance parameters to promising regions, even though those regions could not be the optimal.
+Additionally, when inspecting more closely the data, some other important aspects must be discussed. 
 %
-In contrast, \VSDMOEA{} keeps diverse solutions in both kind of parameters until the $90\%$ of the time elapsed, this strategy allows to explore more adequately the promising regions and might avoid stagnation in several stages.
+In the two-objective case, increasing the number of variables provokes a slight increase on the diversity in \RMOEA{}.
 %
+However, the amount of diversity is low even when using 250 distance variables, meaning that incorporating mechanisms to increase diversity --- as it is done in \VSDMOEA{} ---
+is really helpful.
+%
+Differently, in the three-objective case, the amount of diversity in \RMOEA{} is not so low.
+%
+Moreover, increasing the number of decision variables, provokes an important increase in the attained ADI, meaning that in this case,
+fast convergence is not an issue.
+%
+These results show that, as the number of objectives and variables increases, \MOEAS{} tend to maintain a higher variable-space diversity
+in an implicity way, meaning that explicitly controlling the variable-space diversity is probably not so important.
+%
+Note that the behaviour of \NSGAII{} and \MOEAD{} in terms of the ADI evolution is similar to the one analyzed for \RMOEA{}.
+
+Finally, we would like to note that we selected some specific problems to perform long-term executions with 250 distance variables.
+%
+\VSDMOEA{} could improve further the results when using long-term executions, while the other state-of-the-art algorithms dit not attain
+important improvements.
+%
+This probably means that as the technology evolves and longer executions (more generations) can be performed in admisible times,
+the incorporation of explicit control of diversity will be even more important.
+%
+Note that this also happens in the single-objective case, where benefits of explicit control of diversity appears only when using executions of
+several weeks when dealing with large instances of the Traveling Salesman Problem.
+%
+TODO: PONER CITA.
+
+
+
+
 \begin{figure}[t]
 \centering
 %\input{Graphic-Diversity_2obj.tex}
@@ -240,17 +320,7 @@ In contrast, \VSDMOEA{} keeps diverse solutions in both kind of parameters until
 
 
 
-In relation with the state-of-the-art algorithms, the diversity maintained in problems of three objectives was larger than with problems of two objectives, this might occurs since that the quantity of prominent solutions increases meaningfully between two and three objectives.
 %
-Therefore, there is present an implicit relation of diversity between the number of objectives and the decision variables space, in this situation three objectives keeps implicitly more diversity than two objectives.
-%
-However, this implicit diversity maintained is not enough to avoid stagnation in several problems.
-%
-Thus, the consideration of long-term executions in the state-of-the-art algorithms could not provide meaningfully improvements.
-%
-In contrast, \VSDMOEA{} could improve even more with long-term executions, since that it keeps diversity at several stages.
-%
-In general, as the number of variables is increased, the convergence in the distance parameters is even more slow, therefore to have quality solutions should be required a greater time-execution, specifically in the diversity-based approaches.
 %
 
 \begin{figure}[t]
@@ -268,7 +338,7 @@ In general, as the number of variables is increased, the convergence in the dist
 %\label{fig:Diversity_WFG6}
 %\end{figure}
 
-\subsection{Performance of \MOEAS{} Through the Execution}
+\subsection{Stopping criteria and Diversity}
 
 
 This section is devoted to test the performance of the algorithms with several stopping criteria, i.e. maximum number of generations.
@@ -374,8 +444,6 @@ Therefore, inducing diversity and taking into account the elapses generations ca
 
 
 
-\input{Tables/Table_HV_2obj.tex}
-\input{Tables/Table_HV_3obj.tex}
 %\input{Tables/Table_IGDP_2obj.tex}
 %\input{Tables/Table_IGDP_3obj.tex}
 \input{Tables/Tests_HV_2obj.tex}
