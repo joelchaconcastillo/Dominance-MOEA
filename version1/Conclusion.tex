@@ -6,13 +6,13 @@ Attending to the differences between single-objective and multi-objective optimi
 that several state-of-the-art single-objective optimizers consider explicitly the diversity on the decision variable space specially
 when dealing with long-term executions, whereas this is not the case for \MOEAS{}.
 %
-Since the performance of \MOEAS{} is measured directly in the objective space, only the diversity of the objective space is taken
-into account and the diversity of the variable space is maintained implicitly.
+%Since the performance of \MOEAS{} is measured directly in the objective space, only the diversity of the objective space is taken
+%into account and the diversity of the variable space is maintained implicitly.
 %
-However, depending on the mapping between the variable space and objective space the amount of diversity might not be large enough
-to ensure a proper exploration.
+%However, depending on the mapping between the variable space and objective space the amount of diversity might not be large enough
+%to ensure a proper exploration.
 %
-Current \MOEAS{} that take into account the diversity of the decision variable space have not been very successful. 
+%Current \MOEAS{} that take into account the diversity of the decision variable space have not been very successful. 
 
 This paper propose a novel \MOEA{}, which is called \VSDMOEA{} that takes into account both the diversity of the decision variable space
 and the diversity of the objective space.
@@ -24,7 +24,7 @@ but, as the generations evolves, it gradually grants more importance to the dive
 %
 This is performed with a penalty method that is integrated in the replacement phase.
 %
-Additionally, a novel density estimator based on the IGS+ is integrated.
+Additionally, a novel density estimator based on the IGD+ is integrated.
 %
 This is used to select among the non-penalized individuals.
 
@@ -48,5 +48,5 @@ For instance, including the management of diversity put forth in this paper into
 %
 Additionally, we would like to develop an adaptive scheme for avoiding the setting of the initial threshold value.
 %
-Finally, i order to attain even better results, these strategies are going to be incorporated into a multi-objective memetic algorithm.
+Finally, in order to attain even better results, these strategies are going to be incorporated into a multi-objective memetic algorithm.
 %
