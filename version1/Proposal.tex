@@ -174,10 +174,10 @@ Note that $D_I$ denotes the initial threshold value, $G_{Elapsed}$ is the amount
 been evolved, and $G_{End}$ is the stopping criterion, i.e. the number of generations that are to be evolved 
 in the execution of \VSDMOEA{}.
 %
-The linear decrease is calculated so that after the $90\%$ of the generations, the $D_t$ value is lower than 0, 
+The linear decrease is calculated so that after the $50\%$ of the generations, the $D_t$ value is lower than 0, 
 meaning that no penalties are performed.
 %
-This means that in the first $90\%$ of the generations, more exploration than in traditional MOEAs is induced.
+This means that in the first $50\%$ of the generations, more exploration than in traditional MOEAs is induced.
 %
 
 \begin{algorithm}[t]
@@ -190,7 +190,7 @@ This means that in the first $90\%$ of the generations, more exploration than in
         \STATE $R_t = P_t \cup Q_t$ \label{alg:1}
         \STATE $P_{t+1} = \emptyset$ \label{alg:2}
         \STATE $Penalized = \emptyset$ \label{alg:3}
-				\STATE $D_t = D_I - D_I * \frac{G_{Elapsed}}{0.9*G_{End}}$ \label{alg:4}
+				\STATE $D_t = D_I - D_I * \frac{G_{Elapsed}}{0.5*G_{End}}$ \label{alg:4}
 %				\FOR{$k \in {1...M}$}\label{alg:5}
 %					\STATE Move to $P_{t+1}$ the individual that optimize $AWF_k$ (Eq.~\ref{eqn:extremes}) \label{alg:5b}
 %				\ENDFOR
@@ -296,13 +296,15 @@ of diverse individuals.
 As it was previously described, our density estimator selects a new survivor from the front identified
 in line \ref{alg:13} of Algorithm~\ref{alg:Replacement_Phase}.
 %
-This front contains at least one individual belonging to $R_t$ and it might also contain some elements 
+This front (refered in Algorithm~\ref{alg:Density_Estimator}  as $F$) contains at least one individual belonging to $R_t$ and it might also contain some elements 
 of $P_{t+1}$.
 %
 The aim behind the selection of the next survivor is to pick up an individual of the input front
 that contributes significantly in terms of objective-space quality and diversity. % to $R_t$.
 
 Algorithm~\ref{alg:Density_Estimator} describes the selection of the next survivor.
+%
+Mainly, the sets $FP$ and $FR$ are employed refering to the survivors and candidates individuals that belong to the current front $F$ respectively (lines \ref{alg:FR} and \ref{alg:FS}).
 %
 First, similarly to most state-of-the-art algorithms, an action to promote the selection of boundary solutions
 is included.
@@ -349,7 +351,7 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 \end{equation}
 
 %
-Denoting as $FS$ the selected members of the input front that are already in $P_{t+1}$ (line \ref{alg:FS}), the contribution of each member which belongs to the input front and that has not been selected ($R_t$) is calculated as $\displaystyle{\min_{s \in FS}\ ID(I, s)}$.
+Denoting as $FP$ the selected members of the input front that are already in $P_{t+1}$ (line \ref{alg:FS}), the contribution of each member which belongs to the input front and that has not been selected ($R_t$) is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
 %
 Then, the individual with the higher contribution to the objective space is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
 
@@ -360,16 +362,17 @@ Then, the individual with the higher contribution to the objective space is sele
 \begin{algorithmic}[1]
 \STATE Input: $P_{t+1}$ (Survivors), $R_t$ (Candidates), $F$ (Current front)
     	\STATE Output: $I \in R_t$ 
+	\STATE $FP = P_{t+1} \cap F$ \label{alg:FS}
+	\STATE $FR = R_{t} \cap F$ \label{alg:FR}
+	\STATE $MaxID = 0$ \label{alg:density_for2}
         \FOR{$k \in$ number of objectives}\label{alg:density_for}
 	      \STATE Select the best individual $I \in F$ of $k$ according to Eq.~\ref{eqn:extremes}.\label{alg:density_1}
-	  	\IF{ $I \in R_{t}$}
+	  	\IF{ $I \in FR_{t}$}
 	  	 \RETURN $I$ \label{alg:density_2}
 	  	\ENDIF
 	\ENDFOR\label{alg:density_endfor}
-	\STATE $FS = P_{t+1} \cap F$ \label{alg:FS}
-	\STATE $MaxID = 0$ \label{alg:density_for2}
-	\FOR{ $ Ic \in R_t$}
-	\STATE $Improvement = \displaystyle{\min_{s \in FS}\ ID(Ic, s)}$ 
+	\FOR{ $ Ic \in FR_t$}
+	\STATE $Improvement = \displaystyle{\min_{s \in FP}\ ID(Ic, s)}$ 
 	\IF{ $Improvement > MaxID$} \label{alg:density_if2}
 	   \STATE $MaxID = Improvement$
 	   \STATE $I = Ic$ 
