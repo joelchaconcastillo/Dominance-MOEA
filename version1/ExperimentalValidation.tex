@@ -91,7 +91,7 @@ They were generated with the uniform design (UD) and the good lattice point meth
 
 \subsection{State-of-the-art \MOEAS{} against \VSDMOEA{} taking into account long-term executions}
 
-Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term, thus the stoppin criterion was set to $250,000$ generations.
+Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term, thus the stopping criterion was set to $250,000$ generations.
 %
 
 %
@@ -130,7 +130,7 @@ In each function, the data of the method that attained the largest mean is shown
 %
 Additionally, all the methods that were not statistically inferior than such a method are shown in bold face.
 %
-From here on, the methods shown in bold face in a given problem are refered to as the winning methods.
+From here on, the methods shown in bold face in a given problem are referred to as the winning methods.
 %
 Attending to the amount of functions where each method is shown is bold-face for the cases 
 with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 11 and 8, respectively.
@@ -151,12 +151,12 @@ best method is not really large.
 For instance, the difference between the \HV{} ratio attained by \VSDMOEA{} and by the best method was never larger
 than $0.1$.
 %
-However, all the other methods presented a deteriation larger than $0.1$ in several cases.
+However, all the other methods presented a deterioration larger than $0.1$ in several cases.
 %
 Particularly, it happened in $5$, $5$ and $6$ problems for \RMOEA{}, \NSGAII{} and \MOEAD{}, respectively.
 %
-This means that even if \VSDMOEA{} loses in some cases, its deteriotation is always small showing a much more 
-robust behaviour than any other method.
+This means that even if \VSDMOEA{} loses in some cases, its deterioration is always small showing a much more 
+robust behavior than any other method.
 
 \input{Tables/Table_HV_3obj.tex}
 \input{Tables/Tests_HV_3obj.tex}
@@ -186,7 +186,7 @@ Particularly, \VSDMOEA{} attained the value $0.918$, whereas the second ranked a
 Once again, the difference between the \HV{} ratio attained by \VSDMOEA{} and by the best method was never larger
 than $0.1$.
 %
-However, all the other methods presented a deteriation larger than $0.1$ in several cases.
+However, all the other methods presented a deterioration larger than $0.1$ in several cases.
 %
 Particularly, it happened in $5$, $6$ and $6$ problems for \RMOEA{}, \NSGAII{} and \MOEAD{}, respectively.
 %
@@ -201,7 +201,7 @@ belonged to the group of winning methods only in 3 functions.
 In order to study the scalability of \VSDMOEA{} in terms of the number of decision variables, all the already described algorithms were tested with
 the same benchmark functions but considering $50$, $100$, and $250$ variables.
 %
-Given that the WFG problems require an especific configuration through different number of variables, the configuration was taken as follows.
+Given that the WFG problems require an specific configuration through different number of variables, the configuration was taken as follows.
 %
 The position parameters $k$ and distance parameters $l$ were set taking into consideration the formulas $k=4/24  \times n$ and $l= 20/24  \times n$, respectively.
 %
@@ -245,7 +245,7 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 \caption{Mean of the \HV{} ratio of 35 runs considering the three-objective problems} \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
-In order to better understand this behaviour, we selected the WFG1 to WFG7 problems.
+In order to better understand this behavior, we selected the WFG1 to WFG7 problems.
 %
 WFG problems divide the decision variables in two kinds of parameters: the distance parameters and the position parameters.
 %
@@ -277,12 +277,12 @@ in the single-objective case~\cite{Joel:GDE3_CEC09}.
 \caption{Evolution of ADI for the problems WFG1-WFG7 with two objectives}\label{fig:Diversity_2obj}
 \end{figure}
 
-For each algorithm, we calculated the avarege Euclidean distance among individuals (ADI) in the population by considering only 
+For each algorithm, we calculated the average Euclidean distance among individuals (ADI) in the population by considering only 
 the distance parameters.
 %
 Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} shows the ADI evolution for the two-objective and three-objective problems.
 %
-In order to not sature this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 decision variables is shown.
+In order to not saturate this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 decision variables is shown.
 %
 The first evident issue is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
@@ -306,16 +306,16 @@ Moreover, increasing the number of decision variables, provokes an important inc
 fast convergence is not a so important issue.
 %
 These results show that, as the number of objectives and variables increases, \MOEAS{} tend to maintain a higher variable space diversity
-in an implicity way, meaning that explicitly controlling the variable space diversity is probably not so important.
+in an implicitly way, meaning that explicitly controlling the variable space diversity is probably not so important.
 %
-Note that the behaviour of \NSGAII{} and \MOEAD{} in terms of the ADI evolution is similar to the one analyzed for \RMOEA{}.
+Note that the behavior of \NSGAII{} and \MOEAD{} in terms of the ADI evolution is similar to the one analyzed for \RMOEA{}.
 
 Finally, we would like to note that we selected some specific problems to perform long-term executions with 250 distance variables.
 %
-\VSDMOEA{} could improve further the results when using long-term executions, while the other state-of-the-art algorithms dit not attain
+\VSDMOEA{} could improve further the results when using long-term executions, while the other state-of-the-art algorithms did not attain
 important improvements.
 %
-This probably means that as the technology evolves and longer executions (more generations) can be performed in admisible times,
+This probably means that as the technology evolves and longer executions (more generations) can be performed in admissible times,
 the incorporation of explicit control of diversity will be even more important.
 %
 Note that this also happens in the single-objective case, where benefits of explicit control of diversity appears only when using executions of
@@ -419,7 +419,7 @@ of \VSDMOEA{} even in shorter executions.
 
 \subsection{Analysis of the Initial Threshold Value}
 
-One of the disadvantages of including an strategy to control the diversity is that this is usally done at the cost of
+One of the disadvantages of including an strategy to control the diversity is that this is usually done at the cost of
 incorporating additional parameters in the designed \EA{}.
 %
 In the case of \VSDMOEA{}, the initial threshold value ($D_I$) must be set.
@@ -455,7 +455,7 @@ The obtained \HV{} ratio quickly increases as larger $D_I$ values up to $0.4$ ar
 Then, with values in the range $[0.5, 0.9]$ the performance decreases slightly.
 %
 There is a large range of values with a really good performance, meaning that 
-the behaviour of \VSDMOEA{} is quite robust.
+the behavior of \VSDMOEA{} is quite robust.
 %
 Thus, properly setting this parameter is not a complex task.
 %
