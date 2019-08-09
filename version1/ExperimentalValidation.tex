@@ -6,7 +6,7 @@ obtained by the state-of-art \MOEAS{}.
 %
 First, some technical specifications of the benchmark problems and implemented algorithms are discussed.
 %
-Thereafter, a comparison between \VSDMOEA{} and state-of-the-art algorithms is presented.
+Thereafter, a comparison of long-term executions between \VSDMOEA{} and state-of-the-art algorithms is presented.
 %
 Then, three additional experiments to fully validate \VSDMOEA{} are included.
 %
@@ -18,8 +18,8 @@ This work takes into account some of the most popular benchmarks that are widely
 Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} configured in a 
 standard way.
 %
-The WFG test problems were used with two and three objectives
-and configured with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
+The WFG test problems were used with two and three objectives and 
+were generally configured (excluding the scalability study which defines different number of variables) with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
 %
 In the DTLZ test problems, the number of decision variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
 % 
@@ -41,7 +41,7 @@ Given that all the considered algorithms are stochastic, each execution was repe
 %
 In order to compare the different schemes, the hypervolume indicator (\HV{}) is used.
 %
-Note that in the supplementary material they are also compared with the IGD+ and conclusions are similar.
+Note that in the supplementary material they are also compared with the IGD+ and conclusions are quite similar.
 %
 The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point 
 as is suggested in~\cite{ishibuchi2017reference}.
@@ -67,9 +67,8 @@ For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used 
 An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, and the mean and median \HV{} ratio 
 obtained by $X$ are higher than the mean and median achieved by $Y$.
 
-Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term.
 %
-The common configuration in all the executions was the following: the stopping criterion was set to $250,000$ generations, 
+The common configuration in all the experiments (excluding the experiment that considers different stopping critera) was the following: the stopping criterion was set to $250,000$ generations, 
 the population size was fixed to $100$, and the genetic operators were the Simulated Binary Crossover (SBX) and polynomial 
 mutation~\cite{Joel:SBX1994, Joel:Mutation}.
 %
@@ -91,6 +90,9 @@ Differently, \MOEAD{} requires the same number of weight vectors than the popula
 %
 They were generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
 
+\subsection{State-of-the-art \MOEAS{} against \VSDMOEA{} taking into account long-term executions}
+
+Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term.
 
 
 %
@@ -98,7 +100,7 @@ They were generated with the uniform design (UD) and the good lattice point meth
 % \usepackage{multirow}
 \begin{table}[t]
 \centering
-\caption{Parameterization of each MOEA}
+\caption{ General parameterization taking into account for each MOEA}
 \label{tab:Parametrization}
 \begin{tabular}{c|c}
 \hline
@@ -200,7 +202,9 @@ belonged to the group of winning methods only in 3 functions.
 In order to study the scalability of \VSDMOEA{} in terms of the number of decision variables, all the already described algorithms were tested with
 the same benchmark functions but considering $50$, $100$, and $250$ variables.
 %
-Particularly, the position parameters $k$ and distance parameters $l$ where set taking into account the formulas $k=(4/24) \times n$ and $l=(20/24) \times n$, respectively.
+Given that the WFG problems require an especific configuration through different number of variables, the configuration was taken as follows.
+%
+The position parameters $k$ and distance parameters $l$ where set taking into account the formulas $k=\lfloor4/24 \rfloor \times n$ and $l=\lfloor 20/24 \rfloor \times n$, respectively.
 %
 Since increasing the number of variables highly increases the required computing time, this study takes into account middle-term executions ($25,000$ generations).
 %
@@ -231,7 +235,7 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 %\includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.pdf}
 \includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-2obj.tex}
-\caption{Mean of the \HV{} (35 runs) considering two objectives.}\label{fig:variable-decision-scalability-2obj}
+\caption{Mean of the ratio \HV{} of 35 runs and considering two objectives.}\label{fig:variable-decision-scalability-2obj}
 \end{figure}
 
 \begin{figure}[t]
@@ -239,7 +243,7 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 %\includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.pdf}
 \includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-3obj.tex}
-\caption{Mean of the \HV{} (35 runs) considering three objectives.} \label{fig:variable-decision-scalability-3obj}
+\caption{Mean of the ratio \HV{} of 35 runs and considering three objectives.} \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
 In order to better understand this behaviour, we selected the WFG1 to WFG7 problems.
@@ -319,7 +323,7 @@ several weeks when dealing with large instances of the Traveling Salesman Proble
 %\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure0.eps} \\[0.2cm]
 %\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure1.pdf}
 \includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure1.eps}
-\caption{Evolution of average distance individuals of the problems WFG1-WFG7 with two objectives.}\label{fig:Diversity_2obj}
+\caption{Evolution of ADI for the problems WFG1-WFG7 with two objectives.}\label{fig:Diversity_2obj}
 \end{figure}
 
 
@@ -334,7 +338,7 @@ several weeks when dealing with large instances of the Traveling Salesman Proble
 %\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure0.eps} \\[0.2cm]
 %\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure1.pdf}
 \includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
-\caption{Evolution of average distance individuals of the problems WFG1-WFG7 with three objectives.}\label{fig:Diversity_3obj}
+\caption{Evolution of ADI for the problems WFG1-WFG7 with three objectives.}\label{fig:Diversity_3obj}
 \end{figure}
 %\begin{figure}[t]
 %\centering
