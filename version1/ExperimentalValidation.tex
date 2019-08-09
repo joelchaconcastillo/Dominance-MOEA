@@ -68,8 +68,7 @@ An algorithm $X$ is said to win algorithm $Y$ when the differences between them 
 obtained by $X$ are higher than the mean and median achieved by $Y$.
 
 %
-The common configuration in all the experiments (excluding the experiment that considers different stopping critera) was the following: the stopping criterion was set to $250,000$ generations, 
-the population size was fixed to $100$, and the genetic operators were the Simulated Binary Crossover (SBX) and polynomial 
+The common configuration in all the experiments was the following: the population size was fixed to $100$, and the genetic operators were the Simulated Binary Crossover (SBX) and polynomial 
 mutation~\cite{Joel:SBX1994, Joel:Mutation}.
 %
 The crossover probability was set to $0.9$ and the crossover distribution index was set to $2$.
@@ -92,8 +91,8 @@ They were generated with the uniform design (UD) and the good lattice point meth
 
 \subsection{State-of-the-art \MOEAS{} against \VSDMOEA{} taking into account long-term executions}
 
-Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term.
-
+Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term, thus the stoppin criterion was set to $250,000$ generations.
+%
 
 %
 % Please add the following required packages to your document preamble:
@@ -131,7 +130,7 @@ In each function, the data of the method that attained the largest mean is shown
 %
 Additionally, all the methods that were not statistically inferior than such a method are shown in bold face.
 %
-From here on, the methods shown in bold face in a given problem are reffered to as the winning methods.
+From here on, the methods shown in bold face in a given problem are refered to as the winning methods.
 %
 Attending to the amount of functions where each method is shown is bold-face for the cases 
 with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 11 and 8, respectively.
@@ -206,7 +205,7 @@ Given that the WFG problems require an especific configuration through different
 %
 The position parameters $k$ and distance parameters $l$ were set taking into consideration the formulas $k=\lfloor4/24 \rfloor \times n$ and $l=\lfloor 20/24 \rfloor \times n$, respectively.
 %
-Since increasing the number of variables highly increases the required computing time, this study takes into account middle-term executions ($25,000$ generations).
+Since increasing the number of variables highly increases the required computing time, this study takes into account middle-term executions, thus the stopping criterion was set to $25,000$ generations.
 %
 Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} shows the mean \HV{} ratio for the four tested algorithms,
 considering the problems with two and three objectives, respectively.
@@ -428,6 +427,8 @@ In the case of \VSDMOEA{}, the initial threshold value ($D_I$) must be set.
 Note that in all the previous experiments $D_I = 0.4$ was used.
 %
 This value was selected in base of some preliminary experiments.
+%
+Particularly, the stopping criterion was set to $250,000$ generations.
 %
 This section is devoted to analyze the performance of \VSDMOEA{} when using different $D_I$ values.
 %
