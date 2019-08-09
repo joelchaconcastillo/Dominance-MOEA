@@ -2,7 +2,7 @@
 This section is devoted to fully describe our novel proposal.
 %
 The novelty of \VSDMOEA{} appears in the replacement phase, which incorporates
-the use of variable space diversity and a novel objective-space density estimator. 
+the use of variable space diversity and a novel objective space density estimator. 
 %
 The main principle behind the design of the novel replacement is to use the stopping criterion and 
 elapsed generations with the aim of gradually moving from exploration to exploitation during the search process.
@@ -26,7 +26,7 @@ and polynomial mutation~\cite{Joel:SBX1994, Joel:Mutation}.
 %
 Thus, the contribution appears in the replacement phase.
 %
-The rest of this section is devoted to describe the replacement phase, including the novel objective-space density 
+The rest of this section is devoted to describe the replacement phase, including the novel objective space density 
 estimator.
 
 \begin{algorithm}[t]
@@ -91,14 +91,14 @@ Note that individuals with larger \DCS{} values are those that contribute more s
 In order to avoid an excessive decrease of the exploration degree, individuals with a \DCS{} value lower 
 than a threshold value are penalized.
 %
-Then, among the non-penalized individuals, an objective-space density estimator is used to select the additional
+Then, among the non-penalized individuals, an objective space density estimator is used to select the additional
 survivor of the iteration.
 %
 In our case, the novel density estimator described in the next subsection is used. 
 %
 Note that it might happen that all individuals are penalized.
 %
-In such a case, the individual with a larger contribution to variable-space diversity is selected.
+In such a case, the individual with a larger contribution to variable space diversity is selected.
 
 \begin{figure}[t]
 \centering
@@ -116,7 +116,7 @@ In order to better understand the penalty method, it can be visualized in the fo
 After selecting each survivor, a hyper-sphere 
 centered in such a candidate solution --- in the variable space --- is created.
 %
-Then, all the individuals that are inside a hyper-sphere are penalized and the objective-space estimator takes 
+Then, all the individuals that are inside a hyper-sphere are penalized and the objective space estimator takes 
 into account only the survivors and non-penalized individuals.
 %
 This is illustrated in Fig.~\ref{fig:Hypersphere}, which represents a state where three individuals have been 
@@ -130,7 +130,7 @@ radius $D_t$.
 In this situation, the penalized individuals are the number 4, 5, and 6.
 %
 In the objective space --- right side --- penalized individuals are shown with gray background, indicating
-that the objective-space density estimator does not take them into account.
+that the objective space density estimator does not take them into account.
 
 Since penalizing with a large threshold value --- radius of the hyper-spheres --- induces a large degree of 
 exploration, it makes sense to reduce this value during the optimization process.
@@ -233,7 +233,7 @@ Specifically, candidate non-penalized individuals and current survivors are join
 Then, the well-known non-dominated sorting procedure~\cite{Joel:NSGAII} is executed with such a set, stopping as soon as a front with 
 a candidate individual is found, i.e. with an individual of $R_t$ (line \ref{alg:12}).
 %
-Then, taking the identified front as input, a novel objective-space density estimator is used to select
+Then, taking the identified front as input, a novel objective space density estimator is used to select
 the next survivor (line \ref{alg:13}).
 %
 The specific way in which the contribution to diversity in the objective space of each individual is measured is described in the next section.
