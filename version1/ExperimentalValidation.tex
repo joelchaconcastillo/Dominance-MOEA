@@ -115,7 +115,8 @@ They were generated with the uniform design (UD) and the good lattice point meth
 
 
 \input{Tables/Table_HV_2obj.tex}
-\input{Tables/Table_HV_3obj.tex}
+\input{Tables/Tests_HV_2obj.tex}
+
 
 Tables \ref{tab:StatisticsHV_2obj} shows the attained \HV{} ratio for the benchmark functions
 with two objectives.
@@ -155,6 +156,9 @@ Particularly, it happened in $5$, $5$ and $6$ problems for \RMOEA{}, \NSGAII{} a
 %
 This means that even if \VSDMOEA{} loses in some cases, its deteriotation is always small showing a much more 
 robust behaviour than any other method.
+
+\input{Tables/Table_HV_3obj.tex}
+\input{Tables/Tests_HV_3obj.tex}
 
 In order to better clarify these findings pair-wise statistical tests were done among each tested method in each
 function.
@@ -340,43 +344,57 @@ TODO: PONER CITA.
 
 \subsection{Stopping criteria and Diversity}
 
+As previously discussed, \EAS{} with explicit control of diversity are usually more useful in long-term executions.
+%
+Since in our first experiment we selected a quite large stopping criterion, reader might consider that \VSDMOEA{} is only
+useful in really long-term executions.
+%
+However, this is not the case.
+%
+This section is devoted to analyze the performance of \VSDMOEA{} and state-of-the-art algorithms with several stopping criteria, 
+i.e. maximum number of generations.
+%
+Three different ranges of stopping criterion were explored.
+%
+Each range was split in ten intervals equally distributed and experiments with each differnet number of generations were run.
+%
+Note that state-of-the-art algorithms can be executed just one time (with $250,000$ generations) by saving the intermediate results.
+%
+However, \VSDMOEA{} takes decisions that depend on the stopping criteria, so independent executions were required for each stopping criterion.
+%
+The ranges considered were $[250, 2500]$, $[2500, 25000]$ and $[25000, 250000]$.
+%
+These ranges are referred to as short-term, middle-term and long-term executions, respectively.
 
-This section is devoted to test the performance of the algorithms with several stopping criteria, i.e. maximum number of generations.
+Figures \ref{fig:Performance_time_2obj} and \ref{fig:Performance_time_3obj} show the mean \HV{} ratio attained with each \MOEA{} with two and three objectives respectively.
 %
-As it is previously discussed, state-of-the-art algorithms might suffer of premature convergence or stagnation.
+To calculate this mean ratio, all the problems are considered simultaneously configured as in the first described experiment.
 %
-Therefore, the solutions could converge to promising --but not optimal-- regions at the first stages of the execution, wasting a meaningful quantity of generations.
+Each figure is divided in three graphics corresponding to short-term, middle-term and long-term.
 %
-To deal with this issue, \VSDMOEA{} maintains diversity at different stages as long as the stopping criterion is reached.
+In the two-objective case, for the shortest executions \VSDMOEA{} is not very competitive.
 %
-Accordingly, to have a better understanding of the performance obtained in each algorithm several stopping criteria have been probed.
+In the range $[250, 750]$ presents the last performance, meaning that for really short-term executions,
+explicitly promoting additional diversity is not helpful.
 %
-In those runs the mean of normalized \HV{} of all the problems for two and three objectives are calculated.
+In the case of using $1,000$ generations, the attained \HV{} ratio is similar than the one attained by other methods.
 %
-Mainly, three ranges of stopping criterion were explored.
+Finally, when using more than $925$ generations, the \HV{} ratio attained by \VSDMOEA{} is much larger than the one
+attained by other methods.
 %
-Each range was split in ten intervals, such ranges considered were $[250, 2500]$, $[2500, 25000]$ and $[25000, 250000]$ that are named as short-term, middle-term and long-term executions respectively.
+It is noticeable that \VSDMOEA{} is the only method that really takes advantages of using long-term executions,
+with the remaining methods just showing a slight improvement.
 %
-In Figures \ref{fig:Performance_time_2obj} and \ref{fig:Performance_time_3obj} are showed the mean \HV{} values attained with each \MOEA{} with two and three objectives respectively.
+In the three-objective case, \VSDMOEA{} attains a lower \HV{} ratio than \RMOEA{} and \MOEAD{} in short-term executions,
+but as more generations are granted, the differences decrease.
 %
-Each figure is conformed by three graphics which correspond to short-term, middle-term and long-term.
+In this case, when $5,000$ generations are evolved, the performance of \VSDMOEA{} is similar to the one of \RMOEA{}.
 %
-Those figures demonstrate that \VSDMOEA{} attained competitive results considering short-term executions.
+Finally, as in the two-objective case, with more generations the differences between \VSDMOEA{} and the remaining
+algorithms increase in favor of \VSDMOEA{}.
 %
-Even more, as the maximum number of generations is increased its performance is improved.
-%
-In fact after $2,500$ generations \VSDMOEA{} has a notorious improvement respect to the state-of-the-art-\MOEAS{} in both two and three objectives (second row of Figures \ref{fig:Performance_time_2obj} and \ref{fig:Performance_time_3obj}).
-%
-In problems of two objectives state-of-the-art algorithms attained quite similar \HV{} values in long-term executions ($250,000$ generations).
-%
-The weight-vector based algorithms had a similar behavior modificating the stopping criterion.
-%
-Particularly, \RMOEA{} improved state-of-the-art algorithms with problems of three objectives (Figure \ref{fig:Performance_time_3obj}).
-%
-Moreover, this algorithm showed a lightly constant improvement increasing the number of generations.
-%
-However, \VSDMOEA{} attained the best results in long-term executions and could improve even more increasing the time-execution.
-%
+Thus, while the most important benefits arise in long-term executions, practitioners can benefit from the use
+of \VSDMOEA{} even in shorter executions.
 
 
 \begin{figure}[t]
@@ -410,29 +428,46 @@ However, \VSDMOEA{} attained the best results in long-term executions and could 
 
 \subsection{Analysis of the Initial Threshold Value}
 
-Avoidance of premature convergence and stagnation in long-term executions is a difficult task mainly in multi-objective problems since that --depending of the problem-- the objective space implicitly involves a relation of diversity in the decision variable space.
+One of the disadvantages of including an strategy to control the diversity is that this is usally done at the cost of
+incorporating additional parameters in the designed \EA{}.
 %
-For this reason, a potential strategy to mitigate those drawbacks is to lead the algorithm through different diversity stages and taking into account the stopping criterion to stimulate an appropriate balance between exploration and exploitation.
+In the case of \VSDMOEA{}, the initial threshold value ($D_I$) must be set.
 %
-Nevertheless, the latter strategy, which is Incorporated in \VSDMOEA{}, requires an initial parameter, which represents the initial diversity induced in the algorithm, better known as the initial threshold value ($D_I$).
+Note that in all the previous experiments $D_I = 0.4$ was used;
 %
-Accordingly, this initial threshold value is decreasing as the time elapses.
+This value was selected in base of some preliminary experiments.
 %
-In order, to have a better insight about the effect raised of inducing several initial diversity stages, \VSDMOEA{} is tested with several initial threshold values and in long-term executions ($250,000$ generations).
+This section is devoted to analyze the performance of \VSDMOEA{} when using different $D_I$ values.
 %
-Particularly, this parameter is computed as a fraction of the main normalized diagonal, which belongs to the unitary hyper-cube, the portions considered are $D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\}$.
+Note that, since normalized distances are used, the maximum difference that can appear is $1$.
 %
-In Figure \ref{fig:Initial-distance-factor} is shown the general normalized mean of the \HV{} for each configuration with two an three objectives.
+Additionally, note that when $D_I$ is set to 0, no individual is penalized in base of its diversity contribution,
+so \VSDMOEA{} would behave as a more traditional \MOEA{}.
 %
-Specifically, setting $D_I=0.0$ implies that the diversity is not promoted resulting in a similar behavior as the dominance-based algorithm.
+As a result, the values $D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\}$ were tested.
 %
-In spite of this setting, \VSDMOEA{} attained better \HV{} values with all the settings than the state-of-the-art algorithms, in fact the lowest values were attained without inducing diversity, such values were $0.912$ and $0.893$ for two and three objectives respectively.
+As in previous experiments, the whole set of benchmark problems were used and
+the stopping criterion was set to $250,000$ generations.
+
+Figure \ref{fig:Initial-distance-factor} shows the mean \HV{} ratio attained both for the two-objective and three-objective case.
 %
-Especially, the maximum benefit achieved of inducing diversity is found with an initial threshold value of $DI=0.4$ with two and three objectives.
+Note that even when setting $D_I = 0$, \VSDMOEA{} attained better \HV{} ratios than other state-of-the-art algorithms.
 %
-In addition, the behavior of setting several initial threshold value is quite similar with two and three objectives.
+Particularly, such values were $0.912$ and $0.893$ for two and three objectives, respectively.
 %
-Therefore, inducing diversity and taking into account the elapses generations can be useful mainly for middle-term and long-term executions.
+This means that the novel density estimator put forth in this paper is really helpful.
+%
+However, the increase in performance when using other $D_I$ values is clear.
+%
+The obtained \HV{} ratio quickly increases as larger $D_I$ values up to $0.4$ are used.
+%
+Then, with values in the range $[0.5, 0.9]$ the performance decreases slightly.
+%
+There is quite a large range of values with a really good performance, meaning that 
+the behaviour of \VSDMOEA{} is quite robust.
+%
+Thus, properly setting this parameter is not a complex task.
+%
 
 \begin{figure}[t]
 \centering
@@ -446,7 +481,5 @@ Therefore, inducing diversity and taking into account the elapses generations ca
 
 %\input{Tables/Table_IGDP_2obj.tex}
 %\input{Tables/Table_IGDP_3obj.tex}
-\input{Tables/Tests_HV_2obj.tex}
-\input{Tables/Tests_HV_3obj.tex}
 %\input{Tables/Tests_IGDP_2obj.tex}
 %\input{Tables/Tests_IGDP_3obj.tex}
