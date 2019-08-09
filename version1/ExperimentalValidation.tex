@@ -132,7 +132,7 @@ Additionally, all the methods that were not statistically inferior than such a m
 From here on, the methods shown in bold face in a given problem are reffered to as the winning methods.
 %
 Attending to the amount of functions where each method is shown is bold-face for the cases 
-with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 13 and 11, respectively.
+with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 11 and 8, respectively.
 %
 Thus, while \VSDMOEA{} is the most competitive one, its superiority does not seem impressive
 attending to these numbers.
@@ -142,7 +142,7 @@ than the one attained by \RMOEA{}.
 %
 In fact, the total mean of \RMOEA{} ($0.882$), \NSGAII{} ($0.886$) and \MOEAD{} ($0.881$) are quite similar.
 %
-In contrast \VSDMOEA{} achieved a much higher value ($0.951$).
+In contrast \VSDMOEA{} achieved a much higher value ($0.949$).
 %
 If the data is inspected carefully, it is clear that when \VSDMOEA{} loses, the difference with respect to the
 best method is not really large.
@@ -180,7 +180,7 @@ In this case, the superiority of \VSDMOEA{} is even clearer.
 %
 Taking into account the mean of all functions, \VSDMOEA{} attained again a much larger mean \HV{} ratio than the other methods.
 %
-Particularly, \VSDMOEA{} attained the value $0.916$, whereas the second raked algorithm (\RMOEA{}) attained the value $0.855$.
+Particularly, \VSDMOEA{} attained the value $0.918$, whereas the second ranked algorithm (\RMOEA{}) attained the value $0.855$.
 %
 Once again, the difference between the \HV{} ratio attained by \VSDMOEA{} and by the best method was never larger
 than $0.1$.
@@ -199,6 +199,8 @@ belonged to the group of winning methods only in 3 functions.
 
 In order to study the scalability of \VSDMOEA{} in terms of the number of decision variables, all the already described algorithms were tested with
 the same benchmark functions but considering $50$, $100$, and $250$ variables.
+%
+Particularly, the position parameters $k$ and distance parameters $l$ where set taking into account the formulas $k=(4/24) \times n$ and $l=(20/24) \times n$, respectively.
 %
 Since increasing the number of variables highly increases the required computing time, this study takes into account middle-term executions ($25,000$ generations).
 %
@@ -305,10 +307,8 @@ This probably means that as the technology evolves and longer executions (more g
 the incorporation of explicit control of diversity will be even more important.
 %
 Note that this also happens in the single-objective case, where benefits of explicit control of diversity appears only when using executions of
-several weeks when dealing with large instances of the Traveling Salesman Problem.
+several weeks when dealing with large instances of the Traveling Salesman Problem~\cite{segura2015novel}.
 %
-TODO: PONER CITA.
-
 
 
 
