@@ -290,6 +290,35 @@ The specific way in which the contribution to diversity in the objective space o
 \subsection{A Novel Density Estimator for the Objective Space}
 \label{subsection:density}
 
+\begin{algorithm}[t]
+\algsetup{linenosize=\tiny}
+	\caption{Density estimator} 
+\begin{small}
+\begin{algorithmic}[1]
+\STATE Input: $P_{t+1}$ (Survivors), $R_t$ (Candidates), $F$ (Current front)
+    	\STATE Output: $I \in R_t$ 
+	\STATE $FP = P_{t+1} \cap F$ \label{alg:FS}
+	\STATE $FR = R_{t} \cap F$ \label{alg:FR}
+	\STATE $MaxID = 0$ \label{alg:density_for2}
+        \FOR{$k \in$ number of objectives}\label{alg:density_for}
+	      \STATE Select the best individual $I \in F$ of $k$ according to Eq.~\ref{eqn:extremes}.\label{alg:density_1}
+	  	\IF{ $I \in FR_{t}$}
+	  	 \RETURN $I$ \label{alg:density_2}
+	  	\ENDIF
+	\ENDFOR\label{alg:density_endfor}
+	\FOR{ $ Ic \in FR_t$}
+	\STATE $Improvement = \displaystyle{\min_{s \in FP}\ ID(Ic, s)}$ 
+	\IF{ $Improvement > MaxID$} \label{alg:density_if2}
+	   \STATE $MaxID = Improvement$
+	   \STATE $I = Ic$ 
+	\ENDIF \label{alg:density_endif2}
+	\ENDFOR	\label{alg:density_endfor2}
+    	\RETURN $I$ \label{alg:density_4}
+	\end{algorithmic}
+\end{small}
+\label{alg:Density_Estimator}
+\end{algorithm}
+
 Since the dominance definition is not related to the preservation of diversity in the objective space,
 dominance-based \MOEAS{} usually incorporate objective-space density estimators to promote the survival
 of diverse individuals.
@@ -356,34 +385,6 @@ Denoting as $FP$ the selected members of the input front that are already in $P_
 %
 Then, the individual with the higher contribution to the objective space is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
 
-\begin{algorithm}[t]
-\algsetup{linenosize=\tiny}
-	\caption{Density estimator} 
-\begin{small}
-\begin{algorithmic}[1]
-\STATE Input: $P_{t+1}$ (Survivors), $R_t$ (Candidates), $F$ (Current front)
-    	\STATE Output: $I \in R_t$ 
-	\STATE $FP = P_{t+1} \cap F$ \label{alg:FS}
-	\STATE $FR = R_{t} \cap F$ \label{alg:FR}
-	\STATE $MaxID = 0$ \label{alg:density_for2}
-        \FOR{$k \in$ number of objectives}\label{alg:density_for}
-	      \STATE Select the best individual $I \in F$ of $k$ according to Eq.~\ref{eqn:extremes}.\label{alg:density_1}
-	  	\IF{ $I \in FR_{t}$}
-	  	 \RETURN $I$ \label{alg:density_2}
-	  	\ENDIF
-	\ENDFOR\label{alg:density_endfor}
-	\FOR{ $ Ic \in FR_t$}
-	\STATE $Improvement = \displaystyle{\min_{s \in FP}\ ID(Ic, s)}$ 
-	\IF{ $Improvement > MaxID$} \label{alg:density_if2}
-	   \STATE $MaxID = Improvement$
-	   \STATE $I = Ic$ 
-	\ENDIF \label{alg:density_endif2}
-	\ENDFOR	\label{alg:density_endfor2}
-    	\RETURN $I$ \label{alg:density_4}
-	\end{algorithmic}
-\end{small}
-\label{alg:Density_Estimator}
-\end{algorithm}
 
 
 %

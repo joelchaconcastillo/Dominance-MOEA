@@ -27,12 +27,12 @@ The UF benchmark comprises seven problems with two objectives (UF1-7) and three 
 %
 All of them were configured with $30$ decision variables.
 
-The experimental validation includes three well-known state-of-the-art-MOEAs and \VSDMOEA{}.
+The experimental validation includes three well-known state-of-the-art \MOEAS{} and \VSDMOEA{}.
 %
 The \MOEAS{} that are taken into account are \NSGAII{}~\cite{Joel:jMetal}, \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode}, 
 which can be classified as dominance-based, decomposition-based, and indicator-based, respectively.
 %
-In the case of \MOEAD{} several variants have been devised.
+In the case of \MOEAD{}, several variants have been devised.
 %
 The \MOEAD{} implementation that has been considered is the one that attained the first place in the Congress on Evolutionary Computation 
 2009 MOP Competition~\cite{zhang2009performance}.
@@ -41,7 +41,7 @@ Given that all the considered algorithms are stochastic, each execution was repe
 %
 In order to compare the different schemes, the hypervolume indicator (\HV{}) is used.
 %
-Note that in the supplementary material they are also compared with the IGD+ and conclusions are quite similar.
+Note that in the supplementary material, results are also compared in terms of the IGD+ metrics and conclusions are quite similar.
 %
 The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point 
 as is suggested in~\cite{ishibuchi2017reference}.
@@ -56,7 +56,7 @@ Note that a value equal to one is not attainable because a discrete approximatio
 %
 In order to statistically compare the \HV{} ratios, a similar guideline than the proposed in~\cite{Joel:StatisticalTest} was used. 
 %
-First a Shapiro-Wilk test was performed to check whatever or not the values of the results followed a Gaussian distribution. 
+First a Shapiro-Wilk test was performed to check whether or not the values of the results followed a Gaussian distribution. 
 %
 If, so, the Levene test was used to check for the homogeneity of the variances. 
 %
@@ -169,11 +169,11 @@ Table~\ref{tab:Tests_HV_2obj} shows for the two-objective cases, the amount of t
 lost (column $\downarrow$) and tied (column $\leftrightarrow$).
 %
 Additionally, for each method $M$ we calculated the sum of the differences between the mean \HV{} ratio attained by the best method (the ones with largest mean)
-and the method $M$, for each problem where the best method won $M$.
+and the method $M$, for each problem where, statistically, $M$ lost against the best method.
 %
-This value is shown in the Total Deterioration column.
+This value is shown in the Deterioration column.
 %
-The calculated data confirms that the number of wins is close in \VSDMOEA{} and \RMOEA{}, but the total deterioration is quite lower in the case of \VSDMOEA{}.
+The calculated data confirms that the number of wins is relatively close in \VSDMOEA{} and \RMOEA{}, but the total deterioration is quite lower in the case of \VSDMOEA{}.
 
 
 Tables~\ref{tab:StatisticsHV_3obj} and \ref{tab:Tests_HV_3obj} shows the same information for the problems with three objectives.
@@ -192,7 +192,7 @@ However, all the other methods presented a deteriation larger than $0.1$ in seve
 Particularly, it happened in $5$, $6$ and $6$ problems for \RMOEA{}, \NSGAII{} and \MOEAD{}, respectively.
 %
 Moreover, in this case, \VSDMOEA{} is much superior than the other methods not only in terms of total deterioration but also
-in terms of total wins (see Table~\ref{tab:Tests_HV_2obj} and data shown in bold face).
+in terms of total wins and losses  (see Table~\ref{tab:Tests_HV_2obj} and data shown in bold face).
 %
 \VSDMOEA{} was in the group of the winning methods in 17 out of 19 functions, whereas the second best ranked algorithm (\RMOEA{})
 belonged to the group of winning methods only in 3 functions.
@@ -233,17 +233,17 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 \begin{figure}[t]
 \centering
 %\includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.pdf}
-\includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.eps}
+\includegraphics[scale=0.85]{Images/Graphic-Scalability-2obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-2obj.tex}
-\caption{Mean of the ratio \HV{} of 35 runs and considering two objectives.}\label{fig:variable-decision-scalability-2obj}
+\caption{Mean of the \HV{} ratio of 35 runs considering the two-objective problems}\label{fig:variable-decision-scalability-2obj}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 %\includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.pdf}
-\includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
+\includegraphics[scale=0.85]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-3obj.tex}
-\caption{Mean of the ratio \HV{} of 35 runs and considering three objectives.} \label{fig:variable-decision-scalability-3obj}
+\caption{Mean of the \HV{} ratio of 35 runs considering the three-objective problems} \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
 In order to better understand this behaviour, we selected the WFG1 to WFG7 problems.
@@ -257,24 +257,33 @@ However, if $i$ is a position parameter, modifying $x_i$ in $\vec{\mathbf{x}}$ a
 equivalent to $\vec{\mathbf{x}}$~\cite{huband2005scalable}.
 %
 Additionally, note that we selected the WFG1-WFG7 problems because their distance parameters values associated to all Pareto optimal solutions 
-have exactly the same values.
+have exactly the same values:
 %
-This values is shown as follows:
+%This values is shown as follows:
 \begin{equation}
    x_{i=k+1:n} = 2i \times 0.35
 \end{equation}
 %
 This is really important because it has been shown that for some cases, state-of-the-art
 \MOEAS{} provoke a quick convergence in \textit{distance parameters}, resulting in an effect that is similar to premature convergence
-in the single-objective case.
+in the single-objective case~\cite{Joel:GDE3_CEC09}.
 
-For each algorithms, we calculated the avarege Euclidean distance among individuals (ADI) in the population by considering only 
+\begin{figure}[t]
+\centering
+%\input{Graphic-Diversity_2obj.tex}
+%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure0.pdf} \\
+%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure0.eps} \\[0.2cm]
+%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure1.pdf}
+\includegraphics[scale=0.85]{Images/Graphic-Diversity_2obj_tikz-figure1.eps}
+\caption{Evolution of ADI for the problems WFG1-WFG7 with two objectives}\label{fig:Diversity_2obj}
+\end{figure}
+
+For each algorithm, we calculated the avarege Euclidean distance among individuals (ADI) in the population by considering only 
 the distance parameters.
 %
 Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} shows the ADI evolution for the two-objective and three-objective problems.
 %
 In order to not sature this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 decision variables is shown.
-
 %
 The first evident issue is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
@@ -289,13 +298,13 @@ Additionally, when inspecting more closely the data, some other important aspect
 %
 In the two-objective case, increasing the number of variables provokes a slight increase on the diversity in \RMOEA{}.
 %
-However, the amount of diversity is low even when using 250 distance variables, meaning that incorporating mechanisms to increase diversity --- as it is done in \VSDMOEA{} ---
+However, the amount of diversity is low even when using 250 variables, meaning that incorporating mechanisms to increase diversity --- as it is done in \VSDMOEA{} ---
 is really helpful.
 %
 Differently, in the three-objective case, the amount of diversity in \RMOEA{} is not so low.
 %
 Moreover, increasing the number of decision variables, provokes an important increase in the attained ADI, meaning that in this case,
-fast convergence is not an issue.
+fast convergence is not a so important issue.
 %
 These results show that, as the number of objectives and variables increases, \MOEAS{} tend to maintain a higher variable space diversity
 in an implicity way, meaning that explicitly controlling the variable space diversity is probably not so important.
@@ -316,15 +325,6 @@ several weeks when dealing with large instances of the Traveling Salesman Proble
 
 
 
-\begin{figure}[t]
-\centering
-%\input{Graphic-Diversity_2obj.tex}
-%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure0.pdf} \\
-%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure0.eps} \\[0.2cm]
-%\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure1.pdf}
-\includegraphics[]{Images/Graphic-Diversity_2obj_tikz-figure1.eps}
-\caption{Evolution of ADI for the problems WFG1-WFG7 with two objectives.}\label{fig:Diversity_2obj}
-\end{figure}
 
 
 
@@ -337,8 +337,8 @@ several weeks when dealing with large instances of the Traveling Salesman Proble
 %\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure0.pdf} \\
 %\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure0.eps} \\[0.2cm]
 %\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure1.pdf}
-\includegraphics[]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
-\caption{Evolution of ADI for the problems WFG1-WFG7 with three objectives.}\label{fig:Diversity_3obj}
+\includegraphics[scale=0.85]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
+\caption{Evolution of ADI for the problems WFG1-WFG7 with three objectives}\label{fig:Diversity_3obj}
 \end{figure}
 %\begin{figure}[t]
 %\centering
@@ -360,7 +360,7 @@ i.e. maximum number of generations.
 %
 Three different ranges of stopping criterion were explored.
 %
-Each range was split in ten intervals equally distributed and experiments with each differnet number of generations were run.
+Each range was split in ten intervals equally distributed and experiments with each different number of generations were run.
 %
 Note that state-of-the-art algorithms can be executed just one time (with $250,000$ generations) by saving the intermediate results.
 %
@@ -372,18 +372,18 @@ These ranges are referred to as short-term, middle-term and long-term executions
 
 Figures \ref{fig:Performance_time_2obj} and \ref{fig:Performance_time_3obj} show the mean \HV{} ratio attained with each \MOEA{} with two and three objectives respectively.
 %
-To calculate this mean ratio, all the problems are considered simultaneously configured as in the first described experiment.
+To calculate this mean ratio, all the problems are considered.
 %
 Each figure is divided in three graphics corresponding to short-term, middle-term and long-term.
 %
 In the two-objective case, for the shortest executions \VSDMOEA{} is not very competitive.
 %
-In the range $[250, 750]$ presents the last performance, meaning that for really short-term executions,
+In the range $[250, 750]$ presents the worst performance, meaning that for really short-term executions,
 explicitly promoting additional diversity is not helpful.
 %
 In the case of using $1,000$ generations, the attained \HV{} ratio is similar than the one attained by other methods.
 %
-Finally, when using more than $925$ generations, the \HV{} ratio attained by \VSDMOEA{} is much larger than the one
+Finally, when using more than $1,000$ generations, the \HV{} ratio attained by \VSDMOEA{} is much larger than the one
 attained by other methods.
 %
 It is noticeable that \VSDMOEA{} is the only method that really takes advantages of using long-term executions,
@@ -416,18 +416,6 @@ of \VSDMOEA{} even in shorter executions.
 \caption{Performance of the \MOEAS{} considering three ranges of stopping criterion. The configurations take place with short-term (first row), middle-term (second row) and long-term (third row) executions.}\label{fig:Performance_time_2obj}
 \end{figure}
 
-\begin{figure}[t]
-\centering
-%\input{Graphic-Performance-Time.tex}
-%\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure0.pdf} \\
-%\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure0.eps} \\
-\begin{tabular}{l}
- \includegraphics[scale=0.6]{Images/Time_tikz-figure3.eps}\\[0cm]%[-0.14cm] 
- \includegraphics[scale=0.6]{Images/Time_tikz-figure4.eps}\\[0cm]%[-0.18cm]
- \includegraphics[scale=0.6]{Images/Time_tikz-figure5.eps}
-\end{tabular}
-\caption{Performance of the \MOEAS{} considering three ranges of stopping criterion. The configurations take place with short-term (first row), middle-term (second row) and long-term (third row) executions.}\label{fig:Performance_time_3obj}
-\end{figure}
 
 
 \subsection{Analysis of the Initial Threshold Value}
@@ -437,7 +425,7 @@ incorporating additional parameters in the designed \EA{}.
 %
 In the case of \VSDMOEA{}, the initial threshold value ($D_I$) must be set.
 %
-Note that in all the previous experiments $D_I = 0.4$ was used;
+Note that in all the previous experiments $D_I = 0.4$ was used.
 %
 This value was selected in base of some preliminary experiments.
 %
@@ -455,7 +443,7 @@ the stopping criterion was set to $250,000$ generations.
 
 Figure \ref{fig:Initial-distance-factor} shows the mean \HV{} ratio attained both for the two-objective and three-objective case.
 %
-Note that even when setting $D_I = 0$, \VSDMOEA{} attained better \HV{} ratios than other state-of-the-art algorithms.
+Note that even when $D_I$ is set to $0$, \VSDMOEA{} attained better \HV{} ratios than other state-of-the-art algorithms (see Tables~\ref{tab:StatisticsHV_2obj} and \ref{tab:StatisticsHV_3obj}).
 %
 Particularly, such values were $0.912$ and $0.893$ for two and three objectives, respectively.
 %
@@ -467,18 +455,30 @@ The obtained \HV{} ratio quickly increases as larger $D_I$ values up to $0.4$ ar
 %
 Then, with values in the range $[0.5, 0.9]$ the performance decreases slightly.
 %
-There is quite a large range of values with a really good performance, meaning that 
+There is a large range of values with a really good performance, meaning that 
 the behaviour of \VSDMOEA{} is quite robust.
 %
 Thus, properly setting this parameter is not a complex task.
 %
+\begin{figure}[t]
+\centering
+%\input{Graphic-Performance-Time.tex}
+%\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure0.pdf} \\
+%\includegraphics[angle=90,origin=c]{Images/Graphic-Performance-Time_tikz-figure0.eps} \\
+\begin{tabular}{l}
+ \includegraphics[scale=0.6]{Images/Time_tikz-figure3.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.6]{Images/Time_tikz-figure4.eps}\\[0cm]%[-0.18cm]
+ \includegraphics[scale=0.6]{Images/Time_tikz-figure5.eps}
+\end{tabular}
+\caption{Performance of the \MOEAS{} considering three ranges of stopping criterion. The configurations take place with short-term (first row), middle-term (second row) and long-term (third row) executions.}\label{fig:Performance_time_3obj}
+\end{figure}
 
 \begin{figure}[t]
 \centering
 %\includegraphics[]{Images/Graphic-Initial-Distance_tikz-figure0.pdf} \\
-\includegraphics[]{Images/Graphic-Initial-Distance_tikz-figure0.eps} \\
+\includegraphics[scale=0.85]{Images/Graphic-Initial-Distance_tikz-figure0.eps} \\
 %\input{Graphic-Initial-Distance.tex}
-\caption{Mean of \HV{} values taking into account all instances with several initial threshold values.}\label{fig:Initial-distance-factor}
+\caption{Mean of \HV{} values taking into account all problems with several initial threshold values}\label{fig:Initial-distance-factor}
 \end{figure}
 
 
