@@ -89,9 +89,12 @@ Differently, \MOEAD{} requires the same number of weight vectors than the popula
 %
 They were generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
 
-\subsection{State-of-the-art \MOEAS{} against \VSDMOEA{} taking into account long-term executions}
+\subsection{Comparison against State-of-the-art \MOEAS{} in long-term executions}
 
-Our first experiment was devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term, thus the stopping criterion was set to $250,000$ generations.
+Our first experiment is devoted to compare the performance of \VSDMOEA{} against state-of-the-art proposals in the long-term, which
+is the kind of executions where diversity-based \EAS{} have been more successful.
+%
+Particularly, the stopping criterion was set to $250,000$ generations.
 %
 
 %
@@ -234,7 +237,7 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 %\includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.pdf}
 \includegraphics[scale=0.85]{Images/Graphic-Scalability-2obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-2obj.tex}
-\caption{Mean of the \HV{} ratio of 35 runs considering the two-objective problems}\label{fig:variable-decision-scalability-2obj}
+\caption{Mean of the \HV{} ratio of 35 runs considering the two-objective problems considering several numbers of decision variables}\label{fig:variable-decision-scalability-2obj}
 \end{figure}
 
 \begin{figure}[t]
@@ -242,7 +245,7 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 %\includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.pdf}
 \includegraphics[scale=0.85]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-3obj.tex}
-\caption{Mean of the \HV{} ratio of 35 runs considering the three-objective problems} \label{fig:variable-decision-scalability-3obj}
+\caption{Mean of the \HV{} ratio of 35 runs considering the three-objective problems considering several numbers of decision variables} \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
 In order to better understand this behavior, we selected the WFG1 to WFG7 problems.
