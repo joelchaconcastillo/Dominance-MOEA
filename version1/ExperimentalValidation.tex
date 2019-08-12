@@ -209,11 +209,15 @@ belonged to the group of winning methods only in 3 functions.
 In order to study the scalability of \VSDMOEA{} in terms of the number of decision variables, all the already described algorithms were tested with
 the same benchmark functions but considering $50$, $100$, and $250$ variables.
 %
-Given that the WFG problems require an specific configuration through different number of variables, the configuration was taken as follows.
+Note that in the WFG problems the number of position parameters ($k$) and distance parameters ($l$) must be specified.
 %
-The position parameters $k$ and distance parameters $l$ were set taking into consideration the formulas $k=4/24  \times n$ and $l= 20/24  \times n$, respectively.
+They were set with the following formulae: $k=4/24  \times n$ and $l= 20/24  \times n$, respectively.
 %
-Since increasing the number of variables highly increases the required computing time, this study takes into account middle-term executions, thus the stopping criterion was set to $25,000$ generations.
+Note that increasing the number of variables highly increases the required computing time.
+%
+As a result, this study takes into account middle-term executions.
+%
+Specifically, the stopping criterion was set to $25,000$ generations.
 %
 Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} shows the mean \HV{} ratio for the four tested algorithms,
 considering the problems with two and three objectives, respectively.
@@ -292,7 +296,7 @@ Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} shows the ADI evol
 %
 In order to not saturate this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 decision variables is shown.
 %
-The first evident issue is that \VSDMOEA{} converges much slower than \RMOEA{}.
+The first evident fact is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
 In this way, the difference between the diversity maintained in the first generation and the one maintained after 10\% of the execution,
 is much larger in \RMOEA{} than in \VSDMOEA{}.
@@ -357,7 +361,7 @@ several weeks when dealing with large instances of the Traveling Salesman Proble
 
 As previously discussed, \EAS{} with explicit control of diversity are usually more useful in long-term executions.
 %
-Since in our first experiment we selected a quite large stopping criterion, reader might consider that \VSDMOEA{} is only
+Since in our first experiment we selected a quite large stopping criterion, readers might consider that \VSDMOEA{} is only
 useful in really long-term executions.
 %
 However, this is not the case.
@@ -369,13 +373,13 @@ Three different ranges of stopping criterion were explored.
 %
 Each range was split in ten intervals equally distributed and experiments with each different number of generations were run.
 %
-Note that state-of-the-art algorithms can be executed just one time (with $250,000$ generations) by saving the intermediate results.
-%
-However, \VSDMOEA{} takes decisions that depend on the stopping criteria, so independent executions were required for each stopping criterion.
-%
 The ranges considered were $[250, 2500]$, $[2500, 25000]$ and $[25000, 250000]$.
 %
 These ranges are referred to as short-term, middle-term and long-term executions, respectively.
+%
+Note that state-of-the-art algorithms can be executed just one time (with $250,000$ generations) by saving the intermediate results.
+%
+However, \VSDMOEA{} takes decisions that depends on the stopping criteria, so independent executions were required for each stopping criterion.
 
 Figures \ref{fig:Performance_time_2obj} and \ref{fig:Performance_time_3obj} show the mean \HV{} ratio attained with each \MOEA{} with two and three objectives respectively.
 %
@@ -385,12 +389,12 @@ Each figure is divided in three graphics corresponding to short-term, middle-ter
 %
 In the two-objective case, for the shortest executions \VSDMOEA{} is not very competitive.
 %
-In the range $[250, 750]$ presents the worst performance, meaning that for really short-term executions,
+In the range $[250, 750]$, it presents the worst performance, meaning that for really short-term executions,
 explicitly promoting additional diversity is not helpful.
 %
 In the case of using $1,000$ generations, the attained \HV{} ratio is similar than the one attained by other methods.
 %
-Finally, when using more than $1,000$ generations, the \HV{} ratio attained by \VSDMOEA{} is much larger than the one
+Finally, when using more than $2,500$ generations, the \HV{} ratio attained by \VSDMOEA{} is much larger than the one
 attained by other methods.
 %
 It is noticeable that \VSDMOEA{} is the only method that really takes advantages of using long-term executions,
@@ -436,7 +440,7 @@ Note that in all the previous experiments $D_I = 0.4$ was used.
 %
 This value was selected in base of some preliminary experiments.
 %
-This section is devoted to analyze the performance of \VSDMOEA{} when using different $D_I$ values and taking into account long-term executions ($250,000$ generations).
+This section is devoted to analyze the performance of \VSDMOEA{} when using different $D_I$ values. 
 %
 Note that, since normalized distances are used, the maximum difference that can appear is $1$.
 %
