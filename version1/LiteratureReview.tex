@@ -23,7 +23,7 @@ Additionally, the methods are referred to as \textit{uniprocess-driven} when a s
 
 Among the previous proposals, the replacement-based methods have attained very high-quality results in last years~\cite{Segura:17}, so
 this alternative was selected with the aim of designing a novel \MOEA{} incorporating an explicit way to control the diversity 
-in the variable space.
+of the variable space.
 %
 The basic principle of these methods is to bias the level of exploration in successive generations by 
 controlling the diversity of the survivors~\cite{Segura:17}.
@@ -101,7 +101,7 @@ An advantage of this kind of algorithms is that the indicators usually take into
 diversity of objective space, so incorporating additional mechanisms to promote diversity of the objective 
 space is not required.
 %
-Among the different indicators, hypervolume is a widely accepted Pareto-compliance quality indicator.
+%Among the different indicators, hypervolume is a widely accepted Pareto-compliance quality indicator.
 %
 The Indicator-Based Evolutionary Algorithm (\IBEA{})~\cite{Joel:IBEA} was the first method belonging to this category.
 %
@@ -148,13 +148,13 @@ mechanisms to promote diversity of the variable space.
 %
 However, some efforts have been dedicated to this principle.
 %
-A popular approach to promote the diversity of the decision space is the application of fitness sharing~\cite{Joel:NPGA} 
+A popular approach to promote the diversity of the variable space is the application of fitness sharing~\cite{Joel:NPGA} 
 in a similar way than in single-objective optimization.
 %
-Although, fitness sharing might be used to promote diversity both in objective and decision variable space, most
+Although, fitness sharing might be used to promote diversity of both objective and variable space, most
 popular variants consider only distances in the objective space.
 %
-Another \MOEA{} designed to promote diversity of both the decision and the objective space is the Genetic
+Another \MOEA{} designed to promote diversity of both the variable and the objective space is the Genetic
 Diversity Evolutionary Algorithm (GDEA)~\cite{toffolo2003genetic}.
 %
 In this case, each individual is assigned with a diversity-based objective which is calculated as the
@@ -169,9 +169,9 @@ of promoting diversity of both spaces.
 %
 A different proposal combines the use of two selection operators~\cite{chan2005evolutionary}.
 %
-The first one promotes diversity and quality of the objective space whereas the second one promotes diversity of the decision space.
+The first one promotes diversity and quality of the objective space whereas the second one promotes diversity of the variable space.
 %
-A different approach was to modify the hypervolume to integrate the decision space diversity 
+A different approach was to modify the hypervolume to integrate the variable space diversity 
 in a single metric~\cite{ulrich2010integrating}.
 %
 In this approach, the proposed metric is used to guide the selection in the \MOEA{}.
@@ -180,19 +180,19 @@ Finally, some indirect mechanisms that might affect the diversity have also been
 %
 Probably, the most popular one is the use of mating restrictions~\cite{Joel:STUDY_MATTING_RESTRICTION,Joel:MOEAD_AMS}.
 
-Attending to the results of previous described approaches, it is clear that taking into account the decision space
+Attending to the results of previous described approaches, it is clear that taking into account the variable space
 diversity in the design phase might bring benefits to decision makers because the final solutions obtained by these 
-methods present a larger decision space diversity than the ones obtained by traditional 
+methods present a larger variable space diversity than the ones obtained by traditional 
 approaches~\cite{deb2005omni, rudolph2007capabilities}.
 %
-Thus, while clear improvements are obtained when taking into account metrics related to the variable decision space, the benefits in terms of the 
+Thus, while clear improvements are obtained when taking into account metrics related to the variable space, the benefits in terms of the 
 objective space are not so clear.
 %
 We claim that one of the reasons of this behavior might be that the diversity of the variable space is considered 
 in the whole optimization process.
 %
 However, in a similar way that in the single objective domain, reducing the importance granted to the diversity 
-in the decision space as the generations progress~\cite{Joel:MULTI_DYNAMIC} might be really important to attain
+in the variable space as the generations progress~\cite{Joel:MULTI_DYNAMIC} might be really important to attain
 better approximations of the Pareto front.
 %
 Currently, no \MOEA{} considers this idea, so this principle has guided the design of our novel \MOEA{}.

@@ -3,7 +3,7 @@
 Its design is a quite complex task that require the definition of several components.
 %
 Attending to the differences between single-objective and multi-objective optimizers, it is remarkable
-that several state-of-the-art single-objective optimizers consider explicitly the diversity on the decision variable space specially
+that several state-of-the-art single-objective optimizers consider explicitly the diversity on the variable space specially
 when dealing with long-term executions, whereas this is not the case for \MOEAS{}.
 %
 %Since the performance of \MOEAS{} is measured directly in the objective space, only the diversity of the objective space is taken
@@ -14,7 +14,7 @@ when dealing with long-term executions, whereas this is not the case for \MOEAS{
 %
 %Current \MOEAS{} that take into account the diversity of the decision variable space have not been very successful. 
 
-This paper propose a novel \MOEA{}, which is called \VSDMOEA{} that takes into account both the diversity of the decision variable space
+This paper propose a novel \MOEA{}, which is called \VSDMOEA{} that takes into account both the diversity of the variable space
 and the diversity of the objective space.
 %
 The main novelty is that the importance given to the different diversities is adapted during the optimization process.
@@ -37,7 +37,7 @@ but also offers a competitive performance in short-term executions.
 The scalability analyses show that as the number of objectives and variables increases the implicit variable space maintained by state-of-the-art
 \MOEAS{} also increases.
 %
-Thus, for large enough objectives and decision variables, explicitly considering the diversity of the variable space is not so helpful.
+Thus, for large enough objectives and variables, explicitly considering the diversity of the variable space is not so helpful.
 %
 Finally, the analysis of the initial threshold distance, which is an additional parameter required by \VSDMOEA{}, shows that finding a proper
 value for this parameter is not a difficult task.

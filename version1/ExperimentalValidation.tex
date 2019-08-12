@@ -10,7 +10,7 @@ Thereafter, a comparison of long-term executions between \VSDMOEA{} and state-of
 %
 Then, three additional experiments to fully validate \VSDMOEA{} are included.
 %
-Such analyses are designed to test the scalability in the decision variable space, the performance with different stopping criteria, 
+Such analyses are designed to test the scalability in the variable space, the performance with different stopping criteria, 
 and the behavior with different initial penalty thresholds.
 
 This work takes into account some of the most popular benchmarks that are widely applied in the multi-objective field.
@@ -21,14 +21,13 @@ standard way.
 The WFG test problems were used with two and three objectives and 
 were generally configured with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
 %
-In the DTLZ test problems, the number of decision variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
+In the DTLZ test problems, the number of variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
 % 
 The UF benchmark comprises seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10).
 %
-All of them were configured with $30$ decision variables.
+All of them were configured with $30$ variables.
 %
-Note that the experiment devoted to analyze the scalability in the decision variables, consider different amount
-of decision variables.
+Note that the experiment devoted to analyze the scalability in the variables, consider different amount of variables.
 
 The experimental validation includes three well-known state-of-the-art \MOEAS{} and \VSDMOEA{}.
 %
@@ -206,7 +205,7 @@ belonged to the group of winning methods only in 3 functions.
 
 \subsection{Decision Variable Scalability Analysis}
 
-In order to study the scalability of \VSDMOEA{} in terms of the number of decision variables, all the already described algorithms were tested with
+In order to study the scalability of \VSDMOEA{} in terms of the number of variables, all the already described algorithms were tested with
 the same benchmark functions but considering $50$, $100$, and $250$ variables.
 %
 Note that in the WFG problems the number of position parameters ($k$) and distance parameters ($l$) must be specified.
@@ -224,7 +223,7 @@ considering the problems with two and three objectives, respectively.
 %
 As expected, the \HV{} ratio decrease as the number of variables increases.
 %
-In the two-objective case, the deterioration is similar in every algorithm, so the superiority of \VSDMOEA{} is clear regardless of the amount of decision
+In the two-objective case, the deterioration is similar in every algorithm, so the superiority of \VSDMOEA{} is clear regardless of the amount of 
 variables.
 %
 Differently, in the three-objective case, the deterioration of \VSDMOEA{} is larger than the one of \RMOEA{} and \MOEAD{}.
@@ -246,7 +245,7 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 %\includegraphics[]{Images/Graphic-Scalability-2obj_tikz-figure0.pdf}
 \includegraphics[scale=0.85]{Images/Graphic-Scalability-2obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-2obj.tex}
-\caption{Mean of the \HV{} ratio of 35 runs considering the two-objective problems considering several numbers of decision variables}\label{fig:variable-decision-scalability-2obj}
+\caption{Mean of the \HV{} ratio of 35 runs considering the two-objective problems considering several numbers of variables}\label{fig:variable-decision-scalability-2obj}
 \end{figure}
 
 \begin{figure}[t]
@@ -254,12 +253,12 @@ In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just
 %\includegraphics[]{Images/Graphic-Scalability-3obj_tikz-figure0.pdf}
 \includegraphics[scale=0.85]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
 %\input{Graphic-Scalability-3obj.tex}
-\caption{Mean of the \HV{} ratio of 35 runs considering the three-objective problems considering several numbers of decision variables} \label{fig:variable-decision-scalability-3obj}
+\caption{Mean of the \HV{} ratio of 35 runs considering the three-objective problems considering several numbers of variables} \label{fig:variable-decision-scalability-3obj}
 \end{figure}
 
 In order to better understand this behavior, we selected the WFG1 to WFG7 problems.
 %
-WFG problems divide the decision variables in two kinds of parameters: the distance parameters and the position parameters.
+WFG problems divide the variables in two kinds of parameters (this framework uses the term parameter instead of variable): the distance parameters and the position parameters.
 %
 Note that, a parameter $i$ is a distance parameter when for all $\vec{\mathbf{x}}$, modifying $x_i$ results in a new solution 
 that dominates $\vec{\mathbf{x}}$, is equivalent to $\vec{\mathbf{x}}$, or is dominated by $\vec{\mathbf{x}}$.
@@ -294,7 +293,7 @@ the distance parameters.
 %
 Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} shows the ADI evolution for the two-objective and three-objective problems.
 %
-In order to not saturate this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 decision variables is shown.
+In order to not saturate this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 variables is shown.
 %
 The first evident fact is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
@@ -314,7 +313,7 @@ is really helpful.
 %
 Differently, in the three-objective case, the amount of diversity in \RMOEA{} is not so low.
 %
-Moreover, increasing the number of decision variables, provokes an important increase in the attained ADI, meaning that in this case,
+Moreover, increasing the number of variables, provokes an important increase in the attained ADI, meaning that in this case,
 fast convergence is not a so important issue.
 %
 These results show that, as the number of objectives and variables increases, \MOEAS{} tend to maintain a higher variable space diversity
