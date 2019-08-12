@@ -6,7 +6,6 @@ Then, the state-of-the-art in \MOEAS{} is summarized.
 
 \subsection{Diversity Management in Evolutionary Algorithms}
 
-%In the \EAS{} field is well known that a proper balance between exploration and exploitation is one of the keys to attain quality solutions.
 The proper balance between exploration and exploitation is one of the keys to success in the design of \EAS{}.
 %
 In the single-objective domain it is known that properly managing the diversity of the variable space is a way to control such a balance,
@@ -50,7 +49,6 @@ Particularly, initial phases preserve a larger amount of diversity than the fina
 %
 This last method has inspired the design of the novel proposal put forth in this paper for multi-objective optimization.
 %
-%Thus, our proposal can be classified as an \textit{uniprocess-driven} and \textit{replacement-based} method.
 
 It is important to remark that in the case of multi-objective optimization, few works related to the maintenance of 
 diversity of the variable space have been developed.
@@ -84,13 +82,8 @@ The dominance relation does not inherently promotes the preservation of diversit
 therefore additional techniques such as objective space density estimators are usually integrated with the aim
 of obtaining a proper spread and convergence to the Pareto front.
 %
-%such as niching, crowding and/or clustering are usually integrated with the aim of 
-%obtaining a proper spread and convergence to the Pareto front.
-%
 The most popular dominance-based \MOEA{} is the Non-Dominated Sorting Genetic Algorithm II (NSGA-II)~\cite{Joel:NSGAII}.
 %
-%Another quite popular proposal that belongs to this category is the Generalized Differential Evolution (\GDEIII{})~\cite{Joel:GDE3}, 
-%which integrates a crowding mechanism, and is an extension of the single-objective Differential Evolution.
 
 In order to assess the performance of \MOEAS{}, several quality indicators have been devised.
 %
@@ -101,25 +94,12 @@ An advantage of this kind of algorithms is that the indicators usually take into
 diversity of objective space, so incorporating additional mechanisms to promote diversity of the objective 
 space is not required.
 %
-%Among the different indicators, hypervolume is a widely accepted Pareto-compliance quality indicator.
-%
 The Indicator-Based Evolutionary Algorithm (\IBEA{})~\cite{Joel:IBEA} was the first method belonging to this category.
 %
 A more recent one is the R2-Indicator-Based Evolutionary Multi-objective Algorithm (\RMOEA{})~\cite{trautmann2013r2}, 
 which has reported a quite promising performance in \MOPS{}.
 %
-%Thereafter the Many-Objective Genetic Algorithm Based on the R2 Indicator (MOMBI-II)~\cite{Joel:MOMBI-II}.
-%which has reported quite promising performance both with multi-objective and many-objective problems.
-%
-%MOMBI-II might be considered as a hybrid between indicator-based and dominance-based because it also uses the 
-%Pareto dominance. 
-%
 Its most important feature is the use of the R2 indicator.
-%, which computes the mean difference in utilities through a set 
-%of weight vectors.
-%In any case, its most important feature is the use of the R2 indicator. % \cite{Joel:R2_Indicator}.
-%
-%MOMBI-II has been selected as the indicator-based \MOEA{} to validate our proposal.
 
 Finally, decomposition-based \MOEAS{}~\cite{Joel:MOEAD_AMS} are based on transforming the \MOP{} into a set of 
 single-objective optimization problems that are tackled simultaneously.
@@ -136,12 +116,6 @@ decomposition-based \MOEA{}.
 %
 Its main principles include problem decomposition, weighted aggregation of objectives and mating restrictions 
 through the use of neighborhoods. 
-%
-%Different ways of aggregating the objectives have been tested with \MOEAD{}.
-%
-%Among them, the use of the Tchebycheff approach is quite popular. 
-%
-%\MOEAD{} based on the Tchebycheff approach has been used to validate our proposal.
  
 It is important to stand out that none of the most popular algorithms in the multi-objective field introduce special 
 mechanisms to promote diversity of the variable space.

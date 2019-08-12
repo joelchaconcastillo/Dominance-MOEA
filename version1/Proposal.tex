@@ -65,10 +65,6 @@ Particularly, the replacement phase operates as follows.
 %
 First, the members of the previous population and offspring are joined in a multi-set with $2 \times N$ individuals.
 %
-%Then, for each objective a high-quality candidate solution is selected to survive.
-%
-%The specific process to perform this selection is detailed later.
-%
 Then, an iterative process that selects an additional
 individual at each iteration is used to pick up the $N$ survivors. 
 %
@@ -99,12 +95,10 @@ In our case, the novel density estimator described in the next subsection is use
 %
 Note that it might happen that all individuals are penalized.
 %
-In such a case, the individual with the largest \DCS{} is selected.
+In such a case, the individual with the largest \DCS{} is selected to survive.
 
 \begin{figure}[t]
 \centering
-%\input{Images/Diagram.tex}
-%\includepdf[pages=-]{Images/Diagram.pdf}
 \includegraphics[width=0.45\textwidth]{Images/Diagram.pdf}
 \caption{Penalty Method of the Replacement Phase - The left side represents the variables space and the right side the 
 objective space.} \label{fig:Hypersphere}
@@ -161,7 +155,7 @@ might behave as a traditional non-diversity based \MOEA{}.
 %
 The robustness of the proposal with respect to this additional parameter is studied in our experimental validation.
 
-Algorithm~\ref{alg:Replacement_Phase} fully describes the replacement phase of \VSDMOEA{}.
+Algorithm~\ref{alg:Replacement_Phase} formalizes the replacement phase of \VSDMOEA{}.
 %
 First, the population of the previous generation ($P_t$) and the offspring ($Q_t$) are joined
 in $R_t$ (line \ref{alg:1}).
@@ -195,9 +189,6 @@ This means that in the first $50\%$ of the generations, more exploration than in
         \STATE $P_{t+1} = \emptyset$ \label{alg:2}
         \STATE $Penalized = \emptyset$ \label{alg:3}
 				\STATE $D_t = D_I - D_I * \frac{G_{Elapsed}}{0.5*G_{End}}$ \label{alg:4}
-%				\FOR{$k \in {1...M}$}\label{alg:5}
-%					\STATE Move to $P_{t+1}$ the individual that optimize $AF_k$ (Eq.~\ref{eqn:extremes}) \label{alg:5b}
-%				\ENDFOR
         \WHILE{ $|P_{t+1}|$ $\leq$ N } \label{alg:6}
 					\STATE Compute $DCS$ of individuals in $R_t$ with $P_{t+1}$ used as reference set \label{alg:7}
 					\STATE Move to $Penalized$ the individuals in $R_t$ with $DCS < D_t$  \label{alg:8}
@@ -242,53 +233,6 @@ the next survivor (line \ref{alg:13}).
 %
 The specific way in which the contribution to diversity of the objective space of each individual is measured is described in the next section.
 %
-
-%Note also that, as part of the diversity calculation of the variable space, a metric should be selected.
-%
-%Since our experimental validation is performed with a continuous domain, the normalized Euclidean distance is used.
-%%
-%However, in discrete domains other distance metrics such as the Manhattan, or the Hamming distance might be considered, and the definition of
-%such distance might affect the performance of the approach~\cite{Segura:17}.
-
-
-%The main idea of replacement phase dwell in compute the contribution by each individual to diversity  in both spaces.
-%
-%Hence in each iteration just one individual is selected as survivor until the size of population is reached.
-%
-%Consequently this methodology separate the suitable candidates based in diversity of the variable space, afterward the best candidate in objective space is selected.
-%
-
-%
-%The figure \ref{fig:Hypersphere} shows one iteration of the Replacement Phase where the reference individuals are $\{1, 2, 7\}$ and candidate individuals are $\{3, 4, 5, 6, 8\}$. 
-%
-%The individuals $\{4, 5, 6\}$ are moved to penalized set, since that each one is inside of a hypersphere (gray dotted circles) related to a reference individual.
-%
-%Finally, the candidate solutions are $\{2, 8\}$, due that both belongs to the same rank, the solution $8$ is selected since it has a better contribution to the diversity in the objective space.
-
-%
-%
-%
-%
-% %The function definitions from algorithm~\ref{alg:Replacement_Phase} are explained as follow:
-% %
-% \begin{itemize}
-% \item Diversity\_Variable\_Space(A,B): for each individual from set A an euclidean distance is computed in variable space to the closest solution from the set B.
-% \item Diversity\_Objective\_Space(A,B): for each individual from set A an euclidean distance is computed in objective space to the closest solution from the set B.
-%\end{itemize}
-%
-%
-%
-
-%ESto hay que moverlo a Experimental Validation
-%Due that the initial diversity is influenced by  $D_I$ parameter, several experiments with different values have been realized.
-%
-%Accordingly that each dimension is normalized in the unity, the maximal hypersphere of the variable decisions is denoted by $\sqrt{N}$ where $N$ is the dimension of the variable space. 
-%
-%Under those circumstances, the hypersphere with radius $\sqrt{N}$ will cover outside from the bounds, for this reason it is multiplied by a factor $k$  resulting in the formula$D_I = k * \sqrt[]{N}  \rightarrow k \in (0,1)$.
-%
-%Empirically, the ideal configuration that provides quality solutions is $k=0.25$ .
-%
-%Additionally, the algorithm empirically is enough stable, given that different values of $k$ does not provide drastically differences in the solutions.
 
 \subsection{A Novel Density Estimator for the Objective Space}
 \label{subsection:density}
@@ -345,8 +289,8 @@ the remaining non-penalized individuals that are in $F$.
 Then, similarly to most state-of-the-art algorithms, an action to promote the selection of boundary solutions
 is included.
 %
-Note that selecting the best solution for each objective might provoke some drawbacks related to accepting an small improvement
-in an objective at the cost of important worsening in other objectives~\cite{deb2016optimality}.
+Note that selecting the best solution for each objective might provoke some drawbacks related to accepting a small improvement
+in an objective at the cost of important worsenings in other objectives~\cite{deb2016optimality}.
 %
 To solve this issue augmented functions can be applied, which has been the alternative used in this paper.
 %
@@ -371,8 +315,6 @@ to objective-space diversity is calculated for each individual in $FR$ (lines \r
 %
 This contribution is calculated by taking into account the current survivors of the front ($FP$).
 %
-%Then, the one with a higher contribution is selected (line XXX).
-%
 Particularly, the ``Improvement Distance'' ($ID$) defined for the indicator IGD+~\cite{Joel:Inverted_Generational_Distance_Plus}
 is used.
 %
@@ -387,69 +329,7 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 \end{split}
 \end{equation}
 
-The contribution of each member of $FR$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
+The contribution of each member of $FR (I)$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
 %
 Then, the individual with the highest contribution is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
 
-
-
-%
-%The main idea is to define distances in terms of regions of dominance, instead of using a more direct
-%distance such as the Euclidean one.
-%
-%Particularly, the reason to discard the usage of Euclidean distances, is that given a reference front,
-%an individual might have a large Eucliden distance to all individuals but just because it has a very
-%low-quality value in an objective.
-%
-%However, if the improvement in the other objectives is small, the distance to the already dominated 
-%region is also small.
-%
-%Thus, calculating distances to the dominaned region seems preferable.
-
-%a non-dominated individual can be very distant to the Pareto Front due that such individual could be the best in one objective but mainly deteriorated in the rest of objectives, so as result it has high diversity in objective space.
-%----
-%The key idea is that, a direct Euclidean distance is used, those individuals that have very high values in some
-%of the objectives might present very large distances which is not an adequate property.
-%
-%In fact, high improvements in one objective value are related to larger selection probabilities and not the opposite, so this behavior should be avoided.
-%
-%In order to take this principle into account, when calculating the distance between two individuals
-
-%The key idea takes into account the dominance relation between the candidate and reference individuals. % when the distance is computed.
-%
-%
-%Consequently, the reference and the candidate individuals are compared.
-%
-%If the reference individual is dominated by the candidate individual, then the euclidean distance with no modification is implemented.
-%
-%However if they are non-dominated with each other, then is calculated the minimum distance from the reference individual to the dominated region by the candidate individual. %
-%
-%Additionally, if the candidate individual is dominated by the reference individual, then is computed the $I_\epsilon$ indicator, that gives the minimum distance by which the candidate individual needs to or can be translated in each dimension in objective space such that the reference individual is dominated.
-%
-%Therefore, this distance can be viewed as an amount of inferiority of the solution in comparison with the reference individual.	
-%
-%The improvement distance is defined in Equation (\ref{eq:ImprovementDistance}) which incorporates the $I_\epsilon$ indicator (Equation \ref{eqn:epsilonindicator})  where $R$ and $C$ are the reference and candidate solutions respectively. 
-%\begin{equation}\label{eqn:epsilonindicator}
-%\begin{split}
-%I_\epsilon(R,C) = \begin{dcases}
-%   min_{\epsilon} \{ f_i(C) - \epsilon \leq f_i (R) \} \} & R \preceq C \\
-%%%\quad \forall i \in \{1,..,m \} \\
-%    0 & otherwise
-%	\end{dcases}
-%\end{split}
-%\end{equation}
-
-%Specifically, this distance is considered as a Weakly Pareto Compliant Indicator.
-%
-%In addition, this metric relaxes some difficulties encountered when the number of objectives is increased, given that the solutions in many objectives are usually non-dominated with each other by using the Pareto dominance relation.
-%%
-%This means a very low selection pressure toward the Pareto front in Pareto-dominance-based MOEAS \cite{Joel:Optimization_Of_Scalarizing_Functions_Through_Evolutionary_MOEAS}.
-%
-%Principally, the improvement distance is effective with over-prioritization  of dominance-resist solutions i.e., solutions with exceptional performance in one objective and extremely poor performance in many others \cite{Joel:Failure_MOEAs}.
-%
-
-%Given that the design of this MOEA is considered for long-term executions, the Algorithm \ref{alg:Replacement_Phase} is implemented efficiently.
-%%
-%Thus, the distances are pre-computed and are updated in each iteration, the same for the dominance count information that is used in the \textit{conditionally-non-dominated-sort}.
-%
-%In fact, the worst case complexity of this algorithm is $O((3 N)^2 \times n)$, since that the dimension of the decision variable space is usually bigger than the number of objectives. 

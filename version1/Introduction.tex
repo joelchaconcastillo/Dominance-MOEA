@@ -1,6 +1,4 @@
-\IEEEPARstart{M}{ulti-objective} Optimization Problems (\MOPS{}) %have a number of objective functions which are to be minimized or maximized.
-%
-%Thus, differently to single-objective optimization, \MOPS{} 
+\IEEEPARstart{M}{ulti-objective} Optimization Problems (\MOPS{}) 
 involve the simultaneous optimization of several objective functions that are usually in conflict~\cite{Joel:Kalyanmoy}. 
 %
 A continuous box-constrained minimization \MOP{}, which is the kind of problem addressed in this paper, can be defined as follows:
@@ -42,10 +40,6 @@ solutions~\cite{Joel:BALANCE_DIVERSITY}.
 Diversity can be taken into account in the design of several components such as in the variation 
 stage~\cite{Joel:FUZZY_ADAPTIVE_GA,Joel:CROSSOVER_DIVERSITY}, replacement phase~\cite{Joel:MULTI_DYNAMIC} 
 and/or population model~\cite{Joel:SAWTOOTH}.
-%In the uniprocess-driven proposals only one component is affected, whereas in the multiprocess-driven ones, several components are redesigned~\cite{Joel:Crepinsek}. 
-%
-%One of the key issues that affects the performance of population-based metaheuristics is the premature convergence, which appears
-%when most of the population members are placed in a small region of the search space and the components selected do not allow escaping from this region.
 %
 The explicit consideration of diversity leads to improvements in terms of premature convergence avoidance, 
 meaning that taking into account the diversity in the design of \EAS{} is specially important when dealing 
@@ -74,7 +68,7 @@ Thus, the benefits of such kind of design patterns have been shown in several di
 One of the goals in the design of Multi-objective Evolutionary Algorithms (\MOEAS{}) is to obtain a well-spread 
 set of solutions in the objective space.
 %
-As a result, most state-of-the-art \MOEAS{} consider the diversity of the objective space explicity.
+As a result, most state-of-the-art \MOEAS{} consider the diversity of the objective space explicitly.
 %
 However, this is not the case for the diversity of the variable space.
 %
@@ -87,7 +81,7 @@ taken into account.
 However, this is just an indirect way of preserving the diversity of the variable space, so 
 in some cases the level of diversity might not be large enough to ensure a proper degree of exploration.
 %
-For instance, it has been shown that with some of the \WFG{} benchmarks, in most the state-of-the-art \MOEAS{} 
+For instance, it has been shown that with some of the \WFG{} benchmarks, in most state-of-the-art \MOEAS{} 
 the \textit{distance parameters} quickly converge, meaning that the approach focuses just on optimizing the 
 \textit{position parameters} for a long period of the optimization process~\cite{Joel:GDE3_CEC09}.
 %
@@ -114,16 +108,6 @@ To our knowledge, this is the first \MOEA{} whose design follows this adaptive p
 %
 Since there exist currently a quite large amount of different \MOEAS{}~\cite{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
 three popular schemes have been selected to validate our proposal.
-%
-%Most current taxonomies classify \MOEAS{} into three categories: non-domination based, based on decomposition and based on metrics.
-%
-%An approach of each of these categories was selected.
-%
-%Particularly, they are the Non-Dominated Sorting Genetic Algorithm II (NSGA-II)~\cite{Joel:NSGAII}, the \MOEA{} based on decomposition (\MOEAD{})~\cite{Joel:MOEAD}, 
-%and the Many-Objective Genetic Algorithm Based on the R2 Indicator (MOMBI-II)~\cite{Joel:MOMBI-II}.
-%
-%Additionally, the Generalized Differential Evolution (GDE3)~\cite{Joel:GDE3}, which have a particularly different variation stage that has reported much benefits in several cases,
-%is also included.
 %
 This validation has been performed with several well-known benchmarks and proper quality metrics.
 %
