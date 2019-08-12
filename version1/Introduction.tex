@@ -74,13 +74,17 @@ Thus, the benefits of such kind of design patterns have been shown in several di
 One of the goals in the design of Multi-objective Evolutionary Algorithms (\MOEAS{}) is to obtain a well-spread 
 set of solutions in the objective space.
 %
-The maintenance of some degree of diversity in the objective space implies that complete convergence 
+As a result, most state-of-the-art \MOEAS{} consider the diversity of the objective space explicity.
+%
+However, this is not the case for the diversity of the variable space.
+%
+The maintenance of some degree of diversity of the objective space implies that complete convergence 
 does not appear in the variable space~\cite{Joel:GDE3_CEC09}.
 %
 In some way, the variable space inherits some degree of diversity due to the way in which the objective space is 
 taken into account. 
 %
-However, this is just an indirect way of preserving the diversity in the variable space, so 
+However, this is just an indirect way of preserving the diversity of the variable space, so 
 in some cases the level of diversity might not be large enough to ensure a proper degree of exploration.
 %
 For instance, it has been shown that with some of the \WFG{} benchmarks, in most of the state-of-the-art \MOEAS{} 
@@ -92,13 +96,13 @@ meaning that genetic operators might not be able to generate better trade-offs.
 
 Attending to the differences between state-of-the-art single-objective \EAS{} and \MOEAS{}, 
 this paper proposes a novel \MOEA{}, the Variable Space Diversity based \MOEA{} (\VSDMOEA{}), 
-that is based on controlling the amount of diversity in the variable space in an explicit way.
+that is based on controlling the amount of diversity of the variable space in an explicit way.
 %
 Similarly to the successful methodology applied in single-objective optimization, the stopping criterion and the 
-amount of evaluations performed are used to vary the amount of desired diversity.
+amount of evaluations performed are used to vary the amount of desired diversity of the variable space.
 %
-The main difference with respect to the single-objective case is that the objective space is simultaneously considered, which
-is performed with a novel objective space density estimator.
+The main difference with respect to the single-objective case is that the diversity of the objective space is simultaneously considered, 
+which is performed with a novel objective space density estimator.
 %
 Particularly, the approach grants more importance to the diversity of the variable space in the initial stages, whereas 
 as the generations evolve, it gradually grants more importance to the diversity of the objective space.

@@ -9,7 +9,7 @@ Then, the state-of-the-art in \MOEAS{} is summarized.
 %In the \EAS{} field is well known that a proper balance between exploration and exploitation is one of the keys to attain quality solutions.
 The proper balance between exploration and exploitation is one of the keys to success in the design of \EAS{}.
 %
-In the single-objective domain it is known that properly managing the diversity in the variable space is a way to control such a balance,
+In the single-objective domain it is known that properly managing the diversity of the variable space is a way to control such a balance,
 and as a consequence, a large amount of diversity management techniques have been devised~\cite{Mohan:14}.
 %
 Particularly, these methods are classified depending on the component(s) of the \EA{} that is modified to alter the 
@@ -53,10 +53,10 @@ This last method has inspired the design of the novel proposal put forth in this
 %Thus, our proposal can be classified as an \textit{uniprocess-driven} and \textit{replacement-based} method.
 
 It is important to remark that in the case of multi-objective optimization, few works related to the maintenance of 
-diversity in the variable space have been developed.
+diversity of the variable space have been developed.
 %
 The following section reviews some of the most important \MOEAS{} and introduces some of the works that consider
-the maintenance of diversity in the variable space.
+the maintenance of diversity of the variable space.
 
 \subsection{Multi-objective Evolutionary Algorithms}
 
@@ -80,7 +80,7 @@ Then, one \MOEA{} of each category is selected to carry out the validation of \V
 The dominance-based category includes those schemes where the Pareto dominance relation is used to guide the 
 design of some of its components such as the fitness assignment, parent selection and replacement phase.
 %
-The dominance relation does not inherently promotes the preservation of diversity in the objective space, 
+The dominance relation does not inherently promotes the preservation of diversity of the objective space, 
 therefore additional techniques such as objective space density estimators are usually integrated with the aim
 of obtaining a proper spread and convergence to the Pareto front.
 %
@@ -98,7 +98,7 @@ In the indicator-based \MOEAS{}, the use of the Pareto dominance relation is sub
 to guide the decisions performed by the \MOEA{}.
 %
 An advantage of this kind of algorithms is that the indicators usually take into account both the quality and 
-diversity in objective space, so incorporating additional mechanisms to promote diversity in the objective 
+diversity of objective space, so incorporating additional mechanisms to promote diversity of the objective 
 space is not required.
 %
 Among the different indicators, hypervolume is a widely accepted Pareto-compliance quality indicator.
@@ -144,17 +144,17 @@ through the use of neighborhoods.
 %\MOEAD{} based on the Tchebycheff approach has been used to validate our proposal.
  
 It is important to stand out that none of the most popular algorithms in the multi-objective field introduce special 
-mechanisms to promote diversity in the variable space.
+mechanisms to promote diversity of the variable space.
 %
 However, some efforts have been dedicated to this principle.
 %
-A popular approach to promote the diversity in the decision space is the application of fitness sharing~\cite{Joel:NPGA} 
+A popular approach to promote the diversity of the decision space is the application of fitness sharing~\cite{Joel:NPGA} 
 in a similar way than in single-objective optimization.
 %
 Although, fitness sharing might be used to promote diversity both in objective and decision variable space, most
 popular variants consider only distances in the objective space.
 %
-Another \MOEA{} designed to promote diversity in both the decision and the objective space is the Genetic
+Another \MOEA{} designed to promote diversity of both the decision and the objective space is the Genetic
 Diversity Evolutionary Algorithm (GDEA)~\cite{toffolo2003genetic}.
 %
 In this case, each individual is assigned with a diversity-based objective which is calculated as the
@@ -165,11 +165,11 @@ to sort individuals.
 %
 Another somewhat popular approach is to calculate distances between candidate solutions by taking
 into account both the objective and variable space~\cite{deb2005omni,shir2009enhancing} with the aim
-of promoting diversity in both spaces.
+of promoting diversity of both spaces.
 %
 A different proposal combines the use of two selection operators~\cite{chan2005evolutionary}.
 %
-The first one promotes diversity and quality in the objective space whereas the second one promotes diversity in the decision space.
+The first one promotes diversity and quality of the objective space whereas the second one promotes diversity of the decision space.
 %
 A different approach was to modify the hypervolume to integrate the decision space diversity 
 in a single metric~\cite{ulrich2010integrating}.
@@ -188,7 +188,7 @@ approaches~\cite{deb2005omni, rudolph2007capabilities}.
 Thus, while clear improvements are obtained when taking into account metrics related to the variable decision space, the benefits in terms of the 
 objective space are not so clear.
 %
-We claim that one of the reasons of this behavior might be that the diversity in the variable space is considered 
+We claim that one of the reasons of this behavior might be that the diversity of the variable space is considered 
 in the whole optimization process.
 %
 However, in a similar way that in the single objective domain, reducing the importance granted to the diversity 

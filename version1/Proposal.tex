@@ -72,7 +72,7 @@ First, the members of the previous population and offspring are joined in a mult
 Then, an iterative process that selects an additional
 individual at each iteration is used to pick up the $N$ survivors. 
 %
-In order to take into account the diversity in the decision space, the Distance to Closest Survivor (\DCS{}) of each
+In order to take into account the diversity of the decision space, the Distance to Closest Survivor (\DCS{}) of each
 individual is calculated at each iteration.
 %
 Thus, the \DCS{} of an individual $I$ is calculated as $\displaystyle{\min_{s \in S}\ Distance(I, s)}$,
@@ -240,7 +240,7 @@ a candidate individual is found, i.e. with an individual of $R_t$ (line \ref{alg
 Then, taking the identified front as input, a novel objective space density estimator is used to select
 the next survivor (line \ref{alg:13}).
 %
-The specific way in which the contribution to diversity in the objective space of each individual is measured is described in the next section.
+The specific way in which the contribution to diversity of the objective space of each individual is measured is described in the next section.
 %
 
 %Note also that, as part of the diversity calculation of the variable space, a metric should be selected.
@@ -322,7 +322,7 @@ The specific way in which the contribution to diversity in the objective space o
 \label{alg:Density_Estimator}
 \end{algorithm}
 
-Since the dominance definition is not related to the preservation of diversity in the objective space,
+Since the dominance definition is not related to the preservation of diversity of the objective space,
 dominance-based \MOEAS{} usually incorporate objective-space density estimators to promote the survival
 of diverse individuals.
 %
