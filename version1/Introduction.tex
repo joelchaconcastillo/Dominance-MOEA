@@ -24,7 +24,7 @@ Given two solutions $\vec{\mathbf{x}}$, $\vec{\mathbf{y}}$ $\in \Omega$, $\vec{\
 mathematically denoted by $\vec{\mathbf{x}} \prec \vec{\mathbf{y}}$, iff $\forall m \in {1,2,...,M} : 
 f_m(\vec{\mathbf{x}}) \leq f_m(\vec{\mathbf{y}})$ and $\exists  m \in {1,2,...,M} : f_m(\vec{\mathbf{x}}) < f_m(\vec{\mathbf{y}})$.
 %
-The best solutions of a \MOP{} are those whose objective vectors are not dominated by any other feasible vector.
+The best solutions of a \MOP{} are those that are not dominated by any other feasible vector.
 %
 These solutions are known as the Pareto optimal solutions.
 %
@@ -81,7 +81,7 @@ In some way, the variable space inherits some degree of diversity due to the way
 taken into account. 
 %
 However, this is just an indirect way of preserving the diversity in the variable space, so 
-in some cases the level of diversity might not be large enough to ensure a high degree of exploration.
+in some cases the level of diversity might not be large enough to ensure a proper degree of exploration.
 %
 For instance, it has been shown that with some of the \WFG{} benchmarks, in most of the state-of-the-art \MOEAS{} 
 the \textit{distance parameters} quickly converge, meaning that the approach focuses just on optimizing the 
@@ -135,7 +135,7 @@ The rest of this paper is organized as follows.
 %
 Section~\ref{Sec:LiteratureReview} provides a review of related papers.
 %
-Some key components related to diversity and the \VSDMOEA{} design are discussed.
+Some key components related to diversity and to the \VSDMOEA{} design are discussed.
 %
 The \VSDMOEA{} proposal is detailed in section~\ref{Sec:Proposal}.
 %
