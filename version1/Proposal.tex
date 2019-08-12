@@ -99,7 +99,7 @@ In our case, the novel density estimator described in the next subsection is use
 %
 Note that it might happen that all individuals are penalized.
 %
-In such a case, the individual with a larger contribution to variable space diversity is selected.
+In such a case, the individual with the largest \DCS{} is selected.
 
 \begin{figure}[t]
 \centering
@@ -133,7 +133,7 @@ In this situation, the penalized individuals are the number 4, 5, and 6.
 In the objective space --- right side --- penalized individuals are shown with gray background, indicating
 that the objective space density estimator does not take them into account.
 
-Since penalizing with a large threshold value --- radius of the hyper-spheres --- induces a large degree of 
+Since using a large radius for the hyper-spheres induces a large degree of 
 exploration, it makes sense to reduce this value during the optimization process.
 %
 This is precisely one of the keys of our proposal.
@@ -148,7 +148,10 @@ This means that in the initial phases exploration is promoted.
 However, as the size of the radius decreases only very close individuals are penalized, meaning that more 
 exploitation is allowed.
 %
-Note that this method requires a parameter which is the initial radius of the hyper-spheres which is denoted as $D_I$. 
+Note that this method requires a parameter which is the initial radius of the 
+hyper-spheres or initial threshold value.
+%
+This parameter is denoted as $D_I$. 
 %
 Setting this parameter with a large value might provoke the penalization of a lot of individuals,
 thus non-useful diversity might be maintained.
@@ -193,7 +196,7 @@ This means that in the first $50\%$ of the generations, more exploration than in
         \STATE $Penalized = \emptyset$ \label{alg:3}
 				\STATE $D_t = D_I - D_I * \frac{G_{Elapsed}}{0.5*G_{End}}$ \label{alg:4}
 %				\FOR{$k \in {1...M}$}\label{alg:5}
-%					\STATE Move to $P_{t+1}$ the individual that optimize $AWF_k$ (Eq.~\ref{eqn:extremes}) \label{alg:5b}
+%					\STATE Move to $P_{t+1}$ the individual that optimize $AF_k$ (Eq.~\ref{eqn:extremes}) \label{alg:5b}
 %				\ENDFOR
         \WHILE{ $|P_{t+1}|$ $\leq$ N } \label{alg:6}
 					\STATE Compute $DCS$ of individuals in $R_t$ with $P_{t+1}$ used as reference set \label{alg:7}
@@ -297,16 +300,16 @@ The specific way in which the contribution to diversity in the objective space o
 \begin{algorithmic}[1]
 \STATE Input: $P_{t+1}$ (Survivors), $R_t$ (Candidates), $F$ (Current front)
     	\STATE Output: $I \in R_t$ 
-	\STATE $FP = P_{t+1} \cap F$ \label{alg:FS}
+	\STATE $FP = P_{t+1} \cap F$ \label{alg:FP}
 	\STATE $FR = R_{t} \cap F$ \label{alg:FR}
-	\STATE $MaxID = 0$ \label{alg:density_for2}
         \FOR{$k \in$ number of objectives}\label{alg:density_for}
 	      \STATE Select the best individual $I \in F$ of $k$ according to Eq.~\ref{eqn:extremes}.\label{alg:density_1}
-	  	\IF{ $I \in FR_{t}$}
+	  	\IF{ $I \in FR$}
 	  	 \RETURN $I$ \label{alg:density_2}
 	  	\ENDIF
 	\ENDFOR\label{alg:density_endfor}
-	\FOR{ $ Ic \in FR_t$}
+	\STATE $MaxID = 0$ \label{alg:density_for2}
+	\FOR{ $ Ic \in FR$}
 	\STATE $Improvement = \displaystyle{\min_{s \in FP}\ ID(Ic, s)}$ 
 	\IF{ $Improvement > MaxID$} \label{alg:density_if2}
 	   \STATE $MaxID = Improvement$
@@ -334,20 +337,23 @@ that contributes significantly in terms of objective-space quality and diversity
 
 Algorithm~\ref{alg:Density_Estimator} describes the selection of the next survivor.
 %
-Mainly, the sets $FP$ and $FR$ are employed referring to the survivors and candidates individuals that belong to the current front $F$ respectively (lines \ref{alg:FR} and \ref{alg:FS}).
+First, the sets $FP$ and $FR$ are identified (lines \ref{alg:FP} and \ref{alg:FR}).
 %
-First, similarly to most state-of-the-art algorithms, an action to promote the selection of boundary solutions
+$FP$ contains the current survivors that are in $F$, whereas $FR$ contains
+the remaining candidate individuals that are in $F$.
+%
+Then, similarly to most state-of-the-art algorithms, an action to promote the selection of boundary solutions
 is included.
 %
-Note that selecting the best solution for each objective might provoke some drawbacks related to accepting small improvement
+Note that selecting the best solution for each objective might provoke some drawbacks related to accepting an small improvement
 in an objective at the cost of important worsening in other objectives~\cite{deb2016optimality}.
 %
 To solve this issue augmented functions can be applied, which has been the alternative used in this paper.
 %
-Particularly, iteratively, for each objective $k$ the candidate solution that minimizes the Augmented Weighted Function (AWF)
-given in Eq.~\ref{eqn:extremes} is calculated (lines \ref{alg:density_for} to \ref{alg:density_endfor}).
+Particularly, iteratively, for each objective $k$ the candidate solution that minimizes the Augmented Function (AF)
+given in Eq.~\ref{eqn:extremes} is identified (lines \ref{alg:density_for} to \ref{alg:density_endfor}).
 %
-If such an individual belongs to $R_t$, i.e., it has not been selected yet as a survivor, the next survivor is such an individual
+If such an individual belongs to $FR$, i.e., it has not been selected yet as a survivor, the next survivor is such an individual
 and the process finalizes (line \ref{alg:density_2}).
 %
 Note that, augmented functions usually take into account weight vectors with the aim of dealing with objectives
@@ -357,12 +363,13 @@ Since benchmarks that have similar scales in each objective have been used in th
 such weight vectors.
 
 \begin{equation}\label{eqn:extremes}
-AWF_k (\vec{x}) = f_k(\vec{x}) + 10^{-4} \times  \sum_{j=1}^M f_j( \vec{x} )
+AF_k (\vec{x}) = f_k(\vec{x}) + 10^{-4} \times  \sum_{j=1}^M f_j( \vec{x} )
 \end{equation}
 
-
-In cases where the individuals that optimize each $AWF_K$ function are already in $P_{t+1}$, a contribution
-to objective-space diversity is calculated by taking into account the current survivors of the front (lines \ref{alg:density_for2} to \ref{alg:density_4}).
+In cases where the individuals that optimize each $AF_K$ function are already in $P_{t+1}$, a contribution
+to objective-space diversity is calculated for each individual in $FR$ (lines \ref{alg:density_for2} to \ref{alg:density_4}).
+%
+This contribution is calculated by taking into account the current survivors of the front ($FP$).
 %
 %Then, the one with a higher contribution is selected (line XXX).
 %
@@ -380,10 +387,9 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 \end{split}
 \end{equation}
 
+Thus, the contribution of each member of $FP$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
 %
-Denoting as $FP$ the selected members of the input front that are already in $P_{t+1}$ (line \ref{alg:FS}), the contribution of each member which belongs to the input front and that has not been selected ($R_t$) is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
-%
-Then, the individual with the higher contribution to the objective space is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
+Then, the individual with the highest contribution is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
 
 
 

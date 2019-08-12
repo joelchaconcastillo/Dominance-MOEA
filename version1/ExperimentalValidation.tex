@@ -1,7 +1,7 @@
 This section describes the experimental validation carried out to study the performance and
 to get a clear understanding of the particularities of \VSDMOEA{}.
 %
-Results clearly show that controlling the diversity in the variable space is a way to improve further some of the results 
+Results clearly show that controlling the diversity in the variable space is a way to improve further the results 
 obtained by the state-of-art \MOEAS{}.
 %
 First, some technical specifications of the benchmark problems and implemented algorithms are discussed.
@@ -19,13 +19,16 @@ Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{J
 standard way.
 %
 The WFG test problems were used with two and three objectives and 
-were generally configured (excluding the scalability study which defines different number of variables) with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
+were generally configured with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
 %
 In the DTLZ test problems, the number of decision variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
 % 
 The UF benchmark comprises seven problems with two objectives (UF1-7) and three problems with three objectives (UF8-10).
 %
 All of them were configured with $30$ decision variables.
+%
+Note that the experiment devoted to analyze the scalability in the decision variables, consider different amount
+of decision variables.
 
 The experimental validation includes three well-known state-of-the-art \MOEAS{} and \VSDMOEA{}.
 %
@@ -36,37 +39,6 @@ In the case of \MOEAD{}, several variants have been devised.
 %
 The \MOEAD{} implementation that has been considered is the one that attained the first place in the Congress on Evolutionary Computation 
 2009 MOP Competition~\cite{zhang2009performance}.
-
-Given that all the considered algorithms are stochastic, each execution was repeated $35$ times with different seeds.
-%
-In order to compare the different schemes, the hypervolume indicator (\HV{}) is used.
-%
-Note that in the supplementary material, results are also compared in terms of the IGD+ metrics and conclusions are quite similar.
-%
-The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point 
-as is suggested in~\cite{ishibuchi2017reference}.
-%
-In order to facilitate the interpretation of the attained results, the normalized \HV{} is used~\cite{li2015evolutionary}
-and the value reported is computed as the ratio between the normalized \HV{} reached and the maximum attainable 
-normalized \HV{}.
-%
-In this way, a value equal to one means a perfect approximation.
-%
-Note that a value equal to one is not attainable because a discrete approximation is obtained by \MOEAS{}.
-%
-In order to statistically compare the \HV{} ratios, a similar guideline than the proposed in~\cite{Joel:StatisticalTest} was used. 
-%
-First a Shapiro-Wilk test was performed to check whether or not the values of the results followed a Gaussian distribution. 
-%
-If, so, the Levene test was used to check for the homogeneity of the variances. 
-%
-If samples had equal variance, an ANOVA test was done; if not, a Welch test was performed. 
-%
-For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution. 
-%
-An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, and the mean and median \HV{} ratio 
-obtained by $X$ are higher than the mean and median achieved by $Y$.
-
 %
 The common configuration in all the experiments was the following: the population size was fixed to $100$, and the genetic operators were the Simulated Binary Crossover (SBX) and polynomial 
 mutation~\cite{Joel:SBX1994, Joel:Mutation}.
@@ -88,6 +60,38 @@ The procedure to generate the weight vectors differs in \MOEAD{} and \RMOEA{}.
 Differently, \MOEAD{} requires the same number of weight vectors than the population size.
 %
 They were generated with the uniform design (UD) and the good lattice point method (GLP)~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
+
+Given that all the considered algorithms are stochastic, each execution was repeated $35$ times with different seeds.
+%
+In order to compare the different schemes, the hypervolume indicator (\HV{}) is used.
+%
+Note that in the supplementary material, results are also compared in terms of the IGD+ metrics and conclusions are quite similar.
+%
+The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point 
+as is suggested in~\cite{ishibuchi2017reference}.
+%
+In order to facilitate the interpretation of the attained results, the normalized \HV{} is used~\cite{li2015evolutionary}
+and the value reported is computed as the ratio between the normalized \HV{} reached and the maximum attainable 
+normalized \HV{}.
+%
+In this way, a value equal to one means a perfect approximation.
+%
+Note that a value equal to one is not attainable because a discrete approximation is obtained by \MOEAS{}.
+%
+Finally, in order to statistically compare the \HV{} ratios, a similar guideline than the proposed in~\cite{Joel:StatisticalTest} was used. 
+%
+First a Shapiro-Wilk test was performed to check whether or not the values of the results followed a Gaussian distribution. 
+%
+If, so, the Levene test was used to check for the homogeneity of the variances. 
+%
+If samples had equal variance, an ANOVA test was done; if not, a Welch test was performed. 
+%
+For non-Gaussian distributions, the non-parametric Kruskal-Wallis test was used to test whether samples are drawn from the same distribution. 
+%
+An algorithm $X$ is said to win algorithm $Y$ when the differences between them are statistically significant, and the mean and median \HV{} ratio 
+obtained by $X$ are higher than the mean and median achieved by $Y$.
+
+%
 
 \subsection{Comparison against State-of-the-art \MOEAS{} in long-term executions}
 
@@ -135,10 +139,10 @@ Additionally, all the methods that were not statistically inferior than such a m
 %
 From here on, the methods shown in bold face in a given problem are referred to as the winning methods.
 %
-Attending to the amount of functions where each method is shown is bold-face for the cases 
+Attending to the amount of functions where each method is in the group of the winning methods for the cases 
 with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 11 and 8, respectively.
 %
-Thus, while \VSDMOEA{} is the most competitive one, its superiority does not seem impressive
+Thus, while \VSDMOEA{} is the most competitive one, its superiority does not seem so impressive
 attending to these numbers.
 %
 However, the mean \HV{} ratio attained by \VSDMOEA{} when considering all the problems simultaneously is quite larger
@@ -170,12 +174,13 @@ function.
 Table~\ref{tab:Tests_HV_2obj} shows for the two-objective cases, the amount of times that each method won (column $\uparrow$),
 lost (column $\downarrow$) and tied (column $\leftrightarrow$).
 %
-Additionally, for each method $M$ we calculated the sum of the differences between the mean \HV{} ratio attained by the best method (the ones with largest mean)
-and the method $M$, for each problem where, statistically, $M$ lost against the best method.
+Additionally, for each method $M$ we calculated the sum of the differences between the mean \HV{} ratio attained by the best method 
+(the ones with largest mean) and the method $M$, for each problem where $M$ was not in the group of the winning methods.
 %
 This value is shown in the Deterioration column.
 %
-The calculated data confirms that the number of wins is relatively close in \VSDMOEA{} and \RMOEA{}, but the total deterioration is quite lower in the case of \VSDMOEA{}.
+The calculated data confirms that the number of wins and loses is relatively close in \VSDMOEA{} and \RMOEA{}, 
+but the total deterioration is quite lower in the case of \VSDMOEA{}.
 
 
 Tables~\ref{tab:StatisticsHV_3obj} and \ref{tab:Tests_HV_3obj} shows the same information for the problems with three objectives.
@@ -194,9 +199,9 @@ However, all the other methods presented a deterioration larger than $0.1$ in se
 Particularly, it happened in $5$, $6$ and $6$ problems for \RMOEA{}, \NSGAII{} and \MOEAD{}, respectively.
 %
 Moreover, in this case, \VSDMOEA{} is much superior than the other methods not only in terms of total deterioration but also
-in terms of total wins and losses  (see Table~\ref{tab:Tests_HV_2obj} and data shown in bold face).
+in terms of total wins and losses  (see Table~\ref{tab:Tests_HV_3obj} and data shown in bold face in Table~\ref{tab:StatisticsHV_3obj}).
 %
-\VSDMOEA{} was in the group of the winning methods in 17 out of 19 functions, whereas the second best ranked algorithm (\RMOEA{})
+\VSDMOEA{} was in the group of the winning methods in 16 out of 19 functions, whereas the second best ranked algorithm (\RMOEA{})
 belonged to the group of winning methods only in 3 functions.
 
 \subsection{Decision Variable Scalability Analysis}
@@ -204,11 +209,15 @@ belonged to the group of winning methods only in 3 functions.
 In order to study the scalability of \VSDMOEA{} in terms of the number of decision variables, all the already described algorithms were tested with
 the same benchmark functions but considering $50$, $100$, and $250$ variables.
 %
-Given that the WFG problems require an specific configuration through different number of variables, the configuration was taken as follows.
+Note that in the WFG problems the number of position parameters ($k$) and distance parameters ($l$) must be specified.
 %
-The position parameters $k$ and distance parameters $l$ were set taking into consideration the formulas $k=4/24  \times n$ and $l= 20/24  \times n$, respectively.
+They were set with the following formulae: $k=4/24  \times n$ and $l= 20/24  \times n$, respectively.
 %
-Since increasing the number of variables highly increases the required computing time, this study takes into account middle-term executions, thus the stopping criterion was set to $25,000$ generations.
+Note that increasing the number of variables highly increases the required computing time.
+%
+As a result, this study takes into account middle-term executions.
+%
+Specifically, the stopping criterion was set to $25,000$ generations.
 %
 Figures \ref{fig:variable-decision-scalability-2obj} and \ref{fig:variable-decision-scalability-3obj} shows the mean \HV{} ratio for the four tested algorithms,
 considering the problems with two and three objectives, respectively.
@@ -287,7 +296,7 @@ Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} shows the ADI evol
 %
 In order to not saturate this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 decision variables is shown.
 %
-The first evident issue is that \VSDMOEA{} converges much slower than \RMOEA{}.
+The first evident fact is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
 In this way, the difference between the diversity maintained in the first generation and the one maintained after 10\% of the execution,
 is much larger in \RMOEA{} than in \VSDMOEA{}.
@@ -352,7 +361,7 @@ several weeks when dealing with large instances of the Traveling Salesman Proble
 
 As previously discussed, \EAS{} with explicit control of diversity are usually more useful in long-term executions.
 %
-Since in our first experiment we selected a quite large stopping criterion, reader might consider that \VSDMOEA{} is only
+Since in our first experiment we selected a quite large stopping criterion, readers might consider that \VSDMOEA{} is only
 useful in really long-term executions.
 %
 However, this is not the case.
@@ -364,13 +373,13 @@ Three different ranges of stopping criterion were explored.
 %
 Each range was split in ten intervals equally distributed and experiments with each different number of generations were run.
 %
-Note that state-of-the-art algorithms can be executed just one time (with $250,000$ generations) by saving the intermediate results.
-%
-However, \VSDMOEA{} takes decisions that depend on the stopping criteria, so independent executions were required for each stopping criterion.
-%
 The ranges considered were $[250, 2500]$, $[2500, 25000]$ and $[25000, 250000]$.
 %
 These ranges are referred to as short-term, middle-term and long-term executions, respectively.
+%
+Note that state-of-the-art algorithms can be executed just one time (with $250,000$ generations) by saving the intermediate results.
+%
+However, \VSDMOEA{} takes decisions that depends on the stopping criteria, so independent executions were required for each stopping criterion.
 
 Figures \ref{fig:Performance_time_2obj} and \ref{fig:Performance_time_3obj} show the mean \HV{} ratio attained with each \MOEA{} with two and three objectives respectively.
 %
@@ -380,12 +389,12 @@ Each figure is divided in three graphics corresponding to short-term, middle-ter
 %
 In the two-objective case, for the shortest executions \VSDMOEA{} is not very competitive.
 %
-In the range $[250, 750]$ presents the worst performance, meaning that for really short-term executions,
+In the range $[250, 750]$, it presents the worst performance, meaning that for really short-term executions,
 explicitly promoting additional diversity is not helpful.
 %
 In the case of using $1,000$ generations, the attained \HV{} ratio is similar than the one attained by other methods.
 %
-Finally, when using more than $1,000$ generations, the \HV{} ratio attained by \VSDMOEA{} is much larger than the one
+Finally, when using more than $2,500$ generations, the \HV{} ratio attained by \VSDMOEA{} is much larger than the one
 attained by other methods.
 %
 It is noticeable that \VSDMOEA{} is the only method that really takes advantages of using long-term executions,
@@ -431,7 +440,7 @@ Note that in all the previous experiments $D_I = 0.4$ was used.
 %
 This value was selected in base of some preliminary experiments.
 %
-This section is devoted to analyze the performance of \VSDMOEA{} when using different $D_I$ values and taking into account long-term executions ($250,000$ generations).
+This section is devoted to analyze the performance of \VSDMOEA{} when using different $D_I$ values. 
 %
 Note that, since normalized distances are used, the maximum difference that can appear is $1$.
 %
