@@ -78,7 +78,7 @@ individual is calculated at each iteration.
 Thus, the \DCS{} of an individual $I$ is calculated as $\displaystyle{\min_{s \in S}\ Distance(I, s)}$,
 where $S$ is the multi-set containing the currently selected survivors. 
 %
-Normalized Euclidean distances are considered, so in order to calculate distances between any two individual $A$ and $B$, 
+Normalized Euclidean distances are considered, so in order to calculate distances between any two individuals $A$ and $B$, 
 Eq. (\ref{eqn:distance}) is applied.
 %
 In the first iteration, the $S$ multi-set is empty, so the \DCS{} of each individual is infinity.
@@ -340,7 +340,7 @@ Algorithm~\ref{alg:Density_Estimator} describes the selection of the next surviv
 First, the sets $FP$ and $FR$ are identified (lines \ref{alg:FP} and \ref{alg:FR}).
 %
 $FP$ contains the current survivors that are in $F$, whereas $FR$ contains
-the remaining candidate individuals that are in $F$.
+the remaining non-penalized individuals that are in $F$.
 %
 Then, similarly to most state-of-the-art algorithms, an action to promote the selection of boundary solutions
 is included.
@@ -387,7 +387,7 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 \end{split}
 \end{equation}
 
-Thus, the contribution of each member of $FP$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
+The contribution of each member of $FR$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
 %
 Then, the individual with the highest contribution is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
 

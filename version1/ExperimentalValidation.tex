@@ -19,7 +19,7 @@ Such problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{J
 standard way.
 %
 The WFG test problems were used with two and three objectives and 
-were generally configured with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
+were configured with $24$ parameters, where $20$ of them correspond to distance parameters and $4$ to position parameters.
 %
 In the DTLZ test problems, the number of variables was set to $n=M+r-1$, where $r=\{5, 10, 20\}$ for DTLZ1, DTLZ2 to DTLZ6 and DTLZ7, respectively.
 % 
@@ -141,17 +141,16 @@ From here on, the methods shown in bold face in a given problem are referred to 
 Attending to the amount of functions where each method is in the group of the winning methods for the cases 
 with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 12 and 8, respectively.
 %
-Thus, while \VSDMOEA{} is the most competitive one, its superiority does not seem so impressive
-attending to these numbers.
+Thus, \VSDMOEA{} is the most competitive method in terms of this metric.
 %
-However, the mean \HV{} ratio attained by \VSDMOEA{} when considering all the problems simultaneously is quite larger
+Moreover, it is more impressive that the mean \HV{} ratio attained by \VSDMOEA{} when considering all the problems simultaneously is much larger
 than the one attained by \RMOEA{}.
 %
 In fact, the total mean of \RMOEA{} ($0.882$), \NSGAII{} ($0.886$) and \MOEAD{} ($0.881$) are quite similar.
 %
 In contrast \VSDMOEA{} achieved a much higher value ($0.949$).
 %
-If the data is inspected carefully, it is clear that when \VSDMOEA{} loses, the difference with respect to the
+When the data is inspected carefully, it is clear that in the cases where \VSDMOEA{} loses, the difference with respect to the
 best method is not really large.
 %
 For instance, the difference between the \HV{} ratio attained by \VSDMOEA{} and by the best method was never larger
@@ -178,8 +177,11 @@ Additionally, for each method $M$ we calculated the sum of the differences betwe
 %
 This value is shown in the Deterioration column.
 %
-The calculated data confirms that the number of wins and loses is relatively close in \VSDMOEA{} and \RMOEA{}, 
-but the total deterioration is quite lower in the case of \VSDMOEA{}.
+The calculated data confirms that although \VSDMOEA{} loses in some cases, the overall numbers of wins and losses
+favors \VSDMOEA{}.
+%
+More importantly, the total deterioration is quite lower in the case of \VSDMOEA{} confirming that when \VSDMOEA{} loses the deteriation is not 
+that large.
 
 
 Tables~\ref{tab:StatisticsHV_3obj} and \ref{tab:Tests_HV_3obj} shows the same information for the problems with three objectives.
@@ -274,8 +276,8 @@ have exactly the same values:
    x_{i=k+1:n} = 2i \times 0.35
 \end{equation}
 %
-This is really important because it has been shown that for some cases, state-of-the-art
-\MOEAS{} provoke a quick convergence in \textit{distance parameters}, resulting in an effect that is similar to premature convergence
+This is really important because it has been shown that for these kinds of cases, state-of-the-art
+\MOEAS{} might provoke a quick convergence in \textit{distance parameters}, resulting in an effect that is similar to premature convergence
 in the single-objective case~\cite{Joel:GDE3_CEC09}.
 
 \begin{figure}[t]
@@ -294,6 +296,8 @@ the distance parameters.
 Figures \ref{fig:Diversity_2obj} and \ref{fig:Diversity_3obj} shows the ADI evolution for the two-objective and three-objective problems.
 %
 In order to not saturate this Figures, only the information of \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 variables is shown.
+%
+The behavior of \NSGAII{} and \MOEAD{} --- which are not included --- is similar to the one of \RMOEA{} in terms of the ADI evolution. 
 %
 The first evident fact is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
@@ -319,7 +323,6 @@ fast convergence is not a so important issue.
 These results show that, as the number of objectives and variables increases, \MOEAS{} tend to maintain a higher variable space diversity
 in an implicitly way, meaning that explicitly controlling the variable space diversity is probably not so important.
 %
-Note that the behavior of \NSGAII{} and \MOEAD{} in terms of the ADI evolution is similar to the one analyzed for \RMOEA{}.
 
 Finally, we would like to note that we selected some specific problems to perform long-term executions with 250 distance variables.
 %
@@ -430,7 +433,7 @@ of \VSDMOEA{} even in shorter executions.
 
 \subsection{Analysis of the Initial Threshold Value}
 
-One of the disadvantages of including an strategy to control the diversity is that this is usually done at the cost of
+One of the disadvantages of including a strategy to control the diversity is that this is usually done at the cost of
 incorporating additional parameters in the designed \EA{}.
 %
 In the case of \VSDMOEA{}, the initial threshold value ($D_I$) must be set.
