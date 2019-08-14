@@ -14,11 +14,51 @@ Additionally, all the methods that ere not statistically inferior than such meth
 %
 Thus, the methods shown in bold face in a give problem are referred to as the winning methods.
 %
-Therefore, the amount of functions where each method attained best results in the problems of two objectives  are VSD-MOEA and R2-EMOA with .
+Therefore, the amount of functions where each method attained the best results with two objectives are VSD-MOEA and R2-EMOA with 8 and 13 respectively.
+%
+Evenmore, the mean IGD+ of all the function attained by the VSD-MOEA is quite superior than the remaining algorithms (including the R2-EMOA).
+%
+In fact, the total mean of R2-EMOA ($0.060$), NSGA-II ($0.051$) and MOEA/D ($0.062$) are similar.
+%
+In contrast VSD-MOEA achieved a better value ($0.021$).
+%
+Futhermore, in the cases where VSD-MOEA loses, the difference with respect to the best methods is nor large.
+%
+In fact, the IGD+ attained by VSD-MOEA and by the best method was never larger than $0.05$.
+%
+However, all the other methods presented a deterioration larger than $0.05$ in several cases.
+%
+The counting of functions with deterioration larger than $0.05$ is $7$, $5$ and $8$ for MOEA/D, NSGA-II and R2-EMOA respectively.
+%
+Therefore, if VSD-MOEA loses in some cases, its deterioration is always small resulting in a robust behavior.
+
+In order to have a better understading, several pair-wise statistical tests were done among each tested method in each function.
+%
+Similarly to the main document, the table \ref{tab:Tests_IGDP_2obj} shows statistical test for the two-objective cases.
+%
+The calculated data confirms that although VSD-MOEA loses in some cases, the overall numbers of wins and losses favor VSD-MOEA.
 %
 
+Tables \ref{tab:StatisticsIGDP_3obj} and \ref{tab:Tests_IGDP_3obj} shows the same information for the problems with three obejctives.
+%
+In this case, the superiority of VSD-MOEA is even clearer.
+%
+Takng into account the mean of all functions, VSD-MOEA attained much larger mean of the IGD+ in comparison to the other methods.
+%
+Particularly, VSD-MOEA attained the value $0.059$, whereas the second ranked algorithm (R2-EMOA) attained a value $0.093$.
+%
+The difference between IGD+ attained by VSD-MOEA was never larger than $0.05$.
+%
+However, all the other methods presented a deterioration larger than $0.05$ in at least one problem.
+%
+Particularly, it happened in $5$, $8$ and $7$ problems for MOEA/D, NSGA-II and R2-EMOa respectively.
+%
+Evemore, VSD-MOEA is notably superior than the other methods in terms of both total deterioration and wins.
+%
+VSD-MOEA won in $49$ pair-wise comparisons, whereas the second best ranked algorithm (R2-EMOA) won in $35$ pair-wise comparisons.
 
-The \cite{Joel:WFG}
+
+
 \input{Tables/Table_IGDP_2obj.tex}
 \input{Tables/Table_IGDP_3obj.tex}
 \input{Tables/Tests_IGDP_2obj.tex}
