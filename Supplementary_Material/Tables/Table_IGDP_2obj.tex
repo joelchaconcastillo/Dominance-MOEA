@@ -1,42 +1,81 @@
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
 \begin{table*}[t]
-\centering
-\caption{Statistics IGD+ with two objectives}
+\caption{Summary of the IGD+ results attained for problems with two objectives}
 \label{tab:StatisticsIGDP_2obj}
+\centering
 %\resizebox{\textwidth}{!}{%
 \begin{tabular}{cc|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
 \cline{2-17}
- & \multicolumn{4}{c|}{\textbf{MOEA/D}} & \multicolumn{4}{c|}{\textbf{NSGA-II}} & \multicolumn{4}{c|}{\textbf{R2-EMOA}} & \multicolumn{4}{c}{\textbf{VSD-MOEA}} \\ \cline{2-17} 
- & \textbf{Min} & \textbf{Max} & \textbf{Mean} & \textbf{Std} & \textbf{Min} & \textbf{Max} & \textbf{Mean} & \textbf{Std} & \textbf{Min} & \textbf{Max} & \textbf{Mean} & \textbf{Std} & \textbf{Min} & \textbf{Max} & \textbf{Mean} & \textbf{Std} \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG1}} & 0.006 & 0.015 & 0.008 & 0.002 & 0.006 & 0.014 & 0.008 & 0.002 & 0.006 & 0.061 & 0.013 & 0.014 & 0.006 & 0.019 & 0.008 & 0.003 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG2}} & 0.006 & 0.055 & 0.052 & 0.011 & 0.003 & 0.053 & 0.040 & 0.022 & 0.053 & 0.055 & 0.054 & 0.000 & 0.003 & 0.003 & 0.003 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG3}} & 0.008 & 0.008 & 0.008 & 0.000 & 0.011 & 0.013 & 0.012 & 0.000 & 0.008 & 0.009 & 0.008 & 0.000 & 0.007 & 0.007 & 0.007 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG4}} & 0.007 & 0.007 & 0.007 & 0.000 & 0.007 & 0.010 & 0.008 & 0.001 & 0.005 & 0.005 & 0.005 & 0.000 & 0.006 & 0.006 & 0.006 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG5}} & 0.060 & 0.069 & 0.065 & 0.002 & 0.060 & 0.068 & 0.066 & 0.002 & 0.064 & 0.066 & 0.065 & 0.000 & 0.038 & 0.057 & 0.047 & 0.006 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG6}} & 0.034 & 0.073 & 0.050 & 0.010 & 0.034 & 0.064 & 0.051 & 0.007 & 0.034 & 0.076 & 0.053 & 0.010 & 0.068 & 0.088 & 0.081 & 0.004 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG7}} & 0.007 & 0.007 & 0.007 & 0.000 & 0.008 & 0.010 & 0.009 & 0.000 & 0.005 & 0.006 & 0.005 & 0.000 & 0.006 & 0.006 & 0.006 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG8}} & 0.103 & 0.120 & 0.112 & 0.005 & 0.116 & 0.139 & 0.125 & 0.005 & 0.103 & 0.120 & 0.110 & 0.004 & 0.026 & 0.099 & 0.043 & 0.025 \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG9}} & 0.011 & 0.125 & 0.067 & 0.053 & 0.014 & 0.127 & 0.101 & 0.046 & 0.009 & 0.125 & 0.067 & 0.053 & 0.009 & 0.014 & 0.011 & 0.001 \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ1}} & 0.001 & 0.001 & 0.001 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 & 0.001 & 0.001 & 0.001 & 0.000 & 0.001 & 0.001 & 0.001 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ2}} & 0.002 & 0.002 & 0.002 & 0.000 & 0.002 & 0.003 & 0.003 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ3}} & 0.002 & 0.002 & 0.002 & 0.000 & 0.002 & 0.003 & 0.002 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ4}} & 0.002 & 0.363 & 0.105 & 0.163 & 0.002 & 0.363 & 0.064 & 0.136 & 0.002 & 0.363 & 0.167 & 0.180 & 0.002 & 0.002 & 0.002 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ5}} & 0.002 & 0.002 & 0.002 & 0.000 & 0.002 & 0.003 & 0.003 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ6}} & 0.022 & 0.149 & 0.076 & 0.027 & 0.126 & 0.315 & 0.205 & 0.036 & 0.019 & 0.128 & 0.078 & 0.027 & 0.002 & 0.002 & 0.002 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ7}} & 0.003 & 0.003 & 0.003 & 0.000 & 0.002 & 0.003 & 0.003 & 0.000 & 0.002 & 0.002 & 0.002 & 0.000 & 0.003 & 0.003 & 0.003 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{UF1}} & 0.004 & 0.004 & 0.004 & 0.000 & 0.005 & 0.006 & 0.006 & 0.000 & 0.003 & 0.005 & 0.004 & 0.001 & 0.003 & 0.003 & 0.003 & 0.000 \\ \hline
-\multicolumn{1}{c|}{\textbf{UF2}} & 0.003 & 0.005 & 0.004 & 0.000 & 0.008 & 0.010 & 0.010 & 0.000 & 0.004 & 0.006 & 0.005 & 0.001 & 0.004 & 0.007 & 0.005 & 0.001 \\ \hline
-\multicolumn{1}{c|}{\textbf{UF3}} & 0.141 & 0.237 & 0.180 & 0.022 & 0.052 & 0.127 & 0.084 & 0.020 & 0.119 & 0.210 & 0.183 & 0.021 & 0.038 & 0.095 & 0.057 & 0.013 \\ \hline
-\multicolumn{1}{c|}{\textbf{UF4}} & 0.024 & 0.031 & 0.026 & 0.001 & 0.027 & 0.039 & 0.033 & 0.003 & 0.019 & 0.023 & 0.021 & 0.001 & 0.020 & 0.024 & 0.022 & 0.001 \\ \hline
-\multicolumn{1}{c|}{\textbf{UF5}} & 0.079 & 0.593 & 0.265 & 0.120 & 0.091 & 0.254 & 0.142 & 0.033 & 0.079 & 0.521 & 0.215 & 0.131 & 0.088 & 0.154 & 0.132 & 0.014 \\ \hline
-\multicolumn{1}{c|}{\textbf{UF6}} & 0.066 & 0.529 & 0.380 & 0.108 & 0.037 & 0.542 & 0.193 & 0.114 & 0.064 & 0.432 & 0.266 & 0.103 & 0.021 & 0.065 & 0.038 & 0.011 \\ \hline
-\multicolumn{1}{c|}{\textbf{UF7}} & 0.003 & 0.005 & 0.004 & 0.000 & 0.007 & 0.008 & 0.007 & 0.000 & 0.003 & 0.242 & 0.046 & 0.082 & 0.003 & 0.009 & 0.004 & 0.001 \\ \hline
-\multicolumn{1}{c|}{\textbf{Mean}} & 0.026 & 0.105 & 0.062 & 0.023 & 0.027 & 0.095 & 0.051 & 0.019 & 0.026 & 0.107 & 0.060 & 0.027 & 0.016 & 0.029 & 0.021 & 0.003 \\ \hline
+                                    & \multicolumn{4}{c|}{\textbf{MOEA/D}}                              & \multicolumn{4}{c|}{\textbf{NSGA-II}}                             & \multicolumn{4}{c|}{\textbf{R2-EMOA}}                             & \multicolumn{4}{c}{\textbf{VSD-MOEA}}                            \\ \cline{2-17} 
+                                    & \textbf{Min}   & \textbf{Max}   & \textbf{Mean}  & \textbf{Std}   & \textbf{Min}   & \textbf{Max}   & \textbf{Mean}  & \textbf{Std}   & \textbf{Min}   & \textbf{Max}   & \textbf{Mean}  & \textbf{Std}   & \textbf{Min}   & \textbf{Max}   & \textbf{Mean}  & \textbf{Std}   \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG1}}  & 0.006          & 0.015          & 0.008          & 0.002          & 0.006          & 0.014          & 0.008          & 0.002          & 0.006          & 0.061          & 0.013          & 0.014          & \textbf{0.006} & \textbf{0.019} & \textbf{0.008} & \textbf{0.003} \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG2}}  & 0.006          & 0.055          & 0.052          & 0.011          & 0.003          & 0.053          & 0.040          & 0.022          & 0.053          & 0.055          & 0.054          & 0.000          & \textbf{0.003} & \textbf{0.003} & \textbf{0.003} & \textbf{0.000} \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG3}}  & 0.008          & 0.008          & 0.008          & 0.000          & 0.011          & 0.013          & 0.012          & 0.000          & 0.008          & 0.009          & 0.008          & 0.000          & \textbf{0.007} & \textbf{0.007} & \textbf{0.007} & \textbf{0.000} \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG4}}  & 0.007          & 0.007          & 0.007          & 0.000          & 0.007          & 0.010          & 0.008          & 0.001          & \textbf{0.005} & \textbf{0.005} & \textbf{0.005} & \textbf{0.000} & 0.006          & 0.006          & 0.006          & 0.000          \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG5}}  & 0.060          & 0.069          & 0.065          & 0.002          & 0.060          & 0.068          & 0.066          & 0.002          & 0.064          & 0.066          & 0.065          & 0.000          & \textbf{0.038} & \textbf{0.057} & \textbf{0.047} & \textbf{0.006} \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG6}}  & \textbf{0.034} & \textbf{0.073} & \textbf{0.050} & \textbf{0.010} & \textbf{0.034} & \textbf{0.064} & \textbf{0.051} & \textbf{0.007} & \textbf{0.034} & \textbf{0.076} & \textbf{0.053} & \textbf{0.010} & 0.068          & 0.088          & 0.081          & 0.004          \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG7}}  & 0.007          & 0.007          & 0.007          & 0.000          & 0.008          & 0.010          & 0.009          & 0.000          & \textbf{0.005} & \textbf{0.006} & \textbf{0.005} & \textbf{0.000} & 0.006          & 0.006          & 0.006          & 0.000          \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG8}}  & 0.103          & 0.120          & 0.112          & 0.005          & 0.116          & 0.139          & 0.125          & 0.005          & 0.103          & 0.120          & 0.110          & 0.004          & \textbf{0.026} & \textbf{0.099} & \textbf{0.043} & \textbf{0.025} \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG9}}  & 0.011          & 0.125          & 0.067          & 0.053          & 0.014          & 0.127          & 0.101          & 0.046          & 0.009          & 0.125          & 0.067          & 0.053          & \textbf{0.009} & \textbf{0.014} & \textbf{0.011} & \textbf{0.001} \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ1}} & \textbf{0.001} & \textbf{0.001} & \textbf{0.001} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          & 0.001          & 0.001          & 0.001          & 0.000          & 0.001          & 0.001          & 0.001          & 0.000          \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ2}} & 0.002          & 0.002          & 0.002          & 0.000          & 0.002          & 0.003          & 0.003          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ3}} & 0.002          & 0.002          & 0.002          & 0.000          & 0.002          & 0.003          & 0.002          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ4}} & 0.002          & 0.363          & 0.105          & 0.163          & 0.002          & 0.363          & 0.064          & 0.136          & 0.002          & 0.363          & 0.167          & 0.180          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ5}} & 0.002          & 0.002          & 0.002          & 0.000          & 0.002          & 0.003          & 0.003          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ6}} & 0.022          & 0.149          & 0.076          & 0.027          & 0.126          & 0.315          & 0.205          & 0.036          & 0.019          & 0.128          & 0.078          & 0.027          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ7}} & 0.003          & 0.003          & 0.003          & 0.000          & 0.002          & 0.003          & 0.003          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.003          & 0.003          & 0.003          & 0.000          \\ \hline
+\multicolumn{1}{c|}{\textbf{UF1}}   & 0.004          & 0.004          & 0.004          & 0.000          & 0.005          & 0.006          & 0.006          & 0.000          & 0.003          & 0.005          & 0.004          & 0.001          & \textbf{0.003} & \textbf{0.003} & \textbf{0.003} & \textbf{0.000} \\ \hline
+\multicolumn{1}{c|}{\textbf{UF2}}   & \textbf{0.003} & \textbf{0.005} & \textbf{0.004} & \textbf{0.000} & 0.008          & 0.010          & 0.010          & 0.000          & 0.004          & 0.006          & 0.005          & 0.001          & 0.004          & 0.007          & 0.005          & 0.001          \\ \hline
+\multicolumn{1}{c|}{\textbf{UF3}}   & 0.141          & 0.237          & 0.180          & 0.022          & 0.052          & 0.127          & 0.084          & 0.020          & 0.119          & 0.210          & 0.183          & 0.021          & \textbf{0.038} & \textbf{0.095} & \textbf{0.057} & \textbf{0.013} \\ \hline
+\multicolumn{1}{c|}{\textbf{UF4}}   & 0.024          & 0.031          & 0.026          & 0.001          & 0.027          & 0.039          & 0.033          & 0.003          & \textbf{0.019} & \textbf{0.023} & \textbf{0.021} & \textbf{0.001} & 0.020          & 0.024          & 0.022          & 0.001          \\ \hline
+\multicolumn{1}{c|}{\textbf{UF5}}   & 0.079          & 0.593          & 0.265          & 0.120          & \textbf{0.091} & \textbf{0.254} & \textbf{0.142} & \textbf{0.033} & 0.079          & 0.521          & 0.215          & 0.131          & \textbf{0.088} & \textbf{0.154} & \textbf{0.132} & \textbf{0.014} \\ \hline
+\multicolumn{1}{c|}{\textbf{UF6}}   & 0.066          & 0.529          & 0.380          & 0.108          & 0.037          & 0.542          & 0.193          & 0.114          & 0.064          & 0.432          & 0.266          & 0.103          & \textbf{0.021} & \textbf{0.065} & \textbf{0.038} & \textbf{0.011} \\ \hline
+\multicolumn{1}{c|}{\textbf{UF7}}   & \textbf{0.003} & \textbf{0.005} & \textbf{0.004} & \textbf{0.000} & 0.007          & 0.008          & 0.007          & 0.000          & 0.003          & 0.242          & 0.046          & 0.082          & \textbf{0.003} & \textbf{0.009} & \textbf{0.004} & \textbf{0.001} \\ \hline
+\multicolumn{1}{c|}{\textbf{Mean}}  & 0.026          & 0.105          & 0.062          & 0.023          & 0.027          & 0.095          & 0.051          & 0.019          & 0.026          & 0.107          & 0.060          & 0.027          & 0.016          & 0.029          & 0.021          & 0.003          \\ \hline
 \end{tabular}%
 %}
 \end{table*}
 
+
+%%% Please add the following required packages to your document preamble:
+%%% \usepackage{graphicx}
+%%\begin{table*}[t]
+%%\caption{Summary of the IGD+ ratio results attained for problems with two objectives}
+%%\label{tab:StatisticsIGDP_2obj}
+%%\centering
+%%%\resizebox{\textwidth}{!}{%
+%%\begin{tabular}{cc|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+%%\cline{2-17}
+%%                           & \multicolumn{4}{c|}{\textbf{MOEA/D}}                              & \multicolumn{4}{c|}{\textbf{NSGA-II}}                             & \multicolumn{4}{c|}{\textbf{R2-EMOA}}                             & \multicolumn{4}{c}{\textbf{VSD-MOEA}}                            \\ \cline{2-17} 
+%%                           & Min            & Max            & Mean           & Std            & Min            & Max            & Mean           & Std            & Min            & Max            & Mean           & Std            & Min            & Max            & Mean           & Std            \\ \hline
+%%\multicolumn{1}{c|}{WFG1}  & \textbf{0.006} & \textbf{0.015} & \textbf{0.008} & \textbf{0.002} & 0.006          & 0.014          & 0.008          & 0.002          & 0.006          & 0.061          & 0.013          & 0.014          & 0.006          & 0.019          & 0.008          & 0.003          \\ \hline
+%%\multicolumn{1}{c|}{WFG2}  & 0.006          & 0.055          & 0.052          & 0.011          & 0.003          & 0.053          & 0.040          & 0.022          & 0.053          & 0.055          & 0.054          & 0.000          & \textbf{0.003} & \textbf{0.003} & \textbf{0.003} & \textbf{0.000} \\ \hline
+%%\multicolumn{1}{c|}{WFG3}  & 0.008          & 0.008          & 0.008          & 0.000          & 0.011          & 0.013          & 0.012          & 0.000          & 0.008          & 0.009          & 0.008          & 0.000          & \textbf{0.007} & \textbf{0.007} & \textbf{0.007} & \textbf{0.000} \\ \hline
+%%\multicolumn{1}{c|}{WFG4}  & 0.007          & 0.007          & 0.007          & 0.000          & 0.007          & 0.010          & 0.008          & 0.001          & \textbf{0.005} & \textbf{0.005} & \textbf{0.005} & \textbf{0.000} & 0.006          & 0.006          & 0.006          & 0.000          \\ \hline
+%%\multicolumn{1}{c|}{WFG5}  & 0.060          & 0.069          & 0.065          & 0.002          & 0.060          & 0.068          & 0.066          & 0.002          & 0.064          & 0.066          & 0.065          & 0.000          & \textbf{0.038} & \textbf{0.057} & \textbf{0.047} & \textbf{0.006} \\ \hline
+%%\multicolumn{1}{c|}{WFG6}  & \textbf{0.034} & \textbf{0.073} & \textbf{0.050} & \textbf{0.010} & \textbf{0.034} & \textbf{0.064} & \textbf{0.051} & \textbf{0.007} & \textbf{0.034} & \textbf{0.076} & \textbf{0.053} & \textbf{0.010} & 0.068          & 0.088          & 0.081          & 0.004          \\ \hline
+%%\multicolumn{1}{c|}{WFG7}  & 0.007          & 0.007          & 0.007          & 0.000          & 0.008          & 0.010          & 0.009          & 0.000          & \textbf{0.005} & \textbf{0.006} & \textbf{0.005} & \textbf{0.000} & 0.006          & 0.006          & 0.006          & 0.000          \\ \hline
+%%\multicolumn{1}{c|}{WFG8}  & 0.103          & 0.120          & 0.112          & 0.005          & 0.116          & 0.139          & 0.125          & 0.005          & 0.103          & 0.120          & 0.110          & 0.004          & \textbf{0.026} & \textbf{0.099} & \textbf{0.043} & \textbf{0.025} \\ \hline
+%%\multicolumn{1}{c|}{WFG9}  & 0.011          & 0.125          & 0.067          & 0.053          & 0.014          & 0.127          & 0.101          & 0.046          & 0.009          & 0.125          & 0.067          & 0.053          & \textbf{0.009} & \textbf{0.014} & \textbf{0.011} & \textbf{0.001} \\ \hline
+%%\multicolumn{1}{c|}{DTLZ1} & \textbf{0.001} & \textbf{0.001} & \textbf{0.001} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          & 0.001          & 0.001          & 0.001          & 0.000          & 0.001          & 0.001          & 0.001          & 0.000          \\ \hline
+%%\multicolumn{1}{c|}{DTLZ2} & 0.002          & 0.002          & 0.002          & 0.000          & 0.002          & 0.003          & 0.003          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          \\ \hline
+%%\multicolumn{1}{c|}{DTLZ3} & 0.002          & 0.002          & 0.002          & 0.000          & 0.002          & 0.003          & 0.002          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          \\ \hline
+%%\multicolumn{1}{c|}{DTLZ4} & 0.002          & 0.363          & 0.105          & 0.163          & 0.002          & 0.363          & 0.064          & 0.136          & \textbf{0.002} & \textbf{0.363} & \textbf{0.167} & \textbf{0.180} & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} \\ \hline
+%%\multicolumn{1}{c|}{DTLZ5} & 0.002          & 0.002          & 0.002          & 0.000          & 0.002          & 0.003          & 0.003          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.002          & 0.002          & 0.002          & 0.000          \\ \hline
+%%\multicolumn{1}{c|}{DTLZ6} & 0.022          & 0.149          & 0.076          & 0.027          & 0.126          & 0.315          & 0.205          & 0.036          & 0.019          & 0.128          & 0.078          & 0.027          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} \\ \hline
+%%\multicolumn{1}{c|}{DTLZ7} & 0.003          & 0.003          & 0.003          & 0.000          & 0.002          & 0.003          & 0.003          & 0.000          & \textbf{0.002} & \textbf{0.002} & \textbf{0.002} & \textbf{0.000} & 0.003          & 0.003          & 0.003          & 0.000          \\ \hline
+%%\multicolumn{1}{c|}{UF1}   & 0.004          & 0.004          & 0.004          & 0.000          & 0.005          & 0.006          & 0.006          & 0.000          & 0.003          & 0.005          & 0.004          & 0.001          & \textbf{0.003} & \textbf{0.003} & \textbf{0.003} & \textbf{0.000} \\ \hline
+%%\multicolumn{1}{c|}{UF2}   & \textbf{0.003} & \textbf{0.005} & \textbf{0.004} & \textbf{0.000} & 0.008          & 0.010          & 0.010          & 0.000          & 0.004          & 0.006          & 0.005          & 0.001          & 0.004          & 0.007          & 0.005          & 0.001          \\ \hline
+%%\multicolumn{1}{c|}{UF3}   & 0.141          & 0.237          & 0.180          & 0.022          & 0.052          & 0.127          & 0.084          & 0.020          & 0.119          & 0.210          & 0.183          & 0.021          & \textbf{0.038} & \textbf{0.095} & \textbf{0.057} & \textbf{0.013} \\ \hline
+%%\multicolumn{1}{c|}{UF4}   & 0.024          & 0.031          & 0.026          & 0.001          & 0.027          & 0.039          & 0.033          & 0.003          & \textbf{0.019} & \textbf{0.023} & \textbf{0.021} & \textbf{0.001} & 0.020          & 0.024          & 0.022          & 0.001          \\ \hline
+%%\multicolumn{1}{c|}{UF5}   & 0.079          & 0.593          & 0.265          & 0.120          & \textbf{0.091} & \textbf{0.254} & \textbf{0.142} & \textbf{0.033} & \textbf{0.079} & \textbf{0.521} & \textbf{0.215} & \textbf{0.131} & \textbf{0.088} & \textbf{0.154} & \textbf{0.132} & \textbf{0.014} \\ \hline
+%%\multicolumn{1}{c|}{UF6}   & 0.066          & 0.529          & 0.380          & 0.108          & 0.037          & 0.542          & 0.193          & 0.114          & 0.064          & 0.432          & 0.266          & 0.103          & \textbf{0.021} & \textbf{0.065} & \textbf{0.038} & \textbf{0.011} \\ \hline
+%%\multicolumn{1}{c|}{UF7}   & \textbf{0.003} & \textbf{0.005} & \textbf{0.004} & \textbf{0.000} & 0.007          & 0.008          & 0.007          & 0.000          & 0.003          & 0.242          & 0.046          & 0.082          & 0.003          & 0.009          & 0.004          & 0.001          \\ \hline
+%%\multicolumn{1}{c|}{Mean}  & 0.026          & 0.105          & 0.062          & 0.023          & 0.027          & 0.095          & 0.051          & 0.019          & 0.026          & 0.107          & 0.060          & 0.027          & 0.016          & 0.029          & 0.021          & 0.003          \\ \hline
+%%\end{tabular}%
+%%%}
+%%\end{table*}
 
 
 %%% Please add the following required packages to your document preamble:
