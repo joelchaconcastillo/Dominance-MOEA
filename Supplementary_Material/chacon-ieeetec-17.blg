@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: chacon-ieeetec-17.aux
 The style file: IEEEtran.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -9,49 +9,49 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex/bib/IEEEabrv.bib
 Database file #2: bibtex/bib/References.bib.bib
--- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 1 entry,
-            4087 wiz_defined-function locations,
-            1228 strings with 15587 characters,
-and the built_in function-call counts, 1012 in all, are:
-= -- 69
-> -- 25
-< -- 9
-+ -- 14
-- -- 4
-* -- 63
-:= -- 154
-add.period$ -- 2
-call.type$ -- 1
+You've used 2 entries,
+            4039 wiz_defined-function locations,
+            1227 strings with 15918 characters,
+and the built_in function-call counts, 1874 in all, are:
+= -- 133
+> -- 50
+< -- 18
++ -- 28
+- -- 8
+* -- 102
+:= -- 264
+add.period$ -- 4
+call.type$ -- 2
 change.case$ -- 0
-chr.to.int$ -- 24
-cite$ -- 1
-duplicate$ -- 55
-empty$ -- 77
-format.name$ -- 5
-if$ -- 219
+chr.to.int$ -- 48
+cite$ -- 2
+duplicate$ -- 110
+empty$ -- 153
+format.name$ -- 10
+if$ -- 424
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 9
-newline$ -- 28
-num.names$ -- 1
-pop$ -- 26
+int.to.str$ -- 2
+missing$ -- 18
+newline$ -- 31
+num.names$ -- 2
+pop$ -- 53
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 68
+skip$ -- 133
 stack$ -- 0
-substring$ -- 56
-swap$ -- 51
-text.length$ -- 1
+substring$ -- 112
+swap$ -- 101
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 1
+type$ -- 2
 warning$ -- 0
-while$ -- 5
-width$ -- 2
-write$ -- 33
+while$ -- 10
+width$ -- 3
+write$ -- 41
