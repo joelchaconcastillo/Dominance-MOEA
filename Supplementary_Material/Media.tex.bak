@@ -1,10 +1,10 @@
 This section is devoted to provide a detailed description of the included video \footnote{Alternatively, the video can be consulted in this link \url{https://www.youtube.com/watch?v=ElxK_95n4lE&feature=youtu.be}}.
 %
-Specifically, to have a better insight of the benefits provides by our proposal, a simulation with the WFG5 problem is recorded.
+Especifically, to have a better insight of the benefits provides by our proposal, a simulation with the WFG5 problem is recored.
 %
-The WFG5 problem is selected given its properties being perhaps under standard parameterization on of the most difficult in the WFG toolkit~\cite{Joel:WFG}.
+The WFG5 problem is selected given its properties being perhaps under standart parameterization on of the most difficult in the WFG toolkit~\cite{Joel:WFG}.
 %
-The main peculiarity of this problem dwell in its deceptiveness, which involves several local optimal regions that mislead the search process of the algorithms.
+The main peculiarity of this problem dwell in its desceptiveness, which involves several local optimal regions that mislead the search process of the algorithms.
 %
 Principally, the Pareto geometry of this problem is convex, and such Pareto optimal solutions of the distance parameters have the following values:
 %
@@ -26,11 +26,11 @@ In the decision variable space (right-side) each local optimal region is remarke
 %
 In this configuration, the position and distance parameters are denoted by $x_1$ and $x_2$ respectively, thus according to Equation~\ref{ref:Solution} the Pareto optimal solutions are conformed by the  $x_2=1.4$.
 %
-The video shows that after ten generations the state-of-the-art-MOEAs have converged prematurely to the deceptive regions, contrarily to the VSD-MOEA which is still exploring.
+The video shows that after ten generations the state-of-the-art-MOEAs have converged prematurely to the deceptive regions, contrarely to the VSD-MOEA which is still exploring.
 %
-Approximately until the $30\%$ of total generations, VSD-MOEA has located three individuals in the global optimal region, and in few generations later ($40\%$) has converged moderately to the optimal region.
+Approximatelly until the $30\%$ of total generations, VSD-MOEA has located three individuals in the global optimal region, and in few generations later ($40\%$) has converged moderately to the optimal region.
 %
-Thereafter, at the $50\%$ of total generations, VSD-MOEA has converged to the optimal and desired region (red horizontal line) avoiding the remaining sub-optimal (blue horizontal lines).
+Thereafter, at the $50\%$ of total generations, VSD-MOEA has converged to the optimal and desired region (red horizontal line) avoiding the remaining sub-optimals (blue horizontal lines).
 %
 Finally, the remaining generations VSD-MOEA keeps improving the quality of the solutions in the objective space.
 %%Figures ONE TWO THREE, are taken of the video and belong to the 0\%, 50\% and 100\% of total generations.

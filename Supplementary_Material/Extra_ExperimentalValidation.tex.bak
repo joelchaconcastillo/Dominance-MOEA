@@ -55,7 +55,7 @@ However, all the other methods presented a deterioration larger than $0.05$ in a
 %
 Particularly, it happened in $5$, $8$ and $7$ problems for MOEA/D, NSGA-II and R2-EMOA respectively.
 %
-Even more, VSD-MOEA is notably superior than the other methods in terms of both: total deterioration and statistical-tests (wins).
+Evenmore, VSD-MOEA is notably superior than the other methods in terms of both: total deterioration and statistical-tests (wins).
 %
 VSD-MOEA won in $49$ pair-wise comparisons, whereas the second best ranked algorithm (R2-EMOA) won in $35$ pair-wise comparisons.
 
