@@ -13,9 +13,9 @@ variables $\vec{\mathbf{x}}=(x_1, ..., x_n) \in R^n$, which are constrained by $
 and $x_i^{(U)}$, i.e. the lower bound and upper bound, and $M$ is the number of objective functions
 to optimize.
 %
-The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$,
-each solution is mapped to the objective space with the function $F : \Omega \rightarrow R^M$, 
-which consist of $M$ real-valued objective functions and $R^M$ is called the \textit{objective space}. 
+The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$.
+Each solution is mapped to the objective space with the function $F : \Omega \rightarrow R^M$, 
+which consist of $M$ real-valued objective functions, and $R^M$ is called the \textit{objective space}. 
 
 Given two solutions $\vec{\mathbf{x}}$, $\vec{\mathbf{y}}$ $\in \Omega$, $\vec{\mathbf{x}}$ dominates $\vec{\mathbf{y}}$, 
 mathematically denoted by $\vec{\mathbf{x}} \prec \vec{\mathbf{y}}$, iff $\forall m \in {1,2,...,M} : 
@@ -36,42 +36,42 @@ In single-objective \EAS{}, it has been shown that taking into account the diver
 to properly balance between exploration and exploitation is highly important to attain high quality 
 solutions~\cite{Joel:BALANCE_DIVERSITY}.
 %
-Diversity can be taken into account in the design of several components such as in the variation 
+Diversity can be taken into account in the design of several components, such as in the variation 
 stage~\cite{Joel:FUZZY_ADAPTIVE_GA,Joel:CROSSOVER_DIVERSITY}, replacement phase~\cite{Joel:MULTI_DYNAMIC} 
 and/or population model~\cite{Joel:SAWTOOTH}.
 %
-The explicit consideration of diversity leads to improvements in terms of premature convergence avoidance, 
-meaning that taking into account the diversity in the design of \EAS{} is specially important when dealing 
+The explicit consideration of diversity leads to improvements in terms of avoiding premature convergence, 
+meaning that taking into account diversity in the design of \EAS{} is specially important when dealing 
 with long-term executions.
 %
-Recently, some diversity management algorithms that combine the information of diversity, stopping criterion and elapsed 
+Recently, some diversity management algorithms that combine the information on diversity, stopping criterion and elapsed 
 generations have been devised.
 %
-They have allowed to provide a gradual loss of diversity that depends on the time or evaluations granted to the 
+They have yielded a gradual loss of diversity that depends on the time or evaluations granted to the 
 execution~\cite{Joel:MULTI_DYNAMIC}.
 %
-Particularly the aim of such a methodology is to promote exploration in the initial generations and gradually alter the 
+Specifically, the aim of such a methodology is to promote exploration in the initial generations and gradually alter the 
 behavior towards intensification.
 %
-These schemes have provided really promising results.
+These schemes have provided highly promising results.
 %
 For instance, new best-known solutions for some well-known variants of the frequency assignment problem~\cite{Segura:17},
 and for a two-dimensional packing problem~\cite{Joel:MULTI_DYNAMIC} have been attained using the same principles.
 %
-Additionally, this principle guided the design of the winning strategy of the Second Wind Farm Layout Optimization 
+Additionally, this principle guided the design of the winning strategy at the Second Wind Farm Layout Optimization 
 Competition\footnote{https://www.irit.fr/wind-competition/}, which was held in the Genetic and Evolutionary 
 Computation Conference.
 %
-Thus, the benefits of such kind of design patterns have been shown in several different single-objective optimization problems.
+Thus, the benefits of this type of design patterns have been shown in several different single-objective optimization problems.
 
-One of the goals in the design of Multi-objective Evolutionary Algorithms (\MOEAS{}) is to obtain a well-spread 
+One of the goals when designing Multi-objective Evolutionary Algorithms (\MOEAS{}) is to obtain a well-spread 
 set of solutions in the objective space.
 %
 As a result, most state-of-the-art \MOEAS{} consider the diversity of the objective space explicitly.
 %
 However, this is not the case for the diversity of the variable space.
 %
-The maintenance of some degree of diversity of the objective space implies that complete convergence 
+Maintaining some degree of diversity in the objective space implies that complete convergence 
 does not appear in the variable space~\cite{Joel:GDE3_CEC09}.
 %
 In some way, the variable space inherits some degree of diversity due to the way in which the objective space is 
@@ -84,36 +84,34 @@ For instance, it has been shown that with some of the \WFG{} benchmarks, in most
 the \textit{distance parameters} quickly converge, meaning that the approach focuses just on optimizing the 
 \textit{position parameters} for a long period of the optimization process~\cite{Joel:GDE3_CEC09}.
 %
-Thus, while some degree of diversity is maintained, a similar situation to premature convergence is presented
+Thus, while some degree of diversity is maintained, a similar situation to premature convergence occurs,
 meaning that genetic operators might not be able to generate better trade-offs. 
 
-Attending to the differences between state-of-the-art single-objective \EAS{} and \MOEAS{}, 
+In light of the differences between state-of-the-art single-objective \EAS{} and \MOEAS{}, 
 this paper proposes a novel \MOEA{}, the Variable Space Diversity based \MOEA{} (\VSDMOEA{}), 
-that is based on controlling the amount of diversity of the variable space in an explicit way.
+which relies on explicitly controlling the amount of diversity in the variable space.
 %
 Similarly to the successful methodology applied in single-objective optimization, the stopping criterion and the 
-amount of evaluations performed are used to vary the amount of desired diversity of the variable space.
+number of evaluations performed are used to vary the amount of diversity desired in the variable space.
 %
-The main difference with respect to the single-objective case is that the diversity of the objective space is simultaneously considered, 
-which is performed with a novel objective space density estimator.
+The main difference with respect to the single-objective case is that the diversity of the objective space is simultaneously considered by using a novel objective space density estimator.
 %
-Particularly, the approach grants more importance to the diversity of the variable space in the initial stages, whereas 
+Particularly, the approach grants more importance to the diversity of the variable space in the initial stages, and 
 as the generations evolve, it gradually grants more importance to the diversity of the objective space.
 %
-In fact, at the last period of the execution, the diversity of the variable space is neglected, so in the last phases the proposal 
+In fact, in the last period of the execution, the diversity of the variable space is neglected, so in the last phases the proposal 
 is quite similar to current state-of-the-art approaches.
 %
 To our knowledge, this is the first \MOEA{} whose design follows this adaptive principle.
 %
-Since there exist currently a quite large amount of different \MOEAS{}~\cite{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
+Since there currently exist quite a large number of different \MOEAS{}~\cite{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
 three popular schemes have been selected to validate our proposal.
 %
-This validation has been performed with several well-known benchmarks and proper quality metrics.
+This validation was performed with several well-known benchmarks and proper quality metrics.
 %
-The important benefits of properly taking into account the diversity of the variable space is
-clearly shown in this paper.
+This paper clearly shows the important benefits of properly taking into account the diversity of the variable space.
 %
-Particularly, the advantages are clearer in the most complex problems.
+In particular, the advantages are clearer in the most complex problems.
 %
 Note that this is consistent with the single-objective case, where the most important benefits have been obtained
 in complex multi-modal cases~\cite{Segura:17}.
@@ -130,6 +128,6 @@ Section~\ref{Sec:ExperimentalValidation} is devoted to the experimental validati
 %
 Finally, conclusions and some lines of future work are given in Section~\ref{Sec:Conclusion}.
 %
-Note also that some supplementary materials are given.
+Note also that some supplementary materials are provided.
 %
-They include details of the experimental results with additional metrics as well as an explanatory video.
+They include details of the experimental results with additional metrics, as well as an explanatory video.

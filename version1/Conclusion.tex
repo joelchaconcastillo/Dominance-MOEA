@@ -1,44 +1,42 @@
-\EAS{} have been one of the most popular approaches to deal with complex optimization problems.
+\EAS{} have been one of the most popular approaches for dealing with complex optimization problems.
 %
-Its design is a quite complex task that require the definition of several components.
+Their design is a highly complex task that requires defining several components.
 %
-Attending to the differences between single-objective and multi-objective optimizers, it is remarkable
-that several state-of-the-art single-objective optimizers consider explicitly the diversity of the variable space specially
+Looking at the differences between single-objective and multi-objective optimizers, it is worth noting
+that several state-of-the-art single-objective optimizers explicitly consider the diversity of the variable space, especially
 when dealing with long-term executions, whereas this is not the case for \MOEAS{}.
 
-This paper propose a novel \MOEA{}, which is called \VSDMOEA{} that takes into account both the diversity of the variable space
-and the diversity of the objective space.
+This paper proposes a novel \MOEA{}, called \VSDMOEA{}, that takes into account the diversity of both the variable space
+and the objective space.
 %
 The main novelty is that the importance given to the different diversities is adapted during the optimization process.
 %
-Particularly, in \VSDMOEA{} more importance is given to the diversity of the variable space in the initial stages
-but, as the generations evolves, it gradually grants more importance to the diversity of the objective space.
+In particular, in \VSDMOEA{} more importance is given to the diversity of the variable space in the initial stages,
+but as the generations evolve, it gradually grants more importance to the diversity of the objective space.
 %
-This is performed with a penalty method that is integrated in the replacement phase.
+This is performed using a penalty method that is integrated into the replacement phase.
 %
-Additionally, a novel density estimator based on the IGD+ is integrated.
-%
-This is used to select among the non-penalized individuals.
+Also included is a novel density estimator based on IGD+ that is used to select from the non-penalized individuals.
 
-The experimental validation carried out shows a remarkable improvement of \VSDMOEA{} when compared to state-of-the-art \MOEAS{} both in
+The experimental validation carried out shows a remarkable improvement in \VSDMOEA{} when compared to state-of-the-art \MOEAS{} both in
 two-objective and three-objective problems.
 %
-Moreover, our proposal not only improves the state-of-the-art algorithms in long-term and mid-term executions,
-but also offers a competitive performance in short-term executions.
+Moreover, our proposal not only improves the state-of-the-art algorithms in long-term and medium-term executions,
+it also offers a competitive performance in short-term executions.
 %
-The scalability analyses show that as the number of objectives and variables increases the implicit variable space maintained by state-of-the-art
+The scalability analyses show that as the number of objectives and variables increases, the implicit variable space maintained by state-of-the-art
 \MOEAS{} also increases.
 %
-Thus, for large enough objectives and variables, explicitly considering the diversity of the variable space is not so helpful.
+Thus, for large enough objectives and variables, explicitly considering the diversity of the variable space is not very helpful.
 %
 Finally, the analysis of the initial threshold distance, which is an additional parameter required by \VSDMOEA{}, shows that finding a proper
 value for this parameter is not a difficult task.
 
-In the future we plan to integrate the principles studied in this paper with other categories of \MOEAS{}.
+In the future, we plan to apply the principles studied in this paper to other categories of \MOEAS{}.
 %
-For instance, including the management of diversity put forth in this paper into decomposition-based and indicator-based \MOEAS{} seems plausible.
+For instance, including the diversity management put forth in this paper in decomposition-based and indicator-based \MOEAS{} seems plausible.
 %
-Additionally, we would like to develop an adaptive scheme for avoiding the setting of the initial threshold value.
+Additionally, we would like to develop an adaptive scheme to avoid setting the initial threshold value.
 %
-Finally, in order to attain even better results, these strategies are going to be incorporated into a multi-objective memetic algorithm.
+Finally, in order to obtain even better results, these strategies are going to be incorporated into a multi-objective memetic algorithm.
 %
