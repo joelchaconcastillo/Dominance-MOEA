@@ -1,46 +1,50 @@
-This section is devoted to provide a detailed description of the included video \footnote{Alternatively, the video can be consulted in this link \url{https://www.youtube.com/watch?v=ElxK_95n4lE&feature=youtu.be}}.
+This section is devoted to provide a description of the video included as supplementary material\footnote{Alternatively, the video can be accessed 
+in \url{https://youtu.be/dbk5DaFJ8y0}}.
 %
-Specifically, to have a better insight of the benefits provides by our proposal, a simulation with the WFG5 problem is recorded.
+The main aim of this video is to show the large differences between the way that \VSDMOEA{} and state of the art \MOEAS{} 
+explore the search space.
 %
-The WFG5 problem is selected given its properties being perhaps under standard parameterization on of the most difficult in the WFG toolkit~\cite{Joel:WFG}.
+The video shows a single execution of \VSDMOEA{} and \RMOEA{} for the optimization of the WFG5 problem.
 %
-The main peculiarity of this problem dwell in its deceptiveness, which involves several local optimal regions that mislead the search process of the algorithms.
+Note that \NSGAII{} and \MOEAD{} were also executed and their behaviours were similar to the one of \RMOEA{}.
 %
-Principally, the Pareto geometry of this problem is convex, and such Pareto optimal solutions of the distance parameters have the following values:
+Thus, in order to avoid saturating the video, they were not included.
 %
-\begin{equation}\label{ref:Solution}
-   x_{i=k+1:n} = 2i \times 0.35
-\end{equation}
-In addition, in this simulation is taken into account the standard parameterization indicated in the main document, as well the specified configuration.
+In order to allow the visuallization, the WFG5 problem was configured with two variables, meaning that one distance parameter
+and one position parameter are used.
 %
-Each algorithm was run with two objectives and two decision variables, whose number of position and distance parameters were set to one, and the number of generations was set to $1000$.
+The main peculiarity of WFG5 is its deceptiveness~\cite{Joel:WFG}.
 %
-The diversity explicitly promoted in the decision variable space by our proposal is until the $50\%$ of the total generations.
+In this configuration, a solution $x$ is part of the Pareto set when $x_2 = 1.4$.
 %
-Since that the R2-EMOA is a steady-state algorithm, each generation is reported as an equivalent to the number of function evaluations.
+However, most of the descent directions points out towards two local optimal fronts, which appear when $x_2 = 0$ or when $x_2 = 4$.
 %
+The stopping criterion was set to $100,000$ function evaluations and the reamining parameters were set as in the main document.
+%
+It is worth noticing that \VSDMOEA{} explicitly promotes decision variable space diversity until the halfway point of the execution.
 
-The video is vertically split in two sides, i.e. the left-side and right-side and each one represents the objective space and the decision variable space respectively.
+The video is split in two sides.
 %
-In the decision variable space (right-side) each local optimal region is remarked by a horizontal blue line, and the global optimal region is remarked with a horizontal red line.
+The left-side represents the objective space and the right-side represents the decision variable space.
 %
-In this configuration, the position and distance parameters are denoted by $x_1$ and $x_2$ respectively, thus according to Equation~\ref{ref:Solution} the Pareto optimal solutions are conformed by the  $x_2=1.4$.
+In the decision variable space each local optimal region is remarked with a horizontal blue line, and the global optimal region is remarked with a horizontal red line.
 %
-The video shows that after ten generations the state-of-the-art-MOEAs have converged prematurely to the deceptive regions, contrarily to the VSD-MOEA which is still exploring.
+The video shows that after just a few generations, \RMOEA{} has converged prematurely to the deceptive regions, 
+contrarily to the \VSDMOEA{} which is still exploring.
 %
-Approximately until the $30\%$ of total generations, VSD-MOEA has located three individuals in the global optimal region, and in few generations later ($40\%$) has converged moderately to the optimal region.
+Approximately at the $30\%$ of total generations, \VSDMOEA{} has located three individuals in the global optimal region, and few generations later ($40\%$)
+the amount of solutions in such a region has increased significantly.
 %
-Thereafter, at the $50\%$ of total generations, VSD-MOEA has converged to the optimal and desired region (red horizontal line) avoiding the remaining sub-optimal (blue horizontal lines).
+Thereafter, at the $50\%$ of total generations, \VSDMOEA{} has located most of the individuals in the global optimal region and just 
+some individuals are located in the local optimal regions.
 %
-Finally, the remaining generations VSD-MOEA keeps improving the quality of the solutions in the objective space.
-%%Figures ONE TWO THREE, are taken of the video and belong to the 0\%, 50\% and 100\% of total generations.
-%%
-%%\begin{figure}[t]
-%%\centering
-%%\begin{tabular}{l}
-%% \includegraphics[scale=0.3]{Images/Simulacion_Algoritmo_1.eps}\\[0cm]%[-0.14cm] 
-%% \includegraphics[scale=0.3]{Images/Simulacion_Algoritmo_4.eps}\\[0cm]%[-0.14cm] 
-%% \includegraphics[scale=0.3]{Images/Simulacion_Algoritmo_5.eps}\\[0cm]%[-0.14cm] 
-%%\end{tabular}
-%%\caption{Performance of \MOEAS{} for the problems with three objectives considering three ranges of stopping criterion: short-term (first row), middle-term (second row) and long-term (third row).}\label{fig:Performance_time_3obj}
-%%\end{figure}
+Thus, the results attained by \RMOEA{} are clearly outperformed by \VSDMOEA{}.
+%
+Note that both schemes place a lot of points in the knee of the Pareto front, at the cost of leaving some holes near the boundaries.
+%
+This is because both the R2 metric and the objective space density estimator used in \VSDMOEA{} prefer such regions.
+%
+In order to point out the superiority of \VSDMOEA{} note that most of the solutions attained by \RMOEA{} are dominated by the ones 
+located by \VSDMOEA{}.
+%
+The main particularity of \VSDMOEA{}, which is to delay convergence, is clearly shown in this video.
