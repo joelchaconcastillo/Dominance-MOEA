@@ -1,50 +1,50 @@
-This section is devoted to provide a description of the video included as supplementary material\footnote{Alternatively, the video can be accessed 
-in \url{https://youtu.be/dbk5DaFJ8y0}}.
+This section provides a description of the video included as supplementary material\footnote{Alternatively, the video can be accessed 
+at \url{https://youtu.be/dbk5DaFJ8y0}}.
 %
-The main aim of this video is to show the large differences between the way that \VSDMOEA{} and state of the art \MOEAS{} 
+The main aim of this video is to show the large differences between the way that \VSDMOEA{} and state-of-the-art \MOEAS{} 
 explore the search space.
 %
-The video shows a single execution of \VSDMOEA{} and \RMOEA{} for the optimization of the WFG5 problem.
+The video shows a single execution of \VSDMOEA{} and \RMOEA{} to optimize the WFG5 problem.
 %
-Note that \NSGAII{} and \MOEAD{} were also executed and their behaviours were similar to the one of \RMOEA{}.
+Note that \NSGAII{} and \MOEAD{} were also executed and their behaviors were similar to that of \RMOEA{}.
 %
 Thus, in order to avoid saturating the video, they were not included.
 %
-In order to allow the visuallization, the WFG5 problem was configured with two variables, meaning that one distance parameter
+In order to allow the visuallization, WFG5 was configured with two variables, meaning that one distance parameter
 and one position parameter are used.
 %
 The main peculiarity of WFG5 is its deceptiveness~\cite{Joel:WFG}.
 %
 In this configuration, a solution $x$ is part of the Pareto set when $x_2 = 1.4$.
 %
-However, most of the descent directions points out towards two local optimal fronts, which appear when $x_2 = 0$ or when $x_2 = 4$.
+However, most of the descent directions point towards two local optimal fronts, which appear when $x_2 = 0$ or when $x_2 = 4$.
 %
-The stopping criterion was set to $100,000$ function evaluations and the reamining parameters were set as in the main document.
+The stopping criterion was set to $100,000$ function evaluations and the remaining parameters were set as in the main document.
 %
-It is worth noticing that \VSDMOEA{} explicitly promotes decision variable space diversity until the halfway point of the execution.
+It is worth noting that \VSDMOEA{} explicitly promotes decision variable space diversity until the halfway point of the execution.
 
-The video is split in two sides.
+The video is divided into two sides.
 %
 The left-side represents the objective space and the right-side represents the decision variable space.
 %
-In the decision variable space each local optimal region is remarked with a horizontal blue line, and the global optimal region is remarked with a horizontal red line.
+In the decision variable space, each local optimal region is highlighted with a horizontal blue line, and the global optimal region with a horizontal red line.
 %
 The video shows that after just a few generations, \RMOEA{} has converged prematurely to the deceptive regions, 
-contrarily to the \VSDMOEA{} which is still exploring.
+contrarily to the \VSDMOEA{}, which is still exploring.
 %
-Approximately at the $30\%$ of total generations, \VSDMOEA{} has located three individuals in the global optimal region, and few generations later ($40\%$)
-the amount of solutions in such a region has increased significantly.
+At approximately the $30\%$ of all the generations, \VSDMOEA{} has located three individuals in the global optimal region, and a few generations later ($40\%$),
+the number of solutions in this region has increased significantly.
 %
-Thereafter, at the $50\%$ of total generations, \VSDMOEA{} has located most of the individuals in the global optimal region and just 
+Thereafter, at the $50\%$ of all generations, \VSDMOEA{} has located most of the individuals in the global optimal region and only 
 some individuals are located in the local optimal regions.
 %
-Thus, the results attained by \RMOEA{} are clearly outperformed by \VSDMOEA{}.
+Thus, the results obtained by \RMOEA{} are clearly outperformed by \VSDMOEA{}.
 %
-Note that both schemes place a lot of points in the knee of the Pareto front, at the cost of leaving some holes near the boundaries.
+Note that both schemes place a large number of points in the knee of the Pareto front, at the cost of leaving some holes near the boundaries.
 %
-This is because both the R2 metric and the objective space density estimator used in \VSDMOEA{} prefer such regions.
+This is because both the R2 metric and the objective space density estimator used in \VSDMOEA{} prefer these regions.
 %
-In order to point out the superiority of \VSDMOEA{} note that most of the solutions attained by \RMOEA{} are dominated by the ones 
+To underscore the superiority of \VSDMOEA{}, note that most of the solutions obtained by \RMOEA{} are dominated by those 
 located by \VSDMOEA{}.
 %
-The main particularity of \VSDMOEA{}, which is to delay convergence, is clearly shown in this video.
+The main feature of \VSDMOEA{}, which is to delay convergence, is clearly shown in this video.
