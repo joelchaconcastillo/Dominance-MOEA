@@ -41,7 +41,8 @@ estimator.
 	\WHILE{ (not stopping criterion)  }
 	   \STATE \textbf{Mating selection}: Fill the mating pool by performing binary tournament selection on $P_t$, 
 		 based on the non-dominated ranks (ties are broken randomly).
-	   \STATE \textbf{Variation}: Apply SBX and Polynomial-based mutation to the mating pool to create an offspring population $Q_t$.
+	   \STATE \textbf{Variation}: Apply SBX and Polynomial-based mutation to the mating pool to create an offspring population $Q_t$
+		 with $N$ individuals.
 		 \STATE \textbf{Evaluation}: Evaluate all individuals in $Q_t$.
 	   \STATE \textbf{Survivor selection}: Generate $P_{t+1}$ by applying the replacement scheme 
 		 described in Algorithm~\ref{alg:Replacement_Phase}, using $P_t$ and $Q_t$ as inputs.
@@ -316,7 +317,7 @@ Specifically, Eq.~(\ref{eq:ImprovementDistance}) is used.
 
 \begin{equation} \label{eq:ImprovementDistance}
 \begin{split}
- ID(A, B) = &  \left (\sum_{i=1}^M \left (max(0, B_i - A_i \right ))^2  \right)^{1/2}
+ ID(A, B) = &  \left (\sum_{i=1}^M \left (max(0, f_i(B) - f_i(A) \right ))^2  \right)^{1/2}
 \end{split}
 \end{equation}
 

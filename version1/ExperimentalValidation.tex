@@ -105,7 +105,8 @@ obtained by $X$ are higher than the mean and median achieved by $Y$.
 Our first experiment aims to compare the long-term performance of \VSDMOEA{} against state-of-the-art proposals, which
 is the kind of execution where diversity-based \EAS{} have been more successful.
 %
-Specifically, the stopping criterion was set at $250,000$ generations.
+%Specifically, the stopping criterion was set at $250,000$ generations.
+Specifically, the stopping criterion was set at $2.5 \times 10^7$ function evaluations.
 %
 
 %
@@ -226,7 +227,8 @@ Note that increasing the number of variables greatly increases the computing tim
 %
 As a result, this study takes into account middle-term executions.
 %
-Specifically, the stopping criterion was set to $25,000$ generations.
+%Specifically, the stopping criterion was set to $25,000$ generations.
+Specifically, the stopping criterion was set to $2.5 \times 10^6$ function evaluations.
 %
 Figures~\ref{fig:variable-decision-scalability-2obj} and~\ref{fig:variable-decision-scalability-3obj} 
 show the mean \HV{} ratio for the four algorithms tested,
@@ -309,7 +311,7 @@ is very helpful.
 In contrast, in the three-objective case, the amount of diversity in \RMOEA{} is not as low.
 %
 Moreover, increasing the number of variables yields a significant increase in the resulting ADI, meaning that in this case,
-fast convergence is not as important.
+fast convergence is not an important issue.
 %
 These results show that, as the number of objectives and variables increases, \MOEAS{} tend to maintain a higher variable space diversity
 in an implicit way, meaning that explicitly controlling the variable space diversity is probably not as important.
@@ -342,17 +344,17 @@ useful in extremely long-term executions;
 however, this is not the case.
 %
 In this section we analyze the performance of \VSDMOEA{} and state-of-the-art algorithms with several stopping criteria, 
-i.e., maximum number of generations.
+i.e., maximum number of function evaluations.
 %
 Three different ranges were explored for the stopping criterion.
 %
 Each range was split into ten equally distributed intervals, and experiments were run with each different number of generations.
 %
-The ranges considered were $[250, 2500]$, $[2500, 25000]$ and $[25000, 250000]$.
+The ranges considered were $[2.5 \times 10^4, 2.5 \times 10^5]$, $[2.5 \times 10^5, 2.5 \times 10^6]$ and $[2.5 \times 10^6, 2.5 \times 10^7]$.
 %
 These ranges are referred to as short-term, middle-term and long-term executions, respectively.
 %
-Note that state-of-the-art algorithms can be executed just once (with $250,000$ generations) by saving the intermediate results.
+Note that state-of-the-art algorithms can be executed just once (with $2.5 \times 10^7$ function evaluations) by saving the intermediate results.
 %
 However, \VSDMOEA{} makes decisions that depend on the stopping criteria, so independent executions were required for each stopping criterion.
 
@@ -365,12 +367,12 @@ Each figure is divided into three graphs corresponding to short-term, middle-ter
 %
 In the two-objective case, for the shortest executions, \VSDMOEA{} is not very competitive.
 %
-In the range $[250, 750]$, it exhibits the worst performance, meaning that for very short-term executions,
+In the range $[2.5 \times 10^4, 7.5 \times 10^4]$, it exhibits the worst performance, meaning that for very short-term executions,
 explicitly promoting additional diversity is not helpful.
 %
-When using $1,000$ generations, the resulting \HV{} ratio is similar than that obtained by other methods.
+When using $10^5$ function evaluations, the resulting \HV{} ratio is similar than that obtained by other methods.
 %
-Finally, when using more than $2,500$ generations, the \HV{} ratio obtained by \VSDMOEA{} is much higher than the one
+Finally, when using more than $2.5 \times 10^4$ function evaluations, the \HV{} ratio obtained by \VSDMOEA{} is much higher than the one
 obtained by other methods.
 %
 It is worth noting that \VSDMOEA{} is the only method that truly takes advantage of using long-term executions,
@@ -379,9 +381,9 @@ with the remaining methods just showing a slight improvement.
 In the three-objective case, \VSDMOEA{} yields a lower \HV{} ratio than \RMOEA{} and \MOEAD{} in short-term executions,
 but as more generations are executed, the differences decrease.
 %
-In this case, after $5,000$ generations, the performance of \VSDMOEA{} is similar to that of \RMOEA{}.
+In this case, after $5 \times 10^5$ function evaluations, the performance of \VSDMOEA{} is similar to that of \RMOEA{}.
 %
-Finally, as in the two-objective case, with more generations, the differences between \VSDMOEA{} and the remaining
+Finally, as in the two-objective case, with additional function evaluations, the differences between \VSDMOEA{} and the remaining
 algorithms increase in favor of \VSDMOEA{}.
 %
 Thus, while the most important benefits arise in long-term executions, users can benefit from \VSDMOEA{} even in shorter executions.
@@ -412,13 +414,14 @@ This section is devoted to analyzing the performance of \VSDMOEA{} when using di
 %
 Note that, since normalized distances are used, the maximum difference that can appear is $1$.
 %
-Additionally, note that when $D_I$ is set to 0, no individual is penalized on the basis of its diversity contribution,
+Additionally, note that when $D_I$ is set to 0, no individual is penalized on the basis of its decision
+variable space diversity contribution,
 so \VSDMOEA{} would behave like a more traditional \MOEA{}.
 %
 As a result, the values $D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9\}$ were tested.
 %
 As in previous experiments, the whole set of benchmark problems was used and
-the stopping criterion was set to $250,000$ generations.
+the stopping criterion was set to $2.5 \times 10^7$ function evaluations.
 
 Figure~\ref{fig:Initial-distance-factor} shows the mean \HV{} ratio obtained for both the two-objective 
 and the three-objective case.
