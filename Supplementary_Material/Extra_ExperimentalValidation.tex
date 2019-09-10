@@ -3,29 +3,31 @@
 \input{Tables/Tests_IGDP_3obj.tex}
 
 This section presents the results obtained by \VSDMOEA{} and state-of-the-art schemes in terms of
-the IGD+\cite{Joel:Inverted_Generational_Distance_Plus}.
+IGD+\cite{Joel:Inverted_Generational_Distance_Plus}.
 %
 Specifically, we present the results for the long-term executions, meaning
 the stopping criterion was set to $250,000$ generations.
 %
 The structure of the tables is the same as in the main document.
 %
-Thus, the only modification is that instead of using the hypervolume, the IGD+ is used.
+Thus, the only modification is that instead of using the hypervolume, IGD+ is adopted in this case.
 
-Table \ref{tab:StatisticsIGDP_2obj} shows the IGD+ obtained for the benchmark functions with two objectives.
+Table~\ref{tab:StatisticsIGDP_2obj} shows the IGD+ values obtained for the benchmark functions with two objectives.
 %
-Specifically, the minimum, maximum, mean and standard deviation of the IGD+ is given for each method and function tested.
+Specifically, the minimum, maximum, mean and standard deviation of the IGD+ values is provided 
+for each method and test problem adopted.
 %
-The last row shows the results considering all the functions together.
+The last row shows the results considering all the test problems.
 %
-For each function, the data for the method that yielded the lowest mean is shown in bold.
+For each test problem, the data for the method that yielded the lowest mean is shown in {\bf boldface}.
 %
-Additionally, all the methods that were not statistically inferior to said method are shown in bold.
+Additionally, all the methods that were not statistically inferior to the method that yielded
+the lowest mean are shown in {\bf boldface}.
 %
-From here on, the methods shown in bold for a given problem are referred to as the winning methods.
+From here on, the methods shown in {\bf boldface} for a given problem are referred to as the winning methods.
 %
-Based on the number of functions where each method is in the group of the winning methods for the cases 
-with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 13 and 8, respectively.
+Based on the number of functions where each method is in the group of winning methods for the cases 
+with two objectives, the best methods are \VSDMOEA{} and \RMOEA{} with 13 and 8 wins, respectively.
 %
 Thus, \VSDMOEA{} is the most competitive method in terms of this metric.
 %
@@ -52,21 +54,20 @@ robust behavior than any other method.
 Exactly the same situation appeared when analyzing the data in terms of hypervolume.
 
 In order to better clarify these findings, pair-wise statistical tests were done between each method tested in each 
-function.
+test problem.
 %
 Table~\ref{tab:Tests_IGDP_2obj} shows the results, with the same meaning as in the main document.
 %
 The calculated data confirms that although \VSDMOEA{} loses in some cases, the overall numbers of wins and losses favor \VSDMOEA{}.
 %
-More importantly, the total deterioration is considerably lower in the case of \VSDMOEA{}, confirming that when \VSDMOEA{} loses, the deterioration is not 
-very high.
-
+More importantly, the total deterioration is considerably lower in the case of \VSDMOEA{}, confirming that 
+when \VSDMOEA{} loses, the deterioration is not very high.
 
 Tables~\ref{tab:Tests_IGDP_3obj} and~\ref{tab:StatisticsIGDP_3obj} show the same information for the problems with three objectives.
 %
 In this case, the superiority of \VSDMOEA{} is even clearer.
 %
-Taking into account the mean of all the functions, \VSDMOEA{} again yielded a much lower mean IGD+ than the other methods.
+Taking into account the mean of all the test problems, \VSDMOEA{} again yielded a much lower mean IGD+ than the other methods.
 %
 Specifically, \VSDMOEA{} obtained a value of $0.059$, whereas the second-ranked algorithm (\RMOEA{}) obtained a value of $0.093$.
 %
@@ -77,15 +78,13 @@ However, all the other methods exhibited a deterioration greater than $0.05$ in 
 %
 In particular, this happened in $5$, $8$ and $7$ problems for \MOEAD{}, \NSGAII{}, \RMOEA{}, respectively.
 %
-Moreover, \VSDMOEA{} is much more superior than the other methods not only in terms of total deterioration, but also
+Moreover, \VSDMOEA{} is considerably superior than the other methods not only in terms of total deterioration, but also
 in terms of total wins and losses.
 %
-\VSDMOEA{} was in the group of winning methods for 14 out of 19 functions, whereas the second best-ranked algorithm (\RMOEA{})
-was in the group of winning methods for only 5 functions.
+\VSDMOEA{} was in the group of winning methods for 14 out of 19 test problems, whereas the second best-ranked algorithm (\RMOEA{})
+was in the group of winning methods for only 5 test problems.
 %
 These conclusions are again quite similar to those drawn for the hypervolume in the main document.
-
-
 
 
 \input{Tables/Table_IGDP_3obj.tex}
