@@ -6,4 +6,4 @@ do
  #  ps2pdf -dNOSAFER $i-figure0.ps
 #   ps2pdf -dNOSAFER $i-figure1.ps
 done
-rm *.ps *dpth *log *dvi *aux *lock *md5
+#rm *.ps *dpth *log *dvi *aux *lock *md5
