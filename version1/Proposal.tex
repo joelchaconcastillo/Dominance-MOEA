@@ -105,7 +105,7 @@ In order to better understand the penalty method, it can be visualized in the fo
 After selecting each survivor, a hyper-sphere 
 centered around a candidate solution --- in decision variable space --- is created.
 %
-Then, all the individuals that are inside the hyper-sphere are penalized, with the objective space estimator only taking 
+Then, all the individuals that are inside the hyper-sphere are penalized, with the objective space density estimator only taking 
 into account the survivors and the non-penalized individuals.
 %
 This is illustrated in Fig.~\ref{fig:Hypersphere}, which represents a state where three individuals have been 
@@ -321,7 +321,7 @@ Specifically, Eq.~(\ref{eq:ImprovementDistance}) is used.
 \end{split}
 \end{equation}
 
-The contribution of each member of $FR (I)$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
+The contribution of each member of $FR$ $(I)$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
 %
 Then, the individual with the highest contribution is selected as the next survivor (lines \ref{alg:density_if2} 
 to \ref{alg:density_endif2}).

@@ -34,7 +34,8 @@ The experimental validation includes three well-known state-of-the-art \MOEAS{} 
 The \MOEAS{} that are considered are \NSGAII{}~\cite{Joel:jMetal}, \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode}, 
 which can be classified as dominance-based, decomposition-based, and indicator-based, respectively.
 %
-Note that for the indicator-based category, \textsc{sms-emoa} was also taken into account initially.
+Note that for the indicator-based category, the s-metric selection evolutionary multiobjective optimisation algorithm 
+(\textsc{sms-emoa})~\cite{Joel:SMSEMOA} was also taken into account initially.
 %
 However, due to its high computational cost, it is not convenient for long-term experiments as the ones used in this paper.
 %
@@ -280,7 +281,7 @@ in the single-objective case~\cite{Joel:GDE3_CEC09}.
 \begin{figure}[t]
 \centering
 \includegraphics[scale=0.85]{Images/Graphic-Diversity_2obj_tikz-figure1.eps}
-\caption{Evolution of ADI for problems WFG1-WFG7 with two objectives}\label{fig:Diversity_2obj}
+\caption{Evolution of ADI for problems WFG1-WFG7 with two objectives considering only the distance variables}\label{fig:Diversity_2obj}
 \end{figure}
 
 For each algorithm, we calculated the average Euclidean distance among individuals (ADI) in the population by considering only 
@@ -288,9 +289,9 @@ the distance parameters.
 %
 Figures~\ref{fig:Diversity_2obj} and~\ref{fig:Diversity_3obj} show how the ADI evolves for the two-objective and three-objective problems.
 %
-Thus, to avoid saturating these Figures, only the information for \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 variables is shown.
+The behaviour of \NSGAII{} and \MOEAD{} --- which are not included --- is similar to that of \RMOEA{} in terms of how the ADI evolves. 
 %
-The performance of \NSGAII{} and \MOEAD{} --- which are not included --- is similar to that of \RMOEA{} in terms of how the ADI evolves. 
+Thus, to avoid saturating these Figures, only the information for \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 variables is shown.
 %
 The first obvious fact is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
@@ -331,7 +332,7 @@ several weeks when dealing with large instances of the Traveling Salesman Proble
 \begin{figure}[t]
 \centering
 \includegraphics[scale=0.85]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
-\caption{Evolution of ADI for problems WFG1-WFG7 with three objectives}\label{fig:Diversity_3obj}
+\caption{Evolution of ADI for problems WFG1-WFG7 with three objectives considering only the distance variables}\label{fig:Diversity_3obj}
 \end{figure}
 
 \subsection{Analysis of the Stopping criterion}
@@ -348,7 +349,7 @@ i.e., maximum number of function evaluations.
 %
 Three different ranges were explored for the stopping criterion.
 %
-Each range was split into ten equally distributed intervals, and experiments were run with each different number of generations.
+Each range was split into ten equally distributed intervals, and experiments were run with each different number of function evaluations.
 %
 The ranges considered were $[2.5 \times 10^4, 2.5 \times 10^5]$, $[2.5 \times 10^5, 2.5 \times 10^6]$ and $[2.5 \times 10^6, 2.5 \times 10^7]$.
 %
@@ -379,7 +380,7 @@ It is worth noting that \VSDMOEA{} is the only method that truly takes advantage
 with the remaining methods just showing a slight improvement.
 %
 In the three-objective case, \VSDMOEA{} yields a lower \HV{} ratio than \RMOEA{} and \MOEAD{} in short-term executions,
-but as more generations are executed, the differences decrease.
+but as more function evaluations are executed, the differences decrease.
 %
 In this case, after $5 \times 10^5$ function evaluations, the performance of \VSDMOEA{} is similar to that of \RMOEA{}.
 %
