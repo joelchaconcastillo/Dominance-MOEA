@@ -1,5 +1,5 @@
 
-This section provides a full description of our novel proposal called, \textit{Variable Space Diversity based MOEA} 
+This section provides a full description of our proposal called \textit{Variable Space Diversity based MOEA} 
 (\VSDMOEA{})~\footnote{The source code in C++ is freely available at \url{https://github.com/joelchaconcastillo/VSD-MOEA.git}}.
 %
 The novelty of \VSDMOEA{} appears in the replacement phase, which incorporates
@@ -10,7 +10,7 @@ elapsed generations with the aim of gradually moving from exploration to exploit
 %
 Note that this principle might be incorporated in any of the three categories of \MOEAS{}.
 %
-In this paper, our decision was to incorporate it in a dominance-based approach.
+In this paper, our decision was to incorporate it into a dominance-based approach.
 %
 Note that this category has been particularly suitable for problems with two and three objectives.
 %
@@ -23,7 +23,7 @@ Algorithm~\ref{alg:vsd-moea} shows the pseudo-code of \VSDMOEA{}.
 Parents are selected using a binary tournament based on dominance ranking with ties broken randomly.
 %
 The variation stage is based on applying the well-known Simulated Binary Crossover (SBX) 
-and polynomial mutation~\cite{Joel:SBX1994, Joel:Mutation}.
+and polynomial-based mutation~\cite{Joel:SBX1994, Joel:Mutation} operators.
 %
 Thus, the contribution appears in the replacement phase.
 %
@@ -41,10 +41,10 @@ estimator.
 	\WHILE{ (not stopping criterion)  }
 	   \STATE \textbf{Mating selection}: Fill the mating pool by performing binary tournament selection on $P_t$, 
 		 based on the non-dominated ranks (ties are broken randomly).
-	   \STATE \textbf{Variation}: Apply SBX crossover and Polynomial mutation to the mating pool to create a child population $Q_t$.
+	   \STATE \textbf{Variation}: Apply SBX and Polynomial-based mutation to the mating pool to create an offspring population $Q_t$.
 		 \STATE \textbf{Evaluation}: Evaluate all individuals in $Q_t$.
 	   \STATE \textbf{Survivor selection}: Generate $P_{t+1}$ by applying the replacement scheme 
-		 described in Algorithm \ref{alg:Replacement_Phase}, using $P_t$ and $Q_t$ as inputs.
+		 described in Algorithm~\ref{alg:Replacement_Phase}, using $P_t$ and $Q_t$ as inputs.
 	   \STATE $t=t+1$
 	\ENDWHILE
 	\end{algorithmic}
@@ -52,29 +52,28 @@ estimator.
 \label{alg:vsd-moea}
 \end{algorithm}
 
-
 \subsection{Replacement Phase of VSD-MOEA}
 
-The replacement phase of \EAS{} is in charge of deciding, for each generation, which members of the previous population and offspring survive.
+The replacement phase of \EAS{} is in charge of deciding, for each generation, which members of the previous population together with their corresponding offspring will survive.
 %
-The novel replacement promotes a gradual movement from exploration to exploitation, which has been a highly 
+The novel replacement scheme promotes a gradual movement from exploration to exploitation, which has been a highly 
 beneficial principle in the design of single-objective optimizers~\cite{Joel:MULTI_DYNAMIC}.
 %
 Specifically, the replacement phase operates as follows.
 %
-First, the members of the previous population and offspring are joined in a multi-set with $2 \times N$ individuals.
+First, the members of the previous population and offspring are merged in a multi-set with $2 \times N$ individuals.
 %
 Then, an iterative process that selects an additional
 individual at each iteration is used to pick the $N$ survivors. 
 %
-In order to take into account the diversity of the variable space, the Distance to Closest Survivor (\DCS{}) of each
+In order to take into account the diversity of decision variable space, the Distance to Closest Survivor (\DCS{}) of each
 individual is calculated at each iteration.
 %
 Thus, the \DCS{} of an individual $I$ is calculated as $\displaystyle{\min_{s \in S}\ Distance(I, s)}$,
 where $S$ is the multi-set containing the currently selected survivors. 
 %
 Normalized Euclidean distances are considered, so in order to calculate distances between any two individuals $A$ and $B$, 
-Eq. (\ref{eqn:distance}) is applied.
+Eq.~(\ref{eqn:distance}) is applied.
 %
 In the first iteration, the $S$ multi-set is empty, so the \DCS{} of each individual is infinity.
 %
@@ -96,31 +95,29 @@ Note that it might happen that all individuals are penalized, in which case the 
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.45\textwidth]{Images/Diagram.pdf}
-\caption{Penalty Method of the Replacement Phase - The left side represents the variable space and the right side the 
-objective space.} \label{fig:Hypersphere}
+\caption{Penalty Method of the Replacement Phase - The left side represents decision variable space and the right side represents 
+objective function space.} \label{fig:Hypersphere}
 \end{figure}
-
-
 
 In order to better understand the penalty method, it can be visualized in the following way.
 %
 After selecting each survivor, a hyper-sphere 
-centered around a candidate solution --- in the variable space --- is created.
+centered around a candidate solution --- in decision variable space --- is created.
 %
 Then, all the individuals that are inside the hyper-sphere are penalized, with the objective space estimator only taking 
-into account the survivors and non-penalized individuals.
+into account the survivors and the non-penalized individuals.
 %
 This is illustrated in Fig.~\ref{fig:Hypersphere}, which represents a state where three individuals have been 
 selected to survive and an additional survivor must be picked.
 %
-The left side shows individuals in the variable space.
+The left side shows individuals in decision variable space.
 %
-Current survivors are marked with a red border. Each one is surrounded by a dashed blue circle of 
+Current survivors are marked with a red border. Each of them is surrounded by a dashed blue circle of 
 radius $D_t$.
 %
 In this scenario, the penalized individuals are numbers 4, 5, and 6.
 %
-In the objective space --- right side --- the penalized individuals are shown in gray, indicating
+In objective function space --- right side --- the penalized individuals are shown in gray, indicating
 that the objective space density estimator is not considering them.
 
 Since using a large radius for the hyper-spheres induces a large degree of 
@@ -152,10 +149,10 @@ The robustness of the proposal with respect to this additional parameter is stud
 
 Algorithm~\ref{alg:Replacement_Phase} formalizes the replacement phase of \VSDMOEA{}.
 %
-First, the population of the previous generation ($P_t$) and the offspring ($Q_t$) are joined
+First, the population of the previous generation ($P_t$) and the offspring ($Q_t$) are merged
 in $R_t$ (line \ref{alg:1}).
 %
-In each iteration, the multi-set $R_t$ contains the remaining non-penalized individuals that might be selected 
+At each iteration, the multi-set $R_t$ contains the remaining non-penalized individuals that might be selected 
 to survive.
 %
 The population of survivors ($P_{t+1}$) and the set containing the penalized individuals are initialized to
@@ -164,11 +161,11 @@ the empty set (lines \ref{alg:2} and \ref{alg:3}).
 Then, the threshold value ($D_t$) that is used to penalize individuals that are too close is calculated (line \ref{alg:4}).
 %
 Note that $D_I$ denotes the initial threshold value, $G_{Elapsed}$ is the number of generations that have 
-evolved, and $G_{End}$ is the stopping criterion, i.e. the number of generations that are to be evolved 
+evolved, and $G_{End}$ is the stopping criterion, i.e., the number of generations that are to be evolved 
 during the execution of the \VSDMOEA{}.
 %
-The linear decrease is calculated such that after $50\%$ of the generations, the $D_t$ value is below 0, 
-meaning that no penalties are performed.
+The linear decrease is calculated such that after $50\%$ of the total number of 
+generations, the $D_t$ value is below 0, meaning that no penalties are applied.
 %
 This means that in the first $50\%$ of the generations, more exploration is induced than in traditional MOEAs.
 %
@@ -210,13 +207,13 @@ First, the \DCS{} value of each remaining non-penalized individual is calculated
 %
 Then, those individuals with a \DCS{} value lower than $D_t$ are moved to the set of penalized individuals (line \ref{alg:8}).
 %
-If all the remaining individuals are penalized (line \ref{alg:9}), it means that the amount of exploration is less than desired.
+If all the remaining individuals are penalized (line \ref{alg:9}), it means that the amount of exploration is lower than desired.
 %
-Thus, the individual with the largest \DCS{} value is recovered, i.e. moved to the set of non-penalized individuals (lines \ref{alg:10} and \ref{alg:11}), and thus survives.
+Thus, the individual with the largest \DCS{} value is recovered, i.e., moved to the set of non-penalized individuals (lines \ref{alg:10} and \ref{alg:11}), and thus survives.
 %
-Finally, the objective space is considered.
+Finally, the objective function space is considered.
 %
-Specifically, candidate non-penalized individuals and current survivors are joined.
+Specifically, candidate non-penalized individuals and current survivors are merged.
 %
 Then, the well-known non-dominated sorting procedure~\cite{Joel:NSGAII} is executed on this set, stopping as soon as a front with 
 a candidate individual is found, i.e. with an individual of $R_t$ (line \ref{alg:12}).
@@ -227,7 +224,7 @@ the next survivor (line \ref{alg:13}).
 The specific way in which each individual's contribution to the diversity of the objective space is measured is described in the next section.
 %
 
-\subsection{A Novel Density Estimator for the Objective Space}
+\subsection{A Novel Density Estimator for Objective Function Space}
 \label{subsection:density}
 
 \begin{algorithm}[t]
@@ -259,14 +256,15 @@ The specific way in which each individual's contribution to the diversity of the
 \label{alg:Density_Estimator}
 \end{algorithm}
 
-Since the dominance definition is not related to the preservation of diversity in the objective space,
+Since the dominance definition is not related to the preservation of diversity in objective function space,
 dominance-based \MOEAS{} usually incorporate objective-space density estimators to promote the survival
 of diverse individuals.
 %
 As previously described, our density estimator selects a new survivor from the front identified
 in line \ref{alg:13} of Algorithm~\ref{alg:Replacement_Phase}.
 %
-This front (referred to in Algorithm~\ref{alg:Density_Estimator}  as $F$) contains at least one individual belonging to $R_t$, and it might also contain some elements 
+This front (referred to in Algorithm~\ref{alg:Density_Estimator} as $F$) contains at least one 
+individual belonging to $R_t$, and it might also contain some elements 
 of $P_{t+1}$.
 %
 The aim behind the selection of the next survivor is to pick an individual of the input front
@@ -297,7 +295,7 @@ Note that augmented functions usually take into account weight vectors in order 
 that exhibit very different scales.
 %
 Since benchmarks that have similar scales in each objective have been used in this paper, there was no need to apply
-said weight vectors.
+the aforementioned weight vectors.
 
 \begin{equation}\label{eqn:extremes}
 AF_k (\vec{x}) = f_k(\vec{x}) + 10^{-4} \times  \sum_{j=1}^M f_j( \vec{x} )
@@ -314,7 +312,7 @@ is used.
 The $ID$ of an individual $A$ with respect to an individual $B$ is calculated by taking into account only the objectives
 where $A$ is better.
 %
-Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
+Specifically, Eq.~(\ref{eq:ImprovementDistance}) is used.
 
 \begin{equation} \label{eq:ImprovementDistance}
 \begin{split}
@@ -324,5 +322,6 @@ Specifically, Eq. (\ref{eq:ImprovementDistance}) is used.
 
 The contribution of each member of $FR (I)$ is calculated as $\displaystyle{\min_{s \in FP}\ ID(I, s)}$.
 %
-Then, the individual with the highest contribution is selected as the next survivor (lines \ref{alg:density_if2} to \ref{alg:density_endif2}).%, with ties broken randomly (line XXX).
+Then, the individual with the highest contribution is selected as the next survivor (lines \ref{alg:density_if2} 
+to \ref{alg:density_endif2}).
 
