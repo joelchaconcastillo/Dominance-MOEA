@@ -1,0 +1,255 @@
+\begin{thebibliography}{}
+
+\bibitem[Agrawal et~al., 1994]{Joel:SBX1994}
+Agrawal, R.~B., Deb, K., Deb, K., and Agrawal, R.~B. (1994).
+\newblock Simulated binary crossover for continuous search space.
+\newblock Technical report.
+
+\bibitem[Bechikh et~al., 2016]{Joel:BOOK_MOEAs}
+Bechikh, S., Datta, R., and Gupta, A. (2016).
+\newblock {\em Recent advances in evolutionary multi-objective optimization},
+  volume~20.
+\newblock Springer.
+
+\bibitem[Beume et~al., 2007]{Joel:SMSEMOA}
+Beume, N., Naujoks, B., and Emmerich, M. (2007).
+\newblock {SMS-EMOA: Multiobjective selection based on dominated hypervolume }.
+\newblock {\em European Journal of Operational Research}, 181(3):1653 -- 1669.
+
+\bibitem[Bhagavatula et~al., 2014]{Joel:IBEA}
+Bhagavatula, S.~S., Sanjeevi, S.~G., Kumar, D., and Yadav, C.~K. (2014).
+\newblock Multi-objective indicator based evolutionary algorithm for portfolio
+  optimization.
+\newblock In {\em 2014 IEEE International Advance Computing Conference (IACC)},
+  pages 1206--1210.
+
+\bibitem[Chan and Ray, 2005]{chan2005evolutionary}
+Chan, K. and Ray, T. (2005).
+\newblock An evolutionary algorithm to maintain diversity in the parametric and
+  the objective space.
+\newblock In {\em International Conference on Computational Robotics and
+  Autonomous Systems (CIRAS), Centre for Intelligent Control, National
+  University of Singapore}.
+
+\bibitem[Chiang and Lai, 2011]{Joel:MOEAD_AMS}
+Chiang, T.~C. and Lai, Y.~P. (2011).
+\newblock {MOEA/D-AMS: Improving MOEA/D by an adaptive mating selection
+  mechanism}.
+\newblock In {\em 2011 IEEE Congress of Evolutionary Computation (CEC)}, pages
+  1473--1480.
+
+\bibitem[Das and Suganthan, 2011]{Joel:StateArt}
+Das, S. and Suganthan, P.~N. (2011).
+\newblock {Differential Evolution: A Survey of the State-of-the-Art}.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 15(1):4--31.
+
+\bibitem[Deb and Abouhawwash, 2016]{deb2016optimality}
+Deb, K. and Abouhawwash, M. (2016).
+\newblock An optimality theory-based proximity measure for set-based
+  multiobjective optimization.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 20(4):515--528.
+
+\bibitem[Deb and Goyal, 1996]{Joel:Mutation}
+Deb, K. and Goyal, M. (1996).
+\newblock A combined genetic adaptive search (geneas) for engineering design.
+\newblock {\em Computer Science and informatics}, 26:30--45.
+
+\bibitem[Deb and Kalyanmoy, 2001]{Joel:Kalyanmoy}
+Deb, K. and Kalyanmoy, D. (2001).
+\newblock {\em {Multi-Objective Optimization Using Evolutionary Algorithms}}.
+\newblock John Wiley \& Sons, Inc., New York, NY, USA.
+
+\bibitem[Deb et~al., 2002]{Joel:NSGAII}
+Deb, K., Pratap, A., Agarwal, S., and Meyarivan, T. (2002).
+\newblock {A fast and elitist multiobjective genetic algorithm: NSGA-II}.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 6(2):182--197.
+
+\bibitem[Deb et~al., 2005]{Joel:DTLZ}
+Deb, K., Thiele, L., Laumanns, M., and Zitzler, E. (2005).
+\newblock Scalable test problems for evolutionary multiobjective optimization.
+\newblock {\em Evolutionary Multiobjective Optimization. Theoretical Advances
+  and Applications}, pages 105--145.
+
+\bibitem[Deb and Tiwari, 2005]{deb2005omni}
+Deb, K. and Tiwari, S. (2005).
+\newblock Omni-optimizer: A procedure for single and multi-objective
+  optimization.
+\newblock In {\em EMO}, volume 3410, pages 47--61. Springer.
+
+\bibitem[Durillo et~al., 2010]{Joel:StatisticalTest}
+Durillo, J.~J., Nebro, A.~J., Coello, C. A.~C., Garcia-Nieto, J., Luna, F., and
+  Alba, E. (2010).
+\newblock {A Study of Multiobjective Metaheuristics When Solving Parameter
+  Scalable Problems}.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 14(4):618--635.
+
+\bibitem[Horn et~al., 1994]{Joel:NPGA}
+Horn, J., Nafpliotis, N., and Goldberg, D.~E. (1994).
+\newblock {A niched Pareto genetic algorithm for multiobjective optimization}.
+\newblock In {\em Proceedings of the First IEEE Conference on Evolutionary
+  Computation. IEEE World Congress on Computational Intelligence}, pages 82--87
+  vol.1.
+
+\bibitem[Huband et~al., 2005a]{Joel:WFG}
+Huband, S., Barone, L., While, L., and Hingston, P. (2005a).
+\newblock {\em {A Scalable Multi-objective Test Problem Toolkit}}, pages
+  280--295.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Huband et~al., 2005b]{huband2005scalable}
+Huband, S., Barone, L., While, L., and Hingston, P. (2005b).
+\newblock A scalable multi-objective test problem toolkit.
+\newblock In {\em International Conference on Evolutionary Multi-Criterion
+  Optimization}, pages 280--295. Springer.
+
+\bibitem[Ishibuchi et~al., 2017]{ishibuchi2017reference}
+Ishibuchi, H., Imada, R., Setoguchi, Y., and Nojima, Y. (2017).
+\newblock Reference point specification in hypervolume calculation for fair
+  comparison and efficient search.
+\newblock In {\em Proceedings of the Genetic and Evolutionary Computation
+  Conference}, pages 585--592. ACM.
+
+\bibitem[Ishibuchi et~al., 2015]{Joel:Inverted_Generational_Distance_Plus}
+Ishibuchi, H., Masuda, H., Tanigaki, Y., and Nojima, Y. (2015).
+\newblock {\em Modified Distance Calculation in Generational Distance and
+  Inverted Generational Distance}, pages 110--125.
+\newblock Springer International Publishing, Cham.
+
+\bibitem[Ishibuchi and Shibata, 2003]{Joel:STUDY_MATTING_RESTRICTION}
+Ishibuchi, H. and Shibata, Y. (2003).
+\newblock {\em {An Empirical Study on the Effect of Mating Restriction on the
+  Search Ability of EMO Algorithms}}, pages 433--447.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[jMetalcpp, 2019]{Joel:jMetal}
+jMetalcpp (2019).
+
+\bibitem[Kukkonen and Lampinen, 2009]{Joel:GDE3_CEC09}
+Kukkonen, S. and Lampinen, J. (2009).
+\newblock Performance assessment of generalized differential evolution 3 with a
+  given set of constrained multi-objective test problems.
+\newblock In {\em 2009 IEEE Congress on Evolutionary Computation}, pages
+  1943--1950. IEEE.
+
+\bibitem[Li et~al., 2014]{li2015evolutionary}
+Li, K., Deb, K., Zhang, Q., and Kwong, S. (2014).
+\newblock An evolutionary many-objective optimization algorithm based on
+  dominance and decomposition.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 19(5):694--716.
+
+\bibitem[Ma et~al., 2014]{Joel:MOEAD_Uniform_Design}
+Ma, X., Qi, Y., Li, L., Liu, F., Jiao, L., and Wu, J. (2014).
+\newblock Moea/d with uniform decomposition measurement for many-objective
+  problems.
+\newblock {\em Soft Computing}, 18(12):2541--2564.
+
+\bibitem[Mengshoel et~al., 2014]{Mengshoel:14}
+Mengshoel, O.~J., Gal\'an, S.~F., and de~Dios, A. (2014).
+\newblock Adaptive generalized crowding for genetic algorithms.
+\newblock {\em Information Sciences}, 258:140 -- 159.
+
+\bibitem[MOEA/D, 2019]{MOEADCode}
+MOEA/D (2019).
+
+\bibitem[Molinet~Berenguer and Coello~Coello, 2015]{Joel:Kuhn_Munkres}
+Molinet~Berenguer, J.~A. and Coello~Coello, C.~A. (2015).
+\newblock {\em Evolutionary Many-Objective Optimization Based on Kuhn-Munkres
+  Algorithm}, pages 3--17.
+\newblock Springer International Publishing, Cham.
+
+\bibitem[Pandey et~al., 2014]{Mohan:14}
+Pandey, H.~M., Chaudhary, A., and Mehrotra, D. (2014).
+\newblock {A comparative review of approaches to prevent premature convergence
+  in GA}.
+\newblock {\em Applied Soft Computing}, 24:1047 -- 1077.
+
+\bibitem[R2-EMOA, 2019]{R2EMOACode}
+R2-EMOA (2019).
+
+\bibitem[Rudolph et~al., 2007]{rudolph2007capabilities}
+Rudolph, G., Naujoks, B., and Preuss, M. (2007).
+\newblock Capabilities of emoa to detect and preserve equivalent pareto
+  subsets.
+\newblock In {\em Evolutionary Multi-Criterion Optimization}, pages 36--50.
+  Springer.
+
+\bibitem[Segura et~al., 2015]{segura2015novel}
+Segura, C., Botello~Rionda, S., Hern{\'a}ndez~Aguirre, A., and Valdez~Pe{\~n}a,
+  S.~I. (2015).
+\newblock A novel diversity-based evolutionary algorithm for the traveling
+  salesman problem.
+\newblock In {\em Proceedings of the 2015 Annual Conference on Genetic and
+  Evolutionary Computation}, pages 489--496. ACM.
+
+\bibitem[Segura et~al., 2016]{Joel:MULTI_DYNAMIC}
+Segura, C., Coello, C. A.~C., Segredo, E., and Aguirre, A.~H. (2016).
+\newblock {A Novel Diversity-Based Replacement Strategy for Evolutionary
+  Algorithms}.
+\newblock {\em IEEE Transactions on Cybernetics}, 46(12):3233--3246.
+
+\bibitem[Segura et~al., 2017]{Segura:17}
+Segura, C., Hernández-Aguirre, A., Luna, F., and Alba, E. (2017).
+\newblock Improving diversity in evolutionary algorithms: New best solutions
+  for frequency assignment.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 21(4):539--553.
+
+\bibitem[Shir et~al., 2009]{shir2009enhancing}
+Shir, O.~M., Preuss, M., Naujoks, B., and Emmerich, M.~T. (2009).
+\newblock Enhancing decision space diversity in evolutionary multiobjective
+  algorithms.
+\newblock In {\em EMO}, volume~9, pages 95--109. Springer.
+
+\bibitem[Toffolo and Benini, 2003]{toffolo2003genetic}
+Toffolo, A. and Benini, E. (2003).
+\newblock Genetic diversity as an objective in multi-objective evolutionary
+  algorithms.
+\newblock {\em Evolutionary computation}, 11(2):151--167.
+
+\bibitem[Trautmann et~al., 2013]{trautmann2013r2}
+Trautmann, H., Wagner, T., and Brockhoff, D. (2013).
+\newblock R2-emoa: Focused multiobjective search using r2-indicator-based
+  selection.
+\newblock In {\em International Conference on Learning and Intelligent
+  Optimization}, pages 70--74. Springer.
+
+\bibitem[Ulrich et~al., 2010]{ulrich2010integrating}
+Ulrich, T., Bader, J., and Zitzler, E. (2010).
+\newblock Integrating decision space diversity into hypervolume-based
+  multiobjective search.
+\newblock In {\em Proceedings of the 12th annual conference on Genetic and
+  evolutionary computation}, pages 455--462. ACM.
+
+\bibitem[\v{C}repin\v{s}ek et~al., 2013]{Joel:Crepinsek}
+\v{C}repin\v{s}ek, M., Liu, S.-H., and Mernik, M. (2013).
+\newblock {Exploration and Exploitation in Evolutionary Algorithms: A Survey}.
+\newblock {\em ACM Computing Surveys}, 45(3):35:1--35:33.
+
+\bibitem[Vidal et~al., 2013]{Vidal:13}
+Vidal, T., Crainic, T.~G., Gendreau, M., and Prins, C. (2013).
+\newblock A hybrid genetic algorithm with adaptive diversity management for a
+  large class of vehicle routing problems with time-windows.
+\newblock {\em Computers \& Operations Research}, 40(1):475 -- 489.
+
+\bibitem[Zhang and Li, 2007]{Joel:MOEAD}
+Zhang, Q. and Li, H. (2007).
+\newblock {MOEA/D: A Multiobjective Evolutionary Algorithm Based on
+  Decomposition}.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 11(6):712--731.
+
+\bibitem[Zhang et~al., 2009]{zhang2009performance}
+Zhang, Q., Liu, W., and Li, H. (2009).
+\newblock The performance of a new version of moea/d on cec09 unconstrained mop
+  test instances.
+\newblock In {\em 2009 IEEE congress on evolutionary computation}, pages
+  203--208. IEEE.
+
+\bibitem[Zhang et~al., 2008]{Joel:CEC2009}
+Zhang, Q., Zhou, A., Zhao, S., Suganthan, P.~N., Liu, W., and Tiwari, S.
+  (2008).
+\newblock Multiobjective optimization test instances for the cec 2009 special
+  session and competition.
+\newblock {\em University of Essex, Colchester, UK and Nanyang technological
+  University, Singapore, special session on performance assessment of
+  multi-objective optimization algorithms, technical report}, 264.
+
+\end{thebibliography}

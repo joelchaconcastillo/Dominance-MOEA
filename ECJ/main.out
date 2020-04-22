@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Literature Review}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Diversity Management in Evolutionary Algorithms}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Multi-objective Evolutionary Algorithms}{section.1}% 3
+\BOOKMARK [1][-]{section.2}{Proposal}{}% 4
+\BOOKMARK [2][-]{subsection.2.1}{Replacement Phase of VSD-MOEA}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.2}{A Novel Density Estimator for Objective Function Space}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{Experimental Validation}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Comparison against State-of-the-art moeas in long-term executions}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.2}{Decision Variable Scalability Analysis}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Analysis of the Stopping criterion}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{Analysis of the Initial Threshold Value}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Conclusions and Future Work}{}% 12
