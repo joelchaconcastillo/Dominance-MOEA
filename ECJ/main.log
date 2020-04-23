@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.3)  22 APR 2020 11:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.3)  22 APR 2020 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,35 +861,46 @@ LaTeX Info: Redefining \nameref on input line 41.
 \openout4 = `main.out'.
 
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 74.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 74.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 75.
- (./Abstract.tex) (./LiteratureReview.tex
-LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 7.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 23.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 77.
+ (./Abstract.tex) (./Introduction.tex
+LaTeX Font Info:    Try loading font information for U+lasy on input line 5.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 23.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 1997) in paragraph at lines 68--90
+[]\OT1/ppl/m/n/10 One of the goals when de-sign-ing Multi-objective Evo-lu-tion
+-ary Al-go-rithms
+ []
+
+
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
+ [2])
+(./LiteratureReview.tex
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 7.
+ [3] [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3])
+ [5])
 (./Proposal.tex
-LaTeX Font Info:    Try loading font information for U+lasy on input line 3.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 3.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 1540) in paragraph at lines 3--3
@@ -898,34 +909,30 @@ cr/m/n/8 https : / / github . com / joelchaconcastillo /
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 35.
-[4]
-<Images/Diagram.pdf, id=190, 194.63716pt x 82.47813pt>
+put line 20.
+[6]
+<Images/Diagram.pdf, id=256, 194.63716pt x 82.47813pt>
 File: Images/Diagram.pdf Graphic file (type pdf)
 <use Images/Diagram.pdf>
-Package pdftex.def Info: Images/Diagram.pdf  used on input line 98.
-(pdftex.def)             Requested size: 171.56886pt x 72.70682pt.
- [5 <./Images/Diagram.pdf>]
-Underfull \vbox (badness 7685) has occurred while \output is active []
+Package pdftex.def Info: Images/Diagram.pdf  used on input line 118.
+(pdftex.def)             Requested size: 190.63338pt x 80.78522pt.
+ [7 <./Images/Diagram.pdf>] [8]
 
- [6]
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 244.
+
+[9]) (./ExperimentalValidation.tex [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7])
-(./ExperimentalValidation.tex [8] (./Tables/Table_HV_2obj.tex
+ [11]
+(./Tables/Table_HV_2obj.tex) [12] (./Tables/Tests_HV_2obj.tex
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 11.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 13.
+)
+(./Tables/Table_HV_3obj.tex) (./Tables/Tests_HV_3obj.tex)
+Underfull \vbox (badness 1675) has occurred while \output is active []
 
-Overfull \hbox (114.18697pt too wide) in paragraph at lines 9--40
- [][] 
- []
-
-) (./Tables/Tests_HV_2obj.tex) [9] (./Tables/Table_HV_3obj.tex
-Overfull \hbox (114.18697pt too wide) in paragraph at lines 9--36
- [][] 
- []
-
-) (./Tables/Tests_HV_3obj.tex) [10] [11]
+ [13]
 Package epstopdf Info: Source file: <Images/Graphic-Scalability-2obj_tikz-figur
 e0.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -939,14 +946,14 @@ e0-eps-converted-to.pdf>
 gure0.eps>
 (epstopdf)             \includegraphics on input line 249.
 Package epstopdf Info: Output file is already uptodate.
-<Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf, id=382, 251
+<Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf, id=443, 251
 .94125pt x 170.6375pt>
 File: Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Scalability-2obj_tikz-figure0-eps-conve
 rted-to.pdf  used on input line 249.
-(pdftex.def)             Requested size: 214.15106pt x 145.04254pt.
+(pdftex.def)             Requested size: 181.39755pt x 122.85889pt.
 Package epstopdf Info: Source file: <Images/Graphic-Scalability-3obj_tikz-figur
 e0.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -958,17 +965,23 @@ e0-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Scalability
 -3obj_tikz-figure0-eps-converted-to.pdf Images/Graphic-Scalability-3obj_tikz-fi
 gure0.eps>
-(epstopdf)             \includegraphics on input line 255.
+(epstopdf)             \includegraphics on input line 249.
 Package epstopdf Info: Output file is already uptodate.
-<Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf, id=383, 251
+<Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf, id=444, 251
 .94125pt x 170.6375pt>
 File: Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Scalability-3obj_tikz-figure0-eps-conve
-rted-to.pdf  used on input line 255.
-(pdftex.def)             Requested size: 214.15106pt x 145.04254pt.
- [12 <./Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf>]
+rted-to.pdf  used on input line 249.
+(pdftex.def)             Requested size: 181.39755pt x 122.85889pt.
+
+Overfull \hbox (5.52835pt too wide) in paragraph at lines 248--251
+ [][] 
+ []
+
+[14 <./Images/Graphic-Scalability-2obj_tikz-figure0-eps-converted-to.pdf> <./Im
+ages/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Graphic-Diversity_2obj_tikz-figure1
 .eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -980,23 +993,22 @@ Package epstopdf Info: Source file: <Images/Graphic-Diversity_2obj_tikz-figure1
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_2
 obj_tikz-figure1-eps-converted-to.pdf Images/Graphic-Diversity_2obj_tikz-figure
 1.eps>
-(epstopdf)             \includegraphics on input line 283.
+(epstopdf)             \includegraphics on input line 284.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Graphic-Diversity_2obj_tikz-figure1-eps
 -converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version
  <1.5> allowed
-<Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf, id=405, 255.7
+<Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf, id=472, 255.7
 6553pt x 170.29623pt>
 File: Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Diversity_2obj_tikz-figure1-eps-convert
-ed-to.pdf  used on input line 283.
+ed-to.pdf  used on input line 284.
 (pdftex.def)             Requested size: 217.40172pt x 144.75247pt.
-[13 <./Images/Graphic-Scalability-3obj_tikz-figure0-eps-converted-to.pdf> <./Im
-ages/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf>]
+[15 <./Images/Graphic-Diversity_2obj_tikz-figure1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Graphic-Diversity_3obj_tikz-figure1
 .eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -1008,22 +1020,22 @@ Package epstopdf Info: Source file: <Images/Graphic-Diversity_3obj_tikz-figure1
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Diversity_3
 obj_tikz-figure1-eps-converted-to.pdf Images/Graphic-Diversity_3obj_tikz-figure
 1.eps>
-(epstopdf)             \includegraphics on input line 334.
+(epstopdf)             \includegraphics on input line 335.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Graphic-Diversity_3obj_tikz-figure1-eps
 -converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version
  <1.5> allowed
-<Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf, id=438, 255.7
+<Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf, id=494, 255.7
 6553pt x 170.29623pt>
 File: Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf Graphic f
 ile (type pdf)
 <use Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Diversity_3obj_tikz-figure1-eps-convert
-ed-to.pdf  used on input line 334.
+ed-to.pdf  used on input line 335.
 (pdftex.def)             Requested size: 217.40172pt x 144.75247pt.
-[14 <./Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf>]
+[16 <./Images/Graphic-Diversity_3obj_tikz-figure1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Time_tikz-figure0.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
 (epstopdf)                    size: 152549 bytes
@@ -1033,18 +1045,18 @@ pdf>
 (epstopdf)                    size: 16745 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure0-e
 ps-converted-to.pdf Images/Time_tikz-figure0.eps>
-(epstopdf)             \includegraphics on input line 395.
+(epstopdf)             \includegraphics on input line 396.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Time_tikz-figure0-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Time_tikz-figure0-eps-converted-to.pdf, id=454, 372.25072pt x 104.36993
+<Images/Time_tikz-figure0-eps-converted-to.pdf, id=512, 372.25072pt x 104.36993
 pt>
 File: Images/Time_tikz-figure0-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Time_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Time_tikz-figure0-eps-converted-to.pdf  used on
- input line 395.
+ input line 396.
 (pdftex.def)             Requested size: 223.35214pt x 62.62244pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure1.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -1055,18 +1067,18 @@ pdf>
 (epstopdf)                    size: 11553 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure1-e
 ps-converted-to.pdf Images/Time_tikz-figure1.eps>
-(epstopdf)             \includegraphics on input line 396.
+(epstopdf)             \includegraphics on input line 397.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Time_tikz-figure1-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Time_tikz-figure1-eps-converted-to.pdf, id=455, 282.37495pt x 85.13808p
+<Images/Time_tikz-figure1-eps-converted-to.pdf, id=513, 282.37495pt x 85.13808p
 t>
 File: Images/Time_tikz-figure1-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Time_tikz-figure1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Time_tikz-figure1-eps-converted-to.pdf  used on
- input line 396.
+ input line 397.
 (pdftex.def)             Requested size: 169.42627pt x 51.08324pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure2.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -1077,19 +1089,21 @@ pdf>
 (epstopdf)                    size: 15784 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure2-e
 ps-converted-to.pdf Images/Time_tikz-figure2.eps>
-(epstopdf)             \includegraphics on input line 397.
+(epstopdf)             \includegraphics on input line 398.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Time_tikz-figure2-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Time_tikz-figure2-eps-converted-to.pdf, id=456, 282.37495pt x 118.78377
+<Images/Time_tikz-figure2-eps-converted-to.pdf, id=514, 282.37495pt x 118.78377
 pt>
 File: Images/Time_tikz-figure2-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Time_tikz-figure2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Time_tikz-figure2-eps-converted-to.pdf  used on
- input line 397.
+ input line 398.
 (pdftex.def)             Requested size: 169.42627pt x 71.2708pt.
+[17 <./Images/Time_tikz-figure0-eps-converted-to.pdf> <./Images/Time_tikz-figur
+e1-eps-converted-to.pdf> <./Images/Time_tikz-figure2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <Images/Time_tikz-figure3.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
 (epstopdf)                    size: 153267 bytes
@@ -1099,18 +1113,18 @@ pdf>
 (epstopdf)                    size: 16908 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure3-e
 ps-converted-to.pdf Images/Time_tikz-figure3.eps>
-(epstopdf)             \includegraphics on input line 451.
+(epstopdf)             \includegraphics on input line 452.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Time_tikz-figure3-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Time_tikz-figure3-eps-converted-to.pdf, id=460, 372.25072pt x 104.36993
+<Images/Time_tikz-figure3-eps-converted-to.pdf, id=577, 372.25072pt x 104.36993
 pt>
 File: Images/Time_tikz-figure3-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Time_tikz-figure3-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Time_tikz-figure3-eps-converted-to.pdf  used on
- input line 451.
+ input line 452.
 (pdftex.def)             Requested size: 223.35214pt x 62.62244pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure4.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -1121,18 +1135,18 @@ pdf>
 (epstopdf)                    size: 11498 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure4-e
 ps-converted-to.pdf Images/Time_tikz-figure4.eps>
-(epstopdf)             \includegraphics on input line 452.
+(epstopdf)             \includegraphics on input line 453.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Time_tikz-figure4-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Time_tikz-figure4-eps-converted-to.pdf, id=461, 282.37495pt x 85.13808p
+<Images/Time_tikz-figure4-eps-converted-to.pdf, id=578, 282.37495pt x 85.13808p
 t>
 File: Images/Time_tikz-figure4-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Time_tikz-figure4-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Time_tikz-figure4-eps-converted-to.pdf  used on
- input line 452.
+ input line 453.
 (pdftex.def)             Requested size: 169.42627pt x 51.08324pt.
 Package epstopdf Info: Source file: <Images/Time_tikz-figure5.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -1143,20 +1157,19 @@ pdf>
 (epstopdf)                    size: 15930 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/Time_tikz-figure5-e
 ps-converted-to.pdf Images/Time_tikz-figure5.eps>
-(epstopdf)             \includegraphics on input line 453.
+(epstopdf)             \includegraphics on input line 454.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./Images/Time_tikz-figure5-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/Time_tikz-figure5-eps-converted-to.pdf, id=462, 282.37495pt x 118.78377
+<Images/Time_tikz-figure5-eps-converted-to.pdf, id=579, 282.37495pt x 118.78377
 pt>
 File: Images/Time_tikz-figure5-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/Time_tikz-figure5-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Time_tikz-figure5-eps-converted-to.pdf  used on
- input line 453.
+ input line 454.
 (pdftex.def)             Requested size: 169.42627pt x 71.2708pt.
-[15]
 Package epstopdf Info: Source file: <Images/Graphic-Initial-Distance_tikz-figur
 e0.eps>
 (epstopdf)                    date: 2020-04-22 09:55:35
@@ -1168,42 +1181,40 @@ e0-eps-converted-to.pdf>
 (epstopdf)             Command: <repstopdf --outfile=Images/Graphic-Initial-Dis
 tance_tikz-figure0-eps-converted-to.pdf Images/Graphic-Initial-Distance_tikz-fi
 gure0.eps>
-(epstopdf)             \includegraphics on input line 461.
+(epstopdf)             \includegraphics on input line 462.
 Package epstopdf Info: Output file is already uptodate.
-<Images/Graphic-Initial-Distance_tikz-figure0-eps-converted-to.pdf, id=470, 262
+<Images/Graphic-Initial-Distance_tikz-figure0-eps-converted-to.pdf, id=580, 262
 .9825pt x 170.6375pt>
 File: Images/Graphic-Initial-Distance_tikz-figure0-eps-converted-to.pdf Graphic
  file (type pdf)
 <use Images/Graphic-Initial-Distance_tikz-figure0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/Graphic-Initial-Distance_tikz-figure0-eps-conve
-rted-to.pdf  used on input line 461.
+rted-to.pdf  used on input line 462.
 (pdftex.def)             Requested size: 223.53616pt x 145.04254pt.
-) (./Conclusion.tex [16 <./Images/Time_tikz-figure0-eps-converted-to.pdf> <./Im
-ages/Time_tikz-figure1-eps-converted-to.pdf> <./Images/Time_tikz-figure2-eps-co
-nverted-to.pdf>]) (./main.bbl [17 <./Images/Time_tikz-figure3-eps-converted-to.
-pdf> <./Images/Time_tikz-figure4-eps-converted-to.pdf> <./Images/Time_tikz-figu
-re5-eps-converted-to.pdf>] [18 <./Images/Graphic-Initial-Distance_tikz-figure0-
-eps-converted-to.pdf>]
+) (./Conclusion.tex [18 <./Images/Time_tikz-figure3-eps-converted-to.pdf> <./Im
+ages/Time_tikz-figure4-eps-converted-to.pdf> <./Images/Time_tikz-figure5-eps-co
+nverted-to.pdf>]) (./main.bbl [19 <./Images/Graphic-Initial-Distance_tikz-figur
+e0-eps-converted-to.pdf>] [20]
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ¡ in font pplr7t!
- [19]) [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
+ [21]) [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8C60E649D4B6365F057F8A6F06EA1CE2;955.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 122.
+(rerunfilecheck)             Checksum: 48F2C5E36EB2BDB32DD542A4F209D0D9;1003.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
- 28637 strings out of 492982
- 689485 string characters out of 6134897
- 903848 words of memory out of 5000000
- 31505 multiletter control sequences out of 15000+600000
- 24610 words of font info for 68 fonts, out of 8000000 for 9000
+ 28678 strings out of 492982
+ 690379 string characters out of 6134897
+ 894997 words of memory out of 5000000
+ 31529 multiletter control sequences out of 15000+600000
+ 25539 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,16n,96p,721b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,17n,96p,721b,676s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-di
@@ -1226,10 +1237,10 @@ msy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (20 pages, 390888 bytes).
+Output written on main.pdf (22 pages, 404377 bytes).
 PDF statistics:
- 697 PDF objects out of 1000 (max. 8388607)
- 633 compressed objects within 7 object streams
- 137 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 756 PDF objects out of 1000 (max. 8388607)
+ 690 compressed objects within 7 object streams
+ 148 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

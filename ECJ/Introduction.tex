@@ -1,5 +1,5 @@
-\IEEEPARstart{M}{ulti-objective} Optimization Problems (\MOPS{}) 
-involve the simultaneous optimization of several objective functions that are usually in conflict with each other~\cite{Joel:Kalyanmoy}. 
+Multi-objective Optimization Problems (\MOPS{}) 
+involve the simultaneous optimization of several objective functions that are usually in conflict with each other~\citep{Joel:Kalyanmoy}. 
 %
 A continuous box-constrained minimization \MOP{}, which is the kind of problem addressed in this paper, can be defined as follows:
 \begin{equation}
@@ -10,7 +10,7 @@ A continuous box-constrained minimization \MOP{}, which is the kind of problem a
 \end{equation}
 where $n$ corresponds to the dimensionality of the decision variable space, $\vec{\mathbf{x}}$ is a vector of $n$ 
 decision variables $\vec{\mathbf{x}}=(x_1, ..., x_n) \in R^n$, which are constrained by $x_i^{(L)}$ 
-and $x_i^{(U)}$, i.e. the lower bound and the upper bound, and $M$ is the number of objective functions
+and $x_i^{(U)}$, i.e. the lower bound and the upper bound, furthermore $M$ is the number of objective functions
 to optimize.
 %
 The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$.
@@ -21,25 +21,25 @@ Given two solutions $\vec{\mathbf{x}}$, $\vec{\mathbf{y}}$ $\in \Omega$, $\vec{\
 which is mathematically denoted by $\vec{\mathbf{x}} \prec \vec{\mathbf{y}}$, iff $\forall m \in {1,2,...,M} : 
 f_m(\vec{\mathbf{x}}) \leq f_m(\vec{\mathbf{y}})$ and $\exists  m \in {1,2,...,M} : f_m(\vec{\mathbf{x}}) < f_m(\vec{\mathbf{y}})$.
 %
-The best solutions of a \MOP{} are those that are not dominated by any other feasible vector.
+The best solutions of an \MOP{} are those that are not dominated by any other feasible vector.
 %
 These solutions are known as the Pareto optimal solutions.
 %
 The Pareto set is the set of all Pareto optimal solutions, and the Pareto front is the image (i.e., the corresponding
 objective function values) of the Pareto optimal set. 
 %
-The goal of multi-objective optimizers is to obtain a proper approximation of the Pareto front, i.e., 
+The goal of multi-objective optimizers is to obtain a proper approximation of the Pareto front, i.e.
 a set of well-distributed solutions that are close to the Pareto front.
 
 One of the most popular meta-heuristics used to deal with \MOPS{} is the Evolutionary Algorithm (\EA{}).
 %
 In single-objective \EAS{}, it has been shown that taking into account the diversity of decision variable space
 to properly balance between exploration and exploitation is highly important to attain high quality 
-solutions~\cite{Joel:BALANCE_DIVERSITY}.
+solutions~\citep{Joel:BALANCE_DIVERSITY}.
 %
 Diversity can be taken into account in the design of several components, such as in the variation 
-stage~\cite{Joel:FUZZY_ADAPTIVE_GA,Joel:CROSSOVER_DIVERSITY}, the replacement phase~\cite{Joel:MULTI_DYNAMIC} 
-and/or the population model~\cite{Joel:SAWTOOTH}.
+stage~\citep{Joel:FUZZY_ADAPTIVE_GA,Joel:CROSSOVER_DIVERSITY}, the replacement phase~\citep{Joel:MULTI_DYNAMIC} 
+and/or the population model~\citep{Joel:SAWTOOTH}.
 %
 The explicit consideration of diversity leads to improvements in terms of avoiding premature convergence, 
 meaning that taking into account diversity in the design of \EAS{} is specially important when dealing 
@@ -49,15 +49,15 @@ Recently, some diversity management algorithms that combine the information on d
 generations have been devised.
 %
 They have yielded a gradual loss of diversity that depends on the time or evaluations granted to the 
-execution~\cite{Joel:MULTI_DYNAMIC}.
+execution~\citep{Joel:MULTI_DYNAMIC}.
 %
 Specifically, the aim of such a methodology is to promote exploration in the initial generations and gradually alter the 
 behavior towards intensification.
 %
 These schemes have provided highly promising results.
 %
-For instance, new best-known solutions for some well-known variants of the frequency assignment problem~\cite{Segura:17},
-and for a two-dimensional packing problem~\cite{Joel:MULTI_DYNAMIC} have been attained using the same principles.
+For instance, new best-known solutions for some well-known variants of the frequency assignment problem~\citep{Segura:17},
+and for a two-dimensional packing problem~\citep{Joel:MULTI_DYNAMIC} have been attained using the same principles.
 %
 Additionally, this principle guided the design of the winning strategy at the Second Wind Farm Layout Optimization 
 Competition\footnote{https://www.irit.fr/wind-competition/}, which was held at the {\em Genetic and Evolutionary 
@@ -73,7 +73,7 @@ As a result, most state-of-the-art \MOEAS{} consider the diversity of the object
 However, this is not the case for the diversity of decision variable space.
 %
 Maintaining some degree of diversity in objective space implies that full convergence 
-is not achieved in decision variable space~\cite{Joel:GDE3_CEC09}.
+is not achieved in decision variable space~\citep{Joel:GDE3_CEC09}.
 %
 In some way, decision variable space inherits some degree of diversity due to the way in which objective space is 
 taken into account. 
@@ -83,7 +83,7 @@ in some cases the level of diversity might not be large enough to ensure a prope
 %
 For instance, it has been shown that with some of the \WFG{} test problems, in most state-of-the-art \MOEAS{} 
 the \textit{distance parameters} quickly converge, meaning that the approach focuses just on optimizing the 
-\textit{position parameters} for a long period of the optimization process~\cite{Joel:GDE3_CEC09}.
+\textit{position parameters} for a long period of the optimization process~\citep{Joel:GDE3_CEC09}.
 %
 Thus, while some degree of diversity is maintained, a situation similar to premature convergence occurs,
 meaning that genetic operators might not be longer able to generate better trade-offs. 
@@ -106,7 +106,7 @@ in the last phases, the proposed approach is quite similar to current state-of-t
 %
 To the best of our knowledge, this is the first \MOEA{} whose design follows this adaptive principle.
 %
-Since there currently exist quite a large number of different \MOEAS{}~\cite{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
+Since there currently exist quite a large number of different \MOEAS{}~\citep{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
 three popular schemes have been selected to validate our proposal.
 %
 This validation was performed using several well-known benchmarks and proper quality metrics.
@@ -116,7 +116,8 @@ This paper clearly shows the important benefits of properly taking into account 
 In particular, the advantages become more evident in the most complex problems.
 %
 Note that this is consistent with the single-objective case, where the most important benefits have been obtained
-in complex multi-modal cases~\cite{Segura:17}.
+in complex multi-modal cases~\citep{Segura:17}, nevertheless is imperative to clarify that this work does not dwells to the niche-base paradigm (e.g. \cite{liang2016multimodal}, \cite{deb2005omni}, \cite{li2016seeking}), 
+rather it should be considered as an usual muti-objective algorithm.
 
 The rest of this paper is organized as follows. 
 %

@@ -6,7 +6,7 @@ obtained by state-of-art \MOEAS{}.
 %
 First, we discuss some technical specifications involving the benchmark problems and algorithms implemented.
 %
-We then present a comparison between \VSDMOEA{} and state-of-the-art algorithms when used in long-term executions.
+We then present a comparison between \VSDMOEA{} and state-of-the-art algorithms in long-term executions.
 %
 Then, three additional experiments to fully validate \VSDMOEA{} are included.
 %
@@ -15,7 +15,7 @@ and the behavior with different initial penalty thresholds.
 
 This work takes into account some of the most popular and widely used benchmarks in the multi-objective field.
 %
-These problems are the WFG~\cite{Joel:WFG}, DTLZ~\cite{Joel:DTLZ}, and UF~\cite{Joel:CEC2009} test suites 
+These problems are the WFG~\citep{Joel:WFG}, DTLZ~\citep{Joel:DTLZ}, and UF~\citep{Joel:CEC2009} test suites 
 configured in a standard way.
 %
 The WFG test problems were used with two and three objectives and 
@@ -31,11 +31,11 @@ Note that the experiment used to analyze scalability considers different numbers
 
 The experimental validation includes three well-known state-of-the-art \MOEAS{} and \VSDMOEA{}.
 %
-The \MOEAS{} that are considered are \NSGAII{}~\cite{Joel:jMetal}, \MOEAD{}~\cite{MOEADCode}, and \RMOEA{}~\cite{R2EMOACode}, 
+The \MOEAS{} that are considered are \NSGAII{}~\citep{Joel:jMetal}, \MOEAD{}~\citep{MOEADCode}, and \RMOEA{}~\citep{R2EMOACode}, 
 which can be classified as dominance-based, decomposition-based, and indicator-based, respectively.
 %
 Note that for the indicator-based category, the s-metric selection evolutionary multiobjective optimisation algorithm 
-(\textsc{sms-emoa})~\cite{Joel:SMSEMOA} was also taken into account initially.
+(\textsc{sms-emoa})~\citep{Joel:SMSEMOA} was also taken into account initially.
 %
 However, due to its high computational cost, it is not convenient for long-term experiments as the ones used in this paper.
 %
@@ -45,17 +45,35 @@ repetitions with several functions is not feasible.
 In the case of \MOEAD{}, several variants have been devised.
 %
 The \MOEAD{} implementation considered is the one that obtained first place in the IEEE 2009 Congress on Evolutionary Computation's 
-MOP Competition~\cite{zhang2009performance}.
+MOP Competition proposed by~\cite{zhang2009performance}.
 %
 The common configuration in all the experiments was as follows: the population size was set to $100$, and the genetic 
 operators were Simulated Binary Crossover (SBX) and polynomial-based 
-mutation~\cite{Joel:SBX1994, Joel:Mutation}.
+mutation~\citep{Joel:SBX1994, Joel:Mutation}.
 %
 The crossover probability was set to $0.9$ and the crossover distribution index was set to $2$.
 %
 Similarly, the mutation probability and distribution index were fixed to $1/n$ and $50$, respectively.
 %
 The additional parameterization required by each algorithm is shown in Table~\ref{tab:Parametrization}.
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[t]
+\centering
+\caption{ Parameterization applied to each MOEA}
+\label{tab:Parametrization}
+\begin{tabular}{c|c}
+\hline
+\textbf{Algorithm} & \textbf{Configuration} \\ \hline
+\multirow{3}{*}{\textbf{MOEA/D}} &Max. updates by sub-problem ($\eta_r$) = 2, \\
+ & tour selection = 10,   neighbor size = 10, \\
+ & period utility updating = 30 generations, \\ 
+ & local selection probability ($\delta$) = 0.9,\\ \hline
+\textbf{VSD-MOEA} & $D_I=0.4$ \\ \hline
+\textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
+\end{tabular}
+\end{table}
+
 %
 Note that scalarization functions are required in \MOEAD{} and \RMOEA{}.
 %
@@ -63,11 +81,11 @@ In both cases, the Tchebycheff approach is used.
 %
 The procedure for generating the weight vectors differs in \MOEAD{} and \RMOEA{}.
 %
-\RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives, respectively~\cite{trautmann2013r2}.
+\RMOEA{} was applied with $501$ and $496$ weight vectors for two and three objectives, respectively~\citep{trautmann2013r2}.
 %
 In contrast, \MOEAD{} requires the same number of weight vectors as the population size.
 %
-They were generated using the uniform design (UD) and the good lattice point (GLP) method~\cite{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
+They were generated using the uniform design (UD) and the good lattice point (GLP) method~\citep{Joel:MOEAD_Uniform_Design, Joel:Kuhn_Munkres}.
 
 Given that all the algorithms considered are stochastic, each execution was repeated $35$ times with different seeds.
 %
@@ -78,7 +96,7 @@ Note that in the supplementary material, the results are also compared in terms 
 The reference point used to calculate the \HV{} is chosen to be a vector whose values are sightly larger (ten percent) than the nadir point, 
 as suggested in~\cite{ishibuchi2017reference}.
 %
-The normalized \HV{} is used to facilitate the interpretation of the results~\cite{li2015evolutionary},
+The normalized \HV{} is used to facilitate the interpretation of the results~\citep{li2015evolutionary},
 and the value reported is computed as the ratio between the normalized \HV{} obtained and the maximum attainable 
 normalized \HV{}.
 %
@@ -111,27 +129,7 @@ Specifically, the stopping criterion was set at $2.5 \times 10^7$ function evalu
 %
 
 %
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-\begin{table}[t]
-\centering
-\caption{ Parameterization applied to each MOEA}
-\label{tab:Parametrization}
-\begin{tabular}{c|c}
-\hline
-\textbf{Algorithm} & \textbf{Configuration} \\ \hline
-\multirow{3}{*}{\textbf{MOEA/D}} &Max. updates by sub-problem ($\eta_r$) = 2, \\
- & tour selection = 10,   neighbor size = 10, \\
- & period utility updating = 30 generations, \\ 
- & local selection probability ($\delta$) = 0.9,\\ \hline
-\textbf{VSD-MOEA} & $D_I=0.4$ \\ \hline
-\textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
-\end{tabular}
-\end{table}
-
 \input{Tables/Table_HV_2obj.tex}
-\input{Tables/Tests_HV_2obj.tex}
-
 Table~\ref{tab:StatisticsHV_2obj} shows the \HV{} ratio obtained for the benchmark functions
 with two objectives.
 %
@@ -158,7 +156,7 @@ In fact, the total means of \RMOEA{} ($0.882$), \NSGAII{} ($0.886$) and \MOEAD{}
 %
 In contrast, \VSDMOEA{} achieved a much higher value ($0.949$).
 %
-When the data is inspected carefully, it is clear that in the cases where \VSDMOEA{} loses, the difference with respect to the
+Inspecting the data carefully, it is clear that in the cases where \VSDMOEA{} loses, the difference with respect to the
 best method is not very large.
 %
 For instance, the difference between the mean \HV{} ratio attained by the best method and by \VSDMOEA{} was never larger
@@ -171,15 +169,14 @@ Specifically, it happened in $5$, $5$ and $6$ problems for \RMOEA{}, \NSGAII{} a
 This means that even if \VSDMOEA{} loses in some cases, its deterioration is always small, exhibiting a much more 
 robust behavior than any other method.
 
-\input{Tables/Table_HV_3obj.tex}
-\input{Tables/Tests_HV_3obj.tex}
-
 In order to better clarify these findings, pair-wise statistical tests were done among each method tested in each
 test problem.
 %
 For the two-objective cases, Table~\ref{tab:Tests_HV_2obj} shows the number of times that each method won (column $\uparrow$),
 lost (column $\downarrow$) and tied (column $\leftrightarrow$).
 %
+
+\input{Tables/Tests_HV_2obj.tex}
 Additionally, for each method $M$, we calculated the sum of the differences between the mean \HV{} ratio attained by the best method 
 (the ones with the highest mean) and method $M$, for each problem where $M$ was not in the group of winning methods.
 %
@@ -190,6 +187,9 @@ favors \VSDMOEA{}.
 %
 More importantly, the total deterioration is quite lower in the case of \VSDMOEA{}, confirming that when \VSDMOEA{} loses, the deterioration is not 
 that large.
+
+\input{Tables/Table_HV_3obj.tex}
+\input{Tables/Tests_HV_3obj.tex}
 
 Tables~\ref{tab:StatisticsHV_3obj} and~\ref{tab:Tests_HV_3obj} show the same information for the problems with three objectives.
 %
@@ -231,8 +231,7 @@ As a result, this study takes into account middle-term executions.
 %Specifically, the stopping criterion was set to $25,000$ generations.
 Specifically, the stopping criterion was set to $2.5 \times 10^6$ function evaluations.
 %
-Figures~\ref{fig:variable-decision-scalability-2obj} and~\ref{fig:variable-decision-scalability-3obj} 
-show the mean \HV{} ratio for the four algorithms tested,
+The figure~\ref{fig:variable-decision-scalability} shows the mean \HV{} ratio for the four algorithms tested,
 considering the problems with two and three objectives, respectively.
 %
 As expected, the \HV{} ratio decreases as the number of variables increases.
@@ -244,17 +243,19 @@ In contrast, in the three-objective case, the deterioration of \VSDMOEA{} is hig
 %
 In fact, when considering $250$ variables, the performance of \VSDMOEA{} is just slightly superior to that of \RMOEA{}.
 
-\begin{figure}[t]
+\begin{figure}[h]
 \centering
-\includegraphics[scale=0.85]{Images/Graphic-Scalability-2obj_tikz-figure0.eps}
-\caption{Mean of the \HV{} ratio for 35 runs for the two-objective problems considering different numbers of variables}\label{fig:variable-decision-scalability-2obj}
+\begin{tabular}{c c}
+\includegraphics[scale=0.72]{Images/Graphic-Scalability-2obj_tikz-figure0.eps} & \includegraphics[scale=0.72]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
+\end{tabular}
+\caption{Mean of the \HV{} ratio for 35 runs for the two-objective (left side) and three-objective (right side) problems considering different numbers of variables}\label{fig:variable-decision-scalability}
 \end{figure}
 
-\begin{figure}[t]
-\centering
-\includegraphics[scale=0.85]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
-\caption{Mean of the \HV{} ratio for 35 runs for the three-objective problems considering different numbers of variables} \label{fig:variable-decision-scalability-3obj}
-\end{figure}
+%\begin{figure}[t]
+%\centering
+%\includegraphics[scale=0.85]{Images/Graphic-Scalability-3obj_tikz-figure0.eps}
+%\caption{Mean of the \HV{} ratio for 35 runs for the three-objective problems considering different numbers of variables} \label{fig:variable-decision-scalability-3obj}
+%\end{figure}
 
 In order to better understand this behavior, we selected problems WFG1 to WFG7.
 %

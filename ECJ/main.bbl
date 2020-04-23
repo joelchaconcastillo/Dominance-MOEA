@@ -83,6 +83,18 @@ Durillo, J.~J., Nebro, A.~J., Coello, C. A.~C., Garcia-Nieto, J., Luna, F., and
   Scalable Problems}.
 \newblock {\em IEEE Transactions on Evolutionary Computation}, 14(4):618--635.
 
+\bibitem[Herrera and Lozano, 2003]{Joel:FUZZY_ADAPTIVE_GA}
+Herrera, F. and Lozano, M. (2003).
+\newblock Fuzzy adaptive genetic algorithms: design, taxonomy, and future
+  directions.
+\newblock {\em Soft Computing}, 7(8):545--562.
+
+\bibitem[Herrera et~al., 1996]{Joel:BALANCE_DIVERSITY}
+Herrera, F., Lozano, M., et~al. (1996).
+\newblock Adaptation of genetic algorithm parameters based on fuzzy logic
+  controllers.
+\newblock {\em Genetic Algorithms and Soft Computing}, 8(1996):95--125.
+
 \bibitem[Horn et~al., 1994]{Joel:NPGA}
 Horn, J., Nafpliotis, N., and Goldberg, D.~E. (1994).
 \newblock {A niched Pareto genetic algorithm for multiobjective optimization}.
@@ -124,6 +136,12 @@ Ishibuchi, H. and Shibata, Y. (2003).
 \bibitem[jMetalcpp, 2019]{Joel:jMetal}
 jMetalcpp (2019).
 
+\bibitem[Koumousis and Katsaras, 2006]{Joel:SAWTOOTH}
+Koumousis, V. and Katsaras, C. (2006).
+\newblock {A saw-tooth genetic algorithm combining the effects of variable
+  population size and reinitialization to enhance performance}.
+\newblock 10(1):19--28.
+
 \bibitem[Kukkonen and Lampinen, 2009]{Joel:GDE3_CEC09}
 Kukkonen, S. and Lampinen, J. (2009).
 \newblock Performance assessment of generalized differential evolution 3 with a
@@ -137,6 +155,18 @@ Li, K., Deb, K., Zhang, Q., and Kwong, S. (2014).
   dominance and decomposition.
 \newblock {\em IEEE Transactions on Evolutionary Computation}, 19(5):694--716.
 
+\bibitem[Li et~al., 2016]{li2016seeking}
+Li, X., Epitropakis, M.~G., Deb, K., and Engelbrecht, A. (2016).
+\newblock Seeking multiple solutions: an updated survey on niching methods and
+  their applications.
+\newblock {\em IEEE Transactions on Evolutionary Computation}, 21(4):518--538.
+
+\bibitem[Liang et~al., 2016]{liang2016multimodal}
+Liang, J., Yue, C., and Qu, B. (2016).
+\newblock Multimodal multi-objective optimization: A preliminary study.
+\newblock In {\em 2016 IEEE Congress on Evolutionary Computation (CEC)}, pages
+  2454--2461. IEEE.
+
 \bibitem[Ma et~al., 2014]{Joel:MOEAD_Uniform_Design}
 Ma, X., Qi, Y., Li, L., Liu, F., Jiao, L., and Wu, J. (2014).
 \newblock Moea/d with uniform decomposition measurement for many-objective
@@ -147,6 +177,11 @@ Ma, X., Qi, Y., Li, L., Liu, F., Jiao, L., and Wu, J. (2014).
 Mengshoel, O.~J., Gal\'an, S.~F., and de~Dios, A. (2014).
 \newblock Adaptive generalized crowding for genetic algorithms.
 \newblock {\em Information Sciences}, 258:140 -- 159.
+
+\bibitem[Mitchell, 1998]{Joel:CROSSOVER_DIVERSITY}
+Mitchell, M. (1998).
+\newblock {\em An Introduction to Genetic Algorithms}.
+\newblock MIT Press, Cambridge, MA, USA.
 
 \bibitem[MOEA/D, 2019]{MOEADCode}
 MOEA/D (2019).
@@ -198,6 +233,12 @@ Shir, O.~M., Preuss, M., Naujoks, B., and Emmerich, M.~T. (2009).
 \newblock Enhancing decision space diversity in evolutionary multiobjective
   algorithms.
 \newblock In {\em EMO}, volume~9, pages 95--109. Springer.
+
+\bibitem[Tan et~al., 2005]{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}
+Tan, K.~C., Khor, E.~F., and Lee, T.~H. (2005).
+\newblock {\em Multiobjective Evolutionary Algorithms and Applications
+  (Advanced Information and Knowledge Processing)}.
+\newblock Springer-Verlag New York, Inc., Secaucus, NJ, USA.
 
 \bibitem[Toffolo and Benini, 2003]{toffolo2003genetic}
 Toffolo, A. and Benini, E. (2003).

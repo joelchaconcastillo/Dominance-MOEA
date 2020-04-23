@@ -10,40 +10,40 @@ The proper balance between exploration and exploitation is one of the keys to de
 %
 In the single-objective domain, it is known that properly managing the diversity of decision 
 variable space is a way to achieve this balance,
-and as a consequence, a large number of diversity management techniques have been devised~\cite{Mohan:14}.
+and as a consequence, a large number of diversity management techniques have been devised~\citep{Mohan:14}.
 %
 Specifically, these methods are classified depending on the component(s) of the \EA{} that is modified to alter the way in which 
 diversity is maintained.
 %
-A popular taxonomy identifies the following groups~\cite{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, 
+A popular taxonomy identifies the following groups~\citep{Joel:Crepinsek}: \textit{selection-based}, \textit{population-based}, 
 \textit{crossover/mutation-based}, \textit{fitness-based}, and \textit{replacement-based}.
 %
 Additionally, the methods are referred to as \textit{uniprocess-driven} when a single component is altered, whereas the term
 \textit{multiprocess-driven} is used to refer to those methods that act on more than one component.
 
-Among the previous proposals, the replacement-based methods have yielded very high-quality results in recent years~\cite{Segura:17}, so
+Among the previous proposals, the replacement-based methods have yielded very high-quality results in recent years~\citep{Segura:17}, so
 this alternative was selected with the aim of designing a novel \MOEA{} that explicitly incorporates a way to control the diversity 
 of decision variable space.
 %
 The basic principle of these methods is to bias the level of exploration in successive generations by 
-controlling the diversity of the survivors~\cite{Segura:17}.
+controlling the diversity of the survivors.%~\citep{Segura:17}.
 %
 Since premature convergence is one of the most common drawbacks in the application of \EAS{}, 
 modifications are usually performed with the aim of slowing down convergence.
 %
 One of the most popular proposals belonging to this group is the \textit{crowding} method, which
-is based on the principle that offspring should replace similar individuals to those from the previous generation~\cite{Mengshoel:14}.
+is based on the principle that offspring should replace similar individuals to those from the previous generation~\citep{Mengshoel:14}.
 %
 Several replacement strategies that do not rely on crowding have also been devised.
 %
 In some methods, diversity is considered as an objective.
 %
-For instance, in the hybrid genetic search with adaptive diversity control (\HGSADC{})~\cite{Vidal:13}, individuals are sorted 
+For instance, in the hybrid genetic search with adaptive diversity control (\HGSADC{}) proposed by ~\cite{Vidal:13}, individuals are sorted 
 by their contribution to diversity and by their original cost.
 %
 Then, the rankings of the individuals are used in the fitness assignment phase.
 %
-A more recent proposal~\cite{Segura:17} incorporates a penalty approach to gradually alter the amount of diversity 
+A more recent proposal~\citep{Segura:17} incorporates a penalty approach to gradually alter the amount of diversity 
 maintained in the population.
 %
 Specifically, the initial phases preserve a higher amount of diversity than the final phases of the optimization.
@@ -65,9 +65,9 @@ While most of them seek to provide a well-spread set of solutions close to the P
 several ways of achieving this purpose have been devised.
 %
 Therefore, several taxonomies have been proposed with the aim of better classifying the different 
-schemes~\cite{Joel:BOOK_MOEAs}.
+schemes~\citep{Joel:BOOK_MOEAs}.
 %
-Particularly, a \MOEA{} can be designed based on Pareto dominance, indicators and/or decomposition~\cite{Joel:StateArt}.
+Particularly, a \MOEA{} can be designed based on Pareto dominance, indicators and/or decomposition~\citep{Joel:StateArt}.
 %
 Since none of the groups is significantly superior to the others, in this work all of them are taken into account to validate
 our proposal.
@@ -83,7 +83,7 @@ The dominance relationship does not inherently promote the preservation of diver
 therefore, additional techniques such as objective space density estimators are usually integrated in order to obtain 
 a proper spread and convergence to the Pareto front.
 %
-The most popular dominance-based \MOEA{} is the Non-Dominated Sorting Genetic Algorithm~II (\NSGAII{})~\cite{Joel:NSGAII}.
+The most popular dominance-based \MOEA{} is the Non-Dominated Sorting Genetic Algorithm~II (\NSGAII{}) proposed by~\cite{Joel:NSGAII}.
 %
 
 Several quality indicators have been devised to assess the performance of \MOEAS{}.
@@ -95,14 +95,14 @@ An advantage of this kind of algorithm is that the indicators usually take into 
 the diversity of objective function space. Thus, incorporating additional mechanisms to promote diversity in 
 objective function space is not required.
 %
-The Indicator-Based Evolutionary Algorithm (\IBEA{})~\cite{Joel:IBEA} was the first method belonging to this category.
+The Indicator-Based Evolutionary Algorithm (\IBEA{}) proposed by ~\cite{Joel:IBEA} was the first method belonging to this category.
 %
-A more recent one is the R2-Indicator-Based Evolutionary Multi-objective Algorithm (\RMOEA{})~\cite{trautmann2013r2}, 
+A more recent one is the R2-Indicator-Based Evolutionary Multi-objective Algorithm (\RMOEA{}) proposed by~\cite{trautmann2013r2}, 
 whose performance in \MOPS{} has been quite promising.
 %
 Its most important feature is the use of the R2 indicator.
 
-Finally, decomposition-based \MOEAS{}~\cite{Joel:MOEAD_AMS} are based on transforming the \MOP{} into a set of 
+Finally, decomposition-based \MOEAS{}~\citep{Joel:MOEAD_AMS} are based on transforming the \MOP{} into a set of 
 single-objective optimization problems that are tackled simultaneously.
 %
 This transformation can be performed in several ways, e.g. with a linear weighted sum or with a weighted Tchebycheff function. 
@@ -110,9 +110,9 @@ This transformation can be performed in several ways, e.g. with a linear weighte
 Given a set of weights to establish different single-objective functions, the \MOEA{} searches for a single 
 high-quality solution for each of them. 
 %
-The weight vectors should be selected with the aim of obtaining a well-spread set of solutions~\cite{Joel:Kalyanmoy}.
+The weight vectors should be selected with the aim of obtaining a well-spread set of solutions~\citep{Joel:Kalyanmoy}.
 %
-The Multi-objective Evolutionary Algorithm Based on Decomposition (\MOEAD{})~\cite{Joel:MOEAD} is the most popular 
+The Multi-objective Evolutionary Algorithm Based on Decomposition (\MOEAD{}) proposed by ~\cite{Joel:MOEAD} is the most popular 
 decomposition-based \MOEA{}. 
 %
 Its main principles include problem decomposition, weighted aggregation of objectives and mating restrictions 
@@ -123,14 +123,14 @@ mechanisms to promote diversity of decision variable space.
 %
 However, some efforts have been devoted to this principle.
 %
-A popular approach to promote the diversity of decision variable space is the application of fitness sharing~\cite{Joel:NPGA}, 
+A popular approach to promote the diversity of decision variable space is the application of fitness sharing~\citep{Joel:NPGA}, 
 in a way similar to single-objective optimization.
 %
 Although fitness sharing might be used to promote the diversity of both objective and decision variable spaces, most
 popular variants consider only distances in objective function space.
 % 
 Another \MOEA{} designed to promote diversity of both decision variable space and objective function space is the Genetic
-Diversity Evolutionary Algorithm (GDEA)~\cite{toffolo2003genetic}.
+Diversity Evolutionary Algorithm (GDEA) proposed by ~\cite{toffolo2003genetic}.
 %
 In this case, each individual is assigned a diversity-based objective which is calculated as the
 Euclidean distance in the genotype space to the remaining individuals in the population.
@@ -139,27 +139,27 @@ Then, a ranking that considers both the original objectives and the diversity ob
 to sort individuals.
 %
 Another somewhat popular approach is to calculate distances between candidate solutions by taking
-into account both objective and decision variable space~\cite{deb2005omni,shir2009enhancing} with the aim
+into account both objective and decision variable space~\citep{deb2005omni,shir2009enhancing} with the aim
 of promoting diversity of both spaces.
 %
-A different proposal combines the use of two selection operators~\cite{chan2005evolutionary}.
+A different proposal combines the use of two selection operators~\citep{chan2005evolutionary}.
 %
 The first one promotes diversity and quality in objective function space, whereas the second one promotes diversity 
 in decision variable space.
 %
 A different approach involves modifying the hypervolume to integrate the decision variable space diversity 
-into a single metric~\cite{ulrich2010integrating}.
+into a single metric~\citep{ulrich2010integrating}.
 % 
 In this approach, the proposed metric is used to guide the selection in the \MOEA{}.
 %
 Finally, some indirect mechanisms that might affect diversity have also been taken into account.
 %
-The most popular one is probably the use of mating restrictions~\cite{Joel:STUDY_MATTING_RESTRICTION,Joel:MOEAD_AMS}.
+The most popular one is probably the use of mating restrictions~\citep{Joel:STUDY_MATTING_RESTRICTION,Joel:MOEAD_AMS}.
 
 In light of the results of the approaches described above, it is clear that considering the diversity of decision variable space
 in the design phase might yield benefits for decision makers, since the final solutions obtained by these 
 methods exhibit a higher decision variable space diversity than those obtained by traditional 
-approaches~\cite{deb2005omni, rudolph2007capabilities}.
+approaches~\citep{deb2005omni, rudolph2007capabilities}.
 %
 Thus, while clear improvements are obtained when metrics related to the decision 
 variable space are taken into account, the benefits in terms of the 
@@ -169,9 +169,9 @@ We claim that one of the reasons for this behavior might be that the diversity o
 in the whole optimization process.
 %
 However, in a similar way as in the single objective domain, reducing the importance granted to the diversity 
-of decision variable space as the generations progress~\cite{Joel:MULTI_DYNAMIC} might be truly important for obtaining
+of decision variable space as the generations progress~\citep{Joel:MULTI_DYNAMIC} might be truly important for obtaining
 better approximations of the Pareto front.
 %
-Currently, no \MOEA{} considers this idea, so it is this principle that has guided the design of our novel \MOEA{}.
+Currently, no \MOEA{} considers this idea, therefore this principle has guided the design of our novel \MOEA{}.
 
 
