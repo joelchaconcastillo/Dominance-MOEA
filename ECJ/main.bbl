@@ -133,9 +133,6 @@ Ishibuchi, H. and Shibata, Y. (2003).
   Search Ability of EMO Algorithms}}, pages 433--447.
 \newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
 
-\bibitem[jMetalcpp, 2019]{Joel:jMetal}
-jMetalcpp (2019).
-
 \bibitem[Koumousis and Katsaras, 2006]{Joel:SAWTOOTH}
 Koumousis, V. and Katsaras, C. (2006).
 \newblock {A saw-tooth genetic algorithm combining the effects of variable
@@ -183,9 +180,6 @@ Mitchell, M. (1998).
 \newblock {\em An Introduction to Genetic Algorithms}.
 \newblock MIT Press, Cambridge, MA, USA.
 
-\bibitem[MOEA/D, 2019]{MOEADCode}
-MOEA/D (2019).
-
 \bibitem[Molinet~Berenguer and Coello~Coello, 2015]{Joel:Kuhn_Munkres}
 Molinet~Berenguer, J.~A. and Coello~Coello, C.~A. (2015).
 \newblock {\em Evolutionary Many-Objective Optimization Based on Kuhn-Munkres
@@ -197,9 +191,6 @@ Pandey, H.~M., Chaudhary, A., and Mehrotra, D. (2014).
 \newblock {A comparative review of approaches to prevent premature convergence
   in GA}.
 \newblock {\em Applied Soft Computing}, 24:1047 -- 1077.
-
-\bibitem[R2-EMOA, 2019]{R2EMOACode}
-R2-EMOA (2019).
 
 \bibitem[Rudolph et~al., 2007]{rudolph2007capabilities}
 Rudolph, G., Naujoks, B., and Preuss, M. (2007).

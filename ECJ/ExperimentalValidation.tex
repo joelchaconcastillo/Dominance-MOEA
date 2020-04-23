@@ -31,7 +31,7 @@ Note that the experiment used to analyze scalability considers different numbers
 
 The experimental validation includes three well-known state-of-the-art \MOEAS{} and \VSDMOEA{}.
 %
-The \MOEAS{} that are considered are \NSGAII{}~\citep{Joel:jMetal}, \MOEAD{}~\citep{MOEADCode}, and \RMOEA{}~\citep{R2EMOACode}, 
+The \MOEAS{} that are considered are \NSGAII{}~\footnote{\url{http://jmetalcpp.sourceforge.net/}}, \MOEAD{}~\footnote{\url{http://www3.ntu.edu.sg/home/epnsugan/index_files/CEC09-MOEA/CEC09-MOEA.htm}}, and \RMOEA{}~\footnote{\url{http://inriadortmund.gforge.inria.fr/r2emoa/}}, 
 which can be classified as dominance-based, decomposition-based, and indicator-based, respectively.
 %
 Note that for the indicator-based category, the s-metric selection evolutionary multiobjective optimisation algorithm 
@@ -173,7 +173,9 @@ In order to better clarify these findings, pair-wise statistical tests were done
 test problem.
 %
 For the two-objective cases, Table~\ref{tab:Tests_HV_2obj} shows the number of times that each method won (column $\uparrow$),
-lost (column $\downarrow$) and tied (column $\leftrightarrow$).
+lost (column $\downarrow$), tied (column $\leftrightarrow$) and \textbf{Score}.
+%
+The later is calculated as the diference between the number of times that each method won and the numer of times that each method lost.
 %
 
 \input{Tables/Tests_HV_2obj.tex}
@@ -266,7 +268,7 @@ Note that a parameter $i$ is a distance parameter when for all $\vec{\mathbf{x}}
 that dominates $\vec{\mathbf{x}}$, is equivalent to $\vec{\mathbf{x}}$, or is dominated by $\vec{\mathbf{x}}$.
 %
 However, if $i$ is a position parameter, modifying $x_i$ in $\vec{\mathbf{x}}$ always results in a vector that is incomparable or 
-equivalent to $\vec{\mathbf{x}}$~\cite{huband2005scalable}.
+equivalent to $\vec{\mathbf{x}}$~\citep{huband2005scalable}.
 %
 Additionally, note that we selected problems WFG1-WFG7 because their distance parameter values associated to all Pareto optimal solutions 
 have exactly the same values:
@@ -277,22 +279,26 @@ have exactly the same values:
 %
 This is very important because it has been shown that for these cases, state-of-the-art
 \MOEAS{} might provoke a quick convergence in \textit{distance parameters}, resulting in an effect that is similar to premature convergence
-in the single-objective case~\cite{Joel:GDE3_CEC09}.
+in the single-objective case~\citep{Joel:GDE3_CEC09}.
 
 \begin{figure}[t]
 \centering
-\includegraphics[scale=0.85]{Images/Graphic-Diversity_2obj_tikz-figure1.eps}
-\caption{Evolution of ADI for problems WFG1-WFG7 with two objectives considering only the distance variables}\label{fig:Diversity_2obj}
+\setlength{\tabcolsep}{0.0em}
+\begin{tabular}{c c}
+\includegraphics[scale=0.75]{Images/Graphic-Diversity_2obj_tikz-figure1.eps} & \includegraphics[scale=0.75]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
+\end{tabular}
+\caption{Evolution of ADI for problems WFG1-WFG7 with two and three objectives considering only the distance variables}\label{fig:Diversity}
 \end{figure}
 
 For each algorithm, we calculated the average Euclidean distance among individuals (ADI) in the population by considering only 
 the distance parameters.
 %
-Figures~\ref{fig:Diversity_2obj} and~\ref{fig:Diversity_3obj} show how the ADI evolves for the two-objective and three-objective problems.
+The figure~\ref{fig:Diversity} shows how the ADI evolves for the two-objective (left side) and three-objective (right side) problems.
+%Figures~\ref{fig:Diversity_2obj} and~\ref{fig:Diversity_3obj} show how the ADI evolves for the two-objective and three-objective problems.
 %
 The behavior of \NSGAII{} and \MOEAD{} --- which are not included --- is similar to that of \RMOEA{} in terms of how the ADI evolves. 
 %
-Thus, to avoid saturating these Figures, only the information for \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 variables is shown.
+Thus, to avoid saturating these figures, only the information for \VSDMOEA{} and \RMOEA{} with 50, 100 and 250 variables is shown.
 %
 The first obvious fact is that \VSDMOEA{} converges much slower than \RMOEA{}.
 %
@@ -327,18 +333,39 @@ This probably means that as technology evolves, allowing longer executions to be
 the incorporation of explicit control of diversity will be even more important.
 %
 Note that this also happens in the single-objective case, where the benefits of explicitly controlling diversity appears only when using executions lasting
-several weeks when dealing with large instances of the Traveling Salesman Problem~\cite{segura2015novel}.
+several weeks when dealing with large instances of the Traveling Salesman Problem~\citep{segura2015novel}.
 %
 
-\begin{figure}[t]
-\centering
-\includegraphics[scale=0.85]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
-\caption{Evolution of ADI for problems WFG1-WFG7 with three objectives considering only the distance variables}\label{fig:Diversity_3obj}
-\end{figure}
+%\begin{figure}[t]
+%\centering
+%\includegraphics[scale=0.85]{Images/Graphic-Diversity_3obj_tikz-figure1.eps}
+%\caption{Evolution of ADI for problems WFG1-WFG7 with three objectives considering only the distance variables}\label{fig:Diversity_3obj}
+%\end{figure}
 
 \subsection{Analysis of the Stopping criterion}
+\begin{figure}[t]
+\centering
+\setlength{\tabcolsep}{0.0em}
+\begin{tabular}{cc}
+\begin{tabular}{l}
+ \includegraphics[scale=0.5]{Images/Time_tikz-figure0.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.5]{Images/Time_tikz-figure1.eps}\\[0cm]%[-0.18cm]
+ \includegraphics[scale=0.5]{Images/Time_tikz-figure2.eps}
+\end{tabular}
+& \begin{tabular}{l}
+ \includegraphics[scale=0.5]{Images/Time_tikz-figure3.eps}\\[0cm]%[-0.14cm] 
+ \includegraphics[scale=0.5]{Images/Time_tikz-figure4.eps}\\[0cm]%[-0.18cm]
+ \includegraphics[scale=0.5]{Images/Time_tikz-figure5.eps}
+\end{tabular}
 
-As previously discussed, \EAS{} with explicit control of diversity are usually more useful in long-term executions.
+\end{tabular}
+\caption{Performance of \MOEAS{} for the problems with two objectives (left side) and three objectives (right side) considering three ranges for the stopping criterion: 
+short-term (first row), middle-term (second row) and long-term (third row).}\label{fig:Performance_time}
+\end{figure}
+
+This section ilustrates the main reason of why the superiority of the \VSDMOEA{} against state-of-the-art algorithms in long-term executions.
+%
+As previously discussed, \EAS{} with explicit control of diversity often are more useful in long-term executions.
 %
 The fact that we selected a rather large stopping criterion in our first experiment might lead readers to think that \VSDMOEA{} is only
 useful in extremely long-term executions;
@@ -360,7 +387,8 @@ Note that state-of-the-art algorithms can be executed just once (with $2.5 \time
 %
 However, \VSDMOEA{} makes decisions that depend on the stopping criteria, so independent executions were required for each stopping criterion.
 
-Figures~\ref{fig:Performance_time_2obj} and~\ref{fig:Performance_time_3obj} show the mean \HV{} ratio obtained with each \MOEA{} 
+The figure~\ref{fig:Performance_time} shows the mean \HV{} ratio obtained with each \MOEA{} 
+%Figures~\ref{fig:Performance_time_2obj} and~\ref{fig:Performance_time_3obj} show the mean \HV{} ratio obtained with each \MOEA{} 
 with two and three objectives, respectively.
 %
 All the problems were considered to calculate this mean ratio.
@@ -390,16 +418,6 @@ algorithms increase in favor of \VSDMOEA{}.
 %
 Thus, while the most important benefits arise in long-term executions, users can benefit from \VSDMOEA{} even in shorter executions.
 
-\begin{figure}[t]
-\centering
-\begin{tabular}{l}
- \includegraphics[scale=0.6]{Images/Time_tikz-figure0.eps}\\[0cm]%[-0.14cm] 
- \includegraphics[scale=0.6]{Images/Time_tikz-figure1.eps}\\[0cm]%[-0.18cm]
- \includegraphics[scale=0.6]{Images/Time_tikz-figure2.eps}
-\end{tabular}
-\caption{Performance of \MOEAS{} for the problems with two objectives considering three ranges for the stopping criterion: 
-short-term (first row), middle-term (second row) and long-term (third row).}\label{fig:Performance_time_2obj}
-\end{figure}
 
 \subsection{Analysis of the Initial Threshold Value}
 
@@ -407,6 +425,10 @@ One of the disadvantages of including a strategy for controlling diversity is th
 incorporating additional parameters in the \EA{} designed.
 %
 In the case of \VSDMOEA{}, the initial threshold value ($D_I$) must be set.
+%
+The higher this value is, the greater the exploración of the decision variable space.
+%
+In an opposed way, the lower this value is, the less space exploration will be.
 %
 Note that in all the previous experiments, $D_I = 0.4$ was used.
 %
@@ -424,6 +446,12 @@ As a result, the values $D_I = \{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.
 %
 As in previous experiments, the whole set of benchmark problems was used and
 the stopping criterion was set to $2.5 \times 10^7$ function evaluations.
+
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.85]{Images/Graphic-Initial-Distance_tikz-figure0.eps} \\
+\caption{Mean of \HV{} values taking into account all the problems with several initial threshold values}\label{fig:Initial-distance-factor}
+\end{figure}
 
 Figure~\ref{fig:Initial-distance-factor} shows the mean \HV{} ratio obtained for both the two-objective 
 and the three-objective case.
@@ -446,20 +474,15 @@ the behavior of \VSDMOEA{} is quite robust.
 %
 Thus, properly setting this parameter is not a complex task.
 %
-\begin{figure}[t]
-\centering
-\begin{tabular}{l}
- \includegraphics[scale=0.6]{Images/Time_tikz-figure3.eps}\\[0cm]%[-0.14cm] 
- \includegraphics[scale=0.6]{Images/Time_tikz-figure4.eps}\\[0cm]%[-0.18cm]
- \includegraphics[scale=0.6]{Images/Time_tikz-figure5.eps}
-\end{tabular}
-\caption{Performance of \MOEAS{} for the problems with three objectives considering three ranges for the stopping 
-criterion: short-term (first row), middle-term (second row) and long-term (third row).}\label{fig:Performance_time_3obj}
-\end{figure}
+%\begin{figure}[t]
+%\centering
+%\begin{tabular}{l}
+% \includegraphics[scale=0.6]{Images/Time_tikz-figure3.eps}\\[0cm]%[-0.14cm] 
+% \includegraphics[scale=0.6]{Images/Time_tikz-figure4.eps}\\[0cm]%[-0.18cm]
+% \includegraphics[scale=0.6]{Images/Time_tikz-figure5.eps}
+%\end{tabular}
+%\caption{Performance of \MOEAS{} for the problems with three objectives considering three ranges for the stopping 
+%criterion: short-term (first row), middle-term (second row) and long-term (third row).}\label{fig:Performance_time_3obj}
+%\end{figure}
 
-\begin{figure}[t]
-\centering
-\includegraphics[scale=0.85]{Images/Graphic-Initial-Distance_tikz-figure0.eps} \\
-\caption{Mean of \HV{} values taking into account all the problems with several initial threshold values}\label{fig:Initial-distance-factor}
-\end{figure}
 

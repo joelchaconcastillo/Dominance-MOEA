@@ -5,57 +5,51 @@ The style file: apalike.bst
 Database file #1: References.bib
 Warning--string name "ieee_j_evc" is undefined
 --line 242 of file References.bib
-Warning--entry type for "Joel:jMetal" isn't style-file defined
---line 1058 of file References.bib
-Warning--entry type for "MOEADCode" isn't style-file defined
---line 1063 of file References.bib
-Warning--entry type for "R2EMOACode" isn't style-file defined
---line 1068 of file References.bib
 Warning--empty institution in Joel:SBX1994
 Warning--can't use both author and editor fields in Joel:WFG
 Warning--can't use both author and editor fields in Joel:Inverted_Generational_Distance_Plus
 Warning--can't use both author and editor fields in Joel:STUDY_MATTING_RESTRICTION
 Warning--empty journal in Joel:SAWTOOTH
 Warning--can't use both author and editor fields in Joel:Kuhn_Munkres
-You've used 49 entries,
+You've used 46 entries,
             1935 wiz_defined-function locations,
-            774 strings with 13802 characters,
-and the built_in function-call counts, 22423 in all, are:
-= -- 2244
-> -- 888
-< -- 40
-+ -- 317
-- -- 298
-* -- 1851
-:= -- 3677
-add.period$ -- 152
-call.type$ -- 49
-change.case$ -- 383
-chr.to.int$ -- 48
-cite$ -- 55
-duplicate$ -- 899
-empty$ -- 1591
-format.name$ -- 375
-if$ -- 4587
+            764 strings with 13716 characters,
+and the built_in function-call counts, 21745 in all, are:
+= -- 2178
+> -- 867
+< -- 37
++ -- 311
+- -- 292
+* -- 1806
+:= -- 3542
+add.period$ -- 149
+call.type$ -- 46
+change.case$ -- 368
+chr.to.int$ -- 45
+cite$ -- 52
+duplicate$ -- 869
+empty$ -- 1546
+format.name$ -- 366
+if$ -- 4464
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 53
-newline$ -- 242
-num.names$ -- 147
-pop$ -- 409
+newline$ -- 233
+num.names$ -- 138
+pop$ -- 388
 preamble$ -- 1
-purify$ -- 393
+purify$ -- 375
 quote$ -- 0
-skip$ -- 690
+skip$ -- 669
 stack$ -- 0
-substring$ -- 1691
+substring$ -- 1655
 swap$ -- 216
 text.length$ -- 22
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 278
+type$ -- 260
 warning$ -- 6
-while$ -- 181
+while$ -- 175
 width$ -- 0
-write$ -- 638
-(There were 10 warnings)
+write$ -- 614
+(There were 7 warnings)
