@@ -1,0 +1,107 @@
+\documentclass[twoside]{article}
+\usepackage{ecj,palatino,epsfig,latexsym,natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots,pgfplotstable}
+\usepackage{pdfpages}
+%\usepackage{tikz}
+\usepackage{algorithm}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue, breaklinks=true]{hyperref}
+\usepackage[noend]{algorithmic}
+\usepackage{mathtools}
+\usepackage{multirow}
+
+\newcommand{\COMB}{{\sc comb}}
+\newcommand{\DCS}{{\sc dcs}}
+\newcommand{\EA}{{\sc ea}}
+\newcommand{\EAS}{{\sc ea}s}
+\newcommand{\GDEIII}{{\sc gde3}}
+\newcommand{\HGSADC}{{\sc hgsadc}}
+\newcommand{\MOEA}{{\sc moea}}
+\newcommand{\MOEAD}{{\sc moea/d}}
+\newcommand{\MOEAS}{{\sc moea}s}
+\newcommand{\MOP}{{\sc mop}}
+\newcommand{\MOPS}{{\sc mop}s}
+\newcommand{\NSGAII}{{\sc nsga-ii}}
+\newcommand{\IBEA}{{\sc ibea}}
+\newcommand{\VSDMOEA}{{\sc vsd-moea}}
+\newcommand{\RMOEA}{{\sc r2-emoa}}
+\newcommand{\WFG}{{\sc wfg}}
+\newcommand{\AASF}{{\sc aasf}}
+\newcommand{\HV}{{\sc hv}}
+
+
+
+%% do not add any other page- or text-size instruction here
+
+\parskip=0.00in
+
+\begin{document}
+
+\ecjHeader{x}{x}{xxx-xxx}{2020}{Multi-objective Evolutionary Algorithm with Explicit Variable Space Diversity Managment}{J. Chac\'on Castillo, C. Segura, C. Coello}
+%\title{\bf Formatting Your Paper for Evolutionary Computation}  
+\title{\bf Supplementary Document for ``VSD-MOEA: A Dominance-Based Multi-Objective Evolutionary Algorithm with Explicit Variable Space Diversity Management''}
+
+%\author{\name{\bf B. A. Author} \hfill \addr{author@abc.university.country}\\ 
+%        \addr{Department of Science, My University, 
+%        MyTown, Zip, Country}
+%\AND
+%       \name{\bf D. C. Author2} \hfill \addr{author2@abc.university.country}\\
+%        \addr{Department of Science, My University, 
+%        MyTown, Zip, Country}
+%}
+
+
+\author{\name{\bf Joel~Chac\'on~Castillo} \hfill \addr{joel.chacon@cimat.mx}\\
+	\addr{Computer Science Department, Center for Research in Mathematics (CIMAT), Callej\'on Jalisco s/n, Mineral de Valenciana, Guanajuato, Guanajuato 36240, Mexico}
+	\AND
+        \name{\bf Carlos~Segura} \hfill \addr{carlos.segura@cimat.mx}\\
+	\addr{Computer Science Department, Center for Research in Mathematics (CIMAT), Callej\'on Jalisco s/n, Mineral de Valenciana, Guanajuato, Guanajuato 36240, Mexico}
+        \AND
+        \name{\bf Carlos A. Coello Coello} \hfill \addr{ccoello@cs.cinvestav.mx}\\
+	\addr{Computer Science Department, CINVESTAV-IPN, Mexico City 07300 }
+%\thanks{J. Chac\'on, and C. Segura are with the Center for Research in Mathematics (CIMAT), Computer Science Department,
+%Callej\'on Jalisco s/n, Mineral de Valenciana, Guanajuato, Guanajuato 36240, Mexico (e-mail: joel.chacon@cimat.mx; carlos.segura@cimat.mx)}%
+%\thanks{C. A. Coello Coello is with the Evolutionary Computation
+%Group, Computer Science Department, CINVESTAV-IPN, Mexico City 07300, 
+%Mexico (e-mail: ccoello@cs.cinvestav.mx).}% <-this % stops a space
+%\thanks{Digital Object Identifier xxx}
+%\thanks{Manuscript received XX, XX 2019; revised XX XX, XX.}%
+}
+
+
+\maketitle
+
+%\begin{keywords}
+%Evolutionary algorithms,
+%multi-objective optimization,
+%diversity,
+%premature convergence
+%
+%\end{keywords}
+\input{Introduction_SM.tex}
+
+
+\section{Multimedia Material}
+\input{Media.tex}
+
+\section{Comparison against State-of-the-art \MOEAS{} in long-term executions}
+\input{Extra_ExperimentalValidation.tex}
+
+%%
+%%\section*{Acknowledgments}
+%%The first two authors acknowledge the financial support from CONACyT through the ``Ciencia B\'asica'' project no. 285599.
+%%The last author acknowledges support from CONACyT 
+%%project no. 2016-01-1920 ({\em Investigaci\'{o}n en Fronteras de la Ciencia 2016})
+%%and from a project from the 2018 SEP-Cinvestav Fund (application no. 4).
+
+
+\small
+
+\bibliographystyle{apalike}
+\bibliography{References}
+
+
+\end{document}
