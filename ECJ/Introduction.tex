@@ -10,7 +10,7 @@ A continuous box-constrained minimization \MOP{}, which is the kind of problem a
 \end{equation}
 where $n$ corresponds to the dimensionality of the decision variable space, $\vec{\mathbf{x}}$ is a vector of $n$ 
 decision variables $\vec{\mathbf{x}}=(x_1, ..., x_n) \in R^n$, which are constrained by $x_i^{(L)}$ 
-and $x_i^{(U)}$, i.e. the lower bound and the upper bound, furthermore $M$ is the number of objective functions
+and $x_i^{(U)}$, i.e. the lower bound and the upper bound, and $M$ is the number of objective functions
 to optimize.
 %
 The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$.
@@ -61,7 +61,8 @@ and for a two-dimensional packing problem~\citep{Joel:MULTI_DYNAMIC} have been a
 %
 Additionally, this principle guided the design of the winning strategy at the Second Wind Farm Layout Optimization 
 Competition\footnote{https://www.irit.fr/wind-competition/}, which was held at the {\em Genetic and Evolutionary 
-Computation Conference}.
+Computation Conference} and for the extended round of Google Hash Code 2020~\footnote{https://codingcompetitions.withgoogle.com/hashcode/}
+, with more than $100,000$ participants.
 %
 Thus, the benefits of this type of design patterns have been shown in several different single-objective optimization problems.
 
@@ -81,9 +82,9 @@ taken into account.
 However, this is just an indirect way of preserving diversity of decision variable space, so 
 in some cases the level of diversity might not be large enough to ensure a proper degree of exploration.
 %
-For instance, it has been shown that with some of the \WFG{} test problems, in most state-of-the-art \MOEAS{} 
-the \textit{distance parameters} quickly converge, meaning that the approach focuses just on optimizing the 
-\textit{position parameters} for a long period of the optimization process~\citep{Joel:GDE3_CEC09}.
+For instance, it has been shown that with some of the \WFG{} test problems, in most state-of-the-art \MOEAS{}
+the \textit{distance parameters} quickly converge, meaning that the approach focuses just on optimizing the
+\textit{position parameters} for a long period of the optimization process~\citep{castillo2017multi}.
 %
 Thus, while some degree of diversity is maintained, a situation similar to premature convergence occurs,
 meaning that genetic operators might not be longer able to generate better trade-offs. 
@@ -105,8 +106,8 @@ In fact, in the last stage of execution, diversity of decision variable space is
 in the last phases, the proposed approach is quite similar to current state-of-the-art approaches.
 %
 To the best of our knowledge, this is the first \MOEA{} whose design follows this adaptive principle.
-%
-Since there currently exist quite a large number of different \MOEAS{}~\citep{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
+
+Since there currently exists quite a large number of different \MOEAS{}~\citep{Joel:MOEA_APPLICATIONS_BOOK_KCTAN}, 
 three popular schemes have been selected to validate our proposal.
 %
 This validation was performed using several well-known benchmarks and proper quality metrics.
@@ -116,7 +117,13 @@ This paper clearly shows the important benefits of properly taking into account 
 In particular, the advantages become more evident in the most complex problems.
 %
 Note that this is consistent with the single-objective case, where the most important benefits have been obtained
-in complex multi-modal cases~\citep{Segura:17}, nevertheless is imperative to clarify that this work does not dwells to the niche-base paradigm (e.g. \cite{liang2016multimodal}, \cite{deb2005omni}, \cite{li2016seeking}), and despite that it can be successfully applied to multi-modal problems, this work is mainly oriented to prove that promoting diversity in the decision variable space is useful \MOEAS{} field, and might result in quality solutions.
+in complex multi-modal cases~\citep{Segura:17}.
+%
+It is also important to clarify that, in spite of considering the variable-space diversity, our work is not a niche-based proposal
+for multimodal optimization (\cite{liang2016multimodal}, \cite{deb2005omni}, \cite{li2016seeking}).
+%
+Instead, this work is oriented to prove that considering explicitly the amount of diversity maintained in the decision variable space 
+is useful to increase the quality of \MOEAS{} when taking into account metrics of the objective space.
 
 The rest of this paper is organized as follows. 
 %
