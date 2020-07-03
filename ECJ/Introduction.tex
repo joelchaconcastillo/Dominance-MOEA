@@ -9,13 +9,13 @@ A continuous box-constrained minimization \MOP{}, which is the kind of problem a
    \end{split}
 \end{equation}
 where $n$ corresponds to the dimensionality of the decision variable space, $\vec{\mathbf{x}}$ is a vector of $n$ 
-decision variables $\vec{\mathbf{x}}=(x_1, ..., x_n) \in R^n$, which are constrained by $x_i^{(L)}$ 
+decision variables $\vec{\mathbf{x}}=(x_1, ..., x_n) \in \mathbb{R}^n$, which are constrained by $x_i^{(L)}$ 
 and $x_i^{(U)}$, i.e. the lower bound and the upper bound, and $M$ is the number of objective functions
 to optimize.
 %
 The feasible space bounded by $x_i^{(L)}$ and $x_i^{(U)}$ is denoted by $\Omega$.
-Each solution is mapped to the objective space with the function $F : \Omega \rightarrow R^M$, 
-which consists of $M$ real-valued objective functions, and $R^M$ is called the \textit{objective space}. 
+Each solution is mapped to the objective space with the function $F : \Omega \rightarrow \mathbb{R}^M$, 
+which consists of $M$ real-valued objective functions, and $\mathbb{R}^M$ is called the \textit{objective space}. 
 
 Given two solutions $\vec{\mathbf{x}}$, $\vec{\mathbf{y}}$ $\in \Omega$, $\vec{\mathbf{x}}$ dominates $\vec{\mathbf{y}}$, 
 which is mathematically denoted by $\vec{\mathbf{x}} \prec \vec{\mathbf{y}}$, iff $\forall m \in {1,2,...,M} : 
@@ -59,9 +59,9 @@ These schemes have provided highly promising results.
 For instance, new best-known solutions for some well-known variants of the frequency assignment problem~\citep{Segura:17},
 and for a two-dimensional packing problem~\citep{Joel:MULTI_DYNAMIC} have been attained using the same principles.
 %
-Additionally, this principle guided the design of the winning strategy at the Second Wind Farm Layout Optimization 
+Additionally, this principle guided the design of the winning strategy of the Second Wind Farm Layout Optimization 
 Competition\footnote{https://www.irit.fr/wind-competition/}, which was held at the {\em Genetic and Evolutionary 
-Computation Conference} and for the extended round of Google Hash Code 2020~\footnote{https://codingcompetitions.withgoogle.com/hashcode/}
+Computation Conference} and of the extended round of Google Hash Code 2020~\footnote{https://codingcompetitions.withgoogle.com/hashcode/}
 , with more than $100,000$ participants.
 %
 Thus, the benefits of this type of design patterns have been shown in several different single-objective optimization problems.
@@ -100,7 +100,7 @@ The main difference with respect to the single-objective case is that diversity 
 is simultaneously considered by using a novel objective space density estimator.
 %
 Particularly, the approach grants more importance to the diversity of decision variable space in the initial stages, and 
-it gradually grants more importance to the diversity of objective function space.
+it gradually grants more importance to the diversity of objective function space as the evolution progresses.
 %
 In fact, in the last stage of execution, diversity of decision variable space is neglected. Thus, 
 in the last phases, the proposed approach is quite similar to current state-of-the-art approaches.
@@ -120,9 +120,9 @@ Note that this is consistent with the single-objective case, where the most impo
 in complex multi-modal cases~\citep{Segura:17}.
 %
 It is also important to clarify that, in spite of considering the variable-space diversity, our work is not a niche-based proposal
-for multimodal optimization (\cite{liang2016multimodal}, \cite{deb2005omni}, \cite{li2016seeking}).
+for multimodal optimization (\cite{deb2005omni}, \cite{zhou2009approximating}, \cite{li2016seeking},\cite{liang2016multimodal}).
 %
-Instead, this work is oriented to prove that considering explicitly the amount of diversity maintained in the decision variable space 
+Instead, this work is oriented to show that controlling explicitly the amount of diversity maintained in the decision variable space 
 is useful to increase the quality of \MOEAS{} when taking into account metrics of the objective space.
 
 The rest of this paper is organized as follows. 

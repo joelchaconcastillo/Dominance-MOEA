@@ -1,6 +1,6 @@
 
 This section provides a full description of our proposal called \textit{Variable Space Diversity based MOEA} 
-(\VSDMOEA{})~\footnote{The source code in C++ is freely available at \url{https://github.com/joelchaconcastillo/VSD-MOEA.git}}.
+(\VSDMOEA{})~\footnote{The source code in C++ is freely available at \url{https://github.com/carlossegurag/VSD-MOEA}}.
 %
 The novelty of \VSDMOEA{} appears in the replacement phase, which incorporates
 the use of variable space diversity and a novel objective space density estimator. 
@@ -15,7 +15,7 @@ In this paper, our decision was to incorporate it into a dominance-based approac
 Note that this category has been particularly suitable for problems with two and three objectives.
 %
 Thus, some of our design decisions might not be suitable for dealing with many-objective optimization problems.
-\begin{algorithm}[h]
+\begin{algorithm}[t]
 %\algsetup{linenosize=\tiny}
 	\caption{Main procedure of VSD-MOEA} 
 	\begin{small}
@@ -101,7 +101,7 @@ centered around a candidate solution --- in decision variable space --- is creat
 Then, all the individuals that are inside the hyper-sphere are penalized, with the objective space density estimator only taking 
 into account the survivors and the non-penalized individuals.
 %
-This is illustrated in Fig.~\ref{fig:Hypersphere} (below), which represents a state where three individuals have been 
+This is illustrated in Fig.~\ref{fig:Hypersphere}, which represents a state where three individuals have been 
 selected to survive and an additional survivor must be picked.
 %
 The left side shows individuals in decision variable space.
@@ -121,7 +121,7 @@ objective function space.} \label{fig:Hypersphere}
 \end{figure}
 
 Since using a large radius for the hyper-spheres induces a large degree of 
-exploration, it makes sense to reduce this value during the optimization process.
+exploration, it makes sense to alter this value during the optimization process.
 %
 This is precisely one of the keys of our proposal.
 %
@@ -147,12 +147,12 @@ might behave as a traditional non-diversity based \MOEA{}.
 %
 The robustness of the proposal with respect to this additional parameter is studied in our experimental validation.
 
-\begin{algorithm}[h]
+\begin{algorithm}[t]
 \algsetup{linenosize=\tiny}
 	\caption{Replacement Phase of VSD-MOEA} 
 \begin{small}
 \begin{algorithmic}[1]
-\STATE Input: $P_t$ (Population of current generation), $Q_t$ (Offspring of current Generation)
+\STATE Input: $P_t$ (Population of current generation), $Q_t$ (Offspring of current Generation), $N$ (Population Size)
     	\STATE Output: $P_{t+1}$ 
         \STATE $R_t = P_t \cup Q_t$ \label{alg:1}
         \STATE $P_{t+1} = \emptyset$ \label{alg:2}
@@ -215,8 +215,9 @@ Finally, the objective function space is considered.
 %
 Specifically, candidate non-penalized individuals and current survivors are merged.
 %
-Then, the well-known non-dominated sorting procedure proposed in ~\cite{Joel:NSGAII} is executed on this set, stopping as soon as a front with 
-a candidate individual is found, i.e. with an individual of $R_t$ (line \ref{alg:12}).
+Then, the well-known non-dominated sorting procedure proposed in ~\cite{Joel:NSGAII} 
+is executed on this set, stopping as soon as a front with 
+at least one candidate individual is found, i.e. with an individual of $R_t$ (line \ref{alg:12}).
 %
 Then, taking the identified front as an input, a novel objective space density estimator is used to select
 the next survivor (line \ref{alg:13}).
@@ -233,7 +234,7 @@ dominance-based \MOEAS{} usually incorporate objective-space density estimators 
 of diverse individuals.
 %
 As previously described, our density estimator selects a new survivor from the front identified
-in line \ref{alg:13} of Algorithm~\ref{alg:Replacement_Phase}.
+in line \ref{alg:12} of Algorithm~\ref{alg:Replacement_Phase}.
 %
 This front (referred in Algorithm~\ref{alg:Density_Estimator} as $F$) contains at least one 
 individual belonging to $R_t$, and it might also contain some elements 
@@ -241,7 +242,7 @@ of $P_{t+1}$.
 %
 The aim behind the selection of the next survivor is to pick an individual of the input front
 that contributes significantly in terms of the quality and diversity of the objective space. % to $R_t$.
-\begin{algorithm}[]
+\begin{algorithm}[t]
 \algsetup{linenosize=\tiny}
 	\caption{Density estimator} 
 \begin{small}
@@ -281,8 +282,9 @@ Then, similarly to most state-of-the-art algorithms, a step to promote the selec
 is included.
 %
 Note that selecting the best solution for each objective might cause some drawbacks related to accepting a small improvement
-in one objective at the expense of significant degradation in other objectives, this issue can be resolved 
-by applying augmented functions, which is the alternative used by~\cite{deb2016optimality}.
+in one objective at the expense of significant degradation in other objectives.
+%
+This issue can be solved by applying augmented functions~\citep{deb2016optimality}, which was our design choice.
 %
 Specifically, for each objective $k$, the candidate solution that minimizes the Augmented Function (AF)
 given in Eq.~\ref{eqn:extremes} is iteratively identified (lines \ref{alg:density_for} to \ref{alg:density_endfor}).
@@ -301,7 +303,7 @@ AF_k (\vec{x}) = f_k(\vec{x}) + 10^{-4} \times  \sum_{j=1}^M f_j( \vec{x} )
 \end{equation}
 
 In cases where the individuals that optimize each $AF_K$ function are already in $P_{t+1}$, a contribution
-to objective-space diversity is calculated for each individual in $FR$ (lines \ref{alg:density_for2} to \ref{alg:density_4}).
+to objective-space diversity and quality is calculated for each individual in $FR$ (lines \ref{alg:density_for2} to \ref{alg:density_4}).
 %
 This contribution is calculated by taking into account the current survivors of the front ($FP$).
 %

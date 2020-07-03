@@ -1,15 +1,18 @@
 Most state-of-the-art Multi-Objective Evolutionary Algorithms (\MOEAS{}) promote the preservation of diversity 
-of objective function space, whereas the information about the diversity in decision variable space is usually neglected.
+of objective function space but neglects the diversity of decision variable space.
 %
-In this paper, the Variable Space Diversity based MOEA (\VSDMOEA{}) is presented.
+The aim of this paper is to show that controlling explicitly the amount of diversity maintained in the decision variable space 
+is useful to increase the quality of \MOEAS{} when taking into account metrics of the objective space.
 %
-\VSDMOEA{} is a dominance-based MOEA that explicitly considers the diversity of both decision variable and objective function space.
+Our novel Variable Space Diversity based MOEA (\VSDMOEA{})
+explicitly considers the diversity of both decision variable and objective function space.
 %
-The information gathered on both spaces is used simultaneously with the aim of properly adapting the balance between exploration
+This information is used with the aim of properly adapting the balance between exploration
 and intensification during the optimization process.
 %
 Particularly, at the initial stages, decisions made by the approach are more biased by the information on the diversity of 
-the variable space, whereas in the last stages, decisions are only based on the information on the objective space.
+the variable space, whereas it gradually grants more importance to the diversity of objective function space as the 
+evolution progresses.
 %
 The latter is achieved through a novel density estimator.
 %
