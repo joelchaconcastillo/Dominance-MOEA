@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2019/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: References.bib
+Warning--string name "ieee_j_evc" is undefined
+--line 242 of file References.bib
+Warning--empty institution in Joel:SBX1994
+Warning--can't use both author and editor fields in Joel:WFG
+Warning--can't use both author and editor fields in Joel:Inverted_Generational_Distance_Plus
+Warning--can't use both author and editor fields in Joel:STUDY_MATTING_RESTRICTION
+Warning--empty journal in Joel:SAWTOOTH
+Warning--can't use both author and editor fields in Joel:Kuhn_Munkres
+You've used 48 entries,
+            1935 wiz_defined-function locations,
+            773 strings with 14315 characters,
+and the built_in function-call counts, 22866 in all, are:
+= -- 2296
+> -- 913
+< -- 38
++ -- 331
+- -- 308
+* -- 1902
+:= -- 3718
+add.period$ -- 156
+call.type$ -- 48
+change.case$ -- 386
+chr.to.int$ -- 47
+cite$ -- 54
+duplicate$ -- 910
+empty$ -- 1623
+format.name$ -- 384
+if$ -- 4689
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 55
+newline$ -- 243
+num.names$ -- 144
+pop$ -- 407
+preamble$ -- 1
+purify$ -- 393
+quote$ -- 0
+skip$ -- 700
+stack$ -- 0
+substring$ -- 1763
+swap$ -- 227
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 272
+warning$ -- 6
+while$ -- 186
+width$ -- 0
+write$ -- 641
+(There were 7 warnings)

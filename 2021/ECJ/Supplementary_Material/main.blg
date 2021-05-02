@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: References.bib
+Warning--can't use both author and editor fields in Joel:WFG
+Warning--can't use both author and editor fields in Joel:Inverted_Generational_Distance_Plus
+You've used 2 entries,
+            1935 wiz_defined-function locations,
+            491 strings with 4599 characters,
+and the built_in function-call counts, 1155 in all, are:
+= -- 114
+> -- 46
+< -- 2
++ -- 16
+- -- 16
+* -- 92
+:= -- 181
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 16
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 48
+empty$ -- 79
+format.name$ -- 18
+if$ -- 243
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 4
+newline$ -- 13
+num.names$ -- 6
+pop$ -- 24
+preamble$ -- 1
+purify$ -- 18
+quote$ -- 0
+skip$ -- 41
+stack$ -- 0
+substring$ -- 88
+swap$ -- 22
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 2
+while$ -- 10
+width$ -- 0
+write$ -- 30
+(There were 2 warnings)
