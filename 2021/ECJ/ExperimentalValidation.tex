@@ -56,6 +56,10 @@ The crossover probability was set to $0.9$ and the crossover distribution index 
 Similarly, the mutation probability and distribution index were fixed to $1/n$ and $50$, respectively.
 %
 The additional parameterization required by each algorithm is shown in Table~\ref{tab:Parametrization}.
+
+
+\input{Tables/Table_xover.tex}
+
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
 \begin{table}[t]
@@ -69,8 +73,9 @@ The additional parameterization required by each algorithm is shown in Table~\re
  & tour selection = 10,   neighbor size = 10, \\
  & period utility updating = 30 generations, \\ 
  & local selection probability ($\delta$) = 0.9,\\ \hline
-\textbf{VSD-MOEA} & $D_I=0.4$ \\ \hline
-\textbf{R2-EMOA} & $\rho=1$, offspring by iteration = $1$ \\ \hline
+	\textbf{VSD-MOEA} & Initial threshold value ($D_I$) = 0.4 \\ \hline
+	\textbf{R2-EMOA} & Equally distributed weight vectors ($\rho$) = 1, offspring by iteration = $1$ \\ \hline
+	\textbf{CPDEA} & Nearest neighbors ($K$) = 3, weight of standard deviation ($\eta$) = 2 \\ \hline
 \end{tabular}
 \end{table}
 
