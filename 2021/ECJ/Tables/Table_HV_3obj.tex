@@ -1,33 +1,36 @@
 % Please add the following required packages to your document preamble:
 % \usepackage{graphicx}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
 \begin{table*}[t]
 \caption{Summary of the hypervolume ratio results attained for problems with three objectives, the higher the normalized hypervolume value the better the algorithm.}
 \label{tab:StatisticsHV_3obj}
 %\resizebox{\textwidth}{!}{%
-\begin{tabular}{cc|c|c|c|c|c|c|c}
-\cline{2-9}
-\textbf{}                           & \multicolumn{2}{c|}{\textbf{VSD-MOEA}} & \multicolumn{2}{c|}{\textbf{CPDEA}} & \multicolumn{2}{c|}{\textbf{MOEA/D}} & \multicolumn{2}{c}{\textbf{R2-EMOA}} \\ \cline{2-9} 
-\textbf{}                           & \textbf{Mean}       & \textbf{Std}     & \textbf{Mean}     & \textbf{Std}    & \textbf{Mean}      & \textbf{Std}    & \textbf{Mean}      & \textbf{Std}     \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG1}}  & 0.785               & 0.017            & 0.430             & 0.033           & \textbf{0.968}     & 0.001           & 0.928              & 0.009            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG2}}  & \textbf{0.988}      & 0.001            & 0.923             & 0.006           & 0.967              & 0.034           & 0.905              & 0.070            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG3}}  & 0.989               & 0.000            & 0.906             & 0.013           & \textbf{0.993}     & 0.000           & 0.992              & 0.000            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG4}}  & \textbf{0.920}      & 0.001            & 0.795             & 0.013           & 0.861              & 0.003           & 0.906              & 0.001            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG5}}  & 0.834               & 0.004            & 0.801             & 0.004           & 0.795              & 0.001           & \textbf{0.842}     & 0.002            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG6}}  & 0.837               & 0.007            & 0.766             & 0.005           & 0.811              & 0.012           & \textbf{0.860}     & 0.007            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG7}}  & \textbf{0.919}      & 0.001            & 0.774             & 0.021           & 0.865              & 0.000           & 0.905              & 0.001            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG8}}  & \textbf{0.863}      & 0.035            & 0.672             & 0.039           & 0.779              & 0.002           & 0.820              & 0.002            \\ \hline
-\multicolumn{1}{c|}{\textbf{WFG9}}  & \textbf{0.822}      & 0.038            & 0.727             & 0.005           & 0.810              & 0.047           & 0.804              & 0.048            \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ1}} & \textbf{0.965}      & 0.001            & 0.964             & 0.001           & 0.950              & 0.000           & 0.940              & 0.001            \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ2}} & \textbf{0.930}      & 0.001            & 0.864             & 0.017           & 0.899              & 0.000           & 0.915              & 0.001            \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ3}} & \textbf{0.930}      & 0.001            & 0.830             & 0.239           & 0.899              & 0.000           & 0.912              & 0.004            \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ4}} & \textbf{0.930}      & 0.001            & 0.859             & 0.006           & 0.899              & 0.000           & 0.652              & 0.257            \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ5}} & \textbf{0.986}      & 0.000            & 0.977             & 0.002           & 0.978              & 0.000           & \textbf{0.986}     & 0.000            \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ6}} & \textbf{0.986}      & 0.000            & 0.660             & 0.115           & 0.978              & 0.000           & 0.775              & 0.082            \\ \hline
-\multicolumn{1}{c|}{\textbf{DTLZ7}} & \textbf{0.965}      & 0.001            & 0.940             & 0.004           & 0.914              & 0.000           & 0.852              & 0.014            \\ \hline
-\multicolumn{1}{c|}{\textbf{UF8}}   & \textbf{0.918}      & 0.011            & 0.699             & 0.045           & 0.778              & 0.006           & 0.853              & 0.104            \\ \hline
-\multicolumn{1}{c|}{\textbf{UF9}}   & \textbf{0.962}      & 0.011            & 0.784             & 0.053           & 0.792              & 0.071           & 0.844              & 0.076            \\ \hline
-\multicolumn{1}{c|}{\textbf{UF10}}  & \textbf{0.602}      & 0.095            & 0.122             & 0.060           & 0.309              & 0.150           & 0.268              & 0.132            \\ \hline
-\multicolumn{1}{c|}{\textbf{Mean}}  & 0.902               & 0.012            & 0.763             & 0.036           & 0.855              & 0.017           & 0.840              & 0.043            \\ \hline
+\tiny
+\begin{tabular}{cc|c|c|c|c|c|c|c|c|c|c|c}
+\cline{2-13}
+\textbf{} & \multicolumn{3}{c|}{\textbf{VSD-MOEA}} & \multicolumn{3}{c|}{\textbf{CPDEA}} & \multicolumn{3}{c|}{\textbf{MOEA/D}} & \multicolumn{3}{c}{\textbf{R2-EMOA}} \\ \cline{2-13} 
+\textbf{} & \textbf{Mean} & \textbf{Median} & \textbf{Std} & \textbf{Mean} & \textbf{Median} & \textbf{Std} & \textbf{Mean} & \textbf{Median} & \textbf{Std} & \textbf{Mean} & \textbf{Median} & \textbf{Std} \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG1}} & 0.785 & 0.789 & 0.017 & 0.430 & 0.428 & 0.033 & \textbf{0.968} & {\ul 0.968} & 0.001 & 0.928 & 0.926 & 0.009 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG2}} & \textbf{0.988} & {\ul 0.989} & 0.001 & 0.923 & 0.924 & 0.006 & 0.967 & 0.976 & 0.034 & 0.905 & 0.962 & 0.070 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG3}} & 0.989 & 0.989 & 0.000 & 0.906 & 0.905 & 0.013 & \textbf{0.993} & {\ul 0.992} & 0.000 & 0.992 & {\ul 0.992} & 0.000 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG4}} & \textbf{0.920} & {\ul 0.920} & 0.001 & 0.795 & 0.796 & 0.013 & 0.861 & 0.861 & 0.003 & 0.906 & 0.905 & 0.001 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG5}} & 0.834 & 0.832 & 0.004 & 0.801 & 0.801 & 0.004 & 0.795 & 0.795 & 0.001 & \textbf{0.842} & {\ul 0.843} & 0.002 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG6}} & 0.837 & 0.835 & 0.007 & 0.766 & 0.767 & 0.005 & 0.811 & 0.810 & 0.012 & \textbf{0.860} & {\ul 0.860} & 0.007 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG7}} & \textbf{0.919} & {\ul 0.919} & 0.001 & 0.774 & 0.778 & 0.021 & 0.865 & 0.865 & 0.000 & 0.905 & 0.905 & 0.001 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG8}} & \textbf{0.863} & {\ul 0.864} & 0.035 & 0.672 & 0.682 & 0.039 & 0.779 & 0.779 & 0.002 & 0.820 & 0.820 & 0.002 \\ \hline
+\multicolumn{1}{c|}{\textbf{WFG9}} & \textbf{0.822} & {\ul 0.824} & 0.038 & 0.727 & 0.727 & 0.005 & 0.810 & 0.837 & 0.047 & 0.804 & 0.772 & 0.048 \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ1}} & \textbf{0.965} & {\ul 0.965} & 0.001 & 0.964 & 0.964 & 0.001 & 0.950 & 0.950 & 0.000 & 0.940 & 0.940 & 0.001 \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ2}} & \textbf{0.930} & {\ul 0.930} & 0.001 & 0.864 & 0.864 & 0.017 & 0.899 & 0.899 & 0.000 & 0.915 & 0.915 & 0.001 \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ3}} & \textbf{0.930} & {\ul 0.930} & 0.001 & 0.830 & 0.916 & 0.239 & 0.899 & 0.899 & 0.000 & 0.912 & 0.915 & 0.004 \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ4}} & \textbf{0.930} & {\ul 0.930} & 0.001 & 0.859 & 0.858 & 0.006 & 0.899 & 0.899 & 0.000 & 0.652 & 0.577 & 0.257 \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ5}} & \textbf{0.986} & {\ul 0.986} & 0.000 & 0.977 & 0.977 & 0.002 & 0.978 & 0.978 & 0.000 & \textbf{0.986} & {\ul 0.986} & 0.000 \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ6}} & \textbf{0.986} & {\ul 0.986} & 0.000 & 0.660 & 0.643 & 0.115 & 0.978 & 0.978 & 0.000 & 0.775 & 0.760 & 0.082 \\ \hline
+\multicolumn{1}{c|}{\textbf{DTLZ7}} & \textbf{0.965} & {\ul 0.965} & 0.001 & 0.940 & 0.941 & 0.004 & 0.914 & 0.914 & 0.000 & 0.852 & 0.852 & 0.014 \\ \hline
+\multicolumn{1}{c|}{\textbf{UF8}} & \textbf{0.918} & {\ul 0.920} & 0.011 & 0.699 & 0.711 & 0.045 & 0.778 & 0.777 & 0.006 & 0.853 & 0.905 & 0.104 \\ \hline
+\multicolumn{1}{c|}{\textbf{UF9}} & \textbf{0.962} & {\ul 0.965} & 0.011 & 0.784 & 0.793 & 0.053 & 0.792 & 0.747 & 0.071 & 0.844 & 0.783 & 0.076 \\ \hline
+\multicolumn{1}{c|}{\textbf{UF10}} & \textbf{0.602} & {\ul 0.581} & 0.095 & 0.122 & 0.121 & 0.060 & 0.309 & 0.270 & 0.150 & 0.268 & 0.209 & 0.132 \\ \hline
+\multicolumn{1}{c|}{\textbf{Mean}} & \textbf{0.902} & {\ul 0.901} & 0.012 & 0.763 & 0.768 & 0.036 & 0.855 & 0.852 & 0.017 & 0.840 & 0.833 & 0.043 \\ \hline
 \end{tabular}%
 %}
 \end{table*}

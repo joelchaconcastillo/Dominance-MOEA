@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0
-%%Creator: dvips(k) 5.997 Copyright 2017 Radical Eye Software
+%%Creator: dvips(k) 5.999 Copyright 2019 Radical Eye Software
 %%Title: Graphic-Initial-Distance_tikz-figure0.dvi
-%%CreationDate: Tue Sep 10 19:11:02 2019
+%%CreationDate: Fri May 28 14:37:33 2021
 %%Pages: 1
 %%PageOrder: Ascend
 %%BoundingBox: 0 0 265 175
@@ -11,7 +11,7 @@
 %DVIPSCommandLine: dvips -o Graphic-Initial-Distance_tikz-figure0.ps
 %+ Graphic-Initial-Distance_tikz-figure0.dvi
 %DVIPSParameters: dpi=600
-%DVIPSSource:  TeX output 2019.09.10:1411
+%DVIPSSource:  TeX output 2021.05.28:0937
 %%BeginProcSet: tex.pro 0 0
 %!
 /TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
@@ -58,6 +58,411 @@ rlineto fill grestore}B/a{moveto}B/delta 0 N/tail{A/delta X 0 rmoveto}B
 B/g{0 M}B/h{1 M}B/i{2 M}B/j{3 M}B/k{4 M}B/w{0 rmoveto}B/l{p -4 w}B/m{p
 -3 w}B/n{p -2 w}B/o{p -1 w}B/q{p 1 w}B/r{p 2 w}B/s{p 3 w}B/t{p 4 w}B/x{
 0 S rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
+
+%%EndProcSet
+%%BeginProcSet: l3backend-dvips.pro 0 0
+%%
+%% This is file `l3backend-dvips.pro',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% l3backend-header.dtx  (with options: `header,dvips')
+%% 
+%% Copyright (C) 1990-2020 The LaTeX3 Project
+%% 
+%% It may be distributed and/or modified under the conditions of
+%% the LaTeX Project Public License (LPPL), either version 1.3c of
+%% this license or (at your option) any later version.  The latest
+%% version of this license is in the file:
+%% 
+%%    https://www.latex-project.org/lppl.txt
+%% 
+%% This file is part of the "l3backend bundle" (The Work in LPPL)
+%% and all files in that bundle must be distributed together.
+%% 
+%% File: l3backend-header.dtx
+true setglobal
+/pdf.globaldict 4 dict def
+false setglobal
+
+/pdf.cvs { 65534 string cvs } def
+/pdf.dvi.pt { 72.27 mul Resolution div } def
+/pdf.pt.dvi { 72.27 div Resolution mul } def
+/pdf.rect.ht { dup 1 get neg exch 3 get add } def
+/pdf.linkmargin { 1 pdf.pt.dvi } def
+/pdf.linkdp.pad { 0 } def
+/pdf.linkht.pad { 0 } def
+/pdf.rect
+  { /Rect [ pdf.llx pdf.lly pdf.urx pdf.ury ] } def
+/pdf.save.ll
+  {
+    currentpoint
+    /pdf.lly exch def
+    /pdf.llx exch def
+  }
+    def
+/pdf.save.ur
+  {
+    currentpoint
+    /pdf.ury exch def
+    /pdf.urx exch def
+  }
+    def
+/pdf.save.linkll
+  {
+    currentpoint
+    pdf.linkmargin add
+    pdf.linkdp.pad add
+    /pdf.lly exch def
+    pdf.linkmargin sub
+    /pdf.llx exch def
+  }
+    def
+/pdf.save.linkur
+  {
+    currentpoint
+    pdf.linkmargin sub
+    pdf.linkht.pad sub
+    /pdf.ury exch def
+    pdf.linkmargin add
+    /pdf.urx exch def
+  }
+    def
+/pdf.dest.anchor
+  {
+    currentpoint exch
+    pdf.dvi.pt 72 add
+    /pdf.dest.x exch def
+    pdf.dvi.pt
+    vsize 72 sub exch sub
+    /pdf.dest.y exch def
+  }
+    def
+/pdf.dest.point
+  { pdf.dest.x pdf.dest.y } def
+/pdf.dest2device
+  {
+    /pdf.dest.y exch def
+    /pdf.dest.x exch def
+    matrix currentmatrix
+    matrix defaultmatrix
+    matrix invertmatrix
+    matrix concatmatrix
+    cvx exec
+    /pdf.dev.y exch def
+    /pdf.dev.x exch def
+    /pdf.tmpd exch def
+    /pdf.tmpc exch def
+    /pdf.tmpb exch def
+    /pdf.tmpa exch def
+    pdf.dest.x pdf.tmpa mul
+      pdf.dest.y pdf.tmpc mul add
+      pdf.dev.x add
+    pdf.dest.x pdf.tmpb mul
+     pdf.dest.y pdf.tmpd mul add
+     pdf.dev.y add
+  }
+    def
+/pdf.bordertracking false def
+/pdf.bordertracking.begin
+  {
+    SDict /pdf.bordertracking true put
+    SDict /pdf.leftboundary undef
+    SDict /pdf.rightboundary undef
+    /a where
+      {
+        /a
+          {
+            currentpoint pop
+            SDict /pdf.rightboundary known dup
+              {
+                SDict /pdf.rightboundary get 2 index lt
+                  { not }
+                if
+              }
+            if
+              { pop }
+              { SDict exch /pdf.rightboundary exch put }
+            ifelse
+            moveto
+            currentpoint pop
+            SDict /pdf.leftboundary known dup
+              {
+                SDict /pdf.leftboundary get 2 index gt
+                  { not }
+                if
+              }
+            if
+              { pop }
+              { SDict exch /pdf.leftboundary exch put }
+            ifelse
+          }
+        put
+      }
+    if
+  }
+    def
+/pdf.bordertracking.end
+  {
+    /a where { /a { moveto } put } if
+    /x where { /x { 0 exch rmoveto } put } if
+    SDict /pdf.leftboundary known
+      { pdf.outerbox 0 pdf.leftboundary put }
+    if
+    SDict /pdf.rightboundary known
+      { pdf.outerbox 2 pdf.rightboundary put }
+    if
+    SDict /pdf.bordertracking false put
+  }
+    def
+  /pdf.bordertracking.endpage
+{
+  pdf.bordertracking
+    {
+      pdf.bordertracking.end
+      true setglobal
+      pdf.globaldict
+        /pdf.brokenlink.rect [ pdf.outerbox aload pop ] put
+      pdf.globaldict
+        /pdf.brokenlink.skip pdf.baselineskip put
+      pdf.globaldict
+        /pdf.brokenlink.dict
+          pdf.link.dict pdf.cvs put
+      false setglobal
+      mark pdf.link.dict cvx exec /Rect
+        [
+          pdf.llx
+          pdf.lly
+          pdf.outerbox 2 get pdf.linkmargin add
+          currentpoint exch pop
+          pdf.outerbox pdf.rect.ht sub pdf.linkmargin sub
+        ]
+      /ANN pdf.pdfmark
+    }
+  if
+}
+  def
+/pdf.bordertracking.continue
+  {
+    /pdf.link.dict pdf.globaldict
+      /pdf.brokenlink.dict get def
+    /pdf.outerbox pdf.globaldict
+      /pdf.brokenlink.rect get def
+    /pdf.baselineskip pdf.globaldict
+      /pdf.brokenlink.skip get def
+    pdf.globaldict dup dup
+    /pdf.brokenlink.dict undef
+    /pdf.brokenlink.skip undef
+    /pdf.brokenlink.rect undef
+    currentpoint
+    /pdf.originy exch def
+    /pdf.originx exch def
+    /a where
+      {
+        /a
+          {
+            moveto
+            SDict
+            begin
+            currentpoint pdf.originy ne exch
+              pdf.originx ne or
+              {
+                pdf.save.linkll
+                /pdf.lly
+                  pdf.lly pdf.outerbox 1 get sub def
+                pdf.bordertracking.begin
+              }
+            if
+            end
+          }
+        put
+      }
+    if
+    /x where
+      {
+        /x
+          {
+            0 exch rmoveto
+            SDict~
+            begin
+            currentpoint
+            pdf.originy ne exch pdf.originx ne or
+              {
+                pdf.save.linkll
+                /pdf.lly
+                  pdf.lly pdf.outerbox 1 get sub def
+                pdf.bordertracking.begin
+              }
+            if
+            end
+          }
+        put
+      }
+    if
+  }
+    def
+/pdf.breaklink
+  {
+    pop
+    counttomark 2 mod 0 eq
+      {
+        counttomark /pdf.count exch def
+          {
+           pdf.count 0 eq { exit } if
+           counttomark 2 roll
+           1 index /Rect eq
+             {
+               dup 4 array copy
+               dup dup
+                 1 get
+                 pdf.outerbox pdf.rect.ht
+                 pdf.linkmargin 2 mul add sub
+                 3 exch put
+               dup
+                 pdf.outerbox 2 get
+                 pdf.linkmargin add
+                 2 exch put
+               dup dup
+                 3 get
+                 pdf.outerbox pdf.rect.ht
+                 pdf.linkmargin 2 mul add add
+                 1 exch put
+               /pdf.currentrect exch  def
+               pdf.breaklink.write
+                 {
+                   pdf.currentrect
+                   dup
+                     pdf.outerbox 0 get
+                     pdf.linkmargin sub
+                     0 exch put
+                   dup
+                     pdf.outerbox 2 get
+                     pdf.linkmargin add
+                     2 exch put
+                   dup dup
+                     1 get
+                     pdf.baselineskip add
+                     1 exch put
+                   dup dup
+                     3 get
+                     pdf.baselineskip add
+                     3 exch put
+                   /pdf.currentrect exch def
+                   pdf.breaklink.write
+                  }
+                1 index 3 get
+                pdf.linkmargin 2 mul add
+                pdf.outerbox pdf.rect.ht add
+                2 index 1 get sub
+                pdf.baselineskip div round cvi 1 sub
+                exch
+              repeat
+              pdf.currentrect
+              dup
+                pdf.outerbox 0 get
+                pdf.linkmargin sub
+                0 exch put
+              dup dup
+                1 get
+                pdf.baselineskip add
+                1 exch put
+              dup dup
+                3 get
+                pdf.baselineskip add
+                3 exch put
+              dup 2 index 2 get  2 exch put
+              /pdf.currentrect exch def
+              pdf.breaklink.write
+              SDict /pdf.pdfmark.good false put
+              exit
+            }
+            { pdf.count 2 sub /pdf.count exch def }
+          ifelse
+        }
+      loop
+    }
+  if
+  /ANN
+}
+  def
+/pdf.breaklink.write
+  {
+    counttomark 1 sub
+    index /_objdef eq
+      {
+        counttomark -2 roll
+        dup wcheck
+          {
+            readonly
+            counttomark 2 roll
+          }
+          { pop pop }
+        ifelse
+      }
+    if
+    counttomark 1 add copy
+    pop pdf.currentrect
+    /ANN pdfmark
+  }
+    def
+/pdf.pdfmark
+  {
+    SDict /pdf.pdfmark.good true put
+    dup /ANN eq
+      {
+        pdf.pdfmark.store
+        pdf.pdfmark.dict
+          begin
+            Subtype /Link eq
+            currentdict /Rect known and
+            SDict /pdf.outerbox known and
+            SDict /pdf.baselineskip known and
+              {
+                Rect 3 get
+                pdf.linkmargin 2 mul add
+                pdf.outerbox pdf.rect.ht add
+                Rect 1 get sub
+                pdf.baselineskip div round cvi 0 gt
+                  { pdf.breaklink }
+                if
+              }
+            if
+          end
+        SDict /pdf.outerbox undef
+        SDict /pdf.baselineskip undef
+        currentdict /pdf.pdfmark.dict undef
+      }
+    if
+    pdf.pdfmark.good
+      { pdfmark }
+      { cleartomark }
+    ifelse
+  }
+    def
+/pdf.pdfmark.store
+  {
+    /pdf.pdfmark.dict 65534 dict def
+    counttomark 1 add copy
+    pop
+      {
+        dup mark eq
+          {
+            pop
+            exit
+          }
+          {
+            pdf.pdfmark.dict
+            begin def end
+          }
+        ifelse
+      }
+    loop
+}
+  def
+%% 
+%%
+%% End of file `l3backend-dvips.pro'.
 
 %%EndProcSet
 %%BeginProcSet: texps.pro 0 0
@@ -177,43 +582,118 @@ setcmykcolor}DC/White{0 0 0 0 setcmykcolor}DC end
 %%EndProcSet
 TeXDict begin @defspecial
 
- /pgfH{/pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
-{pgfA} def /pgfdir { dup 0 moveto dup 5 index lineto } bind def} bind
-def
+ /pgfHrgb{/pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
+{pgfArgb} def /pgfdir { dup 0 moveto dup 5 index lineto } bind def}
+bind def
 
- /pgfV{/pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
-{pgfA} def /pgfdir { dup 0 exch moveto dup 5 index exch lineto } bind
-def} bind def
+ /pgfVrgb{/pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
+{pgfArgb} def /pgfdir { dup 0 exch moveto dup 5 index exch lineto }
+bind def} bind def
 
- /pgfA{ /pgfdiff 8 index round cvi 8 index round cvi sub 2 mul 1 add
-def 2 index 6 index sub pgfdiff div 2 index 6 index sub pgfdiff div
-2 index 6 index sub pgfdiff div pgfheight 9 index 9 index 9 index 14
-index pgfdiff { 3 index 3 index 3 index setrgbcolor pgfdir stroke 4
--1 roll 7 index add 4 -1 roll 6 index add 4 -1 roll 5 index add 4 -1
-roll .5 sub } repeat mark 15 1 roll cleartomark exch pop }bind def
+ /pgfArgb{ /pgfdiff 8 index round cvi 8 index round cvi sub 2 mul 1
+add def 2 index 6 index sub pgfdiff div 2 index 6 index sub pgfdiff
+div 2 index 6 index sub pgfdiff div pgfheight 9 index 9 index 9 index
+14 index pgfdiff { 3 index 3 index 3 index setrgbcolor pgfdir stroke
+4 -1 roll 7 index add 4 -1 roll 6 index add 4 -1 roll 5 index add 4
+-1 roll .5 sub } repeat mark 15 1 roll cleartomark exch pop }bind def
 
- /pgfR1{ newpath dup dup dup 0 360 arc clip newpath dup /pgfendx exch
-def /pgfendy exch def 0.875 setlinewidth [] 0 setdash /pgfshade {pgfR}
-def /pgfstartx exch def /pgfstarty exch def /pgfdiffx pgfendx pgfstartx
-sub def /pgfdiffy pgfendy pgfstarty sub def dup /pgfdomb exch def }bind
-def
+ /pgfR1rgb{ newpath dup dup dup 0 360 arc clip newpath dup /pgfendx
+exch def /pgfendy exch def 0.875 setlinewidth [] 0 setdash /pgfshade
+{pgfRrgb} def /pgfstartx exch def /pgfstarty exch def /pgfdiffx pgfendx
+pgfstartx sub def /pgfdiffy pgfendy pgfstarty sub def dup /pgfdomb
+exch def }bind def
 
- /pgfR2{ newpath 0.5 add pgfcircx pgfcircy 3 2 roll 0 360 arc setrgbcolor
+ /pgfR2rgb{ newpath 0.5 add pgfcircx pgfcircy 3 2 roll 0 360 arc setrgbcolor
 fill pop}bind def
 
- /pgfR{ /pgfdiff 8 index round cvi 8 index round cvi sub 4 mul 1 add
-def /pgfcircx pgfstartx 9 index pgfdiffx pgfdomb div mul add def /pgfcircy
-pgfstarty 9 index pgfdiffy pgfdomb div mul add def /pgfcircxe pgfstartx
-8 index pgfdiffx pgfdomb div mul add def /pgfcircye pgfstarty 8 index
-pgfdiffy pgfdomb div mul add def /pgfxstep pgfcircxe pgfcircx sub pgfdiff
-div def /pgfystep pgfcircye pgfcircy sub pgfdiff div def 2 index 6
-index sub pgfdiff div 2 index 6 index sub pgfdiff div 2 index 6 index
-sub pgfdiff div 8 index 8 index 8 index 13 index pgfdiff { 3 index
-3 index 3 index setrgbcolor pgfcircx pgfcircy 2 index 0 360 arc closepath
-stroke 4 -1 roll 6 index add 4 -1 roll 5 index add 4 -1 roll 4 index
-add 4 -1 roll .25 sub /pgfcircx pgfcircx pgfxstep add def /pgfcircy
-pgfcircy pgfystep add def } repeat mark 14 1 roll cleartomark exch
+ /pgfRrgb{ /pgfdiff 8 index round cvi 8 index round cvi sub 4 mul 1
+add def /pgfcircx pgfstartx 9 index pgfdiffx pgfdomb div mul add def
+/pgfcircy pgfstarty 9 index pgfdiffy pgfdomb div mul add def /pgfcircxe
+pgfstartx 8 index pgfdiffx pgfdomb div mul add def /pgfcircye pgfstarty
+8 index pgfdiffy pgfdomb div mul add def /pgfxstep pgfcircxe pgfcircx
+sub pgfdiff div def /pgfystep pgfcircye pgfcircy sub pgfdiff div def
+2 index 6 index sub pgfdiff div 2 index 6 index sub pgfdiff div 2 index
+6 index sub pgfdiff div 8 index 8 index 8 index 13 index pgfdiff {
+3 index 3 index 3 index setrgbcolor pgfcircx pgfcircy 2 index 0 360
+arc closepath stroke 4 -1 roll 6 index add 4 -1 roll 5 index add 4
+-1 roll 4 index add 4 -1 roll .25 sub /pgfcircx pgfcircx pgfxstep add
+def /pgfcircy pgfcircy pgfystep add def } repeat mark 14 1 roll cleartomark
+exch pop }bind def
+
+ /pgfHcmyk{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
+{pgfAcmyk} def /pgfdir { dup 0 moveto dup 6 index lineto } bind def}
+bind def
+
+ /pgfVcmyk{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
+{pgfAcmyk} def /pgfdir { dup 0 exch moveto dup 6 index exch lineto
+} bind def} bind def
+
+ /pgfAcmyk{ /pgfdiff 10 index round cvi 10 index round cvi sub 2 mul
+1 add def 3 index 8 index sub pgfdiff div 3 index 8 index sub pgfdiff
+div 3 index 8 index sub pgfdiff div 3 index 8 index sub pgfdiff div
+pgfheight 12 index 12 index 12 index 12 index 18 index pgfdiff { 4
+index 4 index 4 index 4 index setcmykcolor pgfdir stroke 5 -1 roll
+9 index add 5 -1 roll 8 index add 5 -1 roll 7 index add 5 -1 roll 6
+index add 5 -1 roll .5 sub } repeat mark 19 1 roll cleartomark exch
 pop }bind def
+
+ /pgfR1cmyk{ newpath dup dup dup 0 360 arc clip newpath dup /pgfendx
+exch def /pgfendy exch def 0.875 setlinewidth [] 0 setdash /pgfshade
+{pgfRcmyk} def /pgfstartx exch def /pgfstarty exch def /pgfdiffx pgfendx
+pgfstartx sub def /pgfdiffy pgfendy pgfstarty sub def dup /pgfdomb
+exch def }bind def
+
+ /pgfR2cmyk{ newpath 0.5 add pgfcircx pgfcircy 3 2 roll 0 360 arc setcmykcolor
+fill pop}bind def
+
+ /pgfRcmyk{ /pgfdiff 10 index round cvi 10 index round cvi sub 4 mul
+1 add def /pgfcircx pgfstartx 11 index pgfdiffx pgfdomb div mul add
+def /pgfcircy pgfstarty 11 index pgfdiffy pgfdomb div mul add def /pgfcircxe
+pgfstartx 10 index pgfdiffx pgfdomb div mul add def /pgfcircye pgfstarty
+10 index pgfdiffy pgfdomb div mul add def /pgfxstep pgfcircxe pgfcircx
+sub pgfdiff div def /pgfystep pgfcircye pgfcircy sub pgfdiff div def
+3 index 8 index sub pgfdiff div 3 index 8 index sub pgfdiff div 3 index
+8 index sub pgfdiff div 3 index 8 index sub pgfdiff div 11 index 11
+index 11 index 11 index 17 index pgfdiff { 4 index 4 index 4 index
+4 index setcmykcolor pgfcircx pgfcircy 2 index 0 360 arc closepath
+stroke 5 -1 roll 8 index add 5 -1 roll 7 index add 5 -1 roll 6 index
+add 5 -1 roll 5 index add 5 -1 roll .25 sub /pgfcircx pgfcircx pgfxstep
+add def /pgfcircy pgfcircy pgfystep add def } repeat mark 18 1 roll
+cleartomark exch pop }bind def
+
+ /pgfHgray{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
+{pgfAgray} def /pgfdir { dup 0 moveto dup 3 index lineto } bind def}
+bind def
+
+ /pgfVgray{ /pgfheight exch def 0.75 setlinewidth [] 0 setdash /pgfshade
+{pgfAgray} def /pgfdir { dup 0 exch moveto dup 3 index exch lineto
+} bind def} bind def
+
+ /pgfAgray{ /pgfdiff 4 index round cvi 4 index round cvi sub 2 mul
+1 add def dup 2 index sub pgfdiff div pgfheight 3 index 6 index pgfdiff
+{ 1 index setgray pgfdir stroke exch 3 index add exch .5 sub } repeat
+mark 7 1 roll cleartomark exch pop }bind def
+
+ /pgfR1gray{ newpath dup dup dup 0 360 arc clip newpath dup /pgfendx
+exch def /pgfendy exch def 0.875 setlinewidth [] 0 setdash /pgfshade
+{pgfRgray} def /pgfstartx exch def /pgfstarty exch def /pgfdiffx pgfendx
+pgfstartx sub def /pgfdiffy pgfendy pgfstarty sub def dup /pgfdomb
+exch def }bind def
+
+ /pgfR2gray{ newpath 0.5 add pgfcircx pgfcircy 3 2 roll 0 360 arc setgray
+fill pop}bind def
+
+ /pgfRgray{ /pgfdiff 4 index round cvi 4 index round cvi sub 4 mul
+1 add def /pgfcircx pgfstartx 5 index pgfdiffx pgfdomb div mul add
+def /pgfcircy pgfstarty 5 index pgfdiffy pgfdomb div mul add def /pgfcircxe
+pgfstartx 4 index pgfdiffx pgfdomb div mul add def /pgfcircye pgfstarty
+4 index pgfdiffy pgfdomb div mul add def /pgfxstep pgfcircxe pgfcircx
+sub pgfdiff div def /pgfystep pgfcircye pgfcircy sub pgfdiff div def
+dup 2 index sub pgfdiff div 2 index 5 index pgfdiff { 1 index setgray
+pgfcircx pgfcircy 2 index 0 360 arc closepath stroke exch 2 index add
+exch .25 sub /pgfcircx pgfcircx pgfxstep add def /pgfcircy pgfcircy
+pgfystep add def } repeat mark 6 1 roll cleartomark exch pop }bind
+def
 
   /pgfsc{}bind def/pgffc{}bind def/pgfstr{stroke}bind def/pgffill{fill}bind
 def/pgfeofill{eofill}bind def/pgfe{a dup 0 rlineto exch 0 exch rlineto
@@ -1386,7 +1866,7 @@ A97B9D0D5C22677DC3172079792C2B597B7AE27FACC510F6F17C8D5FA9CFBE3E
 cleartomark
 {restore}if
 %%EndFont 
-TeXDict begin 17413826 11477470 1000 600 600
+TeXDict begin 17413721 11477441 1000 600 600
 (Graphic-Initial-Distance_tikz-figure0.dvi)
 @start /Fa 136[64 44 52 32 40 42 2[49 54 1[25 2[30 49
 1[33 44 49 2[49 10[72 1[66 54 5[89 3[39 74 72[{}21 83.022
@@ -1461,14 +1941,14 @@ TeXDict begin 1 0 bop 0 TeXcolorgray -206 620 a
 
  save
 
- [0.8 0.0 0.0 0.8 -47.22284 -28.02246 ] concat
+ [0.8 0.0 0.0 0.8 -47.22432 -28.02246 ] concat
 
  pgfs
 
 
- 420 216 a
+ 420 206 a
 
- 420 216 a 420 216
+ 420 206 a 420 206
 a
 
 
@@ -1486,13 +1966,13 @@ a
 
  save
 
- -16.19063 -155.1829 moveto
+ -16.1903 -156.41374 moveto
 
- 178.08714 -155.1829 lineto
+ 178.08379 -156.41374 lineto
 
- 178.08714 289.67969 lineto
+ 178.08379 288.46432 lineto
 
- -16.19063 289.67969 lineto
+ -16.1903 288.46432 lineto
 
  clip
 
@@ -1502,85 +1982,93 @@ a
 
  0.19925 pgfw
  0.5 TeXcolorgray
- 0.0 -13.45047 moveto
+ 0.0 -14.67326 moveto
 
- 0.0 -9.1987 lineto
+ 0.0 -10.42123 lineto
 
- 17.9885 -13.45047 moveto
+ 16.18935 -14.67326 moveto
 
- 17.9885 -9.1987 lineto
+ 16.18935 -10.42123 lineto
 
- 35.97699 -13.45047 moveto
+ 32.3787 -14.67326 moveto
 
- 35.97699 -9.1987 lineto
+ 32.3787 -10.42123 lineto
 
- 53.9655 -13.45047 moveto
+ 48.56804 -14.67326 moveto
 
- 53.9655 -9.1987 lineto
+ 48.56804 -10.42123 lineto
 
- 71.954 -13.45047 moveto
+ 64.75739 -14.67326 moveto
 
- 71.954 -9.1987 lineto
+ 64.75739 -10.42123 lineto
 
- 89.9425 -13.45047 moveto
+ 80.94673 -14.67326 moveto
 
- 89.9425 -9.1987 lineto
+ 80.94673 -10.42123 lineto
 
- 107.931 -13.45047 moveto
+ 97.13608 -14.67326 moveto
 
- 107.931 -9.1987 lineto
+ 97.13608 -10.42123 lineto
 
- 125.9195 -13.45047 moveto
+ 113.32542 -14.67326 moveto
 
- 125.9195 -9.1987 lineto
+ 113.32542 -10.42123 lineto
 
- 143.908 -13.45047 moveto
+ 129.51477 -14.67326 moveto
 
- 143.908 -9.1987 lineto
+ 129.51477 -10.42123 lineto
 
- 161.8965 -13.45047 moveto
+ 145.70412 -14.67326 moveto
 
- 161.8965 -9.1987 lineto
+ 145.70412 -10.42123 lineto
 
- 0.0 147.94724 moveto
+ 161.89346 -14.67326 moveto
 
- 0.0 143.69547 lineto
+ 161.89346 -10.42123 lineto
 
- 17.9885 147.94724 moveto
+ 0.0 146.72386 moveto
 
- 17.9885 143.69547 lineto
+ 0.0 142.47182 lineto
 
- 35.97699 147.94724 moveto
+ 16.18935 146.72386 moveto
 
- 35.97699 143.69547 lineto
+ 16.18935 142.47182 lineto
 
- 53.9655 147.94724 moveto
+ 32.3787 146.72386 moveto
 
- 53.9655 143.69547 lineto
+ 32.3787 142.47182 lineto
 
- 71.954 147.94724 moveto
+ 48.56804 146.72386 moveto
 
- 71.954 143.69547 lineto
+ 48.56804 142.47182 lineto
 
- 89.9425 147.94724 moveto
+ 64.75739 146.72386 moveto
 
- 89.9425 143.69547 lineto
+ 64.75739 142.47182 lineto
 
- 107.931 147.94724 moveto
+ 80.94673 146.72386 moveto
 
- 107.931 143.69547 lineto
+ 80.94673 142.47182 lineto
 
- 125.9195 147.94724 moveto
+ 97.13608 146.72386 moveto
 
- 125.9195 143.69547 lineto
+ 97.13608 142.47182 lineto
 
- 143.908 147.94724 moveto
+ 113.32542 146.72386 moveto
 
- 143.908 143.69547 lineto
+ 113.32542 142.47182 lineto
 
- 161.8965 147.94724 moveto
+ 129.51477 146.72386 moveto
 
- 161.8965 143.69547 lineto
+ 129.51477 142.47182 lineto
+
+ 145.70412 146.72386 moveto
+
+ 145.70412 142.47182 lineto
+
+ 161.89346 146.72386 moveto
+
+ 161.89346 142.47182 lineto
 
  pgfstr
  0 TeXcolorgray
@@ -1590,13 +2078,13 @@ a
 
  save
 
- -157.92505 -13.45047 moveto
+ -157.9377 -14.67326 moveto
 
- -157.92505 147.94724 lineto
+ -157.9377 146.72386 lineto
 
- 319.82155 147.94724 lineto
+ 319.83116 146.72386 lineto
 
- 319.82155 -13.45047 lineto
+ 319.83116 -14.67326 lineto
 
  clip
 
@@ -1606,29 +2094,69 @@ a
 
  0.19925 pgfw
  0.5 TeXcolorgray
- -16.19063 16.23236 moveto
+ -16.1903 -0.47838 moveto
 
- -11.93878 16.23236 lineto
+ -11.9381 -0.47838 lineto
 
- -16.19063 62.61055 moveto
+ -16.1903 20.55048 moveto
 
- -11.93878 62.61055 lineto
+ -11.9381 20.55048 lineto
 
- -16.19063 108.98875 moveto
+ -16.1903 41.57938 moveto
 
- -11.93878 108.98875 lineto
+ -11.9381 41.57938 lineto
 
- 178.08714 16.23236 moveto
+ -16.1903 62.60828 moveto
 
- 173.83528 16.23236 lineto
+ -11.9381 62.60828 lineto
 
- 178.08714 62.61055 moveto
+ -16.1903 83.63718 moveto
 
- 173.83528 62.61055 lineto
+ -11.9381 83.63718 lineto
 
- 178.08714 108.98875 moveto
+ -16.1903 104.66608 moveto
 
- 173.83528 108.98875 lineto
+ -11.9381 104.66608 lineto
+
+ -16.1903 125.69496 moveto
+
+ -11.9381 125.69496 lineto
+
+ -16.1903 146.72386 moveto
+
+ -11.9381 146.72386 lineto
+
+ 178.08379 -0.47838 moveto
+
+ 173.83156 -0.47838 lineto
+
+ 178.08379 20.55048 moveto
+
+ 173.83156 20.55048 lineto
+
+ 178.08379 41.57938 moveto
+
+ 173.83156 41.57938 lineto
+
+ 178.08379 62.60828 moveto
+
+ 173.83156 62.60828 lineto
+
+ 178.08379 83.63718 moveto
+
+ 173.83156 83.63718 lineto
+
+ 178.08379 104.66608 moveto
+
+ 173.83156 104.66608 lineto
+
+ 178.08379 125.69496 moveto
+
+ 173.83156 125.69496 lineto
+
+ 178.08379 146.72386 moveto
+
+ 173.83156 146.72386 lineto
 
  pgfstr
  0
@@ -1637,15 +2165,15 @@ TeXcolorgray
 
  restore
 
- -16.19063 -13.45047 moveto
+ -16.1903 -14.67326 moveto
 
- -16.19063 147.94724 lineto
+ -16.1903 146.72386 lineto
 
- 178.08714 147.94724 lineto
+ 178.08379 146.72386 lineto
 
- 178.08714 -13.45047 lineto
+ 178.08379 -14.67326 lineto
 
- -16.19063 -13.45047 lineto
+ -16.1903 -14.67326 lineto
 
  closepath
 
@@ -1655,14 +2183,14 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 -0.55188 -26.30919 ] concat
+ [0.86603 0.5 -0.5 0.86603 -0.5519 -27.53197 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0)420 216 y
+ 420 206 a Fc(0)420 206 y
 
 
  pgfr
@@ -1675,15 +2203,15 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 14.08124 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 12.28207 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206
+a
  0 setgray
- 420 216 a Fc(0.1)420
-216 y
+ 420 206 a Fc(0.1)420 206 y
 
 
  pgfr
@@ -1696,14 +2224,15 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 32.06973 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 28.47144 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.2)420 216 y
+ 420 206 a Fc(0.2)420
+206 y
 
 
  pgfr
@@ -1716,15 +2245,14 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 50.05824 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 44.66078 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.3)420
-216 y
+ 420 206 a Fc(0.3)420 206 y
 
 
  pgfr
@@ -1737,14 +2265,15 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 68.04674 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 60.85013 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.4)420 216 y
+
+420 206 a Fc(0.4)420 206 y
 
 
  pgfr
@@ -1757,15 +2286,15 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 86.03523 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 77.03947 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.5)420
-216 y
+ 420 206 a Fc(0.5)420
+206 y
 
 
  pgfr
@@ -1778,14 +2307,14 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 104.02374 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 93.22882 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.6)420 216 y
+ 420 206 a Fc(0.6)420 206 y
 
 
  pgfr
@@ -1798,15 +2327,15 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 122.01224 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 109.41817 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.7)420
-216 y
+
+420 206 a Fc(0.7)420 206 y
 
 
  pgfr
@@ -1819,14 +2348,15 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 140.00075 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 125.60751 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.8)420 216 y
+ 420 206 a Fc(0.8)420
+206 y
 
 
  pgfr
@@ -1839,15 +2369,14 @@ TeXcolorgray
 
  save
 
- [0.86603 0.5 -0.5 0.86603 157.98924 -30.1835 ] concat
+ [0.86603 0.5 -0.5 0.86603 141.79686 -31.4063 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0.9)420
-216 y
+ 420 206 a Fc(0.9)420 206 y
 
 
  pgfr
@@ -1860,14 +2389,15 @@ TeXcolorgray
 
  save
 
- [1.0 0.0 0.0 1.0 -32.44067 13.02214 ] concat
+ [0.86603 0.5 -0.5 0.86603 161.34155 -27.53197 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0)p Fb(:)p Fc(9)420 216 y
+
+420 206 a Fc(1)420 206 y
 
 
  pgfr
@@ -1880,15 +2410,15 @@ TeXcolorgray
 
  save
 
- [1.0 0.0 0.0 1.0 -37.42209 59.40034 ] concat
+ [1.0 0.0 0.0 1.0 -37.42177 -3.6886 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216
-a Fc(0)p Fb(:)p Fc(92)420 216 y
+ 420 206 a Fc(0)p Fb(:)p
+Fc(88)420 206 y
 
 
  pgfr
@@ -1901,15 +2431,15 @@ a Fc(0)p Fb(:)p Fc(92)420 216 y
 
  save
 
- [1.0 0.0 0.0 1.0 -37.42209 105.77853 ] concat
+ [1.0 0.0 0.0 1.0 -37.42177 17.34027 ] concat
 
  pgfs
 
 
-
+ 420 206 a
  0 setgray
- 420 216 a Fc(0)p Fb(:)p
-Fc(94)420 216 y
+ 420 206 a Fc(0)p Fb(:)p Fc(89)420
+206 y
 
 
  pgfr
@@ -1918,13 +2448,138 @@ Fc(94)420 216 y
 
  restore
 
- -16.19063 -13.45047 moveto
+ save
 
- 178.08714 -13.45047 lineto
+ save
 
- 178.08714 147.94724 lineto
+ [1.0 0.0 0.0 1.0 -32.44035 38.36916 ] concat
 
- -16.19063 147.94724 lineto
+ pgfs
+
+
+ 420 206 a
+ 0 setgray
+ 420 206 a Fc(0)p Fb(:)p Fc(9)420 206
+y
+
+
+ pgfr
+
+ restore
+
+ restore
+
+ save
+
+ save
+
+ [1.0 0.0 0.0 1.0 -37.42177 59.39806 ] concat
+
+ pgfs
+
+
+ 420 206 a
+ 0 setgray
+ 420 206 a Fc(0)p Fb(:)p Fc(91)420 206 y
+
+
+ pgfr
+
+ restore
+
+ restore
+
+ save
+
+ save
+
+ [1.0 0.0 0.0 1.0 -37.42177 80.42696 ] concat
+
+ pgfs
+
+
+ 420
+206 a
+ 0 setgray
+ 420 206 a Fc(0)p Fb(:)p Fc(92)420 206 y
+
+
+ pgfr
+
+ restore
+
+ restore
+
+ save
+
+ save
+
+ [1.0 0.0 0.0 1.0 -37.42177 101.45586 ] concat
+
+ pgfs
+
+
+ 420 206
+a
+ 0 setgray
+ 420 206 a Fc(0)p Fb(:)p Fc(93)420 206 y
+
+
+ pgfr
+
+ restore
+
+ restore
+
+ save
+
+ save
+
+ [1.0 0.0 0.0 1.0 -37.42177 122.48476 ] concat
+
+ pgfs
+
+
+ 420 206 a
+ 0 setgray
+ 420
+206 a Fc(0)p Fb(:)p Fc(94)420 206 y
+
+
+ pgfr
+
+ restore
+
+ restore
+
+ save
+
+ save
+
+ [1.0 0.0 0.0 1.0 -37.42177 143.51364 ] concat
+
+ pgfs
+
+
+ 420 206 a
+ 0 setgray
+ 420 206
+a Fc(0)p Fb(:)p Fc(95)420 206 y
+
+
+ pgfr
+
+ restore
+
+ restore
+
+ -16.1903 -14.67326 moveto
+
+ 178.08379 -14.67326 lineto
+
+ 178.08379 146.72386 lineto
+
+ -16.1903 146.72386 lineto
 
  closepath
 
@@ -1936,54 +2591,58 @@ Fc(94)420 216 y
  1 0 0 TeXcolorrgb
  [ ] 0.0 setdash
 
- 0.0 44.05928 moveto
+ 0.0 8.10567 moveto
 
- 17.9885 90.43747 lineto
+ 16.18935 78.38043 lineto
 
- 35.97699 95.07529 lineto
+ 32.3787 116.45534 lineto
 
- 53.9655 102.03203 lineto
+ 48.56804 127.25977 lineto
 
- 71.954 134.49677 lineto
+ 64.75739 131.69084 lineto
 
- 89.9425 132.17786 lineto
+ 80.94673 129.81224 lineto
 
- 107.931 127.54002 lineto
+ 97.13608 124.39442 lineto
 
- 125.9195 127.54002 lineto
+ 113.32542 120.01253 lineto
 
- 143.908 125.22112 lineto
+ 129.51477 120.21355 lineto
 
- 161.8965 122.9022 lineto
+ 145.70412 115.93176 lineto
+
+ 161.89346 114.12213 lineto
 
  pgfstr
  0 TeXcolorgray
  restore
 
  save
- 0 0 1
-TeXcolorrgb
+
+0 0 1 TeXcolorrgb
  [ 0.3985 1.99255 ] 0.0 setdash
 
  0.0 0.0 moveto
 
- 17.9885 13.91345 lineto
+ 16.18935 22.73213 lineto
 
- 35.97699 23.18909 lineto
+ 32.3787 37.75998 lineto
 
- 53.9655 30.14581 lineto
+ 48.56804 40.1096 lineto
 
- 71.954 53.33492 lineto
+ 64.75739 44.8091 lineto
 
- 89.9425 51.016 lineto
+ 80.94673 40.06665 lineto
 
- 107.931 41.74037 lineto
+ 97.13608 35.7901 lineto
 
- 125.9195 41.74037 lineto
+ 113.32542 34.23409 lineto
 
- 143.908 41.74037 lineto
+ 129.51477 28.29915 lineto
 
- 161.8965 37.10255 lineto
+ 145.70412 27.44484 lineto
+
+ 161.89346 23.97777 lineto
 
  pgfstr
  0 TeXcolorgray
@@ -1994,79 +2653,85 @@ TeXcolorrgb
  save
  1 0 0 TeXcolorrgb
  [ ] 0.0 setdash
- 1 0 0 TeXcolorrgb
+ 1 0 0
+TeXcolorrgb
  [ ] 0.0 setdash
 
- 3.9851 3.9851 -1.99255 42.06673 pgfe
+ 3.9851 3.9851 -1.99255 6.11311 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 15.99594 88.44492 pgfe
+ 3.9851 3.9851 14.1968 76.38788 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 33.98444 93.08273 pgfe
+ 3.9851 3.9851 30.38614 114.46278 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 51.97295 100.03947 pgfe
+ 3.9851 3.9851 46.57549 125.26721 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 69.96144 132.50421 pgfe
+ 3.9851 3.9851 62.76483 129.69829 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 87.94995 130.1853 pgfe
+ 3.9851 3.9851 78.95418 127.81969 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 105.93845 125.54747 pgfe
+ 3.9851 3.9851 95.14352 122.40187 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 123.92694 125.54747 pgfe
+ 3.9851 3.9851 111.33287 118.01997 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 141.91545 123.22856 pgfe
+ 3.9851 3.9851 127.52222 118.221 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
- 3.9851 3.9851 159.90395 120.90965 pgfe
+ 3.9851 3.9851 143.71156 113.93921 pgfe
+
+ gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
+
+ newpath
+
+ 3.9851 3.9851 159.90091 112.12958 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
  newpath
 
  pgfstr
-
-1 0 0 TeXcolorrgb 0 TeXcolorgray
+ 1 0 0 TeXcolorrgb 0 TeXcolorgray
  restore
 
  save
  0 0 1 TeXcolorrgb
  [ 0.3985 1.99255 ] 0.0 setdash
- 0 0 1
-TeXcolorrgb
+
+0 0 1 TeXcolorrgb
  [ 0.3985 1.99255 ] 0.0 setdash
 
  0.0 1.99255 moveto
@@ -2081,23 +2746,11 @@ TeXcolorrgb
 
  newpath
 
- 17.9885 15.906 moveto
+ 16.18935 24.72469 moveto
 
- 19.7141 12.91718 lineto
+ 17.91495 21.73586 lineto
 
- 16.2629 12.91718 lineto
-
- closepath
-
- gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
-
- newpath
-
- 35.97699 25.18164 moveto
-
- 37.7026 22.19281 lineto
-
- 34.25139 22.19281 lineto
+ 14.46373 21.73586 lineto
 
  closepath
 
@@ -2105,23 +2758,11 @@ TeXcolorrgb
 
  newpath
 
- 53.9655 32.13837 moveto
+ 32.3787 39.75253 moveto
 
- 55.6911 29.14954 lineto
+ 34.1043 36.7637 lineto
 
- 52.23988 29.14954 lineto
-
- closepath
-
- gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
-
- newpath
-
- 71.954 55.32747 moveto
-
- 73.6796 52.33864 lineto
-
- 70.2284 52.33864 lineto
+ 30.65308 36.7637 lineto
 
  closepath
 
@@ -2129,23 +2770,11 @@ TeXcolorrgb
 
  newpath
 
- 89.9425 53.00856 moveto
+ 48.56804 42.10216 moveto
 
- 91.6681 50.01973 lineto
+ 50.29364 39.11333 lineto
 
- 88.21689 50.01973 lineto
-
- closepath
-
- gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
-
- newpath
-
- 107.931 43.73293 moveto
-
- 109.6566 40.7441 lineto
-
- 106.2054 40.7441 lineto
+ 46.84242 39.11333 lineto
 
  closepath
 
@@ -2153,23 +2782,11 @@ TeXcolorrgb
 
  newpath
 
- 125.9195 43.73293 moveto
+ 64.75739 46.80165 moveto
 
- 127.64511 40.7441 lineto
+ 66.48299 43.81282 lineto
 
- 124.1939 40.7441 lineto
-
- closepath
-
- gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
-
- newpath
-
- 143.908 43.73293 moveto
-
- 145.6336 40.7441 lineto
-
- 142.18239 40.7441 lineto
+ 63.03177 43.81282 lineto
 
  closepath
 
@@ -2177,11 +2794,71 @@ TeXcolorrgb
 
  newpath
 
- 161.8965 39.09511 moveto
+ 80.94673 42.0592 moveto
 
- 163.62212 36.10628 lineto
+ 82.67233 39.07037 lineto
 
- 160.1709 36.10628 lineto
+ 79.22112 39.07037 lineto
+
+ closepath
+
+ gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
+
+ newpath
+
+ 97.13608 37.78265 moveto
+
+ 98.86168 34.79382 lineto
+
+ 95.41046 34.79382 lineto
+
+ closepath
+
+ gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
+
+ newpath
+
+ 113.32542 36.22664 moveto
+
+ 115.05103 33.23781 lineto
+
+ 111.59981 33.23781 lineto
+
+ closepath
+
+ gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
+
+ newpath
+
+ 129.51477 30.2917 moveto
+
+ 131.24037 27.30287 lineto
+
+ 127.78915 27.30287 lineto
+
+ closepath
+
+ gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
+
+ newpath
+
+ 145.70412 29.4374 moveto
+
+ 147.42972 26.44856 lineto
+
+ 143.9785 26.44856 lineto
+
+ closepath
+
+ gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
+
+ newpath
+
+ 161.89346 25.97032 moveto
+
+ 163.61906 22.98149 lineto
+
+ 160.16785 22.98149 lineto
 
  closepath
 
@@ -2197,15 +2874,16 @@ TeXcolorrgb
 
  save
 
- [1.0 0.0 0.0 1.0 30.40094 -45.15788 ] concat
+ [1.0 0.0 0.0 1.0 30.39941 -46.38066 ] concat
 
  pgfs
 
 
-
+ 420
+206 a
  0 setgray
- 420 216
-a Fc(Initial)28 b(Threshold)f(V)-7 b(alue)420 216 y
+ 420 206 a Fc(Initial)28 b(Threshold)f(V)-7 b(alue)420
+206 y
 
 
  pgfr
@@ -2218,37 +2896,37 @@ a Fc(Initial)28 b(Threshold)f(V)-7 b(alue)420 216 y
 
  save
 
- [0.0 1.0 -1.0 0.0 -44.26248 59.77629 ] concat
+ [0.0 1.0 -1.0 0.0 -44.26216 58.55319 ] concat
 
  pgfs
 
 
+ 420 206 a
+ 0 setgray
+ 420 206 a Fc(HV)420 206 y
 
+
+ pgfr
+
+ restore
+
+ restore
+
+ save
+
+ save
+
+ [1.0 0.0 0.0 1.0 -71.89992 158.15855 ] concat
+
+ pgfs
+
+
+ 420 206 a
  0 setgray
  420
-216 a Fc(HV)420 216 y
-
-
- pgfr
-
- restore
-
- restore
-
- save
-
- save
-
- [1.0 0.0 0.0 1.0 -71.8984 159.38193 ] concat
-
- pgfs
-
-
-
- 0 setgray
- 420 216 a Fa(Me)i(an)35 b(of)g(the)f(HV)h(V)-7
-b(alue)33 b(with)h(Sever)-5 b(al)35 b(Initial)e(Thr)-5
-b(eshold)35 b(V)-7 b(alues)420 216 y
+206 a Fa(Me)i(an)35 b(of)g(the)f(HV)h(V)-7 b(alue)33
+b(with)h(Sever)-5 b(al)35 b(Initial)e(Thr)-5 b(eshold)35
+b(V)-7 b(alues)420 206 y
 
 
  pgfr
@@ -2269,7 +2947,7 @@ b(eshold)35 b(V)-7 b(alues)420 216 y
 
  /pgfsc{0 setgray}def
 
- 28.78117 71.3718 184.11449 118.96681 pgfe
+ 28.78117 71.3718 184.11102 117.74344 pgfe
 
  gsave pgffc pgffill grestore gsave pgfsc pgfstr grestore
 
@@ -2279,15 +2957,15 @@ b(eshold)35 b(V)-7 b(alues)420 216 y
 
  save
 
- [1.0 0.0 0.0 1.0 187.10332 127.15839 ] concat
+ [1.0 0.0 0.0 1.0 187.09985 125.93501 ] concat
 
  pgfs
 
 
- 422 113 a
+ 422 103 a
 
- 422 113
-a 422 113 a
+ 422 103 a 422 103
+a
 
 
  pgfo
@@ -2327,10 +3005,10 @@ a 422 113 a
  pgfc
 
 
- 967 113
-a
+ 967 103 a
 
- 967 113 a 967 113 a
+ 967 103
+a 967 103 a
 
 
  pgfo
@@ -2346,12 +3024,12 @@ a
  pgfs
 
 
-
+ 967 103 a
  /pgfsc{}def/pgffc{}def
-
+ 967 103 a 967 103 a
  0 setgray
- 967 113 a Fc(HV)28 b(-)f(2ob)5
-b(j)967 113 y
+ 967 103 a Fc(HV)28
+b(-)g(2ob)5 b(j)967 103 y
 
 
  pgfr
@@ -2365,9 +3043,10 @@ b(j)967 113 y
  pgfc
 
 
- 422 216 a
+ 422 206 a
 
- 422 216 a 422 216 a
+ 422 206 a 422 206
+a
 
 
  pgfo
@@ -2405,8 +3084,7 @@ b(j)967 113 y
  newpath
 
  restore
-
-0 TeXcolorgray
+ 0 TeXcolorgray
  restore
 
  restore
@@ -2414,9 +3092,10 @@ b(j)967 113 y
  pgfc
 
 
- 967 216 a
+ 967 206 a
 
- 967 216 a 967 216 a
+ 967 206
+a 967 206 a
 
 
  pgfo
@@ -2432,12 +3111,12 @@ b(j)967 113 y
  pgfs
 
 
-
+ 967 206 a
  /pgfsc{}def/pgffc{}def
-
+ 967 206 a 967 206 a
  0 setgray
- 967 216
-a Fc(HV)28 b(-)f(3ob)5 b(j)967 216 y
+ 967 206 a Fc(HV)28
+b(-)g(3ob)5 b(j)967 206 y
 
 
  pgfr
@@ -2451,7 +3130,7 @@ a Fc(HV)28 b(-)f(3ob)5 b(j)967 216 y
  pgfc
 
 
- 420 216 a
+ 420 206 a
 
 
  pgfr
@@ -2469,8 +3148,7 @@ a Fc(HV)28 b(-)f(3ob)5 b(j)967 216 y
  pgfc
 
 
- -206 620
-a
+ -206 620 a
 
 
  pgfr

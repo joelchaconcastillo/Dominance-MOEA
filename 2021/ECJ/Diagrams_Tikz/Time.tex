@@ -10,12 +10,14 @@ title={\textit{\textbf{Performance of the Algorithms with Two Objectives}}},
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=2,
+            precision=1,
         /tikz/.cd
     },
-  ylabel=HV\\ \scriptsize$2.5 \times 10^4 - 2.5 \times 10^5$,
-  %ymin=0.6,
-%  ymax=1.1,
+  %ylabel=HV\\ \scriptsize$2.5 \times 10^4 - 2.5 \times 10^5$,
+  ylabel=HV\\ $2.5 \times 10^5$,
+  ymin=0.3,
+  ymax=1.0,
+  ytick={0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0},
   xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
 %  label style = {font=\small, },
 %  xlabel style={yshift=-0.5cm},
@@ -29,8 +31,8 @@ xticklabels={,,},
 \addplot[red,dotted,mark=square*] table [y=VSD_MOEA_short,x=X]{\Performancetimetwo};
 \addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_short,x=X]{\Performancetimetwo};
-\addlegendentry{NSGA-II}
+\addplot[blue,dotted,mark=triangle*] table[y= CPDEA_short,x=X]{\Performancetimetwo};
+\addlegendentry{CPDEA}
 		
 \addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_short,x=X]{\Performancetimetwo};
 \addlegendentry{R2-EMOA}
@@ -52,12 +54,16 @@ xticklabels={,,},
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=2,
+            precision=1,
         /tikz/.cd
     },
-  ylabel=HV\\ \scriptsize$2.5 \times 10^5 - 2.5 \times 10^6$,
-  ymin=0.78,
+  %ylabel=HV\\ \scriptsize$2.5 \times 10^5 - 2.5 \times 10^6$,
+  ylabel=HV\\ $2.5 \times 10^6$,
+%  ymin=0.78,
 %  ymax=1.1,
+  ymin=0.3,
+  ymax=1.0,
+  ytick={0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0},
   xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
 %  label style = {font=\small, },
 %  xlabel style={yshift=-0.5cm},
@@ -72,7 +78,7 @@ xtick=data]
 \addplot[red,dotted,mark=square*] table [y=VSD_MOEA_middle,x=X]{\Performancetimetwo};
 %\addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_middle,x=X]{\Performancetimetwo};
+\addplot[blue,dotted,mark=triangle*] table[y= CPDEA_middle,x=X]{\Performancetimetwo};
 %\addlegendentry{NSGA-II}
 		
 \addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_middle,x=X]{\Performancetimetwo};
@@ -95,12 +101,16 @@ xtick=data]
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=2,
+            precision=1,
         /tikz/.cd
     },
-  ylabel={ HV\\ \scriptsize$2.5 \times 10^6 - 2.5 \times 10^7$},
+  %ylabel={ HV\\ \scriptsize$2.5 \times 10^6 - 2.5 \times 10^7$},
+  ylabel={ HV\\ $2.5 \times 10^7$},
 %  ymin=0.6,
 %  ymax=1.1,
+  ymin=0.3,
+  ymax=1.0,
+  ytick={0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0},
   xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
 %  label style = {font=\small, },
 %  xlabel style={yshift=-0.1cm},
@@ -114,7 +124,7 @@ xtick=data]
 \addplot[red,dotted,mark=square*] table [y=VSD_MOEA_long,x=X]{\Performancetimetwo};
 %\addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_long,x=X]{\Performancetimetwo};
+\addplot[blue,dotted,mark=triangle*] table[y= CPDEA_long,x=X]{\Performancetimetwo};
 %\addlegendentry{NSGA-II}
 		
 \addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_long,x=X]{\Performancetimetwo};
@@ -139,10 +149,14 @@ title={\textit{\textbf{Performance of the Algorithms with Three Objectives}}},
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=2,
+            precision=1,
         /tikz/.cd
     },
-  ylabel=HV\\ \scriptsize$2.5 \times 10^4 - 2.5 \times 10^5$,
+  %ylabel=HV\\ \scriptsize$2.5 \times 10^4 - 2.5 \times 10^5$,
+  ylabel=HV\\ $2.5 \times 10^5$,
+  ymin=0.3,
+  ymax=1.0,
+  ytick={0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0},
   %ymin=0.6,
 %  ymax=1.1,
   xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
@@ -158,8 +172,8 @@ xticklabels={,,},
 \addplot[red,dotted,mark=square*] table [y=VSD_MOEA_short,x=X]{\Performancetimethree};
 \addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_short,x=X]{\Performancetimethree};
-\addlegendentry{NSGA-II}
+\addplot[blue,dotted,mark=triangle*] table[y= CPDEA_short,x=X]{\Performancetimethree};
+\addlegendentry{CPDEA}
 		
 \addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_short,x=X]{\Performancetimethree};
 \addlegendentry{R2-EMOA}
@@ -181,12 +195,16 @@ xticklabels={,,},
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=2,
+            precision=1,
         /tikz/.cd
     },
-  ylabel=HV\\ \scriptsize$2.5 \times 10^5 - 2.5 \times 10^6$,
+  %ylabel=HV\\ \scriptsize$2.5 \times 10^5 - 2.5 \times 10^6$,
+  ylabel=HV\\ $2.5 \times 10^6$,
+  ymin=0.3,
+  ymax=1.0,
+  ytick={0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0},
 %  ymin=0.78,
-  ymax=0.95,
+  %ymax=0.95,
   xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
 %  label style = {font=\small, },
 %  xlabel style={yshift=-0.5cm},
@@ -201,7 +219,7 @@ xtick=data]
 \addplot[red,dotted,mark=square*] table [y=VSD_MOEA_middle,x=X]{\Performancetimethree};
 %\addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_middle,x=X]{\Performancetimethree};
+\addplot[blue,dotted,mark=triangle*] table[y= CPDEA_middle,x=X]{\Performancetimethree};
 %\addlegendentry{NSGA-II}
 		
 \addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_middle,x=X]{\Performancetimethree};
@@ -220,17 +238,21 @@ xtick=data]
 %title={\textit{\textbf{Performance of the algorithms with Two Objectivessss}}},
   xlabel= Percent of Total Function Evaluations,
   ylabel style={align=center}, 
-  ylabel={ HV\\ \scriptsize$2.5 \times 10^6 - 2.5 \times 10^7$},
+  %ylabel={ HV\\ \scriptsize$2.5 \times 10^6 - 2.5 \times 10^7$},
+  ylabel={ HV\\ $2.5 \times 10^7$},
  y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=2,
+            precision=1,
         /tikz/.cd
     },
 %  ymin=0.6,
 %  ymax=1.1,
   xticklabel style = {rotate=90, anchor=east, font=\footnotesize,},
+  ymin=0.3,
+  ymax=1.0,
+  ytick={0.4, 0.5, 0.6, 0.7 ,0.8, 0.9, 1.0},
 %  label style = {font=\small, },
 %  xlabel style={yshift=-0.1cm},
 %  xmode=log,
@@ -243,7 +265,7 @@ xtick=data]
 \addplot[red,dotted,mark=square*] table [y=VSD_MOEA_long,x=X]{\Performancetimethree};
 %\addlegendentry{VSD-MOEA}
 
-\addplot[blue,dotted,mark=triangle*] table[y= NSGA_II_long,x=X]{\Performancetimethree};
+\addplot[blue,dotted,mark=triangle*] table[y= CPDEA_long,x=X]{\Performancetimethree};
 %\addlegendentry{NSGA-II}
 		
 \addplot[orange,dotted,mark=diamond*] table [y= R2_MOEA_long,x=X]{\Performancetimethree};
