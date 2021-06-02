@@ -11,9 +11,9 @@ alpha=0.05
 def check_means(file1, file2):
    mean1 = mean(file1)
    mean2 = mean(file2)
-   if mean1 > mean2:
+   if mean1 < mean2:
       return 1
-   elif mean1 < mean2:
+   elif mean1 > mean2:
      return -1
    else:
      return 0
@@ -65,9 +65,10 @@ def process_instance_info(list_files):
     data.append(loadtxt(val1))
   ##Run kruskal test, a p-value > 0.05 accepts the null hypothesis
   T, p = ss.kruskal(*data)
-  bestv=-100000
+  #bestv=-100000
+  bestv=100000
   for i, val1 in enumerate(list_files):
-     bestv = max(bestv, median(loadtxt(val1)))
+     bestv = min(bestv, median(loadtxt(val1)))
   for i, val1 in enumerate(list_files):
      sys.stdout.write(" "+str(abs(bestv-median(loadtxt(val1)))))
      sys.stdout.flush()
@@ -100,5 +101,5 @@ def Kruskal_Posthoc_MannWhitney_info():
 #####################################MAIN####################
 ##Load the entire file
 Kruskal_Posthoc_MannWhitney_score()
-#Kruskal_Posthoc_MannWhitney_info()
+Kruskal_Posthoc_MannWhitney_info()
 
