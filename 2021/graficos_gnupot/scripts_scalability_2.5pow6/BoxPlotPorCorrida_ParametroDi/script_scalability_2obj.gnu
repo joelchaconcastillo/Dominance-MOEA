@@ -8,7 +8,7 @@ set key font ",18"
 set yrange [0.84:0.96]
 set ylabel "Normalized HV"
 set xlabel "Initial Threshold Value"
-set title "Scalability with two objectives"
+set title "Problems with two objectives"
 set autoscale xfix
 
 set xtics 0,0.1,1.0
