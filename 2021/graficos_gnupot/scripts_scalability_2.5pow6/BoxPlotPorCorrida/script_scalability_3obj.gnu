@@ -8,14 +8,14 @@ set terminal postscript enhanced font "Helvetica" 22
 set output "scalability_3obj.eps"
 
 set key font ",18"
-set yrange [-0.1:1.4]
+set yrange [0.3:0.85]
 set ylabel "Normalized HV"
 set xlabel "Number of Decision Variables"
 set title "Scalability with three objectives"
 set autoscale xfix
 
 set style fill solid 0.25 border -1
-set style boxplot nooutliers pointtype 7
+set style boxplot pointtype 7
 set style data boxplot
 set boxwidth 0.5
 
